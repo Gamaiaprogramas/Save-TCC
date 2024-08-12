@@ -1,21 +1,8 @@
-:root{
-    --bottom-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
-}
-
 *{
-    box-sizing: border-box !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    text-decoration: none !important;
-    list-style: none !important;
-    color: #fff !important;
-
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-
-body{
-    overflow-x: hidden;
-}
-
 nav{
     padding: 0 2vw;
     background-color: #10002b;
@@ -25,6 +12,9 @@ nav{
     box-shadow: var(--bottom-shadow);
 }
 
+.menu li a{
+    color: white;
+}
 .menu li {
     display: block;
     color: #ff6d00;
@@ -121,10 +111,8 @@ nav{
 .thrd ul li{
     cursor: pointer;
 }
-
-.nada{
-    background-color: #ff6d00;
-    height: 30vw;
+.carousel-item img{
+    height: 86VH;
     width: 100%;
 }
-
+/* background-color: #10002b; color: #ff6d00;*/
