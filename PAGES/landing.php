@@ -38,6 +38,43 @@
       </div>
   </div>
 
+    <div class="servicos">
+      <h1>Serviços</h1>
+      <div>
+        <!-- primeira div -->
+        <div>
+          <div>
+            <h1></h1>
+            <img src="">
+            <input type="button" value="Aprenda">
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe placeat unde quis at officiis laboriosam magni repudiandae possimus ad ipsam nisi facere corporis molestias ipsa distinctio quidem praesentium, officia debitis?</p>
+        </div>
+        
+         <!-- segunda div -->
+        <div>
+          <div>
+          <h1></h1>
+          <img src="">
+          <input type="button" value="Aprenda">
+        </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam laboriosam et veniam cupiditate ratione minima repellat harum autem, illo est. Minima deserunt sequi expedita perspiciatis provident! Consequatur dolor incidunt similique!</p>
+        </div>
+
+         <!-- terceira div -->
+        <div>
+        <div>
+          <h1></h1>
+          <img src="">
+          <input type="button" value="Aprenda">
+        </div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur rem quam placeat praesentium non, vitae fugit sunt libero blanditiis sed minima inventore facilis cupiditate vel pariatur soluta neque magnam est.</p>
+      </div>
+
+      </div>
+    </div>
+
 <?php 
 
   include("../partials/footer.php")
