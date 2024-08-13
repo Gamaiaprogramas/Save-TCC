@@ -9,27 +9,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-  <nav>
-    <div class="frst">
-        <ul class="menu">
-            <li><a href="#">Suporte</a></li>
-            <li><a href="#">Saq</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Ações</a></li>
-        </ul>
-    </div>
-    <div class="scnd">
-        <img src="../PICS/logo-corte.png" alt="">
-    </div>
-    <div class="thrd">
-        <ul class="menu">
-            <li><a href="#">Câmbio</a></li>
-            <li><a href="#">Planilhas</a></li>
-            <li><a href="#">Sobre Nós</a></li>
-            <li><a href="#">Entrar</a></li>
-        </ul>
-    </div>
-</nav>  
+  <?php
+    include("../PARTIALS/header.php");
+  ?>
 
 
   <div id="carouselExampleIndicators" class="carousel slide">
