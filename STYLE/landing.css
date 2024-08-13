@@ -114,8 +114,13 @@ nav{
     cursor: pointer;
 }
 .carousel-item img{
-    height: 86VH;
+    height: 42vw;
     width: 100%;
+}
+
+.carousel-item{
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 /* background-color: #10002b; color: #ff6d00;*/
 
