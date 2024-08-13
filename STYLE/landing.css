@@ -118,6 +118,10 @@ nav{
     background-size: contain;
     background-repeat: no-repeat;
 }
+.carousel-item img{
+    height: 42vw;
+
+}
 /* background-color: #10002b; color: #ff6d00;*/
 
 
