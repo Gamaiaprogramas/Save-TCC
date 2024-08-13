@@ -113,10 +113,6 @@ nav{
 .thrd ul li{
     cursor: pointer;
 }
-.carousel-item img{
-    height: 42vw;
-    width: 100%;
-}
 
 .carousel-item{
     background-size: contain;
@@ -125,7 +121,7 @@ nav{
 /* background-color: #10002b; color: #ff6d00;*/
 
 
-/*FOOTER*/
+
 
 .footer{
     display: flex;
@@ -276,3 +272,4 @@ nav{
     height: 2.5vw;
     border-radius: 50%;
 }
+
