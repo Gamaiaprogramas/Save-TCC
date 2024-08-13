@@ -1,12 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../STYLE/header.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Carrossel de Teste</title>
+  <link rel="stylesheet" href="../STYLE/landing.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    
-</body>
-</html>
+<nav>
+        <div class="frst">
+            <ul class="menu">
+                <li><a href="#">Suporte</a></li>
+                <li><a href="#">Saq</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Ações</a></li>
+            </ul>
+        </div>
+        <div class="scnd">
+            <img src="../PICS/logo-corte.png" alt="">
+        </div>
+        <div class="thrd">
+            <ul class="menu">
+                <li><a href="#">Câmbio</a></li>
+                <li><a href="#">Planilhas</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Entrar</a></li>
+            </ul>
+        </div>
+    </nav>
+ 
