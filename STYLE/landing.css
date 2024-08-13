@@ -21,7 +21,7 @@ nav{
     display: block;
     color: #ff6d00;
     text-decoration: none;
-    padding: 5px 10px;
+    margin-top: 1vw;
     position: relative;
     font-family: 'Formal' , sans-serif;
 }
@@ -75,7 +75,7 @@ nav{
     justify-content: center;
     align-items: center;
     gap: 2vw;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .frst ul li{
@@ -107,7 +107,7 @@ nav{
     justify-content: center;
     align-items: center;
     gap: 2vw;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .thrd ul li{
@@ -157,7 +157,11 @@ nav{
     display: block;
     font-size: 1.8em;
     font-weight: 600;
-    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vw;
+
 }
 
 .footer .menu2{
