@@ -218,13 +218,18 @@ nav{
 /* Diferencial */
 .nossoDiferencial{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
+    flex-direction: column;
+    justify-content:space-around;
     align-items: center;
+}
+
+.nossoDiferencial > div{
+    display: flex;
+    align-items: center;
+    gap: 0 10vw;
 
 }
-.nossoDiferencial > h1{
+.nossoDiferencial >div> h2{
     font-size: 1vw;
     width: 40vw;
     color: #10002b;
