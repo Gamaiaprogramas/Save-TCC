@@ -85,6 +85,6 @@
             </div>
         </div>
     </footer>
- 
+    <script src="../JS/landin.js"></script>
 </body>
 </html>

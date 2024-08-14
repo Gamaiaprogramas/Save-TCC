@@ -199,6 +199,52 @@ nav{
     border-radius: 2vw;
 }
 
+.servicos > div > div > div > input{
+    background-color: #10002b;
+    color: #ff6d00;
+    font-size: 1vw;
+    padding: 0.4vw 0.9vw;
+    border-radius: 0.5vw; 
+}
+.servicos > div > div > div > h1{
+
+    font-size: 0.6vw;
+    color: #ff6d00;
+    font-weight: 800;
+
+}
+
+
+/* Diferencial */
+.nossoDiferencial{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    align-items: center;
+
+}
+.nossoDiferencial > h1{
+    font-size: 1vw;
+    width: 40vw;
+    color: #10002b;
+    font-weight: 700;
+}
+.grafico{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 5vh;
+}
+
+.titulo h1{
+    font-family: titulo;
+    font-size: 60px;
+}
+#chartdiv {
+    width: 95%;
+    height: 30vw;
+  }
 .footer{
     display: flex;
     justify-content: center;
@@ -352,4 +398,5 @@ nav{
     height: 2.5vw;
     border-radius: 50%;
 }
+
 

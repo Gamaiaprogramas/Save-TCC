@@ -1,6 +1,7 @@
 
   <?php
     include("../partials/header.php");
+
   ?>
 
 
@@ -44,7 +45,7 @@
         <!-- primeira div -->
         <div>
           <div>
-            <h1></h1>
+            <h1>Dê uma chance ao conhecer!</h1>
             <img src="">
             <input type="button" value="Aprenda">
           </div>
@@ -54,7 +55,7 @@
          <!-- segunda div -->
         <div>
           <div>
-          <h1></h1>
+          <h1>Dê uma chance ao conhecer!</h1>
           <img src="">
           <input type="button" value="Aprenda">
         </div>
@@ -64,7 +65,7 @@
          <!-- terceira div -->
         <div>
         <div>
-          <h1></h1>
+          <h1>Dê uma chance ao conhecer!</h1>
           <img src="">
           <input type="button" value="Aprenda">
         </div>
@@ -74,7 +75,11 @@
 
       </div>
     </div>
-
+    <div class="nossoDiferencial">
+        
+        <div id="chartdiv"></div>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam illo, ullam laudantium ab mollitia iusto repellendus iure unde fuga quas vel itaque quod repellat sint quam dolore libero aperiam earum!</h1>
+    </div>
 <?php 
 
   include("../partials/footer.php")
