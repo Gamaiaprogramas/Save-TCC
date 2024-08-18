@@ -1,4 +1,4 @@
-
+  <link rel="stylesheet" href="../STYLE/landing.css">
   <?php
     include("../partials/header.php");
 
@@ -78,11 +78,14 @@
     <div class="nossoDiferencial">
         <h1>Nosso Diferencial</h1>
         <div>
+          
         <div id="chartdiv"></div>
         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam illo, ullam laudantium ab mollitia iusto repellendus iure unde fuga quas vel itaque quod repellat sint quam dolore libero aperiam earum!</h2>
     </div></div>
+    
 <?php 
 
   include("../partials/footer.php")
 
 ?>
+<script> window.onload = LandingAct(); </script>

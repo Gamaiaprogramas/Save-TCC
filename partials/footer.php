@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="../STYLE/footer.css">
+
+
 <footer class="footer">
         <div class="container2">
             <div class="col1">
@@ -85,6 +88,6 @@
             </div>
         </div>
     </footer>
-    <script src="../JS/landin.js"></script>
+    <script src="../JS/geral.js"></script>
 </body>
 </html>
