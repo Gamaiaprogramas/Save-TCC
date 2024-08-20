@@ -1,4 +1,21 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
 
+
+body::-webkit-scrollbar {
+    width: 7px;
+  }
+body::-webkit-scrollbar-thumb {
+    border-radius: 80px;
+    background: #ff6d00
+  }
+body::-webkit-scrollbar-track {
+    background: #10002b;
+}
 .carousel-item{
     background-size: contain;
     background-repeat: no-repeat;

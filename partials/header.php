@@ -27,7 +27,7 @@
             </ul>
         </div>
         <div class="scnd">
-            <img src="../PICS/logo-corte.png" alt="">
+            <a href="../PAGES/landing.php"><img src="../PICS/logo-corte.png" alt=""></a>
         </div>
         <div class="thrd">
             <ul class="menu">
