@@ -6,31 +6,31 @@
     include("../partials/header.php");
   ?>
 
-
+<h1>Taxas de Câmbio em Relação ao Real (BRL)</h1>
   <div class="cambio">
 
     <div class="container">
-        <h1>Taxas de Câmbio em Relação ao Real (BRL)</h1>
-        <p id="usd">Carregando USD...</p>
-        <p id="eur">Carregando EUR...</p>
-        <p id="gbp">Carregando GBP...</p>
-        <p id="jpy">Carregando JPY...</p>
-        <p id="">Carregando USD...</p>
-        <p id="">Carregando EUR...</p>
-        <p id="">Carregando GBP...</p>
-        <p id="">Carregando JPY...</p>
-        <p id="">Carregando USD...</p>
-        <p id="">Carregando EUR...</p>
-        <p id="">Carregando GBP...</p>
-        <p id="">Carregando JPY...</p>
-        
+    <div id="usd"><p>USD: Carregando...</p></div>
+    <div id="eur"><p>EURO: Carregando...</p></div>
+    <div id="gbp"><p>LIBRA: Carregando...</p></div>
+    <div id="jpy"><p>IENE: Carregando...</p></div>
+    <div id="cad"><p>Dólar Canadense: Carregando...</p></div>
+    <div id="chf"><p>Franco Suíço: Carregando...</p></div>
+    <div id="cny"><p>Yuan Chinês: Carregando...</p></div>
+    <div id="sek"><p>Coroa Sueca: Carregando...</p></div>
+    <div id="nzd"><p>Dólar Neozelandês: Carregando...</p></div>
+    <div id="mxn"><p>Peso Mexicano: Carregando...</p></div>
+    <div id="sgd"><p>Dólar de Singapura: Carregando...</p></div>
+
+
     </div>
+        
+  </div>
 
 
     <div id="chartdiv"></div>
 
 
-  </div>
 <?php 
 
   include("../partials/footer.php")

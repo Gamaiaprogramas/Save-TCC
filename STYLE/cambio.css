@@ -4,8 +4,19 @@
     padding: 0;
     user-select: none;
 }
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+overflow-x: hidden;
+width: 100%;
+
+}
 .cambio{
     display: flex;
+    width: 100%;
+    background-color: #000;
     align-items: center;
     flex-direction: column;
 }
@@ -22,16 +33,39 @@ body::-webkit-scrollbar-track {
 
 
 .container {
-    background: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    width: 100%;
+    overflow: hidden; 
+    animation: transacao 10s infinite linear;
+    
 }
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
 }
+
+.container div {
+    color: greenyellow;
+    flex-direction: column;
+    display: flex;
+    padding: 1vw;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+@keyframes transacao {
+    from {
+        transform: translateX(200%); /* Começa fora da tela à direita */
+    }
+    to {
+        transform: translateX(-200%); /* Termina fora da tela à esquerda */
+    }
+}
+
 p {
     font-size: 18px;
     margin: 10px 0;

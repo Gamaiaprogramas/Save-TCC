@@ -40,21 +40,6 @@ if ($data && $data['result'] == 'success') {
 
 
 
-//////////////////////////////////
 
 
-$alphakey = 'AHTP1IB6NNE6M8KC';
-
-
-// replace the "demo" apikey below with your own key from https://www.alphavantage.co/support/#api-key
-$json = file_get_contents('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=AHTP1IB6NNE6M8KC');
-
-$data2 = json_decode($json,true);
-
-session_start();
-
-$_SESSION['data'] = $data2;
-
-
-exit;
 ?>

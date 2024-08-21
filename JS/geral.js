@@ -318,19 +318,19 @@ SGD - Singapura (Dólar de Singapura)
 
 
           console.log(usdToBRL)
-    
+          // usdToBRL, eurToBRL, jpyToBRL, gbpToBRL, audToBRL, cadToBRL, chfToBRL, cnyToBRL, sekToBRL, nzdToBRL, mxnToBRL, sgdToBRL
             document.getElementById('usd').textContent = `USD R$ ${usdToBRL}`;
             document.getElementById('eur').textContent = `EUROR$ ${eurToBRL}`;
             document.getElementById('gbp').textContent = `LIBRA R$ ${gbpToBRL}`;
             document.getElementById('jpy').textContent = `iENE  R$ ${jpyToBRL}`;
-            document.getElementById('').textContent = `R$ ${cadToBRL}`;
-            document.getElementById('').textContent = `R$ ${chfToBRL}`;
-            document.getElementById('').textContent = `R$ ${cnyToBRL}`;
-            document.getElementById('').textContent = `R$ ${sekToBRL}`;
-            document.getElementById('').textContent = `R$ ${nzdToBRL}`;
-            document.getElementById('').textContent = `R$ ${mxnToBRL}`;
-            document.getElementById('').textContent = `R$ ${mxnToBRL}`;
-            document.getElementById('').textContent = `R$ ${sgdToBRL}`;
+            document.getElementById('cad').textContent = `Dólar Canadense R$ ${cadToBRL}`;
+            document.getElementById('chf').textContent = `Franco Suíço R$ ${chfToBRL}`;
+            document.getElementById('cny').textContent = `Yuan Chinês R$ ${cnyToBRL}`;
+            document.getElementById('sek').textContent = `Coroa Sueca R$ ${sekToBRL}`;
+            document.getElementById('nzd').textContent = `Dólar Neozelandês R$ ${nzdToBRL}`;
+            document.getElementById('mxn').textContent = `Peso Mexicano R$ ${mxnToBRL}`;
+            document.getElementById('sgd').textContent = ` Dólar de Singapura R$ ${sgdToBRL}`;
+
           }
           console.log(usdToBRL)
 
