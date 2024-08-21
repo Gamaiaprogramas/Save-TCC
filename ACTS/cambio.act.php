@@ -1,6 +1,6 @@
 <?php
 // Sua chave de API
-$apiKey = 'dda91f3f3e56a93c3da0dfdd';
+$apiKey = '39df392d2ca8e9cb6aae02ec';
 
 // URL da API
 $url = "https://v6.exchangerate-api.com/v6/$apiKey/latest/BRL";

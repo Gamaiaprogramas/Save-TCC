@@ -318,11 +318,19 @@ SGD - Singapura (Dólar de Singapura)
 
 
           console.log(usdToBRL)
-
-            document.getElementById('usd').textContent = `Para comprar 1 USD você precisa de ${usdToBRL} BRL`;
-            document.getElementById('eur').textContent = `Para comprar 1 EUR você precisa de ${eurToBRL} BRL`;
-            document.getElementById('gbp').textContent = `Para comprar 1 GBP você precisa de ${gbpToBRL} BRL`;
-            document.getElementById('jpy').textContent = `Para comprar 1 JPY você precisa de ${jpyToBRL} BRL`;
+    
+            document.getElementById('usd').textContent = `USD R$ ${usdToBRL}`;
+            document.getElementById('eur').textContent = `EUROR$ ${eurToBRL}`;
+            document.getElementById('gbp').textContent = `LIBRA R$ ${gbpToBRL}`;
+            document.getElementById('jpy').textContent = `iENE  R$ ${jpyToBRL}`;
+            document.getElementById('').textContent = `R$ ${cadToBRL}`;
+            document.getElementById('').textContent = `R$ ${chfToBRL}`;
+            document.getElementById('').textContent = `R$ ${cnyToBRL}`;
+            document.getElementById('').textContent = `R$ ${sekToBRL}`;
+            document.getElementById('').textContent = `R$ ${nzdToBRL}`;
+            document.getElementById('').textContent = `R$ ${mxnToBRL}`;
+            document.getElementById('').textContent = `R$ ${mxnToBRL}`;
+            document.getElementById('').textContent = `R$ ${sgdToBRL}`;
           }
           console.log(usdToBRL)
 
