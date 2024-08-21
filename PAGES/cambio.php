@@ -4,9 +4,6 @@
 <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 <?php
     include("../partials/header.php");
-    session_start();
-
-    echo "<p>" + $_SESSION['data'] + "</p>" ; 
   ?>
 
 
