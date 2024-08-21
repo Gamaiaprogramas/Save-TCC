@@ -15,6 +15,15 @@
         <p id="eur">Carregando EUR...</p>
         <p id="gbp">Carregando GBP...</p>
         <p id="jpy">Carregando JPY...</p>
+        <p id="">Carregando USD...</p>
+        <p id="">Carregando EUR...</p>
+        <p id="">Carregando GBP...</p>
+        <p id="">Carregando JPY...</p>
+        <p id="">Carregando USD...</p>
+        <p id="">Carregando EUR...</p>
+        <p id="">Carregando GBP...</p>
+        <p id="">Carregando JPY...</p>
+        
     </div>
 
 
