@@ -11,3 +11,13 @@ Chaves de apis{
 
     finnhub: cr33hs1r01qkkc024o00cr33hs1r01qkkc024o0g;
 }
+
+Forma de cashback
+Auxilio de investimento
+graficos
+api integração com taxa selic
+informação da bolsa
+fechamento do mes
+videos explicativos
+dicas para onde investir
+investimentos em altas
