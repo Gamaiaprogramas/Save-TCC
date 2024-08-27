@@ -1,156 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    user-select: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Inter',sans-serif;
 }
 
+body{
+    background-color: #f1f6fc31;
+}
 
-body::-webkit-scrollbar {
-    width: 7px;
-  }
-body::-webkit-scrollbar-thumb {
-    border-radius: 80px;
-    background: #ff6d00
-  }
-body::-webkit-scrollbar-track {
-    background: #10002b;
+section,
+footer{
+    padding: 54px 0;
 }
-.carousel-item{
-    background-size: contain;
-    background-repeat: no-repeat;
+
+h3{
+    font-size: 50px;
 }
-.carousel-item img{
-    height: 42vw;
+
+p{
+    color: #272626;
 
 }
-/* background-color: #10002b; color: #ff6d00;*/
+.container{
+    max-width: 1400px;
+    margin: auto;
+    /*padding: 0 5%;*/
+}
+.btn{
+    background-color: #ff6d00 ;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+}
+.btn:hover{
+    background-color:#c25400 ;
+}
 
+.btn.animate-btn{
+    animation: animate-outline 1s ease-out infinite;
+}
 
-/* Quem somos */
+@keyframes animate-outline {
+    from{
+        outline: 0px solid #ff6d00  ;
+    }
+    to{
+        outline: 15px solid #10002b09;
+    }
 
+}
 
-.quemSomos{
+.flex{
     display: flex;
-    gap: 2vw;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header{
     width: 100%;
-    padding: 1vw;
-    flex-direction: column;
-    align-items: center;
+    padding: 60px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+
+    
 }
-
-.quemSomos > div{
-    display: flex;
-    padding: 1vw;
-    justify-content: space-around;
-    width: 50vw;
- 
-    border: solid #10002b 0.6vh;
-    border-radius: 3vw;
-    align-items: center;
-}
-.quemSomos > div > img{
-    width: 10vw;
-    height: 10vw;
-    border-radius: 10%;
-}
-
-.quemSomos > div > h1{
-    width: 30vw;
-    font-size: 1vw;
-}
-
-
-/* Serviços */
-.servicos{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 10vw 0vw;
-    flex-direction: column;
-}
-
-.servicos > div{
-    display: flex;
-    flex-direction: row;
-
-    width: 100%;
-   justify-content: space-around;
-}
-
-
-.servicos > div > div{
-    width: 20vw;
-    display: flex;
-
-    width: 20vw;
-    height: 22vw  ; 
-    justify-content: space-around   ;
-    align-items: center;
-    flex-direction: column;
-}
-
-.servicos > div > div > div{
-    width: 10vw;
-    height: 10vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    border: solid 0.3vw #10002b;
-    border-radius: 2vw;
-}
-
-.servicos > div > div > div > input{
+header.rolagem{
     background-color: #10002b;
+    padding: 10px 4%;
+}
+
+nav ul a{
+    color: white;
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: inline-block;
+    margin: 0 40px;
+}
+nav ul a:not(.btn):after{
+    content: "";
+    background-color: #ff6d00;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+nav ul a:hover::after{
+    width: 100%;
+}
+/*menu mobile*/
+.flex .menu-icon{
+    cursor: pointer;
+    font-size: 25px;
     color: #ff6d00;
-    font-size: 1vw;
-    padding: 0.4vw 0.9vw;
-    border-radius: 0.5vw; 
+    display: none;
 }
-.servicos > div > div > div > h1{
-
-    font-size: 0.6vw;
-    color: #ff6d00;
-    font-weight: 800;
-
-}
-
-
-/* Diferencial */
-.nossoDiferencial{
-    display: flex;
-    flex-direction: column;
-    justify-content:space-around;
-    align-items: center;
-}
-
-.nossoDiferencial > div{
-    display: flex;
-    align-items: center;
-    gap: 0 10vw;
+.banner{
+display: flex;
+justify-content: center;
+height: 100vh;
+background-position: center;
+background-size: cover;
+background-attachment: fixed;
 
 }
-.nossoDiferencial >div> h2{
-    font-size: 1vw;
-    width: 40vw;
-    color: #10002b;
-    font-weight: 700;
+.banner .banner-text{
+margin: 300px;
+text-align: center;
+padding: 0 90px;
 }
-.grafico{
-    display: flex;
-    justify-content: center;
-    width: 20%;
-    height: 5vh;
+.banner .banner-text h1{
+font-size: 96px;
+color: #ffffff;
+}
+.banner .banner-text p{
+font-size: 20px;
+color: #ffffffd8;
+font-weight: lighter;
+margin: 18px 0;
+}
+/*faca mais*/
+.faca-mais .container{
+display: flex;
+align-items: center;
+}
+.faca-mais .faca-mais-txt{
+width: 50%;
+padding: 0 40px;
 }
 
-.titulo h1{
-    font-family: titulo;
-    font-size: 60px;
+.faca-mais .faca-mais-txt h3{
+font-size: 56px;
 }
-#chartdiv {
-    width: 95%;
-    height: 30vw;
-  }
+.faca-mais .faca-mais-txt p{
+margin: 5px 0px 10px 0px;
+font-size: 17px;
+
+}
+
+.faca-mais .faca-mais-img{
+width: 50%;
 
 
+}
+
+.faca-mais .faca-mais-img img{
+width: 100%;
+}
+/*depoimentos*/
+
+.depoimentos h3{
+text-align: center
+}
+.depoimentos p{
+margin-bottom: 20px;
+text-align: center;
+}
+.cards{
+display: flex;
+justify-content: center;
+}
+.cards2{
+display: flex;
+justify-content: center;
+}
+.depoimentos .card-item{
+background-color: #f5f5f5;
+margin: 15px;
+border-radius: 14px;
+text-align: center;
+width: 350px;
+transition: 0.3s;
+}
+.depoimentos .card-item img{
+border-radius: 100px;
+width: 180px;
+display: block;
+margin: 10px auto;
+}
+.depoimentos .card-item .nome-user{
+font-weight: 600;
+font-size: 20px;
+margin-bottom: 15px;
+transition: 0.3s;
+}
+.depoimentos .card-item .depoimento-user{
+font-size: 15px;
+padding: 0 15px; 
+transition: 0.3s;   
+}
+.depoimentos .card-item:hover{
+cursor: pointer;
+background-color: #10002b;
+margin-top: -5px;
+}
+
+.depoimentos .card-item:hover .nome-user,
+.depoimentos .card-item:hover .depoimento-user{
+color: #ffffff;
+}
+/*campeonatos*/
+.clientes h3,
+.clientes p{
+text-align: center;
+
+}
+.clientes .container div{
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+/*footer*/
+.footer{
+background-color: #10002b;
+text-align: center;
+}
+.footer i{
+color: #10002b;
+font-size: 19px;
+background-color: white;
+padding: 10px;
+margin: 3px;
+border-radius: 10px;
+
+}
+.footer p {
+margin-top: 10px;
+color: white;
+}
+
+@media screen and(max-width:900px){
+header nav , header .btn-contato{
+display: none;
+}
+
+
+}
