@@ -1,153 +1,42 @@
-.footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20vw;
+footer{
+    background-color: #10002b;
     width: 100%;
-    background-color: #10002b;  
+    text-align: center;
+    padding: 30px 0;
 }
 
-.footer p{
-    color: #ccc;
-    max-width: 25em;
-    font-size: 0.9em;
-    line-height: 23px;
-}
-
-.footer a{
+footer .top-footer button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: transparent;
     color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: 0.4s;
+}
+footer .top-footer button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+footer .middle-footer{
+    margin: 20px 0;
+}
+
+footer .middle-footer a{
+    color: #fff;
+    margin: 0 15px;
     text-decoration: none;
 }
 
-
-.footer .container2{
-    width: 100%;
-    display: flex;
-    margin: 0;
-    padding: 2em;
-    justify-content: space-between;
-    gap: 2em;
+.bottom-footer{
+    border-top: 2px solid #fff;
 }
 
-.brand{
-    display: block;
-    font-size: 1.8em;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1vw;
-
-}
-
-.footer .menu2{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: 14px;
-}
-
-.footer .menu2 li{
-    text-align: center;
-    margin: 0 0.7em 0.7em 0;
-    display: inline-block;
-}
-
-.footer .menu2 a{
-    transition: .3s;
-    font-weight: 600;
-}
-
-.services-icons li,
-.media-icons li{
-    display: inline-block;
-    margin: 0.5em 0.5em 0.5em 0;
-}
-
-.media-icons a{
-    font-size: 1.1em;
-    width: 2em;
-    height: 2em;
-    border: 1px #fff solid;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-}
-
-.media-icons a:hover{
-    background: #fff;
-    color: #111;
-}
-
-.services-icons a{
-    font-size: 1.5em;
-}
-
-.service-iconss a:hover{
-    color: #dbdbdb;
-}
-
-.input-wrap{
-    margin: 1em 0;
-    display: flex;
-    border: none;
-    background: #20232a;
-    color: #ccc;
-}
-
-.input-wrap input:focus{
-    outline: none;
-}
-
-.input-wrap button{
-    padding: .8em;
-    background-color: var(--ruby);
-    border: none;
-    outline: none;
+footer .bottom-footer p{
     color: #fff;
-    transition: .5s;
-}
-
-.input-wrap button:hover{
-    background: var(--cereja);
-}
-
-.copy{
-    width: 100%;
-    text-align: center;
-    margin-top: 1vw;
-    transition: .5s;
-}
-
-.copy:hover{
-    color: var(--cereja);
-    user-select: none;
-}
-
-.info{
-    text-align: center;
-}
-
-.user{
-    color: white;
-    gap: 20px;
-    height: 100%;
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.user h1{
-    font-size: 1.2vw;
-    font-family: Formal;
-}
-
-
-.user img{
-    width: 2.5vw;
-    height: 2.5vw;
-    border-radius: 50%;
+    margin-top: 10px;
 }

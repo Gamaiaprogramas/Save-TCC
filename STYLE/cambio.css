@@ -37,7 +37,7 @@ body::-webkit-scrollbar-track {
     display: flex;
     width: 100%;
     overflow: hidden; 
-    animation: transacao 20s infinite linear;
+    animation: transacao 45s infinite linear;
     
 }
 h1 {

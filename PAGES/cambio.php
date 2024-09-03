@@ -1,11 +1,11 @@
-<link rel="stylesheet" href="../STYLE/cambio.css">
+
 <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 <?php
     include("../partials/header.php");
   ?>
-
+<link rel="stylesheet" href="../STYLE/cambio.css">
 <h1>Taxas de Câmbio em Relação ao Real (BRL)</h1>
   <div class="cambio">
 
@@ -33,7 +33,7 @@
 
 <?php 
 
-  include("../partials/footer.php")
+  include("../partials/footer.php");
 
 ?>
-<script>window.onload = fetchExchangeRates; </script>
+<script>window.onload = fetchExchangeRates;</script>
