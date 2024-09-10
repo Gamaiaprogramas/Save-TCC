@@ -2,7 +2,13 @@
 <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<style>
+  header{
+    background-color: #10002b !important;
+  }
+</style>
 <?php
+
     include("../partials/header.php");
   ?>
 <link rel="stylesheet" href="../STYLE/cambio.css">

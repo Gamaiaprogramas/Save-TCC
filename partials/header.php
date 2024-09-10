@@ -29,10 +29,12 @@
     <header id="header">
 
         <div class="interface">
-
-            <section class="logo">
+            <a href="../PAGES/landing.php">
+                <section class="logo">
                     <img src="../PICS/imgs/logo.png" alt="logo tipo do site">
             </section>
+            </a>
+            
 
             <section class="menu-desktop">
                 <nav>
