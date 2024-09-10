@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../STYLE/responsive.css">
     
     <!-- Scripts de JS -->
-    <script src="../JS/js/menu.js" defer></script>
+
     <script src="../JS/js/btn-menu-mob.js" defer></script>
     <!-- end Scripts de Js -->
    
