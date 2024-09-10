@@ -128,17 +128,17 @@
           },{
             country: "Euro",
               visits: parseFloat(Geral[1]),
-              icon: "",
+              icon: "../JS/img/bandeiras/united-kingdom.svg",
               columnSettings: { fill: colors.next() }
             },{
               country: "Iene",
                 visits: parseFloat(Geral[2]),
-                icon: "https://www.amcharts.com/wp-content/uploads/flags/south-korea.svg",
+                icon: "../JS/img/bandeiras/japan.svg",
                 columnSettings: { fill: colors.next() }
               }, {
             country: "Libra Esterlina",
             visits: parseFloat(Geral[3]),
-            icon: "https://w7.pngwing.com/pngs/525/382/png-transparent-european-union-flag-of-europe-flags-graphics-blue-flag-computer-wallpaper-thumbnail.png",
+            icon: "../JS/img/bandeiras/european-union.svg",
             columnSettings: { fill: colors.next() }
           }, {
             country: "Dólar Australiano",
