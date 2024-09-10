@@ -143,17 +143,17 @@
           }, {
             country: "Dólar Australiano",
             visits: parseFloat(Geral[4]),
-            icon: "https://www.amcharts.com/wp-content/uploads/flags/china.svg",
+            icon: "../JS/img/bandeiras/autralia.svg",
             columnSettings: { fill: colors.next() }
           }, {
             country: "Dólar Canadense",
             visits:parseFloat(Geral[5]) ,
-            icon: "https://www.amcharts.com/wp-content/uploads/flags/japan.svg",
+            icon: "../JS/img/bandeiras/canada.svg",
             columnSettings: { fill: colors.next() }
           }, {
             country: "Franco Suíço",
             visits: parseFloat(Geral[6]),
-            icon: "https://www.amcharts.com/wp-content/uploads/flags/germany.svg",
+            icon: "../JS/img/bandeiras/suica.svg",
             columnSettings: { fill: colors.next() }
           }, {
             country: "Yuan Chinês",
@@ -163,13 +163,12 @@
           }, {
             country: "Coroa Sueca",
             visits: parseFloat(Geral[8]),
-            icon: "../JS/img/bandeiras/",
+            icon: "../JS/img/bandeiras/suecia.svg",
             columnSettings: { fill: colors.next() }
           }, {
             country: "Dólar Neozelandês",
             visits: parseFloat(Geral[9]),
-           
-            icon: "https://www.amcharts.com/wp-content/uploads/flags/spain.svg",
+            icon: "../JS/img/bandeiras/nova-zelandia.svg",
             columnSettings: { fill: colors.next() }
           }, {
             country: "Peso Mexicano",
@@ -180,7 +179,7 @@
             country: "Dólar de Singapura",
             visits: parseFloat(Geral[11]),
             
-            icon: "https://www.amcharts.com/wp-content/uploads/flags/canada.svg",
+            icon: "../JS/img/bandeiras/singapura.svg",
             columnSettings: { fill: colors.next() }
           }];
           /*USD - Estados Unidos (Dólar Americano)
