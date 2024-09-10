@@ -128,32 +128,32 @@
           },{
             country: "Euro",
               visits: parseFloat(Geral[1]),
-              icon: "",
+              icon: "../JS/img/bandeiras/united-kingdom.svg",
               columnSettings: { fill: colors.next() }
             },{
               country: "Iene",
                 visits: parseFloat(Geral[2]),
-                icon: "https://www.amcharts.com/wp-content/uploads/flags/south-korea.svg",
+                icon: "../JS/img/bandeiras/japan.svg",
                 columnSettings: { fill: colors.next() }
               }, {
             country: "Libra Esterlina",
             visits: parseFloat(Geral[3]),
-            icon: "https://w7.pngwing.com/pngs/525/382/png-transparent-european-union-flag-of-europe-flags-graphics-blue-flag-computer-wallpaper-thumbnail.png",
+            icon: "../JS/img/bandeiras/european-union.svg",
             columnSettings: { fill: colors.next() }
           }, {
             country: "Dólar Australiano",
             visits: parseFloat(Geral[4]),
-            icon: "https://www.amcharts.com/wp-content/uploads/flags/china.svg",
+            icon: "../JS/img/bandeiras/autralia.svg",
             columnSettings: { fill: colors.next() }
           }, {
             country: "Dólar Canadense",
             visits:parseFloat(Geral[5]) ,
-            icon: "https://www.amcharts.com/wp-content/uploads/flags/japan.svg",
+            icon: "../JS/img/bandeiras/canada.svg",
             columnSettings: { fill: colors.next() }
           }, {
             country: "Franco Suíço",
             visits: parseFloat(Geral[6]),
-            icon: "https://www.amcharts.com/wp-content/uploads/flags/germany.svg",
+            icon: "../JS/img/bandeiras/suica.svg",
             columnSettings: { fill: colors.next() }
           }, {
             country: "Yuan Chinês",
@@ -163,13 +163,12 @@
           }, {
             country: "Coroa Sueca",
             visits: parseFloat(Geral[8]),
-            icon: "../JS/img/bandeiras/",
+            icon: "../JS/img/bandeiras/suecia.svg",
             columnSettings: { fill: colors.next() }
           }, {
             country: "Dólar Neozelandês",
             visits: parseFloat(Geral[9]),
-           
-            icon: "https://www.amcharts.com/wp-content/uploads/flags/spain.svg",
+            icon: "../JS/img/bandeiras/nova-zelandia.svg",
             columnSettings: { fill: colors.next() }
           }, {
             country: "Peso Mexicano",
@@ -180,7 +179,7 @@
             country: "Dólar de Singapura",
             visits: parseFloat(Geral[11]),
             
-            icon: "https://www.amcharts.com/wp-content/uploads/flags/canada.svg",
+            icon: "../JS/img/bandeiras/singapura.svg",
             columnSettings: { fill: colors.next() }
           }];
           /*USD - Estados Unidos (Dólar Americano)
