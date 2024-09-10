@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../STYLE/header.css">
     <link rel="stylesheet" href="../STYLE/responsive.css">
-    
+    <link rel="shortcut icon" href="../PICS/img2/logo.png" type="image/x-icon">
     <!-- Scripts de JS -->
     <script src="../JS/js/menu.js" defer></script>
     <script src="../JS/js/btn-menu-mob.js" defer></script>

@@ -36,7 +36,7 @@
 
     <div id="chartdiv"></div>
 
-      
+  <div></div>
 
 
 <?php 

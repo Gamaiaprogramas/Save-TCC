@@ -5,6 +5,7 @@
 ?>
 
 <link rel="stylesheet" href="../STYLE/responsive.css">
+
 <link rel="stylesheet" href="../STYLE/landing.css">
 <section class="hero-site">
         
