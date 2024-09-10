@@ -93,10 +93,10 @@
 
             <article class="icons-contato">
                 <a href="../PAGES/cambio.php">
-                    <button><i class="bi bi-currency-exchange"></i> <p>Cotação do Dólar</p> </button>
+                    <button><i class="bi bi-currency-exchange"></i> <p>Câmbio de Moedas</p> </button>
                 </a>
-                <a href="#">
-                    <button><i class="bi bi-headset"></i> <p>Atendimento Personalizado</p> </button>
+                <a href="../PAGES/action.php">
+                    <button><i class="bi bi-headset"></i> <p>Ações</p> </button>
                 </a>
                 <a href="#">
                     <button><i class="bi bi-cash-coin"></i> <p>Planejamento Financeiro</p> </button>

@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+overflow-x: hidden;
+width: 100%;
+
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+  }
+body::-webkit-scrollbar-thumb {
+    border-radius: 80px;
+    background: #ff6d00
+  }
+body::-webkit-scrollbar-track {
+    background: #10002b;
+}
+
+.container{
+    background-color: #10002b;
+    height: 30vw;
+    width: 90%;
+    margin-top: 15vw;
+}
