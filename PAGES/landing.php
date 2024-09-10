@@ -3,7 +3,7 @@
     include("../partials/header.php");
 
 ?>
-
+<script src="../JS/js/menu.js" defer></script>
 <link rel="stylesheet" href="../STYLE/responsive.css">
 
 <link rel="stylesheet" href="../STYLE/landing.css">

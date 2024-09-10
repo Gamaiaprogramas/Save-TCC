@@ -9,8 +9,9 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-overflow-x: hidden;
-width: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    background-color: #f0f0f0 !important;
 
 }
 
@@ -25,9 +26,166 @@ body::-webkit-scrollbar-track {
     background: #10002b;
 }
 
+.titles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 9vw;
+}
+
 .container{
+    margin-top: 2vw;
+    width: 100%;
+    height: 35vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vw;
+    background-color: #FFF;
+    border-radius: 1.5vw;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    height: 100%;
+    width: 25%;
+    padding: 1vw;
+}
+
+select {
+    /* Reset Select */
+    appearance: none;
+    outline: 10px red;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    padding: 0 1em;
+    color: #fff;
     background-color: #10002b;
-    height: 30vw;
-    width: 90%;
-    margin-top: 15vw;
+    background-image: none;
+    cursor: pointer;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select wrapper */
+  .select {
+    margin-bottom: 25VW;
+    position: relative;
+    background-color: #10002b;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    border-radius: .25em;
+    overflow: hidden;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #ff6d00;
+    transition: .25s all ease;
+    pointer-events: none;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: #f39c12;
+  }
+  
+
+.center{
+    border-radius: 1.5vw;
+    background-color: #FFF;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    height: 100%;
+    width: 35%;
+}
+
+.nome{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bloco{
+    width: 80%;
+    height: 80%;
+    border-radius: 2vw;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+.bloco h2{
+    font-size: 1vw;
+}
+.value{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.maior{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    height: 80%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    width: 40%;
+    border-radius: 2vw;
+}
+
+#mxdia{
+    color: green;
+    font-size: 2vw;
+}
+
+#mndia{
+    color: red;
+    font-size: 2vw;
+}
+
+#preco{
+    color: rgb(49, 49, 228);
+    font-size: 2vw;
+}
+
+.menor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    height: 80%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    width: 40%;
+    border-radius: 2vw;
+}
+
+.right{
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.5vw;
+    background-color: #FFF;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    height: 100%;
+    width: 25%;
 }

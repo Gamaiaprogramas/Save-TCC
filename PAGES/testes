@@ -1,267 +1,107 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finanças Fáceis - Sua Solução Financeira</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <title>Select Estilizado</title>
     <style>
-        /* styles.css */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+        :root {
+  --background-gradient: linear-gradient(178deg, #ffff33 10%, #3333ff);
+  --gray: #34495e;
+  --darkgray: #2c3e50;
 }
 
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 10px red;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: var(--darkgray);
+  background-image: none;
+  cursor: pointer;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+
+/* Other styles*/
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
+  color: #fff;
+  background: var(--background-gradient);
 }
 
+a {
+  font-weight: bold;
+  color: var(--gray);
+  text-decoration: drop-shadow;
+  padding: .25em;
+  border-radius: .50em;
+  background: pink;
+}
+
+/* 가운데정렬 - position,transform*/
 .container {
-    width: 80%;
-    margin: 0 auto;
+  position : absolute;
+  top: 50%;
+  left : 50%;
+  transform :
+  translate(-50%,-50%); 
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
+/* 가운데정렬 - flexbox*/
+/* 근데 이건 1행 정렬이된다. */
+/* .container {
+  display: flex;
+  justify-content: center;
+  align-items: absolute;
+} */
 
-header h1 {
-    font-size: 2rem;
-}
-
-nav ul {
-    list-style: none;
+.down_note {
     display: flex;
     justify-content: center;
-    gap: 20px;
+
 }
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #f39c12;
-}
-
-.hero {
-    background: url('https://via.placeholder.com/1200x600?text=Banner') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
-}
-
-.hero h2 {
-    font-size: 2.5rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin: 20px 0;
-}
-
-.cta-button {
-    background-color: #f39c12;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #e67e22;
-}
-
-.features {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.features h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-.feature {
-    margin-bottom: 30px;
-}
-
-.feature h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.pricing {
-    padding: 60px 0;
-    text-align: center;
-}
-
-.pricing h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-.pricing-plan {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 0 auto;
-    width: 300px;
-    display: inline-block;
-    margin: 20px;
-}
-
-.pricing-plan h3
-
     </style>
-
-    <!-- Cabeçalho -->
-    <header>
-        <div class="container">
-            <h1>Finanças Fáceis</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#features">Características</a></li>
-                    <li><a href="#pricing">Planos</a></li>
-                    <li><a href="#testimonials">Depoimentos</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
+</head>
+<body>
+    <div class= "container">
+        <div class="select">
+          <select>
+            <option value="1">Americano</option>
+            <option value="2">Latte</option>
+            <option value="3">Green Tea</option>
+          </select>
         </div>
-    </header>
-
-    <!-- Seção Principal -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>Transforme Sua Vida Financeira</h2>
-            <p>Gerencie suas finanças com facilidade e alcance seus objetivos financeiros.</p>
-            <a href="#contact" class="cta-button">Saiba Mais</a>
-        </div>
-    </section>
-
-    <!-- Seção de Características -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2>Características Principais</h2>
-            <div class="feature">
-                <h3>Controle Total</h3>
-                <p>Gerencie suas despesas e receitas com um painel intuitivo.</p>
-            </div>
-            <div class="feature">
-                <h3>Relatórios Detalhados</h3>
-                <p>Receba relatórios financeiros detalhados e gráficos.</p>
-            </div>
-            <div class="feature">
-                <h3>Segurança de Dados</h3>
-                <p>Suas informações financeiras são protegidas com criptografia de ponta.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de Planos -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <h2>Escolha Seu Plano</h2>
-            <div class="pricing-plan">
-                <h3>Básico</h3>
-                <p>Ideal para iniciantes.</p>
-                <span class="price">Grátis</span>
-                <ul>
-                    <li>Gerenciamento de Despesas</li>
-                    <li>Relatórios Básicos</li>
-                </ul>
-                <a href="#contact" class="cta-button">Comece Agora</a>
-            </div>
-            <div class="pricing-plan">
-                <h3>Premium</h3>
-                <p>Para quem busca mais recursos.</p>
-                <span class="price">R$49/mês</span>
-                <ul>
-                    <li>Controle Avançado</li>
-                    <li>Relatórios Detalhados</li>
-                    <li>Suporte Prioritário</li>
-                </ul>
-                <a href="#contact" class="cta-button">Assine Já</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de Depoimentos -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2>O que Nossos Clientes Dizem</h2>
-            <div class="testimonial">
-                <p>"O Finanças Fáceis transformou a forma como eu gerencio minhas finanças. Agora é muito mais fácil controlar meu orçamento!"</p>
-                <cite>- Ana Silva</cite>
-            </div>
-            <div class="testimonial">
-                <p>"Adoro os relatórios detalhados e o suporte excelente. Vale cada centavo do plano Premium!"</p>
-                <cite>- João Pereira</cite>
-            </div>
-            <div class="testimonial">
-                <p>"O sistema de segurança é impecável. Sinto-me tranquilo sabendo que meus dados estão protegidos."</p>
-                <cite>- Maria Oliveira</cite>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção FAQ -->
-    <section id="faq" class="faq">
-        <div class="container">
-            <h2>Perguntas Frequentes</h2>
-            <div class="faq-item">
-                <h3>Como posso começar a usar o Finanças Fáceis?</h3>
-                <p>Você pode começar criando uma conta gratuita e explorar as funcionalidades básicas. Para acessar recursos avançados, considere um plano pago.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Quais são as formas de pagamento aceitas?</h3>
-                <p>Aceitamos pagamentos via cartão de crédito, débito e PayPal.</p>
-            </div>
-            <div class="faq-item">
-                <h3>É seguro fornecer meus dados financeiros?</h3>
-                <p>Sim, utilizamos criptografia de ponta para garantir que seus dados estejam sempre seguros e protegidos.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Posso cancelar minha assinatura a qualquer momento?</h3>
-                <p>Sim, você pode cancelar sua assinatura a qualquer momento. Os detalhes estão descritos na nossa política de cancelamento.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de Contato -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <form action="#" method="post">
-                <input type="text" name="name" placeholder="Seu Nome" required>
-                <input type="email" name="email" placeholder="Seu Email" required>
-                <textarea name="message" placeholder="Sua Mensagem" required></textarea>
-                <button type="submit" class="cta-button">Enviar Mensagem</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Finanças Fáceis. Todos os direitos reservados.</p>
-            <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Serviço</a></p>
-        </div>
-    </footer>
+      </div> 
 </body>
 </html>
