@@ -106,7 +106,7 @@ var qmrToBRL
       const agora = new Date();
         console.log(agora)
         var data =  document.getElementById('data')
-        data.innerText = "Cotação para o dia: " + agora.getDate() + "/" + agora.getMonth() + "/" + agora.getFullYear()
+        data.innerText = "Cotação para o dia: " + agora.getDate() + "/" + (agora.getMonth() + 1) + "/" + agora.getFullYear()
 
       let Geral =[] ;
       fetch('../ACTS/cambio.act.php')

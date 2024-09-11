@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!--  end Bootstrao icons -->
 
-    <title>TCC</title>
+    <title>Home - Save</title>
     
 </head>
 <body>
@@ -49,7 +49,7 @@
              
             <section class="btn-contato">
                 <a href="#">
-                    <button>Contato</button>
+                    <button>Entar</button>
                 </a>
             </section>
 
