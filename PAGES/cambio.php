@@ -108,7 +108,9 @@
       <div class="result">
         <p id="rest">$</p>
       </div>
-
+      <div id="data">
+        <p>Carregando Data ... </p>
+      </div>
     </div>
   </section>
 

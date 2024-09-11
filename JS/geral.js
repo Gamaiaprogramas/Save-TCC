@@ -115,6 +115,14 @@ var qmrToBRL
             document.getElementById('gbp').textContent = 'Erro ao obter GBP';
             document.getElementById('jpy').textContent = 'Erro ao obter JPY';
           } else {
+
+            //data
+            const agora = new Date();
+            console.log(agora)
+            var data =  document.getElementById('data')
+            data.innerText = "Cotação para o dia: " + agora.getDate() + "/" + agora.getMonth() + "/" + agora.getFullYear()
+
+
             // Calcula quantos reais são necessários para comprar uma unidade da moeda
                // Calcula quantos reais são necessários para comprar uma unidade da moeda
                usdToBRL = (1 / data.USD).toFixed(2);
