@@ -57,7 +57,7 @@
 
     <div class="card">
       <div class="titulo">
-        <h1>Conversor</h1>
+        <h1><p class="orange">Con</p>versor</h1>
         <h3 id="valor">BRL > USD</h3>
       </div>
 

@@ -120,22 +120,78 @@ p {
     font-size: 1vw;
 }
 
-.titulo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;    padding: 20px;
+    width: 400px;
+    height: 400px;
+    text-align: center;
 }
 
-  .card{
+.card .titulo h1 {
+    font-size: 2vw;
+    margin: 0;
+    color: #10002b;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background-color: #fff;
-    gap: 2vw;
-    border-radius: 2vw;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    height: 500px;
-    width: 700px;
-  }
+}
+
+.card .titulo h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #666;
+}
+
+.card input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.card select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.card input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #10002b;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.card input[type="button"]:hover {
+    background-color: #1c004d;
+}
+
+.card .result {
+    margin-top: 20px;
+}
+
+.card .result p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.orange{
+    font-size: 2vw;
+    color: #ff6d00;
+}
