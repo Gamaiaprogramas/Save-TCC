@@ -103,6 +103,11 @@ var qmrToBRL
 
     
     function fetchExchangeRates() {
+      const agora = new Date();
+        console.log(agora)
+        var data =  document.getElementById('data')
+        data.innerText = "Cotação para o dia: " + agora.getDate() + "/" + agora.getMonth() + "/" + agora.getFullYear()
+
       let Geral =[] ;
       fetch('../ACTS/cambio.act.php')
         .then(response => response.json())
@@ -117,11 +122,7 @@ var qmrToBRL
           } else {
 
             //data
-            const agora = new Date();
-            console.log(agora)
-            var data =  document.getElementById('data')
-            data.innerText = "Cotação para o dia: " + agora.getDate() + "/" + agora.getMonth() + "/" + agora.getFullYear()
-
+            
 
             // Calcula quantos reais são necessários para comprar uma unidade da moeda
                // Calcula quantos reais são necessários para comprar uma unidade da moeda
