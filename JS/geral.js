@@ -40,7 +40,8 @@ var jodToBRL
 var bndToBRL
 var twdToBRL
 var penToBRL
-   
+var inrToBRL  
+var qmrToBRL 
    function LandingAct(){
     // landing 
     am5.ready(function() {
@@ -158,6 +159,8 @@ var penToBRL
                bndToBRL = (1 / data.BND).toFixed(2);
                twdToBRL = (1 / data.TWD).toFixed(2);
                penToBRL = (1 / data.PEN).toFixed(2);
+               inrToBRL = (1 / data.INR).toFixed(2);
+               qmrToBRL = (1 / data.QMR).toFixed(2);
 
 
         // Adiciona os valores convertidos ao array "Geral"
@@ -419,67 +422,177 @@ SGD - Singapura (Dólar de Singapura)
         
 
     }
+
+    function mudou() {
+      const val =  document.getElementById('valor');
+      const symbol = document.getElementById('currencySelect').value
+      val.innerText = "BRL > " + symbol
+    }
     
     function calc() {
             const val = document.getElementById('num').value;
+            const result =  document.getElementById('rest');
             const symbol = document.getElementById('currencySelect').value
             console.log(symbol)
             
             switch (symbol) {
-              case "USD":
+                case "USD":
                   var vlr = (val / usdToBRL).toFixed(2)              
-                  console.log(vlr)
+                  result.innerText = "$"+ vlr
                 break;
                 case "EUR":
                   var vlr = (val / eurToBRL).toFixed(2)              
-                  console.log(vlr)
+                  result.innerText = "$"+ vlr
                 break;
                 case "JPY":
                   var vlr = (val / jpyToBRL).toFixed(2)              
-                  console.log(vlr)
+                  result.innerText = "$"+ vlr
                 break;
-                case "USD":
-                  var vlr = (val / usdToBRL).toFixed(2)              
-                  console.log(vlr)
+                case "GBP":
+                  var vlr = (val / gbpToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
                 break;
-                case "USD":
-                  var vlr = (val / usdToBRL).toFixed(2)              
-                  console.log(vlr)
+                case "AUD":
+                  var vlr = (val / audToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                
                 break;
-                case "USD":
-                  var vlr = (val / usdToBRL).toFixed(2)              
-                  console.log(vlr)
+                case "CAD":
+                  var vlr = (val / cadToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
                 break;
-                case "USD":
-                  var vlr = (val / usdToBRL).toFixed(2)              
-                  console.log(vlr)
+                case "CHF":
+                  var vlr = (val / chfToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
                 break;
-                case "USD":
-                  var vlr = (val / usdToBRL).toFixed(2)              
-                  console.log(vlr)
+                case "CNY":
+                  var vlr = (val / cnyToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
                 break;
-                case "USD":
-                  var vlr = (val / usdToBRL).toFixed(2)              
-                  console.log(vlr)
+                case "NZD":
+                  var vlr = (val / nzdToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
                 break;
-                case "USD":
-                  var vlr = (val / usdToBRL).toFixed(2)              
-                  console.log(vlr)
+                case "INR":
+                  var vlr = (val / inrToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
                 break;
-                case "USD":
-                  var vlr = (val / usdToBRL).toFixed(2)              
-                  console.log(vlr)
+                case "MXN":
+                  var vlr = (val / mxnToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
                 break;
-                case "USD":
-                  var vlr = (val / usdToBRL).toFixed(2)              
-                  console.log(vlr)
+                case "SGD":
+                  var vlr = (val / sgdToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
                 break;
-                case "USD":
-                  var vlr = (val / usdToBRL).toFixed(2)              
-                  console.log(vlr)
+                case "TRY":
+                  var vlr = (val / tryToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
                 break;
-
-            
+                case "RUB":
+                  var vlr = (val / rubToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "ZAR":
+                  var vlr = (val / zarToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "SEK":
+                  var vlr = (val / sekToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "NOK":
+                  var vlr = (val / nokToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "AED":
+                  var vlr = (val / aedToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "ARS":
+                  var vlr = (val / arsToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "CLP":
+                  var vlr = (val / clpToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "HUF":
+                  var vlr = (val / hufToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "ILS":
+                  var vlr = (val / ilsToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "MYR":
+                  var vlr = (val / myrToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "PHP":
+                  var vlr = (val / phpToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "PLN":
+                  var vlr = (val / plnToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "THB":
+                  var vlr = (val / thbToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "LKR":
+                  var vlr = (val / lkrToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "RSD":
+                  var vlr = (val / rsdToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "CZK":
+                  var vlr = (val / czkToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "MUR":
+                  var vlr = (val / murToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "KES":
+                  var vlr = (val / kesToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "BHD":
+                  var vlr = (val / bhdToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "KWD":
+                  var vlr = (val / kwdToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "QAR":
+                  var vlr = (val / qarToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "OMR":
+                  var vlr = (val / omrToBRL).toFixed(2)           
+                  result.innerText = "$"+ vlr
+                break;
+                case "JOD":
+                  var vlr = (val / jodToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "BND":
+                  var vlr = (val / bndToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "TWD":
+                  var vlr = (val / twdToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
+                case "PEN":
+                  var vlr = (val / penToBRL).toFixed(2)              
+                  result.innerText = "$"+ vlr
+                break;
               default:
                 break;
             }

@@ -79,11 +79,12 @@ p {
   }
 
   .cambiar-item{
+    flex-wrap: wrap;
     margin-top: -3vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vw;
+    height: auto;
     width: 100%;
 }
 
@@ -113,10 +114,28 @@ p {
     color: #ff6d00;
     font-weight: 300;
 }
+
+
+.txt-itens p{
+    font-size: 1vw;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
   .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: #fff;
+    gap: 2vw;
     border-radius: 2vw;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    height: 100%;
-    width: 40%;
+    height: 500px;
+    width: 700px;
   }
