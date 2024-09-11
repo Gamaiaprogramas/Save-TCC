@@ -142,7 +142,12 @@
         </div>
 
         <div class="right">
-        <h1>O que são ações</h1>
+          <h1>O que são ações</h1>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/jtgEN3EO1h4?si=6ibY7OP9I777Yufy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <p>
+            Se você está querendo começar a investir em ações, é necessário entender o que, de fato, elas são, como se rentabiliza com elas e quais os riscos 
+            envolvidos. Neste episódio, Enzo nos explica detalhadamente sobre todos esses pontos, para que você possa tomar suas decisões. 
+          </p>
         </div>
     </div>
 

@@ -1,4 +1,45 @@
-   
+var usdToBRL
+var eurToBRL
+var jpyToBRL
+var gbpToBRL
+var audToBRL
+var cadToBRL
+var chfToBRL
+var cnyToBRL
+var sekToBRL
+var nzdToBRL
+var mxnToBRL
+var sgdToBRL
+var hkdToBRL
+var krwToBRL
+var tryToBRL
+var rubToBRL
+var zarToBRL
+var nokToBRL
+var aedToBRL
+var arsToBRL
+var clpToBRL
+var copToBRL
+var hufToBRL
+var ilsToBRL
+var myrToBRL
+var phpToBRL
+var plnToBRL
+var thbToBRL
+var vndToBRL
+var lkrToBRL
+var rsdToBRL
+var czkToBRL
+var murToBRL
+var kesToBRL
+var bhdToBRL
+var kwdToBRL
+var qarToBRL
+var omrToBRL
+var jodToBRL
+var bndToBRL
+var twdToBRL
+var penToBRL
    
    function LandingAct(){
     // landing 
@@ -75,18 +116,49 @@
           } else {
             // Calcula quantos reais são necessários para comprar uma unidade da moeda
                // Calcula quantos reais são necessários para comprar uma unidade da moeda
-        var usdToBRL = (1 / data.USD).toFixed(2);
-        var eurToBRL = (1 / data.EUR).toFixed(2);
-        var jpyToBRL = (1 / data.JPY).toFixed(2);
-        var gbpToBRL = (1 / data.GBP).toFixed(2);
-        var audToBRL = (1 / data.AUD).toFixed(2);
-        var cadToBRL = (1 / data.CAD).toFixed(2);
-        var chfToBRL = (1 / data.CHF).toFixed(2);
-        var cnyToBRL = (1 / data.CNY).toFixed(2);
-        var sekToBRL = (1 / data.SEK).toFixed(2);
-        var nzdToBRL = (1 / data.NZD).toFixed(2);
-        var mxnToBRL = (1 / data.MXN).toFixed(2);
-        var sgdToBRL = (1 / data.SGD).toFixed(2);
+               usdToBRL = (1 / data.USD).toFixed(2);
+               eurToBRL = (1 / data.EUR).toFixed(2);
+               jpyToBRL = (1 / data.JPY).toFixed(2);
+               gbpToBRL = (1 / data.GBP).toFixed(2);
+               audToBRL = (1 / data.AUD).toFixed(2);
+               cadToBRL = (1 / data.CAD).toFixed(2);
+               chfToBRL = (1 / data.CHF).toFixed(2);
+               cnyToBRL = (1 / data.CNY).toFixed(2);
+               sekToBRL = (1 / data.SEK).toFixed(2);
+               nzdToBRL = (1 / data.NZD).toFixed(2);
+               mxnToBRL = (1 / data.MXN).toFixed(2);
+               sgdToBRL = (1 / data.SGD).toFixed(2);
+               hkdToBRL = (1 / data.HKD).toFixed(2);
+               krwToBRL = (1 / data.KRW).toFixed(2);
+               tryToBRL = (1 / data.TRY).toFixed(2);
+               rubToBRL = (1 / data.RUB).toFixed(2);
+               zarToBRL = (1 / data.ZAR).toFixed(2);
+               nokToBRL = (1 / data.NOK).toFixed(2);
+               aedToBRL = (1 / data.AED).toFixed(2);
+               arsToBRL = (1 / data.ARS).toFixed(2);
+               clpToBRL = (1 / data.CLP).toFixed(2);
+               copToBRL = (1 / data.COP).toFixed(2);
+               hufToBRL = (1 / data.HUF).toFixed(2);
+               ilsToBRL = (1 / data.ILS).toFixed(2);
+               myrToBRL = (1 / data.MYR).toFixed(2);
+               phpToBRL = (1 / data.PHP).toFixed(2);
+               plnToBRL = (1 / data.PLN).toFixed(2);
+               thbToBRL = (1 / data.THB).toFixed(2);
+               vndToBRL = (1 / data.VND).toFixed(2);
+               lkrToBRL = (1 / data.LKR).toFixed(2);
+               rsdToBRL = (1 / data.RSD).toFixed(2);
+               czkToBRL = (1 / data.CZK).toFixed(2);
+               murToBRL = (1 / data.MUR).toFixed(2);
+               kesToBRL = (1 / data.KES).toFixed(2);
+               bhdToBRL = (1 / data.BHD).toFixed(2);
+               kwdToBRL = (1 / data.KWD).toFixed(2);
+               qarToBRL = (1 / data.QAR).toFixed(2);
+               omrToBRL = (1 / data.OMR).toFixed(2);
+               jodToBRL = (1 / data.JOD).toFixed(2);
+               bndToBRL = (1 / data.BND).toFixed(2);
+               twdToBRL = (1 / data.TWD).toFixed(2);
+               penToBRL = (1 / data.PEN).toFixed(2);
+
 
         // Adiciona os valores convertidos ao array "Geral"
         Geral.push(usdToBRL, eurToBRL, jpyToBRL, gbpToBRL, audToBRL, cadToBRL, chfToBRL, cnyToBRL, sekToBRL, nzdToBRL, mxnToBRL, sgdToBRL);
@@ -348,3 +420,71 @@ SGD - Singapura (Dólar de Singapura)
 
     }
     
+    function calc() {
+            const val = document.getElementById('num').value;
+            const symbol = document.getElementById('currencySelect').value
+            console.log(symbol)
+            
+            switch (symbol) {
+              case "USD":
+                  var vlr = (val / usdToBRL).toFixed(2)              
+                  console.log(vlr)
+                break;
+                case "EUR":
+                  var vlr = (val / eurToBRL).toFixed(2)              
+                  console.log(vlr)
+                break;
+                case "JPY":
+                  var vlr = (val / jpyToBRL).toFixed(2)              
+                  console.log(vlr)
+                break;
+                case "USD":
+                  var vlr = (val / usdToBRL).toFixed(2)              
+                  console.log(vlr)
+                break;
+                case "USD":
+                  var vlr = (val / usdToBRL).toFixed(2)              
+                  console.log(vlr)
+                break;
+                case "USD":
+                  var vlr = (val / usdToBRL).toFixed(2)              
+                  console.log(vlr)
+                break;
+                case "USD":
+                  var vlr = (val / usdToBRL).toFixed(2)              
+                  console.log(vlr)
+                break;
+                case "USD":
+                  var vlr = (val / usdToBRL).toFixed(2)              
+                  console.log(vlr)
+                break;
+                case "USD":
+                  var vlr = (val / usdToBRL).toFixed(2)              
+                  console.log(vlr)
+                break;
+                case "USD":
+                  var vlr = (val / usdToBRL).toFixed(2)              
+                  console.log(vlr)
+                break;
+                case "USD":
+                  var vlr = (val / usdToBRL).toFixed(2)              
+                  console.log(vlr)
+                break;
+                case "USD":
+                  var vlr = (val / usdToBRL).toFixed(2)              
+                  console.log(vlr)
+                break;
+                case "USD":
+                  var vlr = (val / usdToBRL).toFixed(2)              
+                  console.log(vlr)
+                break;
+
+            
+              default:
+                break;
+            }
+
+
+
+  
+}

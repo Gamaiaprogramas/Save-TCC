@@ -11,10 +11,10 @@ body{
     flex-direction: column;
 overflow-x: hidden;
 width: 100%;
+gap: 4vw;
 
 }
 .cambio{
-    margin-top: 7vw;
     display: flex;
     width: 100%;
     align-items: center;
@@ -67,6 +67,7 @@ h1 {
     }
 }
 
+
 p {
     font-size: 18px;
     margin: 10px 0;
@@ -75,4 +76,47 @@ p {
     display:  flex;
     width: 80%;
     height: 30vw;
+  }
+
+  .cambiar-item{
+    margin-top: -3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vw;
+    width: 100%;
+}
+
+.interfacea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    width: 55%;
+}
+
+.txt-itens {
+    padding: 2vw;
+}
+
+.cambiar-item img{
+    width: 20vw;
+}
+
+.txt-itens h3{
+    font-size: 3em;
+    line-height: 50px;
+    margin-bottom: 20px;
+    color: #10002b;
+}
+.txt-itens h3 span{
+    color: #ff6d00;
+    font-weight: 300;
+}
+  .card{
+    background-color: #fff;
+    border-radius: 2vw;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    height: 100%;
+    width: 40%;
   }

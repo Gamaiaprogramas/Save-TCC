@@ -97,9 +97,9 @@
                     <button><i class="bi bi-currency-exchange"></i> <p>Câmbio de Moedas</p> </button>
                 </a>
                 <a href="../PAGES/action.php">
-                    <button><i class="bi bi-headset"></i> <p>Ações</p> </button>
+                    <button><i class="bi bi-headset"></i> <p>Ações e Rentabilidade</p> </button>
                 </a>
-                <a href="#">
+                <a href="../PAGES/login.php">
                     <button><i class="bi bi-cash-coin"></i> <p>Planejamento Financeiro</p> </button>
                 </a>
                 <a href="#">
