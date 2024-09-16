@@ -3,7 +3,9 @@
 18/08 - Guilherme Marques {
     Estou incluindo a parte de cambio, arrumando a utilização do header/footer e também deixei o javaScript como um codigo unico
 }
-
+16/09 Guilherme Marques{
+    incluindo cadastro
+}
 https://hgbrasil.com/status/finance#
 
 Chaves de apis{

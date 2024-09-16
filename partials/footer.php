@@ -25,6 +25,8 @@
         </div>
     </footer>
     <script src="../JS/geral.js"></script>
-    <script></script>
+    <script>
+        
+    </script>
 </body>
 </html>
