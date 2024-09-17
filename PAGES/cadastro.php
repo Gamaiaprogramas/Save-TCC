@@ -1,19 +1,19 @@
+
+<link rel="stylesheet" href="../STYLE/cadastro.css">
+<style>
+  header{
+    height: 7vw !important;
+    background-color: #10002b !important;
+    position: relative !important;
+  }
+</style>
 <?php
-    @session_start();
-    if (isset($_SESSION['msg'])) {
-        echo $_SESSION['msg'];
-        unset($_SESSION['msg']);
-    }
-    ?>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <script src="../js/geral.js"></script>r
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadastrar Save</title>
-    </head>
-    <body>
+
+    include("../partials/header.php");
+  ?>
+    .confirmar
+
+
         <div>
             <h1>Entre para SAVE!</h1>
             <fieldset>
@@ -38,6 +38,13 @@
            
                     <input type="submit" class="buttCadastro" value="Enviar"> 
         </form>
+            <?php
+                @session_start();
+                if (isset($_SESSION['msg'])) {
+                    echo $_SESSION['msg'];
+                    unset($_SESSION['msg']);
+                }
+            ?>
             </fieldset>
         </div>
 
