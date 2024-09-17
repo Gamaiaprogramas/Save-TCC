@@ -28,7 +28,7 @@
                             <div class="direita">
                                 <label><p>Emali:</p><input type="text" name="email"></label>
                                 <label><p>Informe seu gênero</p>
-                                    <select id="opcao" name="sexo">
+                                    <select id="opcao" name="genero">
                                         <option value="opcao1">Masculino</option>
                                         <option value="opcao2">Feminino</option>
                                         <option value="opcao3">Não binario</option>
@@ -37,7 +37,7 @@
                                 </label>
                                 <label><p>Nascimento:</p><input type="date" name="nascto"></label>
                                 <label><p>Confirmar senha:</p><input type="password" name="senha2" onkeyup="verificaSenha(senha1.value,senha2.value)" require></label>
-                            </div>  
+                            </div>  <input type="submit" class="buttCadastro" value="Enviar">
                         </form>
                         <?php
                             @session_start();
@@ -49,24 +49,22 @@
                 </div>
                 <div class="final">
                     <div class="finalEsquerda">
-                        <input type="submit" class="buttCadastro" value="Enviar">
+                        
                     </div>
                     <div class="finalDireita">
                         <p>Já possui cadastro?</p>
-                        <a href="#">
+                        <a href="../PAGES/login.php">
                         <button>Entrar</button>
                     </div>
                 </a>
                 </div>
                 
-
+ <script>
+            window.onload = CadastroAct;
+        </script>
             </div>
         </div>
         <?php
         include("../partials/footer.php");
         ?>
-    </body>
-        <script>
-            window.onload = CadastroAct;
-        </script>
-    </html>
+  
