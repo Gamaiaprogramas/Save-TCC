@@ -49,7 +49,7 @@
              
             <section class="btn-contato">
                 <a href="#">
-                    <button>Entar</button>
+                    <button>Entrar</button>
                 </a>
             </section>
 

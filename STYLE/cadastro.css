@@ -10,7 +10,8 @@ body{
     justify-content: center;
     width: 80%;
     height: 37vw;
-    background-color: aqua;
+    background-color: #10002b;
+    color: #ff6d00;
     border-radius: 5% 0 0 5%;
 }
 
@@ -24,7 +25,7 @@ body{
 
 #formAddCliente{
     display: flex;
-    gap: 1rem;
+    gap: 1.5vw;
 }
 
 .esquerda{
@@ -34,7 +35,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 5rem;
+    gap: 3vw;
 }
 
 .direita{
@@ -44,7 +45,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 5rem;
+    gap: 3vw;
 }
 
 .foto{
@@ -59,7 +60,7 @@ body{
 .foto img{
     width: 100%;
     height: 100%;
-    border-radius: 5%;
+    border-radius: 3%;
 }
 
 .cadastro{
@@ -69,4 +70,28 @@ body{
     flex-direction: column;
     height: 100%;
     width: 60%;
+}
+
+.final{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3vw;
+    width: 47.5vw;
+    gap: 2vw;
+}
+
+.finalEsquerda{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 38%;
+}
+
+.finalDireita{
+    display: flex;
+    width: 50%;
+    gap: 1vw;
+    margin-left: 3%;
 }

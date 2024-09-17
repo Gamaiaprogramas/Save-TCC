@@ -21,7 +21,7 @@
                         <form action="../ACTS/cadastro.act.php" method="post" enctype="multipart/form-data" id="formAddCliente" onsubmit="return verificaForm()">
                             <div class="esquerda">
                                 <label><p>Nome:</p><input type="text" name="nome"></label>
-                                <label><p>Cpf:</p><input type="text" name="cpf"></label>
+                                <label><p>CPF:</p><input type="text" name="cpf"></label>
                                 <label><p>telefone:</p><input type="text" name="telefone" id="txtTelefone"></label>
                                 <label><p>Senha:</p><input type="password" name="senha1" onkeyup="verificaSenha(senha1.value,senha2.value)" require></label>
                             </div>
@@ -47,12 +47,21 @@
                             }
                         ?>
                 </div>
+                <div class="final">
+                    <div class="finalEsquerda">
+                        <input type="submit" class="buttCadastro" value="Enviar">
+                    </div>
+                    <div class="finalDireita">
+                        <p>Já possui cadastro?</p>
+                        <a href="#">
+                        <button>Entrar</button>
+                    </div>
+                </a>
+                </div>
                 
-                <input type="submit" class="buttCadastro" value="Enviar"> 
+
             </div>
         </div>
-
-        
         <?php
         include("../partials/footer.php");
         ?>
