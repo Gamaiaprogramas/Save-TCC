@@ -48,23 +48,9 @@
             </section>  
              
             <section class="btn-contato">
-              
-            <?php 
-             @session_start();  
-                if(isset($_SESSION['logado']) && $_SESSION['logado'] == true){
-                    echo "<img src='";
-                    echo $_SESSION['foto'];
-                    echo "'>";  
-                }
-                else{
-                    echo "<a href='../PAGES/login.php'>
+                <a href="#">
                     <button>Entar</button>
-                    </a>";
-                }
-                
-            ?>
-            
-                
+                </a>
             </section>
 
             <div class="btn-menu-mob" id="btn-menu-mob">
