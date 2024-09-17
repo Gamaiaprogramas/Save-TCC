@@ -92,7 +92,7 @@ header .btn-contato button{
     width: 140px;
     height: 50px;
 }
-header .btn-contato img{
+header .btn-contato  a img{
     height: 10vh;
     width: 10vh;
     border-radius: 50%;

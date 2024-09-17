@@ -52,9 +52,9 @@
             <?php 
              @session_start();  
                 if(isset($_SESSION['logado']) && $_SESSION['logado'] == true){
-                    echo "<img src='";
+                    echo "<a href= '../ACTS/logoff.act.php' ><img src='";
                     echo $_SESSION['foto'];
-                    echo "'>";  
+                    echo "'></a>";  
                 }
                 else{
                     echo "<a href='../PAGES/login.php'>
