@@ -11,11 +11,10 @@
 
     include("../partials/header.php");
   ?>
-    .confirmar
 
 
         <div>
-            <h1>Entre para SAVE!</h1>
+            <h1>Entre para SAVE!!</h1>
             <fieldset>
                 <form action="../ACTS/cadastro.act.php" method="post" enctype="multipart/form-data" id="formAddCliente" onsubmit="return verificaForm()">
 
