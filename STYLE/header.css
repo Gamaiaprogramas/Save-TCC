@@ -92,6 +92,11 @@ header .btn-contato button{
     width: 140px;
     height: 50px;
 }
+header .btn-contato img{
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+}
 
 /* Estilo do botão menu mobile */
 header .btn-menu-mob{

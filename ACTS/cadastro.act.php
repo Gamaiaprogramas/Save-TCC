@@ -15,10 +15,11 @@ if($busca->num_rows == 0){
     }
     if ($senha != "") {
 
-        if (mysqli_query($con, "INSERT INTO `registro` (`Id_user`, `nome`, `email`,`cpf`,`genero`, `telefone`, `nascto`, `senha`) VALUES 
-        (NULL, '$nome', '$email','$cpf','$sexo','$telefone', '$nascto','$senha');")) {
+        if (mysqli_query($con, "INSERT INTO `registro` (`Id_user`, `nome`, `email`,`cpf`,`genero`, `telefone`, `nascto`, `senha`,`foto`, `nivel`) VALUES 
+        (NULL, '$nome', '$email','$cpf','$sexo','$telefone', '$nascto','$senha','https://api.dicebear.com/8.x/initials/svg?seed=$nome&backgroundColor=ff6d00
+', '2');")) {
             $msg = "<p class=\"alerta green\">Registro Criado com sucesso!</p>";
-            $destino = "location:logar.php";
+            $destino = "location:../PAGES/login.php";
         } else {
             $msg = "<p class=\"alerta red\">Erro ao gravar registro: " . $con->error . "</p>";
             $destino = "location:../PAGES/cadastro.php";
