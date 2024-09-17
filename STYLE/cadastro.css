@@ -1,0 +1,72 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tudo{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 37vw;
+    background-color: aqua;
+    border-radius: 5% 0 0 5%;
+}
+
+.separar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 85%;
+}
+
+#formAddCliente{
+    display: flex;
+    gap: 1rem;
+}
+
+.esquerda{
+    width: 20vw;
+    height: 31vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.direita{
+    width: 20vw;
+    height: 31vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+
+}
+
+.foto img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+}
+
+.cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+}
