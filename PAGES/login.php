@@ -7,30 +7,34 @@
     <title>Cadastro</title>
 </head>
 <body>
-
+<?php
+    @session_start();
+    if (isset($_SESSION['msg'])) {
+        echo $_SESSION['msg'];
+        unset($_SESSION['msg']);
+    }
+    ?>
     <div class="main-login">
         <div class="left-login">
             <h1> <span>Faça login </span> <br>Para começar sua jornada</h1>
             <img src="../PICS/imgs/manage-money-animate.svg" class = "left-cadastro-image" alt="" srcset="">
         </div>
-        <div class="right-login">
+        <form action="../ACTS/login.act.php" method="post" enctype="multipart/form-data" id="formAddCliente" onsubmit="return verificaForm()" class="right-login">
             <div class="card-login">
                 <h1>Entrar na <span>Save</span> </h1>
                 <div class="textfield">
-                    <label for="email">Email</label>
+                    <label>Email</label>
                     <input type="text" name="email" placeholder="Email">
                 </div>
                 <div class="textfield">
                     <label for="senha">Senha</label>
-                    <input type="text" name="senha" placeholder="Senha  ">
+                    <input  type="passworld" name="senha1" onkeyup="verificaSenha(senha1.value,senha2.value)" require placeholder="Senha  ">
                 </div>
-                <div class="textfield">
-                    <label for="confirmar-senha">Confirmar senha</label>
-                    <input type="text" name="confirmar-senha" placeholder="Confirmar senha">
-                </div>
-                <button class="btn-cadastrar-se">Entrar</button>
+                
+                <input type="submit" class="btn-cadastrar-se" value="Entrar">
+                
             </div>
-        </div>
+        </form>
     </div>
     
 </body>

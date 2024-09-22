@@ -23,7 +23,7 @@
             
         }else{
             echo "Senha Errada";
-            $destino = "location:Logar.php";
+            $destino = "location:../PAGES/login.php";
             header($destino);
         }
     }else{
