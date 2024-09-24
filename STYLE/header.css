@@ -25,6 +25,58 @@ header .btn-contato button, .hero-site button , .hoteis button{
 header .btn-contato button:hover, .hero-site button:hover, .hoteis button:hover{
     background-color: #ff6d00;
 }
+/* Estilos para o dropdown da foto do usuário */
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.user-photo {
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.user-photo:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo do dropdown (conteúdo do menu) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    visibility: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Mostrar dropdown quando passar o mouse */
+.user-menu:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
 
 /*estilo do header*/
 header{
