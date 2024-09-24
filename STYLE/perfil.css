@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+  
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+
+.main-Perfil{
+    display: flex;
+    background-color: blue;
+    height: 80vh;
+    align-items: center;
+    justify-content: space-around;
+    width: 70vw;
+}
+.divImg >img{
+    height: 50vh;
+    width: 40vh;
+}
+.divImg { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 60%;
+    width: 40%;
+}
+.divImg > button{
+     width: inherit;
+     cursor: pointer;
+     height: 4vh;
+}
+.divInfo{
+    display: flex;
+    width: 40%;
+    
+    flex-direction: column;
+    
+}
+.divInfo li{
+    color: white;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 5vh;
+    text-decoration: none;
+}

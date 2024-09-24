@@ -17,6 +17,9 @@
             $_SESSION['Id_user'] = $clientes['Id_user'];
             $_SESSION['foto'] = $clientes['foto'];
             $_SESSION['nivel'] = $clientes['nivel'];
+            $_SESSION['cpf'] = $clientes['cpf'];
+            $_SESSION['telefone'] = $clientes['telefone'];
+            $_SESSION['nascto'] = $clientes['nascto'];
             $msg = "<p class=green>Sessão Iniciada</p>";
             $destino = "location:../PAGES/landing.php";
             header($destino);
