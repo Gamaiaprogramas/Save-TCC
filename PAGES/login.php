@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="../STYLE/cadastro.css">
     <title>Cadastro</title>
 </head>
+
+<header>
+    <img src="../PICS/imgs/logo_Alternativa-removebg.png" alt="">
+</header>
+
 <body>
 <?php
     @session_start();
