@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION['valores'] = $_POST['valores'];
     $_SESSION['juros'] = $_POST['juros'];
     $_SESSION['tempo'] = $_POST['tempo'];
-
+    $_SESSION['saldo'] = $_POST['saldo'];
     // Redireciona para a próxima página
     header("Location: ../PAGES/confirmacaoInf.php");
     exit();
@@ -64,6 +64,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Informe suas Dívidas</h1>
 
     <form method="POST">
+        <div>
+            <h1>Informe seu saldo:</h1>
+            <input type="text" name="saldo" required><br>
+        </div>
         <div id="dividas-container">
             <div class="divida-item">
                 <label>Nome da Dívida 1:</label>
