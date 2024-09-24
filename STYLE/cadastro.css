@@ -18,7 +18,14 @@ header {
 }
 header img{
     margin-left: 4vh;
+    transition: 0.7s;
 }
+
+header img:hover{
+    scale: 1.03;
+    
+}
+
 .main-login{
     width: 100%;
     padding: 1vw;
@@ -132,7 +139,14 @@ header img{
     color: #10002b;
     background-color: #ff6d00;
     cursor: pointer;
+    transition: 0.7s;
     box-shadow: 0px 10px 40px -12px #ff6f008e;
+}
+
+.btn-cadastrar-se:hover{
+    /*scale: 1.03;*/
+    background-color: #10002b;
+    color: #ff6d00;
 }
 
 .forgot a{

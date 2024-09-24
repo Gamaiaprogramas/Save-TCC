@@ -8,7 +8,9 @@
 </head>
 
 <header>
-    <img src="../PICS/imgs/logo_Alternativa-removebg.png" alt="">
+    <a href="../PAGES/landing.php">
+        <img src="../PICS/imgs/logo_Alternativa-removebg.png" alt="">
+    </a>
 </header>
 
 <body>
