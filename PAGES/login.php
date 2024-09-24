@@ -31,11 +31,12 @@
                     <label>Email</label>
                     <input type="text" name="email" placeholder="Email">
                 </div>
+                <br>
                 <div class="textfield">
                     <label for="senha">Senha</label>
                     <input  type="passworld" name="senha1" onkeyup="verificaSenha(senha1.value,senha2.value)" require placeholder="Senha  ">
                 </div>
-                
+                <br>
                 <input type="submit" class="btn-cadastrar-se" value="Entrar">
                 <div class="forgot">
                     <p>Não tem cadastro? <a href="../PAGES/cadastro.php">Cadastre-se Já</a></p>

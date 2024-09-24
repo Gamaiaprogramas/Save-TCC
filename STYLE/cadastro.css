@@ -10,13 +10,15 @@ body{
 }
 
 header {
-    padding: 10px;
+    padding: 10px;  
     /*display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1vw;*/
 }
-
+header img{
+    margin-left: 4vh;
+}
 .main-login{
     width: 100%;
     padding: 1vw;
@@ -39,7 +41,7 @@ header {
 }
 
 .left-login > h1{
-    font-size: 2vw;
+    font-size: 1.7vw;
     color: #ff6d00;
    
 }
@@ -50,6 +52,7 @@ header {
 
 .left-cadastro-image{
      width: 25vw;
+     height: 40vh;
 }
 
 .right-login{
@@ -61,6 +64,7 @@ header {
 
 .card-login{
     width: 60%;
+
     display: flex;
     justify-content: center;
     align-items: center;
