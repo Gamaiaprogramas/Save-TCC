@@ -96,11 +96,7 @@
         </div>
     </div>
 
-    <?php 
-
-  include("../partials/footer.php");
-
-?>
+  
 
     <script>
             window.onload = CadastroAct;
