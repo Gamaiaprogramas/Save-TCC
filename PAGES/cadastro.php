@@ -94,11 +94,17 @@
     
             </div>    
         </div>
-        <script>
-                window.onload = CadastroAct;
-            </script>
-        <script src="../JS/geral.js"></script>
-    </body>
+    </div>
 
+    <?php 
 
+  include("../partials/footer.php");
+
+?>
+
+    <script>
+            window.onload = CadastroAct;
+        </script>
+    <script src="../JS/geral.js"></script>
+</body>
 </html>

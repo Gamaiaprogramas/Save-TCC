@@ -6,7 +6,7 @@ $msg = "";
 $destino = "location:../PAGES/confirmacaoInf.php";
 
 // Verifica se as informações necessárias estão na sessão
-if (isset($_SESSION['dividas'], $_SESSION['valores'], $_SESSION['juros'], $_SESSION['tempo'], $_SESSION['saldo'], $_SESSION['Id_user'])) {
+if (isset($_SESSION['dividas'], $_SESSION['valores'], $_SESSION['juros'], $_SESSION['tempo'], $_SESSION['saldo'], $_SESSION['Id_user'],$_SESSION['nivelDivida'])) {
     
     // Extrai os dados das sessões
     $dividas = $_SESSION['dividas'];
@@ -15,7 +15,7 @@ if (isset($_SESSION['dividas'], $_SESSION['valores'], $_SESSION['juros'], $_SESS
     $tempos = $_SESSION['tempo'];
     $saldo = $_SESSION['saldo'];
     $user_id = $_SESSION['Id_user'];  // ID do usuário logado
-
+    $nivelDivida = $_SESSION['nivelDivida'];
     // Concatena os dados das dívidas, valores, juros e tempos em strings separadas por vírgulas
     $dividasStr = implode(',', $dividas);
     $valoresStr = implode(',', $valores);
@@ -23,8 +23,8 @@ if (isset($_SESSION['dividas'], $_SESSION['valores'], $_SESSION['juros'], $_SESS
     $temposStr = implode(',', $tempos);
 
     // Cria a consulta SQL para inserir no banco de dados
-    $query = "INSERT INTO `informacao` (`Nomes_Dividas`, `Valores_Dividas`, `Tempo_Dividas`, `Juros_Dividas`, `Id_User`, `saldo`) 
-              VALUES ('$dividasStr', '$valoresStr', '$temposStr', '$jurosStr', '$user_id', '$saldo')";
+    $query = "INSERT INTO `informacao` (`saldo`,`Nomes_Dividas`, `Valores_Dividas`, `Tempo_Dividas`, `Juros_Dividas`, `Id_User`, `nivel`) 
+              VALUES ('$saldo','$dividasStr', '$valoresStr', '$temposStr', '$jurosStr', '$user_id', $nivelDivida)";
 
     // Executa a consulta
     if (mysqli_query($con, $query)) {
