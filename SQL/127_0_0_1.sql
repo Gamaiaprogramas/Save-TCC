@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 22/09/2024 às 18:06
--- Versão do servidor: 8.3.0
--- Versão do PHP: 8.2.18
+-- Tempo de geração: 24-Set-2024 às 20:57
+-- Versão do servidor: 8.0.27
+-- versão do PHP: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,29 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `bd_clientes`
 --
-CREATE DATABASE IF NOT EXISTS `bd_clientes` DEFAULT CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci;
+CREATE DATABASE IF NOT EXISTS `bd_clientes` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `bd_clientes`;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tb_clientes`
+-- Estrutura da tabela `tb_clientes`
 --
 
 DROP TABLE IF EXISTS `tb_clientes`;
 CREATE TABLE IF NOT EXISTS `tb_clientes` (
   `codigo` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `email` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `telefone` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `nome` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `telefone` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `nascto` date NOT NULL,
-  `fotoUrl` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `senha` varchar(32) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `fotoUrl` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `senha` varchar(32) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`codigo`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 --
--- Despejando dados para a tabela `tb_clientes`
+-- Extraindo dados da tabela `tb_clientes`
 --
 
 INSERT INTO `tb_clientes` (`codigo`, `nome`, `email`, `telefone`, `nascto`, `fotoUrl`, `senha`) VALUES
@@ -56,7 +56,7 @@ USE `bd_cliente_camisa`;
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `pedidos`
+-- Estrutura da tabela `pedidos`
 --
 
 DROP TABLE IF EXISTS `pedidos`;
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `pedidos` (
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Despejando dados para a tabela `pedidos`
+-- Extraindo dados da tabela `pedidos`
 --
 
 INSERT INTO `pedidos` (`numeroPedido`, `clientePedido`, `dataPedido`, `itensPedido`, `precoPedido`) VALUES
@@ -81,7 +81,7 @@ INSERT INTO `pedidos` (`numeroPedido`, `clientePedido`, `dataPedido`, `itensPedi
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `produtos`
+-- Estrutura da tabela `produtos`
 --
 
 DROP TABLE IF EXISTS `produtos`;
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `produtos` (
 ) ENGINE=MyISAM AUTO_INCREMENT=64 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Despejando dados para a tabela `produtos`
+-- Extraindo dados da tabela `produtos`
 --
 
 INSERT INTO `produtos` (`nomeCamisa`, `infoProduto`, `precoProduto`, `timeProduto`, `codProduto`, `fotoProduto`) VALUES
@@ -160,26 +160,26 @@ INSERT INTO `produtos` (`nomeCamisa`, `infoProduto`, `precoProduto`, `timeProdut
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `registro`
+-- Estrutura da tabela `registro`
 --
 
 DROP TABLE IF EXISTS `registro`;
 CREATE TABLE IF NOT EXISTS `registro` (
   `codigo` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `email` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `nome` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `cpf` int NOT NULL,
   `sexo` varchar(20) NOT NULL,
-  `telefone` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `telefone` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `nascto` date NOT NULL,
   `time` varchar(20) NOT NULL,
-  `senha` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `senha` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `fotoUrl` varchar(50) NOT NULL,
   PRIMARY KEY (`codigo`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Despejando dados para a tabela `registro`
+-- Extraindo dados da tabela `registro`
 --
 
 INSERT INTO `registro` (`codigo`, `nome`, `email`, `cpf`, `sexo`, `telefone`, `nascto`, `time`, `senha`, `fotoUrl`) VALUES
@@ -194,12 +194,13 @@ USE `save`;
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `informacao`
+-- Estrutura da tabela `informacao`
 --
 
 DROP TABLE IF EXISTS `informacao`;
 CREATE TABLE IF NOT EXISTS `informacao` (
   `Id_Informacao` int NOT NULL AUTO_INCREMENT,
+  `saldo` decimal(10,2) NOT NULL,
   `Nomes_Dividas` text NOT NULL,
   `Valores_Dividas` text NOT NULL,
   `Tempo_Dividas` text NOT NULL,
@@ -208,19 +209,21 @@ CREATE TABLE IF NOT EXISTS `informacao` (
   `nivel` int DEFAULT NULL,
   PRIMARY KEY (`Id_Informacao`),
   UNIQUE KEY `Id_User` (`Id_User`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Despejando dados para a tabela `informacao`
+-- Extraindo dados da tabela `informacao`
 --
 
-INSERT INTO `informacao` (`Id_Informacao`, `Nomes_Dividas`, `Valores_Dividas`, `Tempo_Dividas`, `Juros_Dividas`, `Id_User`, `nivel`) VALUES
-(1, '121312,1231231,1231,1231', '12312312,1231,12312,321', '12311312123,123,123', '123131,1231,123,12123', 2, 2);
+INSERT INTO `informacao` (`Id_Informacao`, `saldo`, `Nomes_Dividas`, `Valores_Dividas`, `Tempo_Dividas`, `Juros_Dividas`, `Id_User`, `nivel`) VALUES
+(1, '0.00', '121312,1231231,1231,1231', '12312312,1231,12312,321', '12311312123,123,123', '123131,1231,123,12123', 2, 2),
+(2, '1231312.00', 'asdad,Fasdada', '12,12212', '12,9999', '13,12', 3, NULL),
+(3, '99999999.99', 'fsdfsfsdf,rwerwrwr,eeeeee', '2342342,2342,23423', '3243242,9999', '2342342,33242,23424', 4, 2);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `registro`
+-- Estrutura da tabela `registro`
 --
 
 DROP TABLE IF EXISTS `registro`;
@@ -236,15 +239,17 @@ CREATE TABLE IF NOT EXISTS `registro` (
   `foto` varchar(250) NOT NULL,
   `nivel` int NOT NULL,
   PRIMARY KEY (`Id_user`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Despejando dados para a tabela `registro`
+-- Extraindo dados da tabela `registro`
 --
 
 INSERT INTO `registro` (`Id_user`, `nome`, `email`, `cpf`, `genero`, `telefone`, `nascto`, `senha`, `foto`, `nivel`) VALUES
 (1, 'Marcia Baptista Marques', 'ma.baptista@yahoo.com.br', 153, 'Feminino', '11968773635', '1972-03-21', '1fac06f0396776f44471a86f516cf9b8', 'https://api.dicebear.com/8.x/initials/svg?seed=Marcia Baptista Marques&backgroundColor=ff6d00\r\n', 2),
-(2, 'Gustavo Mendes', 'gamaia@teste.com', 2147483647, 'Não Binario', '11958124482', '2024-09-05', '698d51a19d8a121ce581499d7b701668', 'https://api.dicebear.com/8.x/initials/svg?seed=Gustavo Mendes&backgroundColor=ff6d00\r\n', 2);
+(2, 'Gustavo Mendes', 'gamaia@teste.com', 2147483647, 'Não Binario', '11958124482', '2024-09-05', '698d51a19d8a121ce581499d7b701668', 'https://api.dicebear.com/8.x/initials/svg?seed=Gustavo Mendes&backgroundColor=ff6d00\r\n', 2),
+(3, 'asdadas', 'gamaia123@outlook.com', 436, 'Masculino', '11980896151', '2024-09-13', '202cb962ac59075b964b07152d234b70', 'https://api.dicebear.com/8.x/initials/svg?seed=asdadas&backgroundColor=ff6d00\r\n', 2),
+(4, 'asdadas', '454454@eeee.com', 436, 'Masculino', '11980896151', '2024-09-07', '202cb962ac59075b964b07152d234b70', 'https://api.dicebear.com/8.x/initials/svg?seed=asdadas&backgroundColor=ff6d00\r\n', 2);
 --
 -- Banco de dados: `tech`
 --
@@ -254,7 +259,7 @@ USE `tech`;
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `registro`
+-- Estrutura da tabela `registro`
 --
 
 DROP TABLE IF EXISTS `registro`;
@@ -275,7 +280,7 @@ USE `teste`;
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `aluno`
+-- Estrutura da tabela `aluno`
 --
 
 DROP TABLE IF EXISTS `aluno`;
@@ -292,7 +297,7 @@ CREATE TABLE IF NOT EXISTS `aluno` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `departamento`
+-- Estrutura da tabela `departamento`
 --
 
 DROP TABLE IF EXISTS `departamento`;
