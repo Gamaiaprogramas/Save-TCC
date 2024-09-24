@@ -1,14 +1,7 @@
 <link rel="stylesheet" href="../STYLE/cadastro.css">
 <title>Cadastro</title>
-<style>
-  header{
-    height: 7vw !important;
-    background-color: #10002b !important;
-    position: relative !important;
-  }
-</style>  
+
 <?php
-    include("../partials/header.php");
     @session_start();
     if (isset($_SESSION['msg'])) {
         echo $_SESSION['msg'];
@@ -17,13 +10,18 @@
     ?>
 
 
+    <header>
+        <img src="../PICS/imgs/logoFundoRoxo.png" alt="">
+    </header>
 
     <div class="main-login">
-        <div class="left-login">
+       
+    <div class="left-login">
             
             <h1> <span>Faça seu cadastro </span> <br>E entre para o nosso time</h1>
             <img src="../PICS/imgs/finance-app-animate.svg" class = "left-cadastro-image" alt="" srcset="">
         </div>
+
         <div class="right-login">
         <form action="../ACTS/cadastro.act.php" method="post" enctype="multipart/form-data" id="formAddCliente" onsubmit="return verificaForm()" class="card-login">
                 <h1>Cadastre-se <span>na Save</span> </h1>
@@ -76,14 +74,19 @@
                     <input type="submit" class="btn-cadastrar-se" value="Cadastrar-se">
 
                     <div class="forgot">
-                        <p>Já tem cadastro? <a href="../PAGES/cadastro.php">Faça seu login!</a></p>
+                        <p>Já tem cadastro? <a href="../PAGES/login.php">Faça seu login!</a></p>
                     </div>
+
+                    </form>
                 </div>
                 
                
                 
 
-            </form>
+            
+
+            
+
         </div>
     </div>
 

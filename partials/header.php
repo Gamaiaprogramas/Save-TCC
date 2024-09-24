@@ -22,6 +22,19 @@
     <!--  end Bootstrao icons -->
 
     <title>Home - Save</title>
+
+    <style>
+        body::-webkit-scrollbar {
+            width: 7px;
+        }
+        body::-webkit-scrollbar-thumb {
+            border-radius: 80px;
+            background: #ff6d00
+        }
+        body::-webkit-scrollbar-track {
+            background: #10002b;
+        }
+    </style>
     
 </head>
 <body>
