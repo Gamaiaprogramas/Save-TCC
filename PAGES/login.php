@@ -32,7 +32,9 @@
                 </div>
                 
                 <input type="submit" class="btn-cadastrar-se" value="Entrar">
-                
+                <div class="forgot">
+                    <p>Não tem cadastro? <a href="../PAGES/cadastro.php">Cadastre-se Já</a></p>
+                </div>
             </div>
         </form>
     </div>

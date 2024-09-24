@@ -5,13 +5,14 @@
 body{
    margin: 0;
    font-family: "Poppins", sans-serif;
-   
+   overflow-x: hidden;
+   background-color: #f7f7f7;
 }
 
 .main-login{
     width: 100vw;
     height: 100vh;
-    background-color: #f7f7f7;
+
     display: flex;
     justify-content: center;    
     align-items: center;
@@ -51,7 +52,7 @@ body{
 }
 
 .card-login{
-    width: 60%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,4 +123,22 @@ body{
     box-shadow: 0px 10px 40px -12px #ff6f008e;
 }
 
+.forgot a{
+    cursor: pointer;
+    color: #e96500;
+}
+
+.primeiro{
+}
+
+.segundo{
+}
+
+.center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
 
