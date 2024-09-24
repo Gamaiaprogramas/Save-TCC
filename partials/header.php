@@ -61,21 +61,27 @@
             </section>  
              
             <section class="btn-contato">
-              
-            <?php 
-             @session_start();  
-                if(isset($_SESSION['logado']) && $_SESSION['logado'] == true){
-                    echo "<a href= '../ACTS/logoff.act.php' ><img src='";
-                    echo $_SESSION['foto'];
-                    echo "'></a>";  
-                }
-                else{
-                    echo "<a href='../PAGES/login.php'>
-                    <button>Entar</button>
-                    </a>";
-                }
-                
-            ?>
+    <?php 
+        @session_start();  
+        if(isset($_SESSION['logado']) && $_SESSION['logado'] == true){
+            echo "
+            <div class='user-menu'>
+                <img src='".$_SESSION['foto']."' class='user-photo'>
+                <div class='dropdown-content'>
+                    <a href='../PAGES/perfil.php'>Perfil</a>
+                    <a href='../PAGES/configuracoes.php'>Configurações</a>
+                    <a href='../ACTS/logoff.act.php'>Sair</a>
+                </div>
+            </div>";  
+        }
+        else{
+            echo "<a href='../PAGES/login.php'>
+                    <button>Entrar</button>
+                  </a>";
+        }
+    ?>
+</section>
+
             
                 
             </section>
