@@ -43,7 +43,7 @@
   <section class="cambiar-item">
     <div class="interfacea">
       <div class="img-itens">
-        <img src="../PICS/imgs/ilustration-3.jpg" alt="">
+        <img src="../PICS/imgs/finance-animate.svg" alt="">
 
       </div>
       <div class="txt-itens">
