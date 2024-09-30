@@ -36,20 +36,56 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         function adicionarDivida() {
             const dividasContainer = document.getElementById('dividas-container');
             const novaDivida = `
-                <div class="divida-item">
-                    <label>Nome da Dívida:</label>
-                    <input type="text" name="dividas[]" required><br>
-                    <label>Valor da Dívida:</label>
-                    <input type="number" name="valores[]" step="0.01" required><br>
-                    <label>Juros da Dívida (%):</label>
-                    <input type="number" name="juros[]" step="0.01" required><br>
-                    <label>Tempo da Dívida (meses):</label>
-                    <input type="number" name="tempo[]" required id="tempo-input"><br>
-                    <label>Dívida Ilimitada:</label>
-                    <input type="checkbox" onchange="toggleTempo(this)"><br><br>
-                    <input type="hidden" name="tempo_ilimitada[]" value=""> <!-- Campo oculto -->
-                    <button type="button" onclick="removerDivida(this)">Excluir Dívida</button>
-                </div>
+            <div class="divida-item">
+                <div class="centro">
+                    <div class="esquerda">
+                        <div>
+                            <label><span>Nome</span> da Dívida 1:</label>
+                        </div>
+                        <div>
+                            <label><span>Valor </span>da Dívida 1:</label>
+                        </div>
+                        <div>
+                            <label><span>Juros </span>da Dívida 1 (%):</label>
+                        </div>
+                        <div>
+                            <label><span>Tempo </span>da Dívida (meses):</label>
+                        </div>
+                        <div>
+                            <label><span>Dívida </span>Parcelável?</label>
+                        </div>
+
+                    </div>
+                    <div class="direita">
+                        <div>
+                            <input type="text" name="dividas[]" required><br>
+                        </div>
+                        <div>
+                            <input type="number" name="valores[]" step="0.01" required><br>
+                        </div>
+                        <div>
+                            <input type="number" name="juros[]" step="0.01" required><br>
+                        </div>
+                        <div>
+                            <input type="number" name="tempo[]" required id="tempo-input"><br>
+                        </div>
+                        <div class="check">
+                        
+                        </div>
+                    </div>
+                </div>  
+                
+            
+
+                <button class="learn-more" onclick="removerDivida(this)">
+                    <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Excluir Dívida</span>
+                    
+                </button>
+
+            </div>
             `;
             dividasContainer.insertAdjacentHTML('beforeend', novaDivida);
         }
@@ -75,26 +111,78 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             dividaItem.remove(); // Remove o container da dívida
         }
     </script>
+    <link rel="stylesheet" href="../STYLE/acaoDivida.css">
+
 </head>
 <body>
+<style>
+  header{
+    position: relative !important;
+    background-color: #10002b !important;
+    height: 7vw !important;
+    margin: 0 !important;
+    z-index: 1;
+  }
+</style>
+<?php
+
+    include("../partials/header.php");
+  ?>
+
     <h1>Informe suas Dívidas</h1>
 
     <form method="POST">
 
         <div id="dividas-container">
             <div class="divida-item">
-                <label>Nome da Dívida 1:</label>
-                <input type="text" name="dividas[]" required><br>
-                <label>Valor da Dívida 1:</label>
-                <input type="number" name="valores[]" step="0.01" required><br>
-                <label>Juros da Dívida 1 (%):</label>
-                <input type="number" name="juros[]" step="0.01" required><br>
-                <label>Tempo da Dívida (meses):</label>
-                <input type="number" name="tempo[]" required id="tempo-input"><br>
-                <label>Dívida Ilimitada:</label>
-                <input type="checkbox" onchange="toggleTempo(this)"><br><br>
-                <input type="hidden" name="tempo_ilimitada[]" value=""> <!-- Campo oculto -->
-                <button type="button" onclick="removerDivida(this)">Excluir Dívida</button>
+                <div class="centro">
+                    <div class="esquerda">
+                        <div>
+                            <label><span>Nome</span> da Dívida 1:</label>
+                        </div>
+                        <div>
+                            <label><span>Valor </span>da Dívida 1:</label>
+                        </div>
+                        <div>
+                            <label><span>Juros </span>da Dívida 1 (%):</label>
+                        </div>
+                        <div>
+                            <label><span>Tempo </span>da Dívida (meses):</label>
+                        </div>
+                        <div>
+                            <label><span>Dívida </span>Parcelável?</label>
+                        </div>
+
+                    </div>
+                    <div class="direita">
+                        <div>
+                            <input type="text" name="dividas[]" required><br>
+                        </div>
+                        <div>
+                            <input type="number" name="valores[]" step="0.01" required><br>
+                        </div>
+                        <div>
+                            <input type="number" name="juros[]" step="0.01" required><br>
+                        </div>
+                        <div>
+                            <input type="number" name="tempo[]" required id="tempo-input"><br>
+                        </div>
+                        <div class="check">
+                        
+                        </div>
+                    </div>
+                </div>  
+                
+            
+
+                <button class="learn-more" onclick="removerDivida(this)">
+                    <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Excluir Dívida</span>
+                    
+                </button>
+
             </div>
         </div>
 
