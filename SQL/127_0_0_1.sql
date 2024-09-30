@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 24-Set-2024 às 20:57
+-- Tempo de geração: 30-Set-2024 às 20:49
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
@@ -231,7 +231,7 @@ CREATE TABLE IF NOT EXISTS `registro` (
   `Id_user` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(60) NOT NULL,
   `email` varchar(60) NOT NULL,
-  `cpf` int NOT NULL,
+  `cpf` varchar(15) NOT NULL,
   `genero` varchar(40) NOT NULL,
   `telefone` varchar(13) NOT NULL,
   `nascto` date NOT NULL,
@@ -239,17 +239,7 @@ CREATE TABLE IF NOT EXISTS `registro` (
   `foto` varchar(250) NOT NULL,
   `nivel` int NOT NULL,
   PRIMARY KEY (`Id_user`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Extraindo dados da tabela `registro`
---
-
-INSERT INTO `registro` (`Id_user`, `nome`, `email`, `cpf`, `genero`, `telefone`, `nascto`, `senha`, `foto`, `nivel`) VALUES
-(1, 'Marcia Baptista Marques', 'ma.baptista@yahoo.com.br', 153, 'Feminino', '11968773635', '1972-03-21', '1fac06f0396776f44471a86f516cf9b8', 'https://api.dicebear.com/8.x/initials/svg?seed=Marcia Baptista Marques&backgroundColor=ff6d00\r\n', 2),
-(2, 'Gustavo Mendes', 'gamaia@teste.com', 2147483647, 'Não Binario', '11958124482', '2024-09-05', '698d51a19d8a121ce581499d7b701668', 'https://api.dicebear.com/8.x/initials/svg?seed=Gustavo Mendes&backgroundColor=ff6d00\r\n', 2),
-(3, 'asdadas', 'gamaia123@outlook.com', 436, 'Masculino', '11980896151', '2024-09-13', '202cb962ac59075b964b07152d234b70', 'https://api.dicebear.com/8.x/initials/svg?seed=asdadas&backgroundColor=ff6d00\r\n', 2),
-(4, 'asdadas', '454454@eeee.com', 436, 'Masculino', '11980896151', '2024-09-07', '202cb962ac59075b964b07152d234b70', 'https://api.dicebear.com/8.x/initials/svg?seed=asdadas&backgroundColor=ff6d00\r\n', 2);
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 --
 -- Banco de dados: `tech`
 --
