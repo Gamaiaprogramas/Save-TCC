@@ -79,10 +79,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Informe suas Dívidas</h1>
 
     <form method="POST">
-        <div>
-            <h1>Informe seu saldo:</h1>
-            <input type="text" name="saldo" required><br>
-        </div>
 
         <div id="dividas-container">
             <div class="divida-item">

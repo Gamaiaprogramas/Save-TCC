@@ -13,6 +13,11 @@ body{
     background-color: #fff;
 }
 
+header img{
+    margin-left: 2vw;
+    height: 4vw;
+}
+
 header .btn-contato button, .hero-site button , .hoteis button{
     font-size: 18px;
     background-color: transparent;

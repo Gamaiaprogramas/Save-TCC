@@ -751,3 +751,11 @@ function verificaFormAlt() {
 }
 
 }
+
+setInterval(function () {
+
+  msg = document.querySelector(".alerta");
+  msg.classList.remove('alerta')
+  msg.classList.add('hidden')
+
+}, 5000);

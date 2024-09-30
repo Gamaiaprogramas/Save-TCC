@@ -44,7 +44,7 @@
         <div class="interface">
             <a href="../PAGES/landing.php">
                 <section class="logo">
-                    <img src="../PICS/imgs/logo.png" alt="logo tipo do site">
+                    <img src="../PICS/imgs/logo-slogan.svg" alt="logo tipo do site">
             </section>
             </a>
             

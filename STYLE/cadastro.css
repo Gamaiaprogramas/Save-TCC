@@ -8,19 +8,249 @@ body{
    overflow-x: hidden;
    background-color: #f7f7f7;
 }
-
+/* 
 header {
     padding: 10px;  
-    /*display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1vw;*/
+    margin-top: 1vw;
 }
 header img{
     width: 10%;
-    margin-left: 4vh;
+    margin-left: 47vh;
     transition: 0.7s;
+} */
+
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4%;
 }
+body{
+    background-color: #fff;
+}
+
+header .btn-contato button, .hero-site button , .hoteis button{
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s;
+}
+
+header .btn-contato button:hover, .hero-site button:hover, .hoteis button:hover{
+    background-color: #ff6d00;
+}
+/* Estilos para o dropdown da foto do usuário */
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.user-photo {
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.user-photo:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo do dropdown (conteúdo do menu) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    visibility: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Mostrar dropdown quando passar o mouse */
+.user-menu:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/*estilo do header*/
+header{
+    width: 100%;
+    padding: 40px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    margin-bottom: 2vw;
+}
+
+header .interface{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Menu Dinamico*/
+header.rolar{
+    background-color: #10002b;
+    padding: 20px 0;
+    box-shadow: 0 0 8px #00000061;
+    z-index: 999999999999999999999999 ;
+}
+
+/*end Menu Dinamico*/
+
+header .menu-desktop nav ul{
+    list-style-type: none;
+
+}
+
+header .menu-desktop nav ul li{
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header .menu-desktop nav ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header .menu-desktop nav ul li a::after{
+    content: "";
+    background-color: #ff6d00;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+header .menu-desktop nav ul li a:hover::after{
+    width: 100%;
+}
+
+header .menu-desktop nav a:hover{
+    transform: scale(1.05);
+}
+
+header .btn-contato button{
+    width: 140px;
+    height: 50px;
+}
+header .btn-contato  a img{
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+}
+
+/* Estilo do botão menu mobile */
+header .btn-menu-mob{
+    display: none;
+    position: relative;
+    z-index: 999999999999;
+}
+
+header .btn-menu-mob div{
+    background-color: #ff6d00;
+    height: 3px;
+    margin: 10px 0;
+    transition: .2s
+
+}
+
+header .btn-menu-mob .line-menu-mob-1{
+    width: 30px;
+
+}
+ header .btn-menu-mob .line-menu-mob-2{
+    width: 20px;
+
+}
+
+header .btn-menu-mob .line-menu-mob-1.ativo1{
+    transform: rotate(45deg) translate(31%);
+}
+
+header .btn-menu-mob .line-menu-mob-2.ativo2{
+    transform: rotate(-45deg) translate(31%);
+    width: 30px;
+}
+
+/* Estilo do menu mobile */
+header .menu-mobile{
+    width: 0;
+    height: 0;
+    background-color: #10002b;
+    position: absolute;
+    top: 0;
+    right:0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    overflow: hidden;
+    transition: .5s;
+}
+header .menu-mobile nav{
+    width: 100%;
+}
+
+header .menu-mobile nav ul{
+    list-style-type: none;
+}
+
+header .menu-mobile nav a{
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px 0;
+    display: block;
+    transition: .4s;
+}
+
+header .menu-mobile nav a:hover{
+    background-color:#ff6d00 ;
+    color: #10002b;
+    box-shadow: 0 0 20px #fff;
+}
+
+header .menu-mobile.abrir{
+    width: 100%;
+    height: 100vh;
+}
+body.no-overflow{
+    overflow: hidden;
+
+}
+
 
 header img:hover{
     scale: 1.03;
@@ -35,8 +265,13 @@ header img:hover{
     justify-content: center;    
     align-items: center;
     flex-flow: row-reverse;
-    margin-top: 5vw;
+    margin-top: 11vw;
     
+}
+
+header img{
+    margin-left: 7vw;
+    height: 3.5vw;
 }
 
 
@@ -68,6 +303,7 @@ header img:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 3vw;
 }
 
 .card-login{
@@ -92,6 +328,30 @@ header img:hover{
 
 .card-login  h1 span{
     color: #10002b;
+}
+
+.green{
+    background-color: green;
+    width: 100%;
+    height: 2vw;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red{
+    background-color: #c50000;
+    width: 100%;
+    height: 2vw;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden{
+    display: none;
 }
 
 .textfield{
