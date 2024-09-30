@@ -759,3 +759,8 @@ setInterval(function () {
   msg.classList.add('hidden')
 
 }, 5000);
+
+$("#telefone").mask("(00) 00000-0000");
+$("#cpf").mask("00000-000");
+$("#email").mask("000.000.000-00");
+

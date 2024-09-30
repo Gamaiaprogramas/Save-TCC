@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="../STYLE/cadastro.css">
     <title>Cadastro</title>
 
+    <?php
+            @session_start();
+            if (isset($_SESSION['msg'])) {
+                echo $_SESSION['msg'];
+                unset($_SESSION['msg']);
+            }
+        ?>
+
+    <body>  
+
+
     <header id="header">
 
 <div class="interface">
@@ -50,17 +61,8 @@
 </div>
 
 </header>
+    
 
-
-    <body>      
-        
-        <?php
-            @session_start();
-            if (isset($_SESSION['msg'])) {
-                echo $_SESSION['msg'];
-                unset($_SESSION['msg']);
-            }
-        ?>
 
         <div class="main-login">
         
@@ -78,15 +80,15 @@
                             <div class="primeiro">
                                 <div class="textfield">
                                     <label >Nome</label>
-                                    <input type="text" name="nome" placeholder="Nome">
+                                    <input type="text" id="nome" name="nome" placeholder="Nome" require>
                                 </div>
                                 <div class="textfield">
                                     <label >Email</label>
-                                    <input type="text" name="email" placeholder="Email">
+                                    <input type="email" id="email" name="email" placeholder="Email" require>
                                 </div>
                                 <div class="textfield">
                                     <label>CPF</label>
-                                    <input type="text" name="cpf" placeholder="CPF">
+                                    <input type="text" id="cpf" name="cpf" placeholder="CPF" require>
                                 </div>
                                 <div class="textfield">
                                 <label>Escolha seu genero</label>
@@ -101,11 +103,11 @@
                             <div class="segundo">
                                 <div class="textfield">
                                     <label>Telefone</label>
-                                    <input type="text" name="telefone" placeholder="Telefone">
+                                    <input type="text" id="telefone" name="telefone" placeholder="Telefone" require>
                                 </div>
                                 <div class="textfield">
                                     <label >Nascimento</label>
-                                    <input type="date" name="nascto" >
+                                    <input type="date" id="nasc" name="nascto" require>
                                 </div>
                                 <div class="textfield">
                                     <label >Senha</label>
@@ -119,7 +121,7 @@
                             </div>
                         </div>
 
-                        <input type="submit" class="btn-cadastrar-se" value="Cadastrar-se">
+                        <input type="submit" class="btn-cadastrar-se" value="Cadastrar-se" id="btn" onclick="verifique()">
 
                         <div class="forgot">
                             <p>Já tem cadastro? <a href="../PAGES/login.php">Faça seu login!</a></p>
@@ -129,16 +131,54 @@
                     
 
                 </div>
-    
+            
             </div>    
         </div>
     </div>
 
+            
+
+
   
 
     <script>
+            document.getElementById('cpf').addEventListener('input', function (e) {
+              let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não é dígito
+              if (value.length > 11) value = value.slice(0, 11); // Limita a 11 dígitos
+              e.target.value = value.replace(/(\d{3})(\d)/, '$1.$2') // Adiciona o primeiro ponto
+                                    .replace(/(\d{3})(\d)/, '$1.$2') // Adiciona o segundo ponto
+                                    .replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Adiciona o hífen
+            });
+
+            document.getElementById('telefone').addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não é dígito
+            if (value.length > 11) value = value.slice(0, 11); // Limita a 11 dígitos
+            e.target.value = value.replace(/(\d{2})(\d)/, '($1) $2') // Adiciona parênteses e espaço
+                                  .replace(/(\d{5})(\d)/, '$1-$2'); // Adiciona o hífen
+             });
+
+            document.getElementById('email').addEventListener('input', function (e) {
+            const value = e.target.value;
+            const validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!validEmail.test(value)) {
+              e.target.setCustomValidity("Endereço de e-mail inválido");
+            } else {
+              e.target.setCustomValidity("");
+            }
+            });
+
+            document.getElementById('nome').addEventListener('input', function() {
+            let value = this.value.toLowerCase();
+            this.value = value.split(' ')
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
+            });
+
             window.onload = CadastroAct;
-        </script>
+
+
+
+    </script>
     <script src="../JS/geral.js"></script>
 </body>
 </html>

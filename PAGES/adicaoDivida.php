@@ -1,4 +1,5 @@
 <?php
+include("../ACTS/sec.php");
 session_start();
 
 // Verifica se o formulário foi enviado
