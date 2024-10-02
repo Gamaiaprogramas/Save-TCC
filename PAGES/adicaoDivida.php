@@ -133,7 +133,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Informe suas Dívidas</h1>
 
     <form method="POST">
-        <input type="number" name="saldo">
         <div id="dividas-container">
             <div class="divida-item">
                 <div class="centro">
