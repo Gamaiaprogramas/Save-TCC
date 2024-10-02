@@ -1,12 +1,12 @@
 <?php
 include("../ACTS/sec.php");
-
+extract($_POST);
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Armazena as dívidas, valores, juros, tempo e saldo na sessão
-    $_SESSION['dividas'] = $_POST['dividas'];
-    $_SESSION['valores'] = $_POST['valores'];
-    $_SESSION['juros'] = $_POST['juros'];
+    $_SESSION['dividas'] = $dividas;
+    $_SESSION['valores'] = $valores;
+    $_SESSION['juros'] = $juros;
 
     // Substitui o valor do tempo por 9999 caso a dívida seja ilimitada
     $tempos = $_POST['tempo'];
@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preencha as Dívidas</title>
     <script>
+
         // Função para adicionar mais campos de dívidas
         function adicionarDivida() {
             const dividasContainer = document.getElementById('dividas-container');
@@ -132,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Informe suas Dívidas</h1>
 
     <form method="POST">
-
+        <input type="number" name="saldo">
         <div id="dividas-container">
             <div class="divida-item">
                 <div class="centro">

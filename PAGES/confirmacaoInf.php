@@ -20,11 +20,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Confirmação</title>
 </head>
 <body>
+        <?php
+            if (isset($_SESSION['msg'])) {
+                echo $_SESSION['msg'];
+                unset($_SESSION['msg']);
+            }
+        ?>
     <h1>Confirmação Final</h1>
     <p>Revise as informações antes de prosseguir.</p>
 
-    <!-- Aqui você poderia exibir as informações já armazenadas na sessão para o usuário revisar -->
-    <form method="POST">
+        <!-- Aqui você poderia exibir as informações já armazenadas na sessão para o usuário revisar -->
+        <form method="POST" action="../ACTS/dividas.act.php">
         <label>Confirmar envio dos dados?</label><br>
         <input type="radio" name="confirmacao" value="sim" required> Sim<br>
         <input type="radio" name="confirmacao" value="nao" required> Não<br>

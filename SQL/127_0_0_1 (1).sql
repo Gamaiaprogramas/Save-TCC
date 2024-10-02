@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 02-Out-2024 às 17:51
+-- Tempo de geração: 02-Out-2024 às 18:15
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
@@ -22,6 +22,24 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `save` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
 USE `save`;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `gastosfix`
+--
+
+DROP TABLE IF EXISTS `gastosfix`;
+CREATE TABLE IF NOT EXISTS `gastosfix` (
+  `Id_gastoFix` int NOT NULL AUTO_INCREMENT,
+  `saldo` decimal(10,2) NOT NULL,
+  `Nomes_gastos` text NOT NULL,
+  `Valores_gastos` text NOT NULL,
+  `Id_User` int DEFAULT NULL,
+  `nivel` int DEFAULT NULL,
+  PRIMARY KEY (`Id_gastoFix`),
+  UNIQUE KEY `Id_User` (`Id_User`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -71,14 +89,15 @@ CREATE TABLE IF NOT EXISTS `registro` (
   `foto` varchar(250) NOT NULL,
   `nivel` int NOT NULL,
   PRIMARY KEY (`Id_user`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `registro`
 --
 
 INSERT INTO `registro` (`Id_user`, `nome`, `email`, `cpf`, `genero`, `telefone`, `nascto`, `senha`, `foto`, `nivel`) VALUES
-(14, 'Luis Henrique', 'lourencoluisoppx22@gmail.com', '560.366.028-71', 'Masculino', '(11) 99122-04', '2006-04-22', '3a8b38402b2703b93fcc4925901141e6', 'https://api.dicebear.com/8.x/initials/svg?seed=Luis Henrique&backgroundColor=ff6d00\r\n            ', 2);
+(14, 'Luis Henrique', 'lourencoluisoppx22@gmail.com', '560.366.028-71', 'Masculino', '(11) 99122-04', '2006-04-22', '3a8b38402b2703b93fcc4925901141e6', 'https://api.dicebear.com/8.x/initials/svg?seed=Luis Henrique&backgroundColor=ff6d00\r\n            ', 2),
+(15, 'Guilherme Marques', 'dasdada@asdada.com', '123.132.131-31', 'Masculino', '(12) 31313-13', '2024-10-11', '202cb962ac59075b964b07152d234b70', 'https://api.dicebear.com/8.x/initials/svg?seed=Guilherme Marques&backgroundColor=ff6d00\r\n            ', 2);
 --
 -- Banco de dados: `tech`
 --
