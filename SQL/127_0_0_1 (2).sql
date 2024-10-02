@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 02-Out-2024 às 18:15
+-- Tempo de geração: 02-Out-2024 às 19:42
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `informacao` (
   `nivel` int DEFAULT NULL,
   PRIMARY KEY (`Id_Informacao`),
   UNIQUE KEY `Id_User` (`Id_User`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `informacao`
@@ -68,7 +68,8 @@ CREATE TABLE IF NOT EXISTS `informacao` (
 INSERT INTO `informacao` (`Id_Informacao`, `saldo`, `Nomes_Dividas`, `Valores_Dividas`, `Tempo_Dividas`, `Juros_Dividas`, `Id_User`, `nivel`) VALUES
 (1, '0.00', '121312,1231231,1231,1231', '12312312,1231,12312,321', '12311312123,123,123', '123131,1231,123,12123', 2, 2),
 (2, '1231312.00', 'asdad,Fasdada', '12,12212', '12,9999', '13,12', 3, NULL),
-(3, '99999999.99', 'fsdfsfsdf,rwerwrwr,eeeeee', '2342342,2342,23423', '3243242,9999', '2342342,33242,23424', 4, 2);
+(3, '99999999.99', 'fsdfsfsdf,rwerwrwr,eeeeee', '2342342,2342,23423', '3243242,9999', '2342342,33242,23424', 4, 2),
+(4, '1211212.00', 'gfdgg', '12', '1', '21', 15, 2);
 
 -- --------------------------------------------------------
 
@@ -83,21 +84,13 @@ CREATE TABLE IF NOT EXISTS `registro` (
   `email` varchar(60) NOT NULL,
   `cpf` varchar(15) NOT NULL,
   `genero` varchar(40) NOT NULL,
-  `telefone` varchar(13) NOT NULL,
+  `telefone` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `nascto` date NOT NULL,
   `senha` varchar(40) NOT NULL,
   `foto` varchar(250) NOT NULL,
   `nivel` int NOT NULL,
   PRIMARY KEY (`Id_user`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Extraindo dados da tabela `registro`
---
-
-INSERT INTO `registro` (`Id_user`, `nome`, `email`, `cpf`, `genero`, `telefone`, `nascto`, `senha`, `foto`, `nivel`) VALUES
-(14, 'Luis Henrique', 'lourencoluisoppx22@gmail.com', '560.366.028-71', 'Masculino', '(11) 99122-04', '2006-04-22', '3a8b38402b2703b93fcc4925901141e6', 'https://api.dicebear.com/8.x/initials/svg?seed=Luis Henrique&backgroundColor=ff6d00\r\n            ', 2),
-(15, 'Guilherme Marques', 'dasdada@asdada.com', '123.132.131-31', 'Masculino', '(12) 31313-13', '2024-10-11', '202cb962ac59075b964b07152d234b70', 'https://api.dicebear.com/8.x/initials/svg?seed=Guilherme Marques&backgroundColor=ff6d00\r\n            ', 2);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 --
 -- Banco de dados: `tech`
 --
