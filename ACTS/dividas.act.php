@@ -3,7 +3,7 @@ session_start();
 require('../ACTS/connect.php');
 
 $msg = "";
-$destino = "location:../PAGES/confirmacaoInf.php";
+$destino = "location:../PAGES/perfil.php";
 
 // Verifica se as informações necessárias estão na sessão
 if (isset($_SESSION['dividas'], $_SESSION['valores'], $_SESSION['juros'], $_SESSION['tempo'], $_SESSION['saldo'], $_SESSION['Id_user'],$_SESSION['nivelDivida'])) {

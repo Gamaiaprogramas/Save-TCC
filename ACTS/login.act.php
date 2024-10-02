@@ -4,33 +4,40 @@
     extract($_POST);
     $destino = "";
     $msg = ""; // $nome é igual ao input de logar.php // trocar para email
-    echo $email;
-    
-    $cliente = mysqli_query($con, "SELECT * FROM `registro` WHERE `email` = '$email'");
-    if($cliente->num_rows == 1){
-        $clientes = mysqli_fetch_assoc($cliente);
-        $senha_login = md5($senha1);
-        if($senha_login == $clientes['senha']){
-            $_SESSION['logado'] = true;
-            $_SESSION['nome'] = $clientes['nome'];
-            $_SESSION['email'] = $clientes['email'];
-            $_SESSION['Id_user'] = $clientes['Id_user'];
-            $_SESSION['foto'] = $clientes['foto'];
-            $_SESSION['nivel'] = $clientes['nivel'];
-            $_SESSION['cpf'] = $clientes['cpf'];
-            $_SESSION['telefone'] = $clientes['telefone'];
-            $_SESSION['nascto'] = $clientes['nascto'];
-            $msg = "<p class=green>Sessão Iniciada</p>";
-            $destino = "location:../PAGES/landing.php";
-            header($destino);
-            
+    if ($senha1 == "" || $email == ""){
+        $msg = "<div class=\"alerta red\"><p >Preencha todos os campos</p></div>";            
+        $destino = "location:../PAGES/login.php";
+        
+    }else {
+        $cliente = mysqli_query($con, "SELECT * FROM `registro` WHERE `email` = '$email'");
+        if($cliente->num_rows == 1){
+            $clientes = mysqli_fetch_assoc($cliente);
+            $senha_login = md5($senha1);
+            if($senha_login == $clientes['senha']){
+                $_SESSION['logado'] = true;
+                $_SESSION['nome'] = $clientes['nome'];
+                $_SESSION['email'] = $clientes['email'];
+                $_SESSION['Id_user'] = $clientes['Id_user'];
+                $_SESSION['foto'] = $clientes['foto'];
+                $_SESSION['nivel'] = $clientes['nivel'];
+                $_SESSION['cpf'] = $clientes['cpf'];
+                $_SESSION['telefone'] = $clientes['telefone'];
+                $_SESSION['nascto'] = $clientes['nascto'];
+                $msg = "<div class=\"alerta green\"><p >Login efetuado com sucesso</p></div>";            
+                $destino = "location:../PAGES/landing.php";
+                
+            }else{
+                $msg = "<div class=\"alerta red\"><p >Usuário ou senha incorreto</p></div>";            
+                $destino = "location:../PAGES/login.php";
+            }
         }else{
-            echo "Senha Errada";
+            $msg = "<div class=\"alerta red\"><p >Usuário não encontrado</p></div>";         
             $destino = "location:../PAGES/login.php";
-            header($destino);
         }
-    }else{
-        echo "Usuario não encontrado";
     }
+    
+    
 var_dump($_POST);
+$_SESSION['msg'] = $msg;
+header($destino);
 ?>

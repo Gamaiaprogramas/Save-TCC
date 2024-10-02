@@ -1,6 +1,5 @@
 <?php
 include("../ACTS/sec.php");
-session_start();
 
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -40,13 +39,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="centro">
                     <div class="esquerda">
                         <div>
-                            <label><span>Nome</span> da Dívida 1:</label>
+                            <label><span>Nome</span> da Dívida:</label>
                         </div>
                         <div>
-                            <label><span>Valor </span>da Dívida 1:</label>
+                            <label><span>Valor </span>da Dívida:</label>
                         </div>
                         <div>
-                            <label><span>Juros </span>da Dívida 1 (%):</label>
+                            <label><span>Juros </span>da Dívida (%):</label>
                         </div>
                         <div>
                             <label><span>Tempo </span>da Dívida (meses):</label>
@@ -70,7 +69,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <input type="number" name="tempo[]" required id="tempo-input"><br>
                         </div>
                         <div class="check">
-                        
+                        <input type="checkbox" onchange="toggleTempo(this)"><br><br>
+                    <input type="hidden" name="tempo_ilimitada[]" value="9999"> <!-- Campo oculto -->
                         </div>
                     </div>
                 </div>  
@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     </script>
     <link rel="stylesheet" href="../STYLE/acaoDivida.css">
-
+        
 </head>
 <body>
 <style>
@@ -138,13 +138,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="centro">
                     <div class="esquerda">
                         <div>
-                            <label><span>Nome</span> da Dívida 1:</label>
+                            <label><span>Nome</span> da Dívida:</label>
                         </div>
                         <div>
-                            <label><span>Valor </span>da Dívida 1:</label>
+                            <label><span>Valor </span>da Dívida:</label>
                         </div>
                         <div>
-                            <label><span>Juros </span>da Dívida 1 (%):</label>
+                            <label><span>Juros </span>da Dívida (%):</label>
                         </div>
                         <div>
                             <label><span>Tempo </span>da Dívida (meses):</label>
@@ -168,7 +168,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <input type="number" name="tempo[]" required id="tempo-input"><br>
                         </div>
                         <div class="check">
-                        
+                        <input type="checkbox" onchange="toggleTempo(this)"><br><br>
+                        <input type="hidden" name="tempo_ilimitada[]" value=""> <!-- Campo oculto -->
+                         
                         </div>
                     </div>
                 </div>  

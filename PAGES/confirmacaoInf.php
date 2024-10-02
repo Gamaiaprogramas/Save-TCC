@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION['confirmacao'] = $_POST['confirmacao'];
 
     // Redireciona para a página de finalização, onde os dados serão inseridos no banco
-    header("Location: ../ACTS/dividas.act.php");
+    header("Location:../ACTS/dividas.act.php");
     exit();
 }
 ?>

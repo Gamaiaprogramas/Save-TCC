@@ -88,7 +88,7 @@
                 <br>
                 <div class="textfield">
                     <label for="senha">Senha</label>
-                    <input  type="passworld" name="senha1" onkeyup="verificaSenha(senha1.value,senha2.value)" require placeholder="Senha  ">
+                    <input  type="password" name="senha1" onkeyup="verificaSenha(senha1.value,senha2.value)" require placeholder="Senha  ">
                 </div>
                 <br>
                 <input type="submit" class="btn-cadastrar-se" value="Entrar">
