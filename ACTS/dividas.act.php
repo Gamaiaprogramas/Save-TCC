@@ -13,7 +13,7 @@ if (isset($_SESSION['dividas'], $_SESSION['valores'], $_SESSION['juros'], $_SESS
     $valores = $_SESSION['valores'];
     $juros = $_SESSION['juros'];
     $tempos = $_SESSION['tempo'];
-    $saldo = $_SESSION['saldo'];
+    $saldo = floatval($_SESSION['saldo']);
     $user_id = $_SESSION['Id_user'];  // ID do usuário logado
     $nivelDivida = $_SESSION['nivelDivida'];
 

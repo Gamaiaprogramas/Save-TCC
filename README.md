@@ -35,3 +35,15 @@ fechamento do mes
 videos explicativos
 dicas para onde investir
 investimentos em altas
+
+
+
+{
+    /*API verificação de email*/
+
+    https://1337x.to/torrent/6214192/REKA-v0-1-83-18780b/
+
+https://mhhauto.com/Thread-Xentry-22-3-4-LINKS-for-Activation-Login-DAS-Wallpaper-Missing-pictures
+
+https://github.com/AdrianaSaty/easy-portfolio/tree/class-2
+}
