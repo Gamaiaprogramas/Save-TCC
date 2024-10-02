@@ -184,7 +184,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <button type="button" onclick="adicionarDivida()">Adicionar Mais Dívidas</button><br><br>
     
-    <button class="btnProx" onclick="confirmarEnvio()" >
+    <button type="button" class="btnProx" onclick="confirmarEnvio()" >
         <span>Próximo</span>
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -201,6 +201,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </svg>
     </button>
 </form>
+
 
 <div id="overlay">
     <div id="confirmacao">
