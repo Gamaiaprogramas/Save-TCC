@@ -250,5 +250,102 @@ span{
    }
 
 
-   
+   /*teste*/
+
+   #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+#confirmacao {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+.button.cancel {
+    background-color: #dc3545;
+}
+
+/*teste botão*/
+
+/* From Uiverse.io by alexmaracinaru */ 
+.btnProx {
+    bottom: 2vw;
+    right: 2vw;
+    position: fixed;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #0f022b;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+  
+  .btnProx:hover {
+    background: #10002b;
+  }
+  
+  .btnProx > svg {
+    width: 34px;
+    
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .btnProx:hover svg {
+    transform: translateX(5px);
+  }
+  
+  .btnProx:active {
+    transform: scale(0.95);
+  }
+  .btnProx span{
+    color: white;
+  }
+  .btnProx:hover span{
+    color: #ff6d00;
+  }
+
+  .svg-icon {
+    transition: fill 0.3s; /* Transição suave para a mudança de cor */
+}
+
+.btnProx:hover .svg-icon {
+    fill: #ff6d00; /* Cor ao passar o mouse */
+}
+
+.btnProx:hover .circle {
+    stroke: #ff6d00; /* Cor ao passar o mouse */
+}
+
+/* Para a borda do círculo */
+.circle {
+    stroke: white; /* Cor da borda do círculo */
+}
    
