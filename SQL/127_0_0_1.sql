@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 02-Out-2024 às 17:48
+-- Tempo de geração: 02-Out-2024 às 17:51
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `save`
 --
+CREATE DATABASE IF NOT EXISTS `save` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+USE `save`;
 
 -- --------------------------------------------------------
 
@@ -77,6 +79,63 @@ CREATE TABLE IF NOT EXISTS `registro` (
 
 INSERT INTO `registro` (`Id_user`, `nome`, `email`, `cpf`, `genero`, `telefone`, `nascto`, `senha`, `foto`, `nivel`) VALUES
 (14, 'Luis Henrique', 'lourencoluisoppx22@gmail.com', '560.366.028-71', 'Masculino', '(11) 99122-04', '2006-04-22', '3a8b38402b2703b93fcc4925901141e6', 'https://api.dicebear.com/8.x/initials/svg?seed=Luis Henrique&backgroundColor=ff6d00\r\n            ', 2);
+--
+-- Banco de dados: `tech`
+--
+CREATE DATABASE IF NOT EXISTS `tech` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+USE `tech`;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `registro`
+--
+
+DROP TABLE IF EXISTS `registro`;
+CREATE TABLE IF NOT EXISTS `registro` (
+  `email` varchar(60) NOT NULL,
+  `senha` varchar(40) NOT NULL,
+  `nomeCompleto` varchar(60) NOT NULL,
+  `data` date NOT NULL,
+  `Cliente` int NOT NULL,
+  PRIMARY KEY (`Cliente`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+--
+-- Banco de dados: `teste`
+--
+CREATE DATABASE IF NOT EXISTS `teste` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+USE `teste`;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `aluno`
+--
+
+DROP TABLE IF EXISTS `aluno`;
+CREATE TABLE IF NOT EXISTS `aluno` (
+  `rm` char(5) NOT NULL,
+  `nome` varchar(40) NOT NULL,
+  `nome_dos_pais` varchar(50) DEFAULT NULL,
+  `cpf` char(11) NOT NULL,
+  `logradouro` enum('rua','avenida','praça') NOT NULL DEFAULT 'rua',
+  `cep` char(8) NOT NULL,
+  PRIMARY KEY (`rm`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `departamento`
+--
+
+DROP TABLE IF EXISTS `departamento`;
+CREATE TABLE IF NOT EXISTS `departamento` (
+  `cod_dep` int NOT NULL AUTO_INCREMENT,
+  `descr` varchar(40) NOT NULL,
+  `localiz` varchar(30) NOT NULL,
+  PRIMARY KEY (`cod_dep`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
