@@ -174,12 +174,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                 </div>
             </div>
-            <button class="learn-more" onclick="removerDivida(this)">
-                <span class="circle" aria-hidden="true">
-                    <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Excluir Dívida</span>
+            <button class="Btn" onclick="removerDivida(this)">
+  
+                <div class="sign">
+                <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="50"
+  height="50"
+  viewBox="0 0 24 24"
+>
+  <rect x="4" y="7" width="16" height="14" rx="2" fill="#ccc" />
+  <path d="M4 7h16V5H4v2z" fill="#999" />
+  <path d="M10 2h4v2h-4z" fill="#777" />
+  <path d="M8 10h8v10H8z" fill="#fff" />
+  <rect x="6" y="9" width="12" height="1" fill="#777" />
+  <path d="M6 6h12v1H6z" fill="#777" />
+  <path d="M8 9h1v1H8zm7 0h1v1h-1z" fill="#777" />
+</svg>
+                </div>
+  
+                <div class="text">Apagar dívida</div>
             </button>
+
+
         </div>
     </div>
     <button type="button" onclick="adicionarDivida()">Adicionar Mais Dívidas</button><br><br>
