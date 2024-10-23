@@ -94,7 +94,7 @@ if (isset( $_SESSION['tempo'], $_SESSION['saldo'], $_SESSION['Id_user'], $_SESSI
 }else{
     $msg = "<p class=\"alerta red\">Dividas já cadastradas, altere ou delete!</p>" ;
     
-    $destino = "location:../PAGES/perfil.php";
+    $destino = "location:../PAGES/adicaoDivida.php";
     $_SESSION['msg'] = $msg;
 
      header($destino);

@@ -1,6 +1,7 @@
 <?php
+
 require("../ACTS/sec.php");
-require("../ACTS/sec_divida.php");
+
 
     //mensagem
     $intervalo = range(1, 5);

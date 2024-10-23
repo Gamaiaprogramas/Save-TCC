@@ -15,6 +15,7 @@
             $senha_login = md5($senha1);
             if($senha_login == $clientes['senha']){
                 $_SESSION['logado'] = true;
+                $_SESSION['divida'] = 0;
                 $_SESSION['nome'] = $clientes['nome'];
                 $_SESSION['email'] = $clientes['email'];
                 $_SESSION['Id_user'] = $clientes['Id_user'];
