@@ -23,6 +23,7 @@
                 $_SESSION['cpf'] = $clientes['cpf'];
                 $_SESSION['telefone'] = $clientes['telefone'];
                 $_SESSION['nascto'] = $clientes['nascto'];
+                $_SESSION['genero'] = $clientes['genero'];
                 $msg = "<div class=\"alerta green\"><p >Login efetuado com sucesso</p></div>";            
                 $destino = "location:../PAGES/landing.php";
                 
