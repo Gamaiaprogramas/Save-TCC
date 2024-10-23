@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100%;
+    gap: 3vw;
+}
+
+.conteudo{
+    display: flex;
+    width: 50vw;
+    height: 35vw;
+    background-color: aqua;
+}
+
+.esquerda{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    background-color: antiquewhite;
+}
+
+.direita{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.infos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    height: 90%;
+    background-color: azure;
+}
+
+.salvar{
+    display: flex;
+    gap: 12vw;
+    justify-content: center;
+    align-items: center;
+}
