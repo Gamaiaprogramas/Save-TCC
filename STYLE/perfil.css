@@ -8,7 +8,7 @@ body{
     background-color: aqua;
     display: flex;
     align-items: center;
-
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -38,10 +38,11 @@ body{
 }
 .divInfo{
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40%;
-    
+    height: 80%;
     flex-direction: column;
-    
 }
 .divInfo li{
     color: white;
@@ -49,4 +50,17 @@ body{
     list-style: none;
     font-size: 5vh;
     text-decoration: none;
+}
+
+.editar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vw;
+    width: 5vw;
+}
+
+.btnedit{
+    color: white;
+    font-size: 2vw;
 }
