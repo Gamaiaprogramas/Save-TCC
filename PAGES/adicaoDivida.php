@@ -1,27 +1,19 @@
 <?php
-include("../ACTS/sec.php");
-extract($_POST);
-// Verifica se o formulário foi enviado
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Armazena as dívidas, valores, juros, tempo e saldo na sessão
-    $_SESSION['dividas'] = $dividas;
-    $_SESSION['valores'] = $valores;
-    $_SESSION['juros'] = $juros;
+require("../ACTS/sec.php");
+require("../ACTS/sec_divida.php");
 
-    // Substitui o valor do tempo por 9999 caso a dívida seja ilimitada
-    $tempos = $_POST['tempo'];
-    foreach ($_POST['tempo_ilimitada'] as $key => $ilimitada) {
-        if ($ilimitada === '9999') {
-            $tempos[$key] = 9999; // Substitui o valor do tempo
+    //mensagem
+    $intervalo = range(1, 5);
+
+    // Exibindo o intervalo
+    foreach ($intervalo as $numero) {
+        @session_start();
+        if (isset($_SESSION['msg'])) {
+            echo $_SESSION['msg'];
+            unset($_SESSION['msg']);
         }
     }
-    $_SESSION['tempo'] = $tempos;
-    $_SESSION['saldo'] = $_POST['saldo'];
 
-    // Redireciona para a próxima página
-    header("Location: ../PAGES/confirmacaoInf.php");
-    exit();
-}
 ?>
 
 <!DOCTYPE html>
@@ -134,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <h1>Informe suas Dívidas</h1>
 
-    <form id="dividaForm" method="POST">
+    <form id="dividaForm" method="POST" action="../ACTS/dividas.act.php">
     <div id="dividas-container">
         <div class="divida-item">
             <div class="centro">
@@ -227,7 +219,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button class="button cancel" id="naoBtn">Não</button>
     </div>
 </div>
-
+<script src="../JS/geral.js"></script>
 <script>
 function confirmarEnvio() {
     const form = document.getElementById('dividaForm');
