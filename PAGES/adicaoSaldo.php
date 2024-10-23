@@ -1,5 +1,7 @@
 <?php
-session_start();
+require("../ACTS/sec.php");
+require("../ACTS/sec_divida.php");
+@session_start();
  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Remove o "R$" e formatação ao salvar o saldo na sessão
         $_SESSION['saldo'] = str_replace(['R$', '.', ','], ['', '', '.'], $_POST['saldo']);

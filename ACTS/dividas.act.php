@@ -1,17 +1,30 @@
 <?php
 session_start();
 require('../ACTS/connect.php'); // Certifique-se de que esta linha conecta corretamente ao banco
-
+extract($_POST);
 $msg = "";
-$destino = "location:../PAGES/confirmacaoInf.php";
+
+$destino = "location:../PAGES/perfil.php";
+
+$busca = mysqli_query($con,"SELECT `Nomes_Dividas` FROM `informacao` WHERE `Id_User` = '$_SESSION[Id_user]'");
+
+
+if ($busca->num_rows == 0) {
+// Substitui o valor do tempo por 9999 caso a dívida seja ilimitada
+$tempos = $_POST['tempo'];
+foreach ($_POST['tempo_ilimitada'] as $key => $ilimitada) {
+    if ($ilimitada === '9999') {
+        $tempos[$key] = 9999; // Substitui o valor do tempo
+    }
+}
+$_SESSION['tempo'] = $tempos;
+
+
 
 // Verifica se as informações necessárias estão na sessão
-if (isset($_SESSION['dividas'], $_SESSION['valores'], $_SESSION['juros'], $_SESSION['tempo'], $_SESSION['saldo'], $_SESSION['Id_user'], $_SESSION['nivelDivida'])) {
+if (isset( $_SESSION['tempo'], $_SESSION['saldo'], $_SESSION['Id_user'], $_SESSION['nivelDivida'])) {
 
     // Extrai os dados das sessões
-    $dividas = $_SESSION['dividas'];
-    $valores = $_SESSION['valores'];
-    $juros = $_SESSION['juros'];
     $tempos = $_SESSION['tempo'];
     $saldo = floatval($_SESSION['saldo']);
     $user_id = $_SESSION['Id_user'];  // ID do usuário logado
@@ -19,9 +32,11 @@ if (isset($_SESSION['dividas'], $_SESSION['valores'], $_SESSION['juros'], $_SESS
 
     // Validação simples para evitar inserção de valores vazios
     if (empty($dividas) || empty($valores) || empty($juros) || empty($tempos) || empty($saldo) || empty($user_id)) {
-        $msg = "<div class=\"alerta red\"><p >Preencha todos os campos!</p></div>";
+        $msg = "<p class=\"alerta red\">Preencha todos os campos!</p>";
         $_SESSION['msg'] = $msg;
-        header($destino);
+        $destino = "location:../PAGES/adicaoDivida.php";
+        
+         header($destino);
         exit();
     }
 
@@ -43,32 +58,48 @@ if (isset($_SESSION['dividas'], $_SESSION['valores'], $_SESSION['juros'], $_SESS
         // Executa a query
         if (mysqli_stmt_execute($stmt)) {
 
-            $msg = "<div class=\"alerta green\"><p >Informações salvas com sucesso</p></div>";
+            $msg = "<p class=\"alerta green\">Informações salvas com sucesso</p>";
+            $_SESSION['divida'] = 1;
 
         } else {
-            $msg = "<div class=\"alerta red\"><p >Erro ao salvar informações:"+  mysqli_error($con) + "</p></div>";
+            $msg = "<p class=\"alerta red\">Erro ao salvar informações:"+  mysqli_error($con) + "</p>";
+            $destino = "location:../PAGES/adicaoDivida.php";
         }
 
         // Fecha a statement
         mysqli_stmt_close($stmt);
     } else {
 
-        $msg = "<div class=\"alerta red\"><p >Erro ao preparar a query: "+  mysqli_error($con) + "</p></div>";
+        $msg = "<p class=\"alerta red\">Erro ao preparar a query: "+  mysqli_error($con) + "</p>";
+        $destino = "location:../PAGES/adicaoDivida.php";
 
     }
 
     // Redireciona para a próxima página com a mensagem
-    header($destino);
+     header($destino);
     $_SESSION['msg'] = $msg;
 
     exit();
 } else {
     // Caso as informações da sessão não estejam completas
-    $msg = "<div class=\"alerta red\"><p >Dados insuficientes para salvar</p></div>";
+    $msg = "<p class=\"alerta red\">Dados insuficientes para salvar </p>" ;
+    
+    $destino = "location:../PAGES/adicaoDivida.php";
     $_SESSION['msg'] = $msg;
 
-    header($destino);
+     header($destino);
     exit();
 }
+
+}else{
+    $msg = "<p class=\"alerta red\">Dividas já cadastradas, altere ou delete!</p>" ;
+    
+    $destino = "location:../PAGES/perfil.php";
+    $_SESSION['msg'] = $msg;
+
+     header($destino);
+}
 header($destino);
+
+
 ?>

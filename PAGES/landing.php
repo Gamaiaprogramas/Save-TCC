@@ -152,7 +152,7 @@
                     </div> 
 
                     <div class="txt-instru-box">
-                        <h4>Felipe <span>Gustavo</span></h4>
+                        <h4>Filipe <span>Takara</span></h4>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam maxime nulla dolorum eius necessitatibus quas accusamus ab aliquid iusto illum dolores porro ipsum suscipit atque unde saepe possimus, culpa facilis.</p>
                     </div>
                 
