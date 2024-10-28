@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION['nivelDivida'] = $_POST['nivels'];
 
     // Redireciona para a próxima página
-    header("Location: ../PAGES/adicaoDivida.php");
+    header("Location: ../PAGES/adicaoGastos.php");
     exit();
 }
 ?>

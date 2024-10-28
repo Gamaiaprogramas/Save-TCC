@@ -4,7 +4,7 @@ require('../ACTS/connect.php'); // Certifique-se de que esta linha conecta corre
 extract($_POST);
 $msg = "";
 
-$destino = "location:../PAGES/perfil.php";
+$destino = "location:../ACTS/gastos.act.php";
 
 $busca = mysqli_query($con,"SELECT `Nomes_Dividas` FROM `informacao` WHERE `Id_User` = '$_SESSION[Id_user]'");
 
