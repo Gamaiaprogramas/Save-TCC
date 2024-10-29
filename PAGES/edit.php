@@ -13,6 +13,12 @@ include("../partials/header.php");
     margin: 0 !important;
     z-index: 1;
   }
+  .show{
+    display: block;
+  }
+  .hidden{
+    display: none;
+  }
 </style>
 
 <!DOCTYPE html>
@@ -23,14 +29,22 @@ include("../partials/header.php");
     <title>Editar Perfil</title>
 </head>
 <body>
+    <div class="confirmar hidden" id="confirm">
+        <div class="cima"><p>Tem certeza?</p></div>
+        <div class="baixo">
+            <a href="../ACTS/deletar.php"><button type="button">Sim</button></a>
+            <button type="button" onclick="cancel()">Não</button> 
+        </div>
+    </div>
+
+
     <div class="conteudo">
         <div class="esquerda"></div>
         <div class="direita">
             <div class="infos"></div>
             <div class="salvar">
-                <a href="../ACTS/deletar.php">
-                    <button type="button" class="btn" id="deleteButton">Deletar Perfil</button>
-                </a>
+                <button type="button" class="btn" id="deleteButton" onclick="confirmDelete()">Deletar Perfil</button>
+
                 <button type="submit" class="btn">Salvar</button>
             </div>
         </div>
@@ -38,14 +52,18 @@ include("../partials/header.php");
 
     <script>
         function confirmDelete() {
-            console.log("Função confirmDelete chamada"); // Verifica se a função é chamada
-            if (confirm('Tem certeza que deseja deletar o seu perfil? Esta ação não pode ser desfeita.')) {
-                window.location.href = '../ACTS/deletar.php?codigo=<?php echo $_SESSION['codigo']; ?>';
-            }
+            console.log("oia")
+            container = document.querySelector('#confirm')
+            container.classList.add('show')
+            container.classList.remove('hidden')
+        }
+        function cancel() {
+            console.log("oia")
+            container = document.querySelector('#confirm')
+            container.classList.add('hidden')
+            container.classList.remove('show')
         }
 
-        // Adiciona o evento de clique ao botão
-        document.getElementById('deleteButton').addEventListener('click', confirmDelete);
     </script>
 </body>
 </html>
