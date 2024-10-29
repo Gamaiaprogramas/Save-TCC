@@ -28,7 +28,9 @@ include("../partials/header.php");
         <div class="direita">
             <div class="infos"></div>
             <div class="salvar">
-                <button type="button" class="btn" id="deleteButton">Deletar Perfil</button>
+                <a href="../ACTS/deletar.php">
+                    <button type="button" class="btn" id="deleteButton">Deletar Perfil</button>
+                </a>
                 <button type="submit" class="btn">Salvar</button>
             </div>
         </div>

@@ -8,24 +8,17 @@ if ($_SESSION['logado'] != true) {
     exit();
 }
 
-if (isset($_GET['codigo'])) {
-    $Id_user = $_GET['codigo'];
-
-    $stmt = $con->prepare("DELETE FROM registro WHERE Coduser = ?");
-    $stmt->bind_param("i", $Id_user);
-
-    if ($stmt->execute()) {
-        session_destroy();
-        header("Location: ../PAGES/login.php");
-        exit();
-    } else {
-        echo "Erro ao deletar o perfil. Por favor, tente novamente.";
-    }
-
-    $stmt->close();
+if (isset($_SESSION['logado']) && $_SESSION['logado'] == true ) {
+    $cod = $_SESSION['Id_user'];
+    mysqli_query($con, "DELETE FROM `registro` WHERE `registro`.`Id_user` = $cod");
+    $msg = "<div class=\"alerta green\"><p >Conta deletada com sucesso</p></div>";
+    $destino = "location:../PAGES/login.php";
 } else {
-    echo "Código de usuário inválido.";
+    $msg = "<div class=\"alerta red\"><p >Erro ao deletar perfil</p></div>"; 
+    $destino = "location:../PAGES/edit.php";
 }
 
-$con->close();
+$_SESSION['msg'] = $msg;
+header($destino);
 ?>
+ 

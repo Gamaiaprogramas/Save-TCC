@@ -38,7 +38,7 @@
                     echo "<li>Email $_SESSION[email]</li>";
                     echo "<li >Cpf: $_SESSION[cpf]</li>";
                     echo "<li >Telefone: $_SESSION[telefone]</li>";
-                    echo "<li >Nascto: $_SESSION[nascto]</li>";
+                    echo "<li >Nascimento: $_SESSION[nascto]</li>";
                     echo "<li >Gênero: $_SESSION[genero]</li>";       
                 }
             ?>
