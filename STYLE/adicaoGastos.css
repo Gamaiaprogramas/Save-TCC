@@ -23,12 +23,12 @@ form{
 .Btn {
     position: fixed;
     right: -41vw;
-    top: -21.5vw;
+    top: -12.5vw;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     width: 45px;
-    height: 45px;
+    height:105px;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -147,8 +147,9 @@ form{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: relative;
     flex-direction: column;
-    gap: 4.5vw !important;
+    gap: 4vw !important;
     width: 100%;
     padding: 2vw 5vw;
 }
@@ -168,8 +169,8 @@ padding: .5vw .5vw .5vw 1vw;
     justify-content: center;
     align-items: left;
     padding: 2vw;
+    height: 14vw;
     gap: 1vw;
-    height: 23vw;
     background-color: #FFF;
     border-radius: 1.5vw;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -195,6 +196,7 @@ padding: .5vw .5vw .5vw 1vw;
     flex-direction: column;
     height: 100%;
     width: 50%;
+    gap: 2vw;
 }
 
 .esquerda div{
@@ -205,6 +207,7 @@ padding: .5vw .5vw .5vw 1vw;
     font-size: 1.2vw;
     height: 25%;
     width: 100%;
+    
 }
 
 .direita div{
