@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div>
                         <input type="number" name="valoresGasto[]" step="0.01" required><br>
-</div>
+            </div>
                 </div>
             </div>
             <button class="Btn" onclick="removerDivida(this)">
@@ -135,7 +135,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         </div>
     </div>
-    <button type="button" onclick="adicionarDivida()">Adicionar Mais Dívidas</button><br><br>
+    <div class="espacoBtn">
+        <button type="button" class="btnAdicionar" onclick="adicionarDivida()">Adicionar Mais Dívidas <i class="fa-solid 1 fa-plus"></i></button>
+    </div>
     
     <button type="button" class="btnProx" onclick="confirmarEnvio()" >
         <span>Próximo</span>

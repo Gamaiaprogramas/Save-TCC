@@ -179,7 +179,9 @@ require("../ACTS/sec.php");
 
         </div>
     </div>
-    <button type="button" onclick="adicionarDivida()">Adicionar Mais Dívidas</button><br><br>
+    <div class="espacoBtn">
+        <button type="button" class="btnAdicionar" onclick="adicionarDivida()">Adicionar Mais Dívidas <i class="fa-solid 1 fa-plus"></i></button>
+    </div>
     
     <button type="button" class="btnProx" onclick="confirmarEnvio()" >
         <span>Próximo</span>
