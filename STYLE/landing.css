@@ -1,3 +1,36 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.green{
+    background-color: green;
+    width: 100%;
+    height: 2vw;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    margin-top: -.2vw !important;
+}
+
+.red{
+    background-color: #c50000;
+    width: 100%;
+    height: 2vw;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    margin-top: -.2vw !important;
+}
+
+
 section.hero-site{
     height: 98vh;
     background-image: url(../PICS/imgs/background-home2.png);
