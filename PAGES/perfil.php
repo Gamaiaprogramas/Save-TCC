@@ -65,9 +65,23 @@
                 </div>
                 <div class="nomes">Nascimento:
                     <div class="phps">
-                    <?php echo "$_SESSION[nascto]"; ?>
+                        <?php
+                        //$_SESSION['nascto'] contém a data no formato "YYYY-MM-DD"
+                        $dataOriginal = $_SESSION['nascto'];
+                        
+                        // Dividir a data em partes
+                        $partes = explode('-', $dataOriginal);
+                        
+                        // Verificar se a data está no formato correto
+                        if (count($partes) == 3) {
+                            // Rearranjar as partes para "DD-MM-YYYY"
+                            $dataFormatada = "{$partes[2]}-{$partes[1]}-{$partes[0]}";
+                            echo $dataFormatada;
+                        } else {
+                            echo "Data inválida";
+                        }
+                        ?>
                     </div>
-
                 </div>
                 <div class="nomes">Gênero: 
                     <div class="phps">
