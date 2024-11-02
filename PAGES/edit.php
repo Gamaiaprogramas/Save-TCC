@@ -1,4 +1,5 @@
 <?php 
+@session_start();
 include("../partials/header.php");
 ?>
 
@@ -39,13 +40,48 @@ include("../partials/header.php");
 
 
     <div class="conteudo">
-        <div class="esquerda"></div>
-        <div class="direita">
-            <div class="infos"></div>
-            <div class="salvar">
-                <button type="button" class="btn" id="deleteButton" onclick="confirmDelete()">Deletar Perfil</button>
-
-                <button type="submit" class="btn">Salvar</button>
+        <div class="cimaConteudo">
+            <h1>Edite Suas <a>informações</a>!</h1>
+        </div>
+        <div class="baixoConteudo">
+            <div class="esquerda"></div>
+            <div class="direita">
+                <div class="infos">
+                    <div class="info">
+                        <div class="conteudoInfo">
+                            <label>Nome:</label>
+                            <input type="text" name="nome" id="usuario" value="<?php echo $_SESSION['nome']; ?>">
+                        </div>
+                        <div class="conteudoInfo">
+                            <label>Telefone:</label>
+                            <input type="tel" name="telefone" id="telefone" value="<?php echo $_SESSION['telefone']; ?>">
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="conteudoInfo">
+                            <label>Email:</label>
+                            <input type="email" name="email" id="email" value="<?php echo $_SESSION['email']; ?>">
+                        </div>
+                        <div class="conteudoInfo">
+                            <label>Nascimento:</label>
+                            <input type="date" name="data" value="<?php echo $_SESSION['nascto']; ?>">
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="conteudoInfo">
+                            <label>CPF:</label>
+                            <input type="text" name="cpf" value="<?php echo $_SESSION['cpf']; ?>">
+                        </div>
+                        <div class="conteudoInfo">
+                            <label>Gênero:</label>
+                            <input type="text" name="genero" id="genero" value="<?php echo $_SESSION['genero']; ?>">
+                        </div>
+                    </div>
+                </div>
+                <div class="botoes">
+                    <button type="button" class="btn" id="deleteButton" onclick="confirmDelete()">Deletar Perfil</button>
+                    <button type="submit" class="btn">Salvar</button>
+                </div>
             </div>
         </div>
     </div>
