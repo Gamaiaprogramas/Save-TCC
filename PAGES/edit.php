@@ -44,7 +44,16 @@ include("../partials/header.php");
             <h1>Edite Suas <a>informações</a>!</h1>
         </div>
         <div class="baixoConteudo">
-            <div class="esquerda"></div>
+            <div class="esquerda">
+            <div class="foto">
+                <img id="previewImg" src="<?php echo $_SESSION['foto']; ?>" class="miniaturaPerf">
+                <input type="file" class="custom-file-input" name="foto" id="fileFoto" onchange="previewFile('fileFoto', 'previewImg');">
+            </div>
+                <div class="plano">
+                    <label>Plano 1</label>
+                    <label class="textoPlano">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo repudiandae porro suscipit iure facilis. Quibusdam repudiandae delectus totam exercitationem, mollitia repellendus repellat eum a neque ratione atque quia perferendis vel?</label>
+                </div>
+            </div>
             <div class="direita">
                 <div class="infos">
                     <div class="info">
@@ -73,14 +82,20 @@ include("../partials/header.php");
                             <input type="text" name="cpf" value="<?php echo $_SESSION['cpf']; ?>">
                         </div>
                         <div class="conteudoInfo">
+                            <label>Senha:</label>
+                            <input type="">
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="conteudoInfo">
                             <label>Gênero:</label>
                             <input type="text" name="genero" id="genero" value="<?php echo $_SESSION['genero']; ?>">
                         </div>
+                        <div class="conteudoInfoBtn">
+                            <button type="button" class="btn" id="deleteButton" onclick="confirmDelete()">Deletar Perfil</button>
+                            <button type="submit" class="btn">Salvar</button>
+                        </div>
                     </div>
-                </div>
-                <div class="botoes">
-                    <button type="button" class="btn" id="deleteButton" onclick="confirmDelete()">Deletar Perfil</button>
-                    <button type="submit" class="btn">Salvar</button>
                 </div>
             </div>
         </div>
@@ -99,7 +114,23 @@ include("../partials/header.php");
             container.classList.add('hidden')
             container.classList.remove('show')
         }
+        function previewFile(inputId, imgId) {
+            const input = document.getElementById(inputId);
+            const preview = document.getElementById(imgId);
 
+            const file = input.files[0];
+            const reader = new FileReader();
+
+            reader.onloadend = function() {
+                preview.src = reader.result;
+            }
+
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                preview.src = "<?php echo $_SESSION['Foto']; ?>";
+            }
+        }
     </script>
 </body>
 </html>
