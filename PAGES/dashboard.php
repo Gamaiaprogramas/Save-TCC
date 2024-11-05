@@ -1,6 +1,7 @@
 <?php
 // Inicia a sessão
 session_start();
+include("../partials/header.php");
 
 // Conexão com o banco de dados
 include("../ACTS/connect.php");
@@ -52,40 +53,21 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Financeira</title>
+    <link rel="stylesheet" href="../STYLE/dashboard.css">
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fff;
-            color: #10002b;
-        }
-        .dashboard-container {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        #chartdiv {
-            width: 100%;
-            height: 500px;
-        }
-        .card {
-            background-color: #ff6d00;
-            color: white;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            width: 300px;
-        }
-        .cards-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+        header {
+            position: relative !important;
+            background-color: #10002b !important;
+            height: 7vw !important;
+            margin: 0 !important;
+            z-index: 1;
         }
     </style>
 </head>
@@ -99,36 +81,16 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
         <div id="chartdiv"></div>
 
         <div class="cards-container">
-    <h3>Dívidas</h3>
-    <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
-        <div class="card">
-            <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
-            <p>Valor: R$ <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
-            <p>Juros: <?php echo htmlspecialchars($juros_dividas[$i]); ?>%</p>
-            <p>Tempo: <?php 
-                if (intval($tempo_dividas[$i]) == 9999) {
-                    echo "Pagamento Único";
-                } elseif (intval($tempo_dividas[$i]) > 0) {
-                    echo htmlspecialchars($tempo_dividas[$i]) . " meses";
-                } else {
-                    echo "Dívida Paga";
-                }
-            ?></p>
-            <?php if (intval($tempo_dividas[$i]) > 0 || intval($tempo_dividas[$i]) == 9999): ?>
-                <form method="post" action="../ACTS/pagar_divida.php">
-                    <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
-                    <input type="hidden" name="tempo_dividas" value="<?php echo intval($tempo_dividas[$i]); ?>">
-                    <button type="submit">Pagar Parcela</button>
-                </form>
-            <?php else: ?>
-                <button disabled style="background-color: grey; color: white;">Dívida Paga</button>
-            <?php endif; ?>
+            <h3>Dívidas</h3>
+            <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
+                <div class="card">
+                    <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
+                    <p>Valor: R$ <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
+                    <p>Juros: <?php echo htmlspecialchars($juros_dividas[$i]); ?>%</p>
+                    <p>Tempo: <?php echo htmlspecialchars($tempo_dividas[$i]); ?></p>
+                </div>
+            <?php endfor; ?>
         </div>
-    <?php endfor; ?>
-</div>
-
-
-
 
         <div class="cards-container">
             <h3>Gastos Fixos</h3>
