@@ -1,6 +1,13 @@
 <?php 
 @session_start();
 include("../partials/header.php");
+
+    include('../ACTS/connect.php');
+    $codigo = $_SESSION['Id_user'];
+    $usuarios = mysqli_query($con, "SELECT * FROM `registro` WHERE `Id_user` = '$codigo'");
+    $usuario = mysqli_fetch_assoc($usuarios);
+    
+    
 ?>
 
 <link rel="stylesheet" href="../STYLE/landing.css">
@@ -38,7 +45,7 @@ include("../partials/header.php");
         </div>
     </div>
 
-
+<form action="../ACTS/edit.act.php" enctype="multipart/form-data" method="post">
     <div class="conteudo">
         <div class="cimaConteudo">
             <h1>Edite Suas <a>informações</a>!</h1>
@@ -47,7 +54,7 @@ include("../partials/header.php");
             <div class="esquerda">
             <div class="foto">
                 <img id="previewImg" src="<?php echo $_SESSION['foto']; ?>" class="miniaturaPerf">
-                <input type="file" class="custom-file-input" name="foto" id="fileFoto" onchange="previewFile('fileFoto', 'previewImg');">
+                <input type="file" name="newFoto" id="fileFoto" id="inputGroupFile01" onchange="previewFile(this);">
             </div>
                 <div class="plano">
                     <label>Plano 1</label>
@@ -100,7 +107,7 @@ include("../partials/header.php");
             </div>
         </div>
     </div>
-
+</form>
     <script>
         function confirmDelete() {
             console.log("oia")
@@ -131,6 +138,24 @@ include("../partials/header.php");
                 preview.src = "<?php echo $_SESSION['Foto']; ?>";
             }
         }
+        function previewFile(input) {
+	$("#previewImg").fadeOut(100);
+	$("#imagemAtual").css("filter", "blur(5px)");
+	$("#previewImg").css("filter", "blur(0px)");
+	var file = $("input[type=file]").get(0).files[0];
+
+	if (file) {
+		var reader = new FileReader();
+
+		reader.onload = function () {
+			$("#previewImg").attr("src", reader.result);
+		};
+
+		reader.readAsDataURL(file);
+	}
+	$("#previewImg").fadeIn(800);
+}
+
     </script>
 </body>
 </html>
