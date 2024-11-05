@@ -90,7 +90,8 @@ body{
 }
 
 .foto img{
-    height: ;
+    height: 10vh;
+    width: 10vh;
     border-radius: 50%;
 }
 
