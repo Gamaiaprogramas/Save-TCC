@@ -119,29 +119,36 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
             </div>
         </div>
         <div class="tituloDividas">
+
+        
             <h1>Dividas <a>!</a></h1>
         </div>
         <div class="containerDividas">
-            <button class="Esquerda" onclick="Esquerda()"></button>
             <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
-                <div class="cardDivida">
-                    <div class="nomeDivida">
-                        <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
-                    </div>
-                    <div class="valorDivida">
-                        <p>Valor: R$ <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
-                    </div>
-                    <div class="jurosDivida">
-                        <p>Juros: <?php echo htmlspecialchars($juros_dividas[$i]); ?>%</p>
-                    </div>
-                    <div class="tempoDivida">
-                        <p>Tempo: <?php echo htmlspecialchars($tempo_dividas[$i]); ?></p>
-                    </div>
-                    <div class="btnDivida">
-                        <button class="botaoDivida">Abater Divida</button>
-                    </div>
-                </div>
-            <?php endfor; ?>
+        <div class="card">
+            <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
+            <p>Valor: R$ <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
+            <p>Juros: <?php echo htmlspecialchars($juros_dividas[$i]); ?>%</p>
+            <p>Tempo: <?php 
+                if (intval($tempo_dividas[$i]) == 9999) {
+                    echo "Pagamento Único";
+                } elseif (intval($tempo_dividas[$i]) > 0) {
+                    echo htmlspecialchars($tempo_dividas[$i]) . " meses";
+                } else {
+                    echo "Dívida Paga";
+                }
+            ?></p>
+            <?php if (intval($tempo_dividas[$i]) > 0 || intval($tempo_dividas[$i]) == 9999): ?>
+                <form method="post" action="../ACTS/pagar_divida.php">
+                    <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
+                    <input type="hidden" name="tempo_dividas" value="<?php echo intval($tempo_dividas[$i]); ?>">
+                    <button type="submit">Pagar Parcela</button>
+                </form>
+            <?php else: ?>
+                <button disabled style="background-color: grey; color: white;">Dívida Paga</button>
+            <?php endif; ?>
+        </div>
+    <?php endfor; ?>
         </div>
       
         <div class="tituloFixo">
