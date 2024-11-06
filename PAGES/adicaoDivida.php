@@ -24,89 +24,60 @@ require("../ACTS/sec.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preencha as Dívidas</title>
     <script>
-
-        // Função para adicionar mais campos de dívidas
-        function adicionarDivida() {
-            const dividasContainer = document.getElementById('dividas-container');
-            const novaDivida = `
-            <div class="divida-item">
-                <div class="centro">
-                    <div class="esquerda">
-                        <div>
-                            <label><span>Nome</span> da Dívida:</label>
-                        </div>
-                        <div>
-                            <label><span>Valor </span>da Dívida:</label>
-                        </div>
-                        <div>
-                            <label><span>Juros </span>da Dívida (%):</label>
-                        </div>
-                        <div>
-                            <label><span>Tempo </span>da Dívida (meses):</label>
-                        </div>
-                        <div>
-                            <label><span>Dívida </span>Parcelável?</label>
-                        </div>
-
-                    </div>
-                    <div class="direita">
-                        <div>
-                            <input type="text" name="dividas[]" required><br>
-                        </div>
-                        <div>
-                            <input type="number" name="valores[]" step="0.01" required><br>
-                        </div>
-                        <div>
-                            <input type="number" name="juros[]" step="0.01" required><br>
-                        </div>
-                        <div>
-                            <input type="number" name="tempo[]" required id="tempo-input"><br>
-                        </div>
-                        <div class="check">
+    // Função para adicionar mais campos de dívidas
+    function adicionarDivida() {
+        const dividasContainer = document.getElementById('dividas-container');
+        const novaDivida = `
+        <div class="divida-item">
+            <div class="centro">
+                <div class="esquerda">
+                    <div><label><span>Nome</span> da Dívida:</label></div>
+                    <div><label><span>Valor </span>da Dívida:</label></div>
+                    <div><label><span>Juros </span>da Dívida (%):</label></div>
+                    <div><label><span>Tempo </span>da Dívida (meses):</label></div>
+                    <div><label><span>Dívida </span>Parcelável?</label></div>
+                </div>
+                <div class="direita">
+                    <div><input type="text" name="dividas[]" required><br></div>
+                    <div><input type="number" name="valores[]" step="0.01" required><br></div>
+                    <div><input type="number" name="juros[]" step="0.01" required><br></div>
+                    <div><input type="number" name="tempo[]" class="tempo-input" required><br></div>
+                    <div class="check">
                         <input type="checkbox" onchange="toggleTempo(this)"><br><br>
-                    <input type="hidden" name="tempo_ilimitada[]" value="9999"> <!-- Campo oculto -->
-                        </div>
+                        <input type="hidden" name="tempo_ilimitada[]" value="">
                     </div>
-                </div>  
-                
-            
+                </div>
+            </div>  
+            <button class="Btn" onclick="removerDivida(this)">
+                <div class="sign"><i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i></div>
+                <div class="text">Apagar dívida</div>
+            </button>
+        </div>`;
+        dividasContainer.insertAdjacentHTML('beforeend', novaDivida);
+    }
 
-                <button class="Btn" onclick="removerDivida(this)">
-  
-                    <div class="sign">
-                    <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
-                    </div>
-    
-                    <div class="text">Apagar dívida</div>
-                </button>
-            </div>
-            `;
-            dividasContainer.insertAdjacentHTML('beforeend', novaDivida);
+    // Função para desativar o campo de tempo se a dívida for ilimitada
+    function toggleTempo(checkbox) {
+        const inputTempo = checkbox.closest('.direita').querySelector('.tempo-input');
+        const hiddenTempo = checkbox.closest('.direita').querySelector('input[name="tempo_ilimitada[]"]');
+
+        if (checkbox.checked) {
+            inputTempo.disabled = true; // Desativa o campo de entrada
+            inputTempo.value = ""; // Limpa o valor digitado pelo usuário
+            hiddenTempo.value = 9999; // Define o valor oculto como 9999
+        } else {
+            inputTempo.disabled = false; // Ativa o campo de entrada
+            hiddenTempo.value = ""; // Limpa o valor oculto
         }
+    }
 
-        // Função para desativar o campo de tempo se a dívida for ilimitada
-        function toggleTempo(checkbox) {
-            const inputTempo = checkbox.parentElement.querySelector('#tempo-input');
-            const hiddenTempo = checkbox.parentElement.querySelector('input[name="tempo_ilimitada[]"]');
+    // Função para remover um campo de dívida
+    function removerDivida(button) {
+        const dividaItem = button.parentElement; // Seleciona o container da dívida
+        dividaItem.remove(); // Remove o container da dívida
+    }
+</script>
 
-            if (checkbox.checked) {
-                inputTempo.disabled = true; // Desativa o campo de entrada
-                inputTempo.value = ""; // Limpa o valor digitado pelo usuário
-                hiddenTempo.value = 9999; // Define o valor oculto como 9999
-            } else {
-                inputTempo.disabled = false; // Ativa o campo de entrada
-                hiddenTempo.value = ""; // Limpa o valor oculto
-            }
-        }
-
-        // Função para remover um campo de dívida
-        function removerDivida(button) {
-            const dividaItem = button.parentElement; // Seleciona o container da dívida
-            dividaItem.remove(); // Remove o container da dívida
-        }
-
-        
-    </script>
     <link rel="stylesheet" href="../STYLE/acaoDivida.css">
         
 </head>
