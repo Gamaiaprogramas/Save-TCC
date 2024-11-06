@@ -62,6 +62,7 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="../JS/jquery-3.7.1.min.js"></script>
     <style>
         header {
             position: relative !important;
@@ -119,12 +120,13 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                 </div>
             </div>
         </div>
+        
         <div class="tituloDividas">
             <h1>Dividas <a>!</a></h1>
         </div>
         <div class="espacoDividas">
             <div class="espacoBtnEsquerda">
-                <button class="btnEsquerda"><i class="fa-solid fa-arrow-left fa-2xl"></i></button>
+                <button class="btnEsquerda" onclick="direcao(1)"><i class="fa-solid fa-arrow-left fa-2xl"></i></button>
             </div>
             <div class="containerDividas">
                 <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
@@ -165,10 +167,20 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
             <?php endfor; ?>
             </div>
             <div class="espacoBtnDireita">
-                <button class="btnDireita"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
+                <button class="btnDireita" onclick="direcao(2)"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
             </div>
-        </div>
-        
+        </div> 
+        <script>
+            function direcao(e){
+                var direcao = document.querySelector(".containerDividas")
+
+                if(e == 1){
+                    direcao.scrollLeft = direcao.scrollLeft - 800;
+                }else if (e == 2){
+                    direcao.scrollLeft = direcao.scrollLeft + 800;
+                }
+            }
+        </script>
         <div class="tituloFixo">
             <h1>Gastos <a>Fixos</a>!</h1>
         </div>
