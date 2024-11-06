@@ -26,7 +26,20 @@
     </footer>
     <script src="../JS/geral.js"></script>
     <script>
-        
-    </script>
+    // Verifica se a mensagem existe
+    window.onload = function() {
+        var msg = document.querySelector(".alerta");
+        if (msg) {
+            setTimeout(function() {
+                msg.style.transition = "opacity 1s";
+                msg.style.opacity = 0;
+                // Remove a mensagem do DOM após a animação
+                setTimeout(function() {
+                    msg.remove();
+                }, 1000); // Tempo da animação (1 segundo)
+            }, 5000); // Tempo de exibição (5 segundos)
+        }
+    };
+</script>
 </body>
 </html>

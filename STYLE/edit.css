@@ -14,6 +14,14 @@ body{
     gap: 3vw;
 }
 
+#opcao{
+    width: 100%;
+    padding: 1%;
+    border: none;
+    border-bottom: solid .2vw #10002b;
+    font-size: 1vw;
+}
+
 .confirmar{
     display: flex;
     position: absolute;

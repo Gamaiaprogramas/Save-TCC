@@ -124,13 +124,22 @@ body {
     color: #10002b;
 }
 
-.containerDividas{
+.espacoDividas{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 2vw;
     height: 25vw;
+
+}
+
+.containerDividas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 2vw;
+    height: 100%;
 }
 
 .cardDivida {
@@ -165,16 +174,26 @@ body {
     width: 100%;
 }
 
+.tempoDivida{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1vw;
+    height: 20%;
+    width: 100%;
+}
+
 .btnDivida{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 20%;
+    height: 3vw;
 }
 
 .botaoDivida{
-    width: 50%;
+    width: 10vw;
     height: 60%;
     font-size: 1vw;
     color: #ff6d00;
@@ -201,9 +220,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    margin-top: 3vw;
+    width: 80%;
     height: 23vw;
-    gap: 1vw;
+    gap: 2vw;
+    flex-wrap: wrap ;
+    
 }
 
 .cardFixo{

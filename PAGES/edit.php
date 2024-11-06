@@ -96,7 +96,20 @@ include("../partials/header.php");
                     <div class="info">
                         <div class="conteudoInfo">
                             <label>Gênero:</label>
-                            <input type="text" name="genero" id="genero" value="<?php echo $_SESSION['genero']; ?>">
+                            <select id="opcao" name="sexo">
+                                    <option value="Masculino" <?php if ($_SESSION['genero'] == "Masculino") {
+                                        echo "selected";
+                                    } ?>>Masculino</option>
+                                    <option value="Feminino" <?php if ($_SESSION['genero'] == "Feminino") {
+                                        echo "selected";
+                                    } ?>>Feminino</option>
+                                    <option value="Não Binario" <?php if ($_SESSION['genero'] == "Não Binario") {
+                                        echo "selected";
+                                    } ?>>Não binario</option>
+                                    <option value="Prefiro não Informar" <?php if ($_SESSION['genero'] == "Prefiro não Informar") {
+                                        echo "selected";
+                                    } ?>>Prefiro não informar</option>
+                                </select>
                         </div>
                         <div class="conteudoInfoBtn">
                             <button type="button" class="btn" id="deleteButton" onclick="confirmDelete()">Deletar Perfil</button>

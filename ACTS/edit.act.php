@@ -6,7 +6,7 @@ require('../ACTS/connect.php');
 $nome = $_POST['nome'] ?? '';
 $email = $_POST['email'] ?? '';
 $cpf = $_POST['cpf'] ?? '';
-$genero = $_POST['genero'] ?? '';
+$genero = $_POST['sexo'] ?? '';
 $telefone = $_POST['telefone'] ?? '';
 $data = $_POST['data'] ?? '';
 

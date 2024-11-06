@@ -1,10 +1,13 @@
 <?php 
-
+    
     @session_start();
     if (isset($_SESSION['msg'])) {
         echo $_SESSION['msg'];
         unset($_SESSION['msg']);
     }
+
+
+
 
 
     include("../partials/header.php");
@@ -233,6 +236,9 @@
 
         </div>
     </section>
+
+
+
 <?php 
 
     include("../partials/footer.php")
