@@ -4,6 +4,12 @@
     padding: 0;
     text-decoration: none;
 }
+.alerta {
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+
 .green{
     background-color: green;
     width: 100%;
