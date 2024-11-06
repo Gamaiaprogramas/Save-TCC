@@ -34,7 +34,37 @@
         }
         body::-webkit-scrollbar-track {
             background: #10002b;
+            
         }
+        .green{
+    background-color: green;
+    width: 100%;
+    height: 2vw;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    margin-top: -.2vw !important;
+}
+
+.red{
+    background-color: #c50000;
+    width: 100%;
+    height: 2vw;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    margin-top: -.2vw !important;
+}
+
+.hidden{
+    display: none;
+}
     </style>
     
 </head>
