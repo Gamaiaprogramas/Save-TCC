@@ -175,9 +175,9 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                 var direcao = document.querySelector(".containerDividas")
 
                 if(e == 1){
-                    direcao.scrollLeft = direcao.scrollLeft - 800;
+                    direcao.scrollLeft = direcao.scrollLeft - 1550;
                 }else if (e == 2){
-                    direcao.scrollLeft = direcao.scrollLeft + 800;
+                    direcao.scrollLeft = direcao.scrollLeft + 1550;
                 }
             }
         </script>
