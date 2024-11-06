@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #e9ecef !important;
+    background-color: #fff !important;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -64,6 +64,7 @@ body{
 
 .miniaturaPerf{
     height: 15vw;
+    width: 15vw;
     border-radius: 50%;
 }
 
@@ -108,7 +109,7 @@ body{
     color: black;
     font-size: 1vw;
     border-radius: 0.5vw;
-    background-color: #dee2e6;
+    background-color: #e9ecef;
     padding: 1%;
 }
 

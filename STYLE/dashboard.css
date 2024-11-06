@@ -124,13 +124,47 @@ body {
     color: #10002b;
 }
 
-.containerDividas{
+.espacoDividas{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 2vw;
     height: 25vw;
+}
+
+.espacoBtnEsquerda, .espacoBtnDireita{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 10%;
+}
+
+.btnEsquerda, .btnDireita{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #10002b solid 2px;
+    width: 30%;
+    height: 12%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.containerDividas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 2vw;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}   
+
+.containerDividas::-webkit-scrollbar{
+    display: none;
 }
 
 .cardDivida {
@@ -165,17 +199,38 @@ body {
     width: 100%;
 }
 
+.tempoDivida{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1vw;
+    height: 20%;
+    width: 100%;
+}
+
 .btnDivida{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 20%;
+    height: 3vw;
 }
 
 .botaoDivida{
-    width: 50%;
+    width: 10vw;
     height: 60%;
+    font-size: 1vw;
+    color: #ff6d00;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    border-radius: 2vw;
+}
+
+.btnDividaPaga{
+    width: 10vw;
+    height: 1.8vw;
+    background-color: #10002b;
     font-size: 1vw;
     color: #ff6d00;
     border: none;
@@ -201,9 +256,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    margin-top: 3vw;
+    width: 80%;
     height: 23vw;
-    gap: 1vw;
+    gap: 2vw;
+    flex-wrap: wrap ;
+    
 }
 
 .cardFixo{

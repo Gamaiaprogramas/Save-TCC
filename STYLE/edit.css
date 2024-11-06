@@ -7,6 +7,7 @@
 body{
     display: flex;
     justify-content: center;
+    background-color: #fff;
     align-items: center;
     flex-direction: column;
     overflow-x: hidden;
@@ -98,8 +99,8 @@ body{
 }
 
 .foto img{
-    height: 10vh;
-    width: 10vh;
+    height: 21vh;
+    width: 21vh;
     border-radius: 50%;
 }
 

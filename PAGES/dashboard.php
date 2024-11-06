@@ -3,6 +3,7 @@
 session_start();
 include("../partials/header.php");
 
+
 // Conexão com o banco de dados
 include("../ACTS/connect.php");
 
@@ -61,6 +62,7 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="../JS/jquery-3.7.1.min.js"></script>
     <style>
         header {
             position: relative !important;
@@ -118,39 +120,67 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                 </div>
             </div>
         </div>
-        <div class="tituloDividas">
-
         
+        <div class="tituloDividas">
             <h1>Dividas <a>!</a></h1>
         </div>
-        <div class="containerDividas">
-            <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
-        <div class="card">
-            <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
-            <p>Valor: R$ <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
-            <p>Juros: <?php echo htmlspecialchars($juros_dividas[$i]); ?>%</p>
-            <p>Tempo: <?php 
-                if (intval($tempo_dividas[$i]) == 9999) {
-                    echo "Pagamento Único";
-                } elseif (intval($tempo_dividas[$i]) > 0) {
-                    echo htmlspecialchars($tempo_dividas[$i]) . " meses";
-                } else {
-                    echo "Dívida Paga";
+        <div class="espacoDividas">
+            <div class="espacoBtnEsquerda">
+                <button class="btnEsquerda" onclick="direcao(1)"><i class="fa-solid fa-arrow-left fa-2xl"></i></button>
+            </div>
+            <div class="containerDividas">
+                <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
+                <div class="cardDivida">
+                    <div class="nomeDivida">
+                        <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
+                    </div>
+                    <div class="valorDivida">
+                        <p>Valor: R$ <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
+                    </div>
+                    <div class="jurosDivida">
+                        <p>Juros: <?php echo htmlspecialchars($juros_dividas[$i]); ?>%</p>
+                    </div>
+                    <div class="tempoDivida">
+                        <p>Tempo: <?php 
+                            if (intval($tempo_dividas[$i]) == 9999) {
+                                echo "Pagamento Único";
+                            } elseif (intval($tempo_dividas[$i]) > 0) {
+                                echo htmlspecialchars($tempo_dividas[$i]) . " meses";
+                            } else {
+                                echo "Dívida Paga";
+                            }
+                        ?></p>
+                    </div>
+                    
+                    <?php if (intval($tempo_dividas[$i]) > 0 || intval($tempo_dividas[$i]) == 9999): ?>
+                        <form method="post" action="../ACTS/pagar_divida.php">
+                            <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
+                            <input type="hidden" name="tempo_dividas" value="<?php echo intval($tempo_dividas[$i]); ?>">
+                            <div class="btnDivida">
+                                <button class="botaoDivida" type="submit">Pagar Parcela</button>
+                            </div>
+                        </form>
+                    <?php else: ?>
+                        <button class="btnDividaPaga" >Dívida Paga</button>
+                    <?php endif; ?>
+                </div>
+            <?php endfor; ?>
+            </div>
+            <div class="espacoBtnDireita">
+                <button class="btnDireita" onclick="direcao(2)"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
+            </div>
+        </div> 
+        <script>
+            function direcao(e){
+                var direcao = document.querySelector(".containerDividas")
+
+                if(e == 1){
+                    direcao.scrollLeft = direcao.scrollLeft - 800;
+                }else if (e == 2){
+                    direcao.scrollLeft = direcao.scrollLeft + 800;
                 }
-            ?></p>
-            <?php if (intval($tempo_dividas[$i]) > 0 || intval($tempo_dividas[$i]) == 9999): ?>
-                <form method="post" action="../ACTS/pagar_divida.php">
-                    <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
-                    <input type="hidden" name="tempo_dividas" value="<?php echo intval($tempo_dividas[$i]); ?>">
-                    <button type="submit">Pagar Parcela</button>
-                </form>
-            <?php else: ?>
-                <button disabled style="background-color: grey; color: white;">Dívida Paga</button>
-            <?php endif; ?>
-        </div>
-    <?php endfor; ?>
-        </div>
-      
+            }
+        </script>
         <div class="tituloFixo">
             <h1>Gastos <a>Fixos</a>!</h1>
         </div>
