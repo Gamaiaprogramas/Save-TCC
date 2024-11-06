@@ -44,7 +44,21 @@ include("../partials/header.php");
             <button type="button" onclick="cancel()">Não</button> 
         </div>
     </div>
+<script>
+     function confirmDelete() {
+            console.log("oia")
+            container = document.querySelector('#confirm');
+            container.classList.add('show');
+            container.classList.remove('hidden');
+        }
+        function cancel() {
+            console.log("oia")
+            container = document.querySelector('#confirm');
+            container.classList.add('hidden');
+            container.classList.remove('show');
+        }
 
+</script>
 <form action="../ACTS/edit.act.php" enctype="multipart/form-data" method="post">
     <div class="conteudo">
         <div class="cimaConteudo">
@@ -89,9 +103,16 @@ include("../partials/header.php");
                             <input type="text" name="cpf" value="<?php echo $_SESSION['cpf']; ?>">
                         </div>
                         <div class="conteudoInfo">
-                            <label>Senha:</label>
-                            <input type="">
-                        </div>
+        <label>Senha:</label>
+        <input type="password" name="senha" id="senha" value="<?php echo $_SESSION['senha']; ?>">
+    </div>
+    <div class="conteudoInfoBtn">
+        <!-- Botão com ícone de olho -->
+        <button type="button" class="btn" id="togglePassword" onclick="togglePasswordVisibility()">
+            <i class="fa fa-eye" id="eyeIcon"></i> <!-- Ícone de olho -->
+        </button>
+    </div>
+</div>
                     </div>
                     <div class="info">
                         <div class="conteudoInfo">
@@ -122,53 +143,42 @@ include("../partials/header.php");
     </div>
 </form>
     <script>
-        function confirmDelete() {
-            console.log("oia")
-            container = document.querySelector('#confirm')
-            container.classList.add('show')
-            container.classList.remove('hidden')
-        }
-        function cancel() {
-            console.log("oia")
-            container = document.querySelector('#confirm')
-            container.classList.add('hidden')
-            container.classList.remove('show')
-        }
-        function previewFile(inputId, imgId) {
-            const input = document.getElementById(inputId);
-            const preview = document.getElementById(imgId);
+       
+            function previewFile(inputId, imgId) {
+                const input = document.getElementById(inputId);
+                const preview = document.getElementById(imgId);
 
-            const file = input.files[0];
-            const reader = new FileReader();
+                const file = input.files[0];
+                const reader = new FileReader();
 
-            reader.onloadend = function() {
-                preview.src = reader.result;
+                reader.onloadend = function() {
+                    preview.src = reader.result;
+                }
+
+                if (file) {
+                    reader.readAsDataURL(file);
+                } else {
+                    preview.src = "<?php echo $_SESSION['Foto']; ?>";
+                }
             }
+            function previewFile(input) {
+                $("#previewImg").fadeOut(100);
+                $("#imagemAtual").css("filter", "blur(5px)");
+                $("#previewImg").css("filter", "blur(0px)");
+                var file = $("input[type=file]").get(0).files[0];
 
-            if (file) {
-                reader.readAsDataURL(file);
-            } else {
-                preview.src = "<?php echo $_SESSION['Foto']; ?>";
+                if (file) {
+                    var reader = new FileReader();
+
+                    reader.onload = function () {
+                        $("#previewImg").attr("src", reader.result);
+                    };
+
+                    reader.readAsDataURL(file);
+                }
+                $("#previewImg").fadeIn(800);
             }
-        }
-        function previewFile(input) {
-	$("#previewImg").fadeOut(100);
-	$("#imagemAtual").css("filter", "blur(5px)");
-	$("#previewImg").css("filter", "blur(0px)");
-	var file = $("input[type=file]").get(0).files[0];
-
-	if (file) {
-		var reader = new FileReader();
-
-		reader.onload = function () {
-			$("#previewImg").attr("src", reader.result);
-		};
-
-		reader.readAsDataURL(file);
-	}
-	$("#previewImg").fadeIn(800);
-}
-
+        
     </script>
 </body>
 </html>

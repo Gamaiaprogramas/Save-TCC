@@ -25,6 +25,7 @@
                 $_SESSION['telefone'] = $clientes['telefone'];
                 $_SESSION['nascto'] = $clientes['nascto'];
                 $_SESSION['genero'] = $clientes['genero'];
+                $_SESSION['senha'] = $senha1;
                 $msg = "<div class=\"alerta green\"><p >Login efetuado com sucesso</p></div>";            
                 $destino = "location:../PAGES/landing.php";
                 

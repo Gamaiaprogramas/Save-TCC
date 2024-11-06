@@ -22,7 +22,7 @@
                 return;
             }
 
-            const apiKey = 'SUA_CHAVE_DE_API'; // Substitua por sua chave de API
+            const apiKey = '7bf84672cda6d061'; // Substitua por sua chave de API
             const apiUrl = `https://api.md5decrypt.net/resolve/${hash}?apikey=${apiKey}`;
 
             fetch(apiUrl)
