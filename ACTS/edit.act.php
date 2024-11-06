@@ -9,6 +9,11 @@ $cpf = $_POST['cpf'] ?? '';
 $genero = $_POST['sexo'] ?? '';
 $telefone = $_POST['telefone'] ?? '';
 $data = $_POST['data'] ?? '';
+$senha = $_POST['senha'] ?? '';
+
+if ($senha != $_SESSION['senha']) {
+    $senha = md5($senha);
+}
 
 // Inicializa a variável $foto
 $foto = $_SESSION['foto']; // Mantém a foto existente por padrão
@@ -34,7 +39,8 @@ $update_query = "UPDATE `registro` SET
     `cpf` = '$cpf',
     `genero` = '$genero',
     `telefone` = '$telefone',
-    `nascto` = '$data', 
+    `nascto` = '$data',
+    `senha` = '$senha', 
     `foto` = '$foto'
     WHERE `Id_user` = '{$_SESSION['Id_user']}';";
 

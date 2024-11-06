@@ -68,7 +68,9 @@ include("../partials/header.php");
             <div class="esquerda">
             <div class="foto">
                 <img id="previewImg" src="<?php echo $_SESSION['foto']; ?>" class="miniaturaPerf">
-                <input type="file" name="newFoto" id="fileFoto" id="inputGroupFile01" onchange="previewFile(this);">
+                <label for="fileFoto" class="file-label">Escolher Foto</label>
+                <input type="file" class="file-input" name="newFoto" id="fileFoto" id="inputGroupFile01" onchange="previewFile(this);">
+
             </div>
                 <div class="plano">
                     <label>Plano 1</label>
@@ -103,16 +105,10 @@ include("../partials/header.php");
                             <input type="text" name="cpf" value="<?php echo $_SESSION['cpf']; ?>">
                         </div>
                         <div class="conteudoInfo">
-        <label>Senha:</label>
-        <input type="password" name="senha" id="senha" value="<?php echo $_SESSION['senha']; ?>">
-    </div>
-    <div class="conteudoInfoBtn">
-        <!-- Botão com ícone de olho -->
-        <button type="button" class="btn" id="togglePassword" onclick="togglePasswordVisibility()">
-            <i class="fa fa-eye" id="eyeIcon"></i> <!-- Ícone de olho -->
-        </button>
-    </div>
-</div>
+                            <label>Senha:</label>
+                            <input type="password" name="senha" id="senha" value="<?php echo $_SESSION['senha']; ?>">
+                            </div>
+                        </div>
                     </div>
                     <div class="info">
                         <div class="conteudoInfo">

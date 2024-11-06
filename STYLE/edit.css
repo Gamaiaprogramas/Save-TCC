@@ -71,6 +71,28 @@ body{
     color: #ff6d00;
 }
 
+/* Oculta o input original */
+.file-input {
+    display: none; /* Esconde o input do tipo file */
+}
+
+/* Estilo do botão personalizado */
+.file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6d00; /* Cor do fundo do botão */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Mostra que o botão é clicável */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave para cor de fundo */
+}
+
+/* Efeito de hover para o botão */
+.file-label:hover {
+    background-color: #10002b; /* Cor quando o botão for hover */
+}
+
 .baixoConteudo{
     display: flex;
     justify-content: center;
