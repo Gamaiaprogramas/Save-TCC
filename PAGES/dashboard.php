@@ -123,6 +123,9 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
             <h1>Dividas <a>!</a></h1>
         </div>
         <div class="espacoDividas">
+            <div class="espacoBtnEsquerda">
+                <button class="btnEsquerda"><i class="fa-solid fa-arrow-left fa-2xl"></i></button>
+            </div>
             <div class="containerDividas">
                 <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
                 <div class="cardDivida">
@@ -156,11 +159,14 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                             </div>
                         </form>
                     <?php else: ?>
-                        <button disabled style="background-color: grey; color: white;">Dívida Paga</button>
+                        <button class="btnDividaPaga" >Dívida Paga</button>
                     <?php endif; ?>
+                </div>
+            <?php endfor; ?>
             </div>
-        <?php endfor; ?>
-        </div>
+            <div class="espacoBtnDireita">
+                <button class="btnDireita"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
+            </div>
         </div>
         
         <div class="tituloFixo">
