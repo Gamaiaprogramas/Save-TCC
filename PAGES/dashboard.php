@@ -2,7 +2,7 @@
 // Inicia a sessão
 session_start();
 include("../partials/header.php");
-
+require("../ACTS/sec_dashboard.php");
 
 // Conexão com o banco de dados
 include("../ACTS/connect.php");
