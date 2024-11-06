@@ -38,7 +38,8 @@ header .btn-contato button:hover, .hero-site button:hover, .hoteis button:hover{
 
 .user-photo {
 
-    height: 3vw;
+    height: 4vw;
+    width: 4vw;
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.3s ease;
