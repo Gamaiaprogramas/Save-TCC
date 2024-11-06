@@ -38,27 +38,36 @@ include("../partials/header.php");
 </head>
 <body>
     <div class="confirmar hidden" id="confirm">
-        <div class="cima"><p>Tem certeza?</p></div>
+        <div class="cima">
+            <div class="textoCima">
+                <p>Tem certeza que deseja deletar o seu <a>perfil</a>?</p>
+                <p>Esta ação não poderá ser <b>revertida</b>!</p>
+            </div>
+        </div>
         <div class="baixo">
-            <a href="../ACTS/deletar.php"><button type="button">Sim</button></a>
-            <button type="button" onclick="cancel()">Não</button> 
+            <div class="botoesBaixo">
+                <a href="../ACTS/deletar.php"><button class="btnSimBaixo" type="button">Sim</button></a>
+                <button class="btnNaoBaixo" type="button" onclick="cancel()">Não</button> 
+            </div>
         </div>
     </div>
-<script>
-     function confirmDelete() {
-            console.log("oia")
-            container = document.querySelector('#confirm');
-            container.classList.add('show');
-            container.classList.remove('hidden');
+    <script>
+        function confirmDelete() {
+        console.log("oia");
+        container = document.querySelector('#confirm');
+        container.classList.add('show');
+        container.classList.remove('hidden');
+        document.body.classList.add('blurred'); // Adiciona o blur no body
         }
+
         function cancel() {
-            console.log("oia")
+            console.log("oia");
             container = document.querySelector('#confirm');
             container.classList.add('hidden');
             container.classList.remove('show');
+            document.body.classList.remove('blurred'); // Remove o blur do body
         }
-
-</script>
+    </script>
 <form action="../ACTS/edit.act.php" enctype="multipart/form-data" method="post">
     <div class="conteudo">
         <div class="cimaConteudo">
