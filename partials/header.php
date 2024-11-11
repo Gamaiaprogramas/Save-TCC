@@ -87,11 +87,11 @@
                         <li class="menu-servicos">
                             <a href="">Serviços</a>
                             <div class="submenu">
-                                <a href="#">Cambio</a>
+                                <a href="../PAGES/cambio.php">Cambio</a>
                                 <a href="#">Educação Financeira</a>
-                                <a href="#">Açoes</a>
+                                <a href="../PAGES/action.php">Açoes</a>
                                 <?php if(isset($_SESSION['logado']) && $_SESSION['logado'] == true): ?>
-                                    <a class="aDash" href="#">Sua Dashboard</a>
+                                    <a class="aDash" href="../PAGES/dashboard.php">Sua Dashboard</a>
                                 <?php endif; ?>
                             </div>
                         </li>
@@ -135,22 +135,19 @@
             <section class="menu-mobile" id="menu-mobile">
                 <nav>
                     <ul>
-                        <li><a href="..PAGES/landing.php">Início</a></li>
+                        <li><a href="../PAGES/landing.php">Início</a></li>
                         <li class="menu-servicos">
                             <a href="">Serviços</a>
                             <div class="submenu">
-                                <div class="esquerdaServ">
-                                    <a href="#">Serviço 1</a>
-                                    <a href="#">Serviço 2</a>
-                                </div>
-                                <div class="direitaServ">
-                                    <a href="#">Serviço 3</a>
-                                    <a href="#">Serviço 4</a>
-                                </div>
+                                <a href="../PAGES/cambio.php">Cambio</a>
+                                <a href="#">Educação Financeira</a>
+                                <a href="../PAGES/action.php">Açoes</a>
+                                <?php if(isset($_SESSION['logado']) && $_SESSION['logado'] == true): ?>
+                                    <a class="aDash" href="../PAGES/dashboard.php">Sua Dashboard</a>
+                                <?php endif; ?>
                             </div>
                         </li>
                         <li><a href="../PAGES/">Sobre</a></li>
-                        
                     </ul>
                 </nav> 
             </section>

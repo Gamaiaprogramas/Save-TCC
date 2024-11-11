@@ -1,3 +1,6 @@
+<?php
+ @session_start();
+?>
 <link rel="stylesheet" href="../STYLE/action.css">
 <style>
   header{
