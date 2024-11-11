@@ -37,34 +37,34 @@
             
         }
         .green{
-    background-color: green;
-    width: 100%;
-    height: 2vw;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    align-items: center;
-    margin-top: -.2vw !important;
-}
+            background-color: green;
+            width: 100%;
+            height: 2vw;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            align-items: center;
+            margin-top: -.2vw !important;
+        }
 
-.red{
-    background-color: #c50000;
-    width: 100%;
-    height: 2vw;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    align-items: center;
-    margin-top: -.2vw !important;
-}
+        .red{
+            background-color: #c50000;
+            width: 100%;
+            height: 2vw;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            align-items: center;
+            margin-top: -.2vw !important;
+        }
 
-.hidden{
-    display: none;
-}
+        .hidden{
+            display: none;
+        }
     </style>
     
 </head>
@@ -84,20 +84,32 @@
                 <nav>
                     <ul>
                         <li><a href="../PAGES/landing.php">Início</a></li>
-                        <li><a href="../PAGES/">Serviços</a></li>
+                        <li class="menu-servicos">
+                            <a href="">Serviços</a>
+                            <div class="submenu">
+                                <a href="#">Cambio</a>
+                                <a href="#">Educação Financeira</a>
+                                <a href="#">Açoes</a>
+                                <?php if(isset($_SESSION['logado']) && $_SESSION['logado'] == true): ?>
+                                    <a class="aDash" href="#">Sua Dashboard</a>
+                                <?php endif; ?>
+                            </div>
+                        </li>
                         <li><a href="../PAGES/">Sobre</a></li>
-                        
                     </ul>
                 </nav> 
-            </section>  
+            </section>   
              
             <section class="btn-contato">
     <?php 
+    
         @session_start();  
         if(isset($_SESSION['logado']) && $_SESSION['logado'] == true){
             echo "
             <div class='user-menu'>
-                <img src='".$_SESSION['foto']."' class='user-photo'>
+                <a href='../PAGES/perfil.php'>
+                    <img src='".$_SESSION['foto']."' class='user-photo'>
+                </a>
                 <div class='dropdown-content'>
                     <a href='../PAGES/perfil.php'>Perfil</a>
                     <a href='../PAGES/configuracoes.php'>Configurações</a>
@@ -113,8 +125,6 @@
     ?>
 </section>
 
-            
-                
             </section>
 
             <div class="btn-menu-mob" id="btn-menu-mob">
@@ -126,7 +136,19 @@
                 <nav>
                     <ul>
                         <li><a href="..PAGES/landing.php">Início</a></li>
-                        <li><a href="../PAGES/">Serviços</a></li>
+                        <li class="menu-servicos">
+                            <a href="">Serviços</a>
+                            <div class="submenu">
+                                <div class="esquerdaServ">
+                                    <a href="#">Serviço 1</a>
+                                    <a href="#">Serviço 2</a>
+                                </div>
+                                <div class="direitaServ">
+                                    <a href="#">Serviço 3</a>
+                                    <a href="#">Serviço 4</a>
+                                </div>
+                            </div>
+                        </li>
                         <li><a href="../PAGES/">Sobre</a></li>
                         
                     </ul>

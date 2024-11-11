@@ -34,11 +34,11 @@ header .btn-contato button:hover, .hero-site button:hover, .hoteis button:hover{
 .user-menu {
     position: relative;
     display: inline-block;
+    height: 4vw;
 }
 
 .user-photo {
-
-    height: 4vw;
+    height: 4vw !important;
     width: 4vw;
     border-radius: 50%;
     cursor: pointer;
@@ -53,16 +53,18 @@ header .btn-contato button:hover, .hero-site button:hover, .hoteis button:hover{
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 110%;
+    top: 105%;
     right: 0;
     background-color: #fff;
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-radius: .5vw;
     z-index: 1;
     opacity: 0;
     transition: opacity 0.4s ease, visibility 0.4s ease;
     visibility: hidden;
+    height: 10vw;
+    width: 10vw;
 }
 
 .dropdown-content a {
@@ -71,10 +73,12 @@ header .btn-contato button:hover, .hero-site button:hover, .hoteis button:hover{
     text-decoration: none;
     display: block;
     transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: 6%;
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    color: #ff6d00;
 }
 
 /* Mostrar dropdown quando passar o mouse */
@@ -237,3 +241,54 @@ body.no-overflow{
     overflow: hidden;
 
 }
+
+.menu-servicos {
+    position: relative;
+    display: inline-block;
+}
+
+.submenu {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: -135% !important;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    border-radius: .5vw;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    visibility: hidden;
+    height: 15vw;
+    width: 13vw;
+    flex-direction: column;
+}
+
+.submenu:has(.aDash) {
+    height: 15vw;
+}
+
+.submenu:not(:has(.aDash)) {
+    height: 11vw; /* Ajuste para o tamanho desejado quando "Sua Dashboard" está ausente */
+}
+
+.submenu a {
+    color: #10002b !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    text-align: center !important;
+    margin-top: 5%;
+}
+
+.submenu a:hover{
+    color: #ff6d00 !important;
+}
+
+.menu-servicos:hover .submenu {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
