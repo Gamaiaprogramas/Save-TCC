@@ -83,9 +83,9 @@
             <section class="menu-desktop">
                 <nav>
                     <ul>
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Serviços</a></li>
-                        <li><a href="#">Sobre</a></li>
+                        <li><a href="../PAGES/landing.php">Início</a></li>
+                        <li><a href="../PAGES/">Serviços</a></li>
+                        <li><a href="../PAGES/">Sobre</a></li>
                         
                     </ul>
                 </nav> 
@@ -125,9 +125,9 @@
             <section class="menu-mobile" id="menu-mobile">
                 <nav>
                     <ul>
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Serviços</a></li>
-                        <li><a href="#">Sobre</a></li>
+                        <li><a href="..PAGES/landing.php">Início</a></li>
+                        <li><a href="../PAGES/">Serviços</a></li>
+                        <li><a href="../PAGES/">Sobre</a></li>
                         
                     </ul>
                 </nav> 
