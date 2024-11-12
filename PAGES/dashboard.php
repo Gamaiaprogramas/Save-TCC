@@ -8,7 +8,7 @@ require("../ACTS/sec_dashboard.php");
 include("../ACTS/connect.php");
 
 // Obter dados do usuário logado
-$id_user = $_SESSION['Id_user']; // Corrigido para o correto
+$id_user = $_SESSION['Id_user'];
 
 // Consultar dados do saldo, dívidas e gastos
 $query_saldo = "SELECT saldo FROM informacao WHERE Id_User = '$id_user'";
@@ -24,7 +24,7 @@ $result_gastos = mysqli_query($con, $query_gastos);
 if ($result_saldo) {
     $saldo = mysqli_fetch_assoc($result_saldo)['saldo'];
 } else {
-    $saldo = 0; // Definindo um valor padrão
+    $saldo = 0;
 }
 
 if ($result_dividas) {
@@ -35,7 +35,7 @@ if ($result_dividas) {
     $tempo_dividas = explode(",", $dividas['Tempo_Dividas']);
     $total_dividas = array_sum(array_map('floatval', $valores_dividas));
 } else {
-    $total_dividas = 0; // Definindo um valor padrão
+    $total_dividas = 0;
 }
 
 if ($result_gastos) {
@@ -44,7 +44,7 @@ if ($result_gastos) {
     $valores_gastos = explode(",", $gastos['Valores_gastos']);
     $total_gastos = array_sum(array_map('floatval', $valores_gastos));
 } else {
-    $total_gastos = 0; // Definindo um valor padrão
+    $total_gastos = 0;
 }
 
 // Calcular o total em relação ao salário
@@ -54,7 +54,6 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Financeira</title>
@@ -75,8 +74,6 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
 </head>
 <body>
     <div class="dashboard-container">
-  
-
         <div class="tituloDash">
             <h1>Bem vindo(a) a sua <a>Dashboard</a>!</h1>
         </div>
@@ -96,7 +93,7 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                         <h1>R$<?php echo number_format($saldo, 2, ',', '.'); ?></h1>
                     </div>
                 </div>
-        <div class="divGastos">
+                <div class="divGastos">
                     <div class="iconeGastos">
                         <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
                     </div>
@@ -130,41 +127,46 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
             </div>
             <div class="containerDividas">
                 <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
+                    <div class="cardDivida">
+                        <div class="nomeDivida">
+                            <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
+                        </div>
+                        <div class="valorDivida">
+                            <p>Valor: R$ <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
+                        </div>
+                        <div class="jurosDivida">
+                            <p>Juros: <?php echo htmlspecialchars($juros_dividas[$i]); ?>%</p>
+                        </div>
+                        <div class="tempoDivida">
+                            <p>Tempo: <?php 
+                                if (intval($tempo_dividas[$i]) == 9999) {
+                                    echo "Pagamento Único";
+                                } elseif (intval($tempo_dividas[$i]) > 0) {
+                                    echo htmlspecialchars($tempo_dividas[$i]) . " meses";
+                                } else {
+                                    echo "Dívida Paga";
+                                }
+                            ?></p>
+                        </div>
+                        <?php if (intval($tempo_dividas[$i]) > 0 || intval($tempo_dividas[$i]) == 9999): ?>
+                            <form method="post" action="../ACTS/pagar_divida.php">
+                                <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
+                                <input type="hidden" name="tempo_dividas" value="<?php echo intval($tempo_dividas[$i]); ?>">
+                                <div class="btnDivida">
+                                    <button class="botaoDivida" type="submit">Pagar Parcela</button>
+                                </div>
+                            </form>
+                        <?php else: ?>
+                            <button class="btnDividaPaga">Dívida Paga</button>
+                        <?php endif; ?>
+                    </div>
+                <?php endfor; ?>
+                <!-- Card de Adicionar Dívida -->
                 <div class="cardDivida">
-                    <div class="nomeDivida">
-                        <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
+                    <div class="adicionarDivida">
+                        <a href="../PAGES/adicionar_novo.php    " class="botaoAdicionar">+ Adicionar Dívida</a>
                     </div>
-                    <div class="valorDivida">
-                        <p>Valor: R$ <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
-                    </div>
-                    <div class="jurosDivida">
-                        <p>Juros: <?php echo htmlspecialchars($juros_dividas[$i]); ?>%</p>
-                    </div>
-                    <div class="tempoDivida">
-                        <p>Tempo: <?php 
-                            if (intval($tempo_dividas[$i]) == 9999) {
-                                echo "Pagamento Único";
-                            } elseif (intval($tempo_dividas[$i]) > 0) {
-                                echo htmlspecialchars($tempo_dividas[$i]) . " meses";
-                            } else {
-                                echo "Dívida Paga";
-                            }
-                        ?></p>
-                    </div>
-                    
-                    <?php if (intval($tempo_dividas[$i]) > 0 || intval($tempo_dividas[$i]) == 9999): ?>
-                        <form method="post" action="../ACTS/pagar_divida.php">
-                            <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
-                            <input type="hidden" name="tempo_dividas" value="<?php echo intval($tempo_dividas[$i]); ?>">
-                            <div class="btnDivida">
-                                <button class="botaoDivida" type="submit">Pagar Parcela</button>
-                            </div>
-                        </form>
-                    <?php else: ?>
-                        <button class="btnDividaPaga" >Dívida Paga</button>
-                    <?php endif; ?>
                 </div>
-            <?php endfor; ?>
             </div>
             <div class="espacoBtnDireita">
                 <button class="btnDireita" onclick="direcao(2)"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
@@ -172,8 +174,7 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
         </div> 
         <script>
             function direcao(e){
-                var direcao = document.querySelector(".containerDividas")
-
+                var direcao = document.querySelector(".containerDividas");
                 if(e == 1){
                     direcao.scrollLeft = direcao.scrollLeft - 1550;
                 }else if (e == 2){
@@ -181,22 +182,7 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                 }
             }
         </script>
-        <div class="tituloFixo">
-            <h1>Gastos <a>Fixos</a>!</h1>
-        </div>
-            <div class="containerFixo">
-                    <?php for ($i = 0; $i < count($nomes_gastos); $i++): ?>
-                    <div class="cardFixo">
-                        <div class="nomeFixo">
-                            <p><strong><?php echo htmlspecialchars($nomes_gastos[$i]); ?></strong></p>
-                        </div>
-                        <div class="valorFixo">
-                            <p>Valor: R$ <?php echo number_format(floatval($valores_gastos[$i]), 2, ',', '.'); ?></p>
-                        </div>
-                    </div>
-                    <?php endfor; ?>
-            </div>
-        <script>
+         <script>
         am5.ready(function() {
             // Create root element
             var root = am5.Root.new("chartdiv");
@@ -231,6 +217,29 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
             series.appear(1000, 100);
         }); // end am5.ready()
         </script>
+
+        <div class="tituloFixo">
+            <h1>Gastos <a>Fixos</a>!</h1>
+        </div>
+        <div class="containerFixo">
+            <?php for ($i = 0; $i < count($nomes_gastos); $i++): ?>
+                <div class="cardFixo">
+                    <div class="nomeFixo">
+                        <p><strong><?php echo htmlspecialchars($nomes_gastos[$i]); ?></strong></p>
+                    </div>
+                    <div class="valorFixo">
+                        <p>Valor: R$ <?php echo number_format(floatval($valores_gastos[$i]), 2, ',', '.'); ?></p>
+                    </div>
+                </div>
+            <?php endfor; ?>
+            <!-- Card de Adicionar Gasto -->
+                       <!-- Card de Adicionar Gasto -->
+                       <div class="cardFixo">
+                <div class="adicionarFixo">
+                    <a href="../PAGES/adicionar_gastos_fixos.php" class="botaoAdicionar">+ Adicionar Gasto</a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

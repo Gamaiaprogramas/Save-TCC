@@ -1,7 +1,26 @@
 <?php 
     @session_start();
     include("../partials/header.php");
+    
+    // Conectar ao banco de dados
+    $conn = new mysqli('localhost', 'root', '', 'save'); // Ajuste conforme suas credenciais
 
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Buscar o nível do usuário na tabela 'informacao'
+    $usuarioId = $_SESSION['Id_user']; // Supondo que o Id_user está na sessão
+    $sql = "SELECT nivel FROM informacao WHERE Id_user = ?"; // Ajustar o nome da tabela conforme sua estrutura
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $usuarioId);
+    $stmt->execute();
+    $stmt->bind_result($nivel);
+    $stmt->fetch();
+    $stmt->close();
+    
+    // Depuração: Verificar o valor de $nivel
+    var_dump($nivel); // Isso ajudará a entender o que está sendo retornado pelo banco
 ?>
 
 <link rel="stylesheet" href="../STYLE/landing.css">
@@ -14,6 +33,18 @@
     margin: 0 !important;
     z-index: 1;
   }
+  .btnEdit {
+    margin-top: 10px;
+  }
+  .btnAnalise {
+    margin-top: 20px;
+    background-color: #ff6d00; /* cor de fundo do botão */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+  }
 </style>
 
 <!DOCTYPE html>
@@ -25,7 +56,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class ="main-Perfil">
+    <div class="main-Perfil">
         <div class="titulo">
             <h1>Seu <a>perfil</a> na Save!</h1> 
         </div>
@@ -66,7 +97,7 @@
                 <div class="nomes">Nascimento:
                     <div class="phps">
                         <?php
-                        //$_SESSION['nascto'] contém a data no formato "YYYY-MM-DD"
+                        // $_SESSION['nascto'] contém a data no formato "YYYY-MM-DD"
                         $dataOriginal = $_SESSION['nascto'];
                         
                         // Dividir a data em partes
@@ -88,11 +119,26 @@
                         <?php echo "$_SESSION[genero]"; ?>
                     </div>
                 </div>
+
+                <!-- Botão Editar -->
                 <div class="editar">
                     <div class="btnEdit">
                         <a href="../PAGES/edit.php?codigo= echo $_SESSION['codigo']; ?>">Editar</a>
                     </div>
                 </div>
+                
+                <!-- Botão Fazer Análise (fora da div do Editar) -->
+                <!-- Verifica se o nível é nulo ou não -->
+                <?php if ($nivel == null): ?>
+                    <div class="btnAnalise">
+                        <a href="../PAGES/adicaoSaldo.php">Fazer uma análise</a>
+                    </div>
+                <?php else: ?>
+                    <div class="btnAnalise">
+                        <a href="../PAGES/dashboard.php">Ir para dashboard</a>
+                    </div>
+                <?php endif; ?>
+
             </div>
         </div>
     </div>
