@@ -112,7 +112,7 @@
                 </a>
                 <div class='dropdown-content'>
                     <a href='../PAGES/perfil.php'>Perfil</a>
-                    <a href='../PAGES/configuracoes.php'>Configurações</a>
+                    <a href='#'>Configurações</a>
                     <a href='../ACTS/logoff.act.php'>Sair</a>
                 </div>
             </div>";  

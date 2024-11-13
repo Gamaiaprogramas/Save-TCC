@@ -20,7 +20,7 @@
     $stmt->close();
     
     // Depuração: Verificar o valor de $nivel
-    var_dump($nivel); // Isso ajudará a entender o que está sendo retornado pelo banco
+    
 ?>
 
 <link rel="stylesheet" href="../STYLE/landing.css">

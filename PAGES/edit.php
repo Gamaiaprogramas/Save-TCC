@@ -119,7 +119,7 @@ include("../partials/header.php");
                             </div>
                         </div>
                     </div>
-                    <div class="info">
+                    <div class="info" id="ultInfo">
                         <div class="conteudoInfo">
                             <label>Gênero:</label>
                             <select id="opcao" name="sexo">
