@@ -161,17 +161,12 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                         <?php endif; ?>
                     </div>
                 <?php endfor; ?>
-                <!-- Card de Adicionar Dívida -->
-                <div class="cardDivida">
-                    <div class="adicionarDivida">
-                        <a href="../PAGES/adicionar_novo.php    " class="botaoAdicionar">+ Adicionar Dívida</a>
-                    </div>
-                </div>
+                <!-- Botão de Adicionar Dívida -->
             </div>
             <div class="espacoBtnDireita">
                 <button class="btnDireita" onclick="direcao(2)"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
             </div>
-        </div> 
+        </div>
         <script>
             function direcao(e){
                 var direcao = document.querySelector(".containerDividas");
@@ -218,6 +213,10 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
         }); // end am5.ready()
         </script>
 
+        <div class="espacoBtnDivida">
+            <a href="../PAGES/adicionar_novo.php" class="btnAdicionarDivida">Adicionar Dívida <i class="fa-solid fa-circle-plus"></i></a>
+        </div>
+
         <div class="tituloFixo">
             <h1>Gastos <a>Fixos</a>!</h1>
         </div>
@@ -234,11 +233,9 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
             <?php endfor; ?>
             <!-- Card de Adicionar Gasto -->
                        <!-- Card de Adicionar Gasto -->
-                       <div class="cardFixo">
-                <div class="adicionarFixo">
-                    <a href="../PAGES/adicionar_gastos_fixos.php" class="botaoAdicionar">+ Adicionar Gasto</a>
-                </div>
-            </div>
+        </div>
+        <div class="espacoBtnFixo">
+            <a href="../PAGES/adicionar_gastos_fixos.php" class="btnAdicionarFixo">Adicionar Gasto <i class="fa-solid fa-circle-plus"></i></a>
         </div>
     </div>
 </body>

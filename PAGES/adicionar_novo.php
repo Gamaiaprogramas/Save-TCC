@@ -1,4 +1,5 @@
 <?php
+include("../partials/header.php");
 require("../ACTS/sec.php");
 
 // Mensagem de sessão
@@ -15,20 +16,58 @@ if (isset($_SESSION['msg'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Dívidas</title>
-    <link rel="stylesheet" href="../STYLE/acaoDivida.css"> <!-- Usando apenas o CSS da outra página -->
     <script>
         // Função para adicionar mais campos de dívidas
         function adicionarDivida() {
             const dividasContainer = document.getElementById('dividas-container');
             const novaDivida = `
-                <div class="divida-item">
-                    <label>Nome da Dívida: <input type="text" name="dividas[]" required></label>
-                    <label>Valor da Dívida: <input type="number" name="valores[]" step="0.01" required></label>
-                    <label>Juros (%): <input type="number" name="juros[]" step="0.01" required></label>
-                    <label>Tempo (meses): <input type="number" name="tempo[]" required class="tempo-input"></label>
-                    <label>Parcelável? <input type="checkbox" onchange="toggleTempo(this)"><input type="hidden" name="tempo_ilimitada[]" value=""></label>
-                    <button type="button" class="btn-remove" onclick="removerDivida(this)">Remover</button>
-                </div>`;
+                <div id="dividas-container">
+        <div class="divida-item">
+            <div class="centro">
+                <div class="esquerda">
+                    <div>
+                        <label><span>Nome</span> da Dívida:</label>
+                    </div>
+                    <div>
+                        <label><span>Valor</span> da Dívida:</label>
+                    </div>
+                    <div>
+                        <label><span>Juros</span> da Dívida (%):</label>
+                    </div>
+                    <div>
+                        <label><span>Tempo</span> da Dívida (meses):</label>
+                    </div>
+                    <div>
+                        <label><span>Dívida</span> Parcelável?</label>
+                    </div>
+                </div>
+                <div class="direita">
+                    <div>
+                        <input type="text" name="dividas[]" required><br>
+                    </div>
+                    <div>
+                        <input type="number" name="valores[]" step="0.01" required><br>
+                    </div>
+                    <div>
+                        <input type="number" name="juros[]" step="0.01" required><br>
+                    </div>
+                    <div>
+                        <input type="number" name="tempo[]" required class="tempo-input"><br>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" onchange="toggleTempo(this)"><br><br>
+                        <input type="hidden" name="tempo_ilimitada[]" value="">
+                    </div>
+                </div>
+            </div>
+            <button class="Btn" onclick="removerDivida(this)">
+                <div class="sign">
+                    <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
+                </div>
+                <div class="text">Apagar dívida</div>
+            </button>
+        </div>`
+        ;
             dividasContainer.insertAdjacentHTML('beforeend', novaDivida);
         }
 
@@ -78,29 +117,89 @@ if (isset($_SESSION['msg'])) {
             document.getElementById('dividaForm').submit();
         }
     </script>
+    <link rel="stylesheet" href="../STYLE/acaoDivida.css">
+    <style>
+        header {
+            position: relative !important;
+            background-color: #10002b !important;
+            height: 7vw !important;
+            margin: 0 !important;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
-<main class="container">
     <h1>Adicionar Dívidas</h1>
-
     <form id="dividaForm" method="POST" action="../ACTS/adicionar_novo.act.php">
-        <div id="dividas-container">
-            <div class="divida-item">
-                <label>Nome da Dívida: <input type="text" name="dividas[]" required></label>
-                <label>Valor da Dívida: <input type="number" name="valores[]" step="0.01" required></label>
-                <label>Juros (%): <input type="number" name="juros[]" step="0.01" required></label>
-                <label>Tempo (meses): <input type="number" name="tempo[]" required class="tempo-input"></label>
-                <label>Parcelável? <input type="checkbox" onchange="toggleTempo(this)"><input type="hidden" name="tempo_ilimitada[]" value=""></label>
-                <button type="button" class="btn-remove" onclick="removerDivida(this)">Remover</button>
+    <div id="dividas-container">
+        <div class="divida-item">
+            <div class="centro">
+                <div class="esquerda">
+                    <div>
+                        <label><span>Nome</span> da Dívida:</label>
+                    </div>
+                    <div>
+                        <label><span>Valor</span> da Dívida:</label>
+                    </div>
+                    <div>
+                        <label><span>Juros</span> da Dívida (%):</label>
+                    </div>
+                    <div>
+                        <label><span>Tempo</span> da Dívida (meses):</label>
+                    </div>
+                    <div>
+                        <label><span>Dívida</span> Parcelável?</label>
+                    </div>
+                </div>
+                <div class="direita">
+                    <div>
+                        <input type="text" name="dividas[]" required><br>
+                    </div>
+                    <div>
+                        <input type="number" name="valores[]" step="0.01" required><br>
+                    </div>
+                    <div>
+                        <input type="number" name="juros[]" step="0.01" required><br>
+                    </div>
+                    <div>
+                        <input type="number" name="tempo[]" required class="tempo-input"><br>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" onchange="toggleTempo(this)"><br><br>
+                        <input type="hidden" name="tempo_ilimitada[]" value="">
+                    </div>
+                </div>
             </div>
+            <button class="Btn" onclick="removerDivida(this)">
+                <div class="sign">
+                    <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
+                </div>
+                <div class="text">Apagar dívida</div>
+            </button>
         </div>
-
-        <div class="actions">
-            <button type="button" class="btn-add" onclick="adicionarDivida()">Adicionar Mais Dívidas</button>
-            <button type="button" class="btn-submit" onclick="confirmarEnvio()">Enviar</button>
-        </div>
-    </form>
-</main>
+    </div>
+    
+    <div class="espacoBtn">
+        <button type="button" class="btnAdicionar" onclick="adicionarDivida()">Adicionar Mais Dívidas <i class="fa-solid fa-plus"></i></button>
+    </div>
+    
+    <button type="button" class="btnProx" onclick="confirmarEnvio()">
+        <span>Próximo</span>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 74 74"
+            height="34"
+            width="34"
+            class="svg-icon"
+            fill="white"
+        >
+            <circle class="circle" stroke-width="3" stroke="white" r="35.5" cy="37" cx="37" fill="none"></circle>
+            <path
+                d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+            ></path>
+        </svg>
+    </button>
+</form>
 
 <!-- Overlay de confirmação -->
 <div id="overlay" style="display: none;">
