@@ -184,7 +184,7 @@ if (isset($_SESSION['msg'])) {
     </div>
     
     <button type="button" class="btnProx" onclick="confirmarEnvio()">
-        <span>Próximo</span>
+        <span>Adicionar Divida</span>
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 74 74"
