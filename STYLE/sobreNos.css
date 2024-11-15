@@ -1,0 +1,175 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    flex-direction: column;
+}
+
+.topoSave{
+    display: flex;
+    align-items: center;
+    height: 43vw;
+    width: 100%;
+    background-image: url(../PICS/imgsSobreNos/img_topo.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.topoEsquerda{
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+    flex-direction: column;
+    height: 43vw;
+    width: 28%;
+    margin-left: 10%;
+}
+
+.nomeEsquerdaTopo{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+    margin-bottom: 5vw;
+}
+
+.nomeEsquerdaTopo a{
+    color: white;
+    font-weight: bold;
+    font-size: 5vw;
+    height: 20%;
+}
+
+.textoEsquerdaTopo{
+    display: flex;
+    align-items: start;
+    width: 100%;
+    height: 30%;
+}
+
+.textoEsquerdaTopo a{
+    color: #adb5bd;
+    font-size: 1.3vw;
+}
+
+.espacoAntesTudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 23vw;
+    font-size: 3vw;
+}
+
+.tituloAntes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    color: #ff6d00;
+}
+
+.tituloAntes a{
+    padding-bottom: 5vw;
+    margin-left: 40%;
+}
+
+.textoAntes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+    color: black;
+}
+
+.textoAntes a{
+    padding: 10vw;
+    font-size: 1.2vw;
+}
+
+.espacoGrafico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 33vw;
+    width: 100%;
+}
+
+.espacoOQ{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vw;
+    flex-direction: column;
+    background-color: #10002b;
+}
+
+.tituloOQ{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    
+}
+
+.tituloOQ a{
+    font-size: 3vw;
+    color: white;
+    margin-left: 10%;
+}
+
+.espacoCardOQ{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 75%;
+    gap: 3vw;
+}
+
+.cardOQ{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 80%;
+    background-color: #ff6d00;
+}
+
+.fotoCardOQ{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+}
+
+.textoCardOQ{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+
+}
+
+.textoCardOQ a{
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+    margin-bottom: 20%;
+}

@@ -95,7 +95,7 @@
                                 <?php endif; ?>
                             </div>
                         </li>
-                        <li><a href="../PAGES/">Sobre</a></li>
+                        <li><a href="../PAGES/sobreNos.php">Sobre Nós</a></li>
                     </ul>
                 </nav> 
             </section>   

@@ -39,7 +39,6 @@ body::-webkit-scrollbar-track {
     width: 100%;
     overflow: hidden; 
     animation: transacao 45s infinite linear;
-    
 }
 h1 {
     font-size: 24px;
