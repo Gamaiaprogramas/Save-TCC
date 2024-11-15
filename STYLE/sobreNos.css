@@ -147,7 +147,6 @@ body{
     align-items: center;
     width: 25%;
     height: 80%;
-    background-color: #ff6d00;
 }
 
 .fotoCardOQ{
@@ -172,4 +171,16 @@ body{
     font-size: 1.5vw;
     text-align: center;
     margin-bottom: 20%;
+}
+
+.espacoEstamos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vw;
+    background-image: url(../PICS/imgsSobreNos/img_Maos.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }

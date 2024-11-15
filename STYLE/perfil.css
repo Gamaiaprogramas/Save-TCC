@@ -121,6 +121,10 @@ body{
     height: 10%;
 }
 
+.editar:hover a{
+    color: #ff6d00;
+}
+
 .btnEdit a {
     display: flex;
     justify-content: center;
@@ -147,4 +151,8 @@ body{
     margin-bottom: 1.5vw;
     text-decoration: none;
     border-radius: 2vw;
+}
+
+.btnAnalise:hover a{
+    color: #ff6d00;
 }

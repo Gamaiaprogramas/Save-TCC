@@ -50,24 +50,33 @@
         </div>
         <div class="espacoCardOQ">
             <div class="cardOQ">
-                <div class="fotoCardOQ"></div>
+                <div class="fotoCardOQ">
+                    <img src="../PICS/imgsSobreNos/card1.png" alt="">
+                </div>
                 <div class="textoCardOQ">
                     <a>O alto endividamento gera um ciclo vicioso, onde as famílias se endividam cada vez mais para cobrir dívidas anteriores, o que dificulta a recuperação financeira.</a>
                 </div>
             </div>
             <div class="cardOQ">
-                <div class="fotoCardOQ"></div>
+                <div class="fotoCardOQ">
+                    <img src="../PICS/imgsSobreNos/card2.png" alt="">
+                </div>
                 <div class="textoCardOQ">
-                    <a></a>
+                    <a>O endividamento excessivo causa estresse e afeta a qualidade de vida, tornando difícil planejar o futuro e atingir objetivos financeiros.</a>
                 </div>
             </div>
             <div class="cardOQ">
-                <div class="fotoCardOQ"></div>
+                <div class="fotoCardOQ">
+                    <img src="../PICS/imgsSobreNos/card3.png" alt="">
+                </div>
                 <div class="textoCardOQ">
-                    <a></a>
+                    <a>Famílias endividadas enfrentam dificuldades para obter novos créditos, prejudicando a compra de bens essenciais e limitando o crescimento econômico pessoal.</a>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="espacoEstamos">
+        
     </div>
 </body>
 </html>
