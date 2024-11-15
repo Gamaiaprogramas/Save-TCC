@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['Gastos'] = $_POST['Gastos'];
         $_SESSION['valoresGasto'] = $_POST['valoresGasto'];
 
-        header("Location: ../ACTS/gastos_fixos.act.php");
+        header("Location:../ACTS/gastos_fixos.act.php");
         exit();
     } else {
         echo "<p class='alerta red'>Por favor, preencha todos os campos.</p>";

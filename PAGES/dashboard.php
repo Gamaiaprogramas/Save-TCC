@@ -127,28 +127,26 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
             </div>
             <div class="containerDividas">
                 <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
-                    <div class="cardDivida">
-                        <div class="nomeDivida">
-                            <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
-                        </div>
-                        <div class="valorDivida">
-                            <p>Valor: R$ <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
-                        </div>
-                        <div class="jurosDivida">
-                            <p>Juros: <?php echo htmlspecialchars($juros_dividas[$i]); ?>%</p>
-                        </div>
-                        <div class="tempoDivida">
-                            <p>Tempo: <?php 
-                                if (intval($tempo_dividas[$i]) == 9999) {
-                                    echo "Pagamento Único";
-                                } elseif (intval($tempo_dividas[$i]) > 0) {
-                                    echo htmlspecialchars($tempo_dividas[$i]) . " meses";
-                                } else {
-                                    echo "Dívida Paga";
-                                }
-                            ?></p>
-                        </div>
-                        <?php if (intval($tempo_dividas[$i]) > 0 || intval($tempo_dividas[$i]) == 9999): ?>
+                    <?php if (intval($tempo_dividas[$i]) > 0 || intval($tempo_dividas[$i]) == 9999): ?>
+                        <div class="cardDivida">
+                            <div class="nomeDivida">
+                                <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
+                            </div>
+                            <div class="valorDivida">
+                                <p>Valor: R$ <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
+                            </div>
+                            <div class="jurosDivida">
+                                <p>Juros: <?php echo htmlspecialchars($juros_dividas[$i]); ?>%</p>
+                            </div>
+                            <div class="tempoDivida">
+                                <p>Tempo: <?php 
+                                    if (intval($tempo_dividas[$i]) == 9999) {
+                                        echo "Pagamento Único";
+                                    } else {
+                                        echo htmlspecialchars($tempo_dividas[$i]) . " meses";
+                                    }
+                                ?></p>
+                            </div>
                             <form method="post" action="../ACTS/pagar_divida.php">
                                 <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
                                 <input type="hidden" name="tempo_dividas" value="<?php echo intval($tempo_dividas[$i]); ?>">
@@ -156,12 +154,9 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                                     <button class="botaoDivida" type="submit">Pagar Parcela</button>
                                 </div>
                             </form>
-                        <?php else: ?>
-                            <button class="btnDividaPaga">Dívida Paga</button>
-                        <?php endif; ?>
-                    </div>
+                        </div>
+                    <?php endif; ?>
                 <?php endfor; ?>
-                <!-- Botão de Adicionar Dívida -->
             </div>
             <div class="espacoBtnDireita">
                 <button class="btnDireita" onclick="direcao(2)"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
@@ -237,6 +232,61 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
         <div class="espacoBtnFixo">
             <a href="../PAGES/adicionar_gastos_fixos.php" class="btnAdicionarFixo">Adicionar Gasto <i class="fa-solid fa-circle-plus"></i></a>
         </div>
+
+        <div class="tituloDividasPagas">
+            <h1>Dívidas <a>Pagas</a>!</h1>
+        </div>
+        <div class="containerDividasPagas">
+            <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
+                <?php if (intval($tempo_dividas[$i]) == 0): ?>
+                    <div class="cardDividaPaga">
+                        <div class="nomeDivida">
+                            <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
+                        </div>
+                        <div class="valorDivida">
+                            <p>Valor: R$ <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
+                        </div>
+                        <div class="jurosDivida">
+                            <p>Juros: <?php echo htmlspecialchars($juros_dividas[$i]); ?>%</p>
+                        </div>
+                        <div class="tempoDivida">
+                            <p>Dívida Paga</p>
+                        </div>
+                        <button class="btnDividaPaga">Quitado</button>
+                    </div>
+                <?php endif; ?>
+            <?php endfor; ?>
+        </div>
+
+        <!-- Estilização da nova seção de dívidas pagas -->
+        <style>
+            .tituloDividasPagas {
+                margin-top: 20px;
+            }
+            .containerDividasPagas {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                justify-content: center;
+                padding: 20px;
+            }
+            .cardDividaPaga {
+                background-color: #e0e0e0;
+                padding: 15px;
+                border-radius: 8px;
+                width: 250px;
+                text-align: center;
+                color: #333;
+            }
+            .btnDividaPaga {
+                background-color: #28a745;
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 5px;
+                cursor: not-allowed;
+            }
+        </style>
     </div>
 </body>
 </html>
