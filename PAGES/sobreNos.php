@@ -76,7 +76,63 @@
         </div>
     </div>
     <div class="espacoEstamos">
+        <div class="tituloEstamos">
+            <a>Estamos aqui...</a>
+        </div>
+        <div class="infosEstamos">
+            <a class="t">Com base nessa triste realidade vivida por milhões de Brasileiros,nós surgimos, a “Save Your Money”,venho com a proposta de melhorar a vida financeira de milhares de pessoas,com profissionais e tecnologia de ponta,para ajudar você e seu dinheiro.</a>
+            <div class="btnEstamos">
+                <a href="../PAGES/selecao.php">Preciso de ajuda <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        </div>
         
+    </div>
+    <div class="espacoCrono">
+        <div class="tituloCrono">
+            <a>Nosso cronograma</a>
+        </div>
+        <div class="infosCrono">
+            <div class="cimaCrono">
+                <div class="divCimaCrono">
+                    <a>-Cadastrar suas dividas</a>
+                    <a>-Cadastrar seus gastos Fixos</a>
+                    <a class="laranja">Fase 2</a>
+                </div>
+                <div class="divCimaCrono">
+                    <a>-Realizar as ações propostas</a>
+                    <a>pela nossa equipe, com base em suas informações, para melhorar sua vida financeira</a>
+                    <a class="laranja2">Fase 4</a>
+                </div>
+            </div>
+            <div class="divisaoCrono">
+                <a class="bola"></a>
+                <a class="traco"></a>
+                <a class="bola"></a>
+                <a class="traco"></a>
+                <a class="bola"></a>
+                <a class="traco"></a>
+                <a class="bola"></a>
+                <a class="traco"></a>
+                <a class="bola"></a>
+            </div>
+            <div class="baixoCrono">
+                <div class="divBaixoCrono1">
+                    <a class="laranja">Fase 1</a>
+                    <a>-Realizar cadastro</a>
+                    <a>-coletar suas informações</a>
+                    <a>-Escolher seu tipo de perfil</a>
+                </div>
+                <div class="divBaixoCrono2">
+                    <a class="laranja">Fase 3</a>
+                    <a>-Visualizar sua DashBoard</a>
+                    <a>-Ter acesso as funcionalidades da aplicação</a>
+                </div>
+                <div class="divBaixoCrono3">
+                <a class= "laranja">Fase 5</a>
+                <a>-Ver os resultados alcançados, e propor avanços se o usuário achar necessário.</a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

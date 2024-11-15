@@ -183,4 +183,194 @@ body{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    flex-direction: column;
 }
+
+.tituloEstamos{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    
+}
+
+.tituloEstamos a{
+    color: #ff6d00;
+    font-size: 3vw;
+    margin-left: 10%;
+}
+
+.infosEstamos{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    flex-direction: column;
+    margin-bottom: 7vw;
+}
+
+.infosEstamos .t{
+    margin-left: 50%;
+    margin-bottom: 1%;
+    height: 50%;
+    width: 50%;
+    color: white;
+    font-size: 1.5vw;
+    
+}
+
+.btnEstamos{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 50%;
+    height: 10%;
+    margin-left: 50%;
+    cursor: pointer;
+}
+
+.btnEstamos:hover a{
+    background-color: #ff6d00;
+}
+
+.btnEstamos a{
+    font-size: 1.6vw;
+    width: 50%;
+    text-align: center;
+    padding: 1%;
+    border: solid white 5px;
+    color: white;
+    margin-left: 5%;
+}
+
+.espacoCrono{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vw;
+    background-color: #10002b;
+}
+
+.tituloCrono{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    
+}
+
+.tituloCrono a{
+    color: white;
+    font-size: 3vw;
+    margin-left: 10%;
+}
+
+.infosCrono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75%;
+    flex-direction: column;
+}
+
+.divisaoCrono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 5%;
+}
+
+.bola{
+    height: 100%;
+    width: 3%;
+    background-color: #ff6d00;
+    border-radius: 50%;
+}
+
+.traco{
+    height: 10%;
+    width: 15%;
+    background-color: #ff6d00;
+}
+
+.cimaCrono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 35%;
+}
+
+.divCimaCrono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    gap: 1vw;
+    text-align: center;
+}
+
+.divCimaCrono a{
+    color: white;
+    font-size: 1.3vw;
+}
+
+.divCimaCrono .laranja{
+    color: #ff6d00;
+}
+
+.divCimaCrono .laranja2{
+    margin-bottom: 3vw;
+    color: #ff6d00;
+}
+
+.baixoCrono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 78%;
+    height: 35%;
+}
+
+.divBaixoCrono2, .divBaixoCrono1, .divBaixoCrono3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 100%;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.divBaixoCrono1 .laranja, .divBaixoCrono2 .laranja, .divBaixoCrono3 .laranja{
+    color: #ff6d00;
+}
+
+.divBaixoCrono1 a{
+    margin-left: 5%;
+    color: white;
+    font-size: 1.3vw;
+    text-align: center;
+}
+
+.divBaixoCrono2 a, .divBaixoCrono3 a{
+    text-align: center;
+    color: white;
+    font-size: 1.3vw;
+}
+
+.divBaixoCrono3{
+    margin-right: 1%;
+}
+
+.divBaixoCrono2 a{
+    margin-left: 3%;
+}
+
