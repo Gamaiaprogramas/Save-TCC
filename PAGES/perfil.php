@@ -2,6 +2,7 @@
     @session_start();
     include("../partials/header.php");
     
+    
     // Conectar ao banco de dados
     $conn = new mysqli('localhost', 'root', '', 'save'); // Ajuste conforme suas credenciais
 
@@ -20,8 +21,30 @@
     $stmt->close();
     
     // Depuração: Verificar o valor de $nivel
-    
+    $codigo = $_SESSION['Id_user'];
+$nivelBusca = mysqli_query($conn, "SELECT nivel FROM `informacao` WHERE `Id_user` = '$codigo'");
+$buscaResult = mysqli_fetch_assoc($nivelBusca);
+
+$nivel2 = $buscaResult['nivel']; // Corrigir para acessar o valor da chave 'nivel'
+
+switch ($nivel2) {
+    case 1:
+        $textoPlano = "Plano 1: Aprender a lidar com dinheiro, pagar dívidas e sair do vermelho.";
+        break;
+    case 2:
+        $textoPlano = "Plano 2: Começar pequenos investimentos, guardar dinheiro, aprender mais sobre finanças.";
+        break;
+    case 3:
+        $textoPlano = "Plano 3: Investir meu dinheiro, ter uma reserva de emergência, corrigir meus gastos.";
+        break;
+    default:
+        $textoPlano = "Plano não definido.";
+        break;
+}
 ?>
+
+    
+
 
 <link rel="stylesheet" href="../STYLE/landing.css">
 
@@ -66,9 +89,9 @@
                     <?php echo "<img src='$_SESSION[foto]' class='miniaturaPerf'>"; ?>
                 </div>
                 <div class="plano">
-                    <h1>Plano 1</h1>
+                    <h1>Plano <?php  echo $nivel2 ?></h1>
                     <div class="texto">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti esse illum itaque animi labore, ea iusto vero est voluptatibus, non sint, qui iste quos id ipsam? Perferendis voluptatem ab quos.
+                        <?php echo $textoPlano?>
                     </div>
                 </div>
             </div>
