@@ -25,7 +25,7 @@
 
                 <h1>Descubra uma <span>nova forma</span></h1>
                 <p>Encontre a melhor maneira de cuidar do seu dinheiro <span>estamos aqui para ajudar</span> </p>
-                <a href="../PAGES/">
+                <a href="#">
                     <button>Quero conhecer</button>
                 </a>
 
@@ -104,16 +104,16 @@
 
             <article class="icons-contato">
                 <a href="../PAGES/cambio.php">
-                    <button><a href="../PAGES/cambio.php"><i class="bi bi-currency-exchange"></i> <p>Câmbio de Moedas</p> </a></button>
+                    <button><i class="bi bi-currency-exchange"></i> <p>Câmbio de Moedas</p> </button>
                 </a>
                 <a href="../PAGES/action.php">
-                    <button><a href="../PAGES/action.php"><i class="bi bi-headset"></i> <p>Ações e Rentabilidade</p> </a></button>
+                    <button><i class="bi bi-headset"></i> <p>Ações e Rentabilidade</p> </button>
                 </a>
                 <a href="../PAGES/login.php">
-                    <button><a href="../PAGES/dashboard.php"><i class="bi bi-cash-coin"></i> <p>Planejamento Financeiro</p> </a></button>
+                    <button><i class="bi bi-cash-coin"></i> <p>Planejamento Financeiro</p> </button>
                 </a>
                 <a href="#">
-                    <button><a href="../PAGES/"><i class="bi bi-book-half"></i> <p>Educação Financeira</p> </a></button>
+                    <button><i class="bi bi-book-half"></i> <p>Educação Financeira</p> </button>
                 </a>
             </article>
 
@@ -126,7 +126,7 @@
 
             <h3>No vermelho? <span>Deixa com a gente</span> </h3>
             <p>Os melhores planejamentos para sair desta situção.</p>
-            <a href="../PAGES/selecao.php">
+            <a href="#">
                 <button>Conheça o plano</button>
             </a>
 
