@@ -33,6 +33,48 @@ body {
     margin-top: 2vw;
 }
 
+.alterarDados {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.alterarDados h2 {
+    margin-bottom: 10px;
+    color: #10002b;
+}
+
+.alterarDados form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.alterarDados label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.alterarDados input, .alterarDados select, .alterarDados button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.alterarDados button {
+    background-color: #ff6d00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.alterarDados button:hover {
+    background-color: #e65a00;
+}
+
+
 .tituloDash a{
     color: #ff6d00;
 }

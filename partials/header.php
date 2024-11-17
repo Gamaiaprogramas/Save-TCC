@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="../STYLE/header.css">
     <link rel="stylesheet" href="../STYLE/responsive.css">
-    <link rel="shortcut icon" href="../PICS/img2/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../PICS/imgs/save_logo_site.png" type="image/x-icon">
     <!-- Scripts de JS -->
 
     <script src="../JS/js/btn-menu-mob.js" defer></script>

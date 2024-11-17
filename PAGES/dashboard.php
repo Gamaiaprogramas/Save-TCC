@@ -301,6 +301,104 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
         </style>
 
 
+<div class="alterarDados">
+    <!-- Alterar Dívida -->
+    <!-- Formulário para atualizar dívida -->
+    <div class="tituloAtualizarDivida">
+    <h2>Atualizar <a>Dívida</a></h2>
+</div>
+<div class="formAtualizarDivida">
+    <form method="post" action="../ACTS/update_divida.php">
+        <label for="index_divida">Escolha a dívida:</label>
+        <select name="index_divida" id="index_divida" onchange="preencherCamposDivida()">
+            <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
+                <option value="<?php echo $i; ?>"><?php echo htmlspecialchars($nomes_dividas[$i]); ?></option>
+            <?php endfor; ?>
+        </select>
+
+        <label for="novo_nome_divida">Nome Atual:</label>
+        <input type="text" name="novo_nome_divida" id="novo_nome_divida" required>
+
+        <label for="novo_valor_divida">Valor Atual:</label>
+        <input type="text" name="novo_valor_divida" id="novo_valor_divida" required>
+
+        <label for="novo_juros_divida">juros Atual:</label>
+        <input type="text" name="novo_juros_divida" id="novo_juros_divida" required>
+
+        <label for="novo_tempo_divida">Tempo Atual:</label>
+        <input type="text" name="novo_tempo_divida" id="novo_tempo_divida" required>
+
+        <button type="submit" class="btnAtualizar">Atualizar Dívida</button>
+    </form>
+</div>
+
+<script>
+    const nomesDividas = <?php echo json_encode($nomes_dividas); ?>;
+    const valoresDividas = <?php echo json_encode($valores_dividas); ?>;
+    const jurosDividas = <?php echo json_encode($juros_dividas); ?>;
+    const tempoDividas = <?php echo json_encode($tempo_dividas); ?>;
+
+    function preencherCamposDivida() {
+        const index = document.getElementById("index_divida").value;
+        document.getElementById("novo_nome_divida").value = nomesDividas[index];
+        document.getElementById("novo_valor_divida").value = valoresDividas[index];
+        document.getElementById("novo_juros_divida").value = jurosDividas[index];
+        document.getElementById("novo_tempo_divida").value = tempoDividas[index];
+    }
+
+   
+</script>
+
+
+<!-- Formulário para atualizar gasto fixo -->
+<div class="tituloAtualizarGasto">
+    <h2>Atualizar <a>Gasto Fixo</a></h2>
+</div>
+<div class="formAtualizarGasto">
+    <form method="post" action="../ACTS/update_gasto.php">
+        <label for="index_gasto">Escolha o gasto fixo:</label>
+        <select name="index_gasto" id="index_gasto" onchange="preencherCamposGasto()">
+            <?php for ($i = 0; $i < count($nomes_gastos); $i++): ?>
+                <option value="<?php echo $i; ?>"><?php echo htmlspecialchars($nomes_gastos[$i]); ?></option>
+            <?php endfor; ?>
+        </select>
+
+        <label for="novo_nome_gasto">Nome Atual:</label>
+        <input type="text" name="novo_nome_gasto" id="novo_nome_gasto" required>
+
+        <label for="novo_valor_gasto">Valor Atual:</label>
+        <input type="number" name="novo_valor_gasto" id="novo_valor_gasto" required>
+
+        <button type="submit" class="btnAtualizar">Atualizar Gasto</button>
+    </form>
+</div>
+
+<script>
+    const nomesGastos = <?php echo json_encode($nomes_gastos); ?>;
+    const valoresGastos = <?php echo json_encode($valores_gastos); ?>;
+
+    function preencherCamposGasto() {
+        const index = document.getElementById("index_gasto").value;
+        document.getElementById("novo_nome_gasto").value = nomesGastos[index];
+        document.getElementById("novo_valor_gasto").value = valoresGastos[index];
+    }
+
+
+</script>
+
+
+<!-- Formulário para atualizar saldo -->
+<div class="formAtualizarSaldo">
+    <form method="post" action="../ACTS/atualizar_saldo.php">
+        <label for="novo_saldo">Novo Saldo:</label>
+        <input type="number" name="novo_saldo" id="novo_saldo" step="0.01" required>
+
+        <button type="submit" class="btnAtualizar">Atualizar Saldo</button>
+    </form>
+</div>
+
+
+
 
     </div>
     
