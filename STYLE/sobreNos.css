@@ -615,3 +615,272 @@ body{
     margin-top: 5%;
     font-size: 1vw;
 }
+
+.espacoClientes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 50vw;
+}
+
+.cimaClientes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 25%;
+    width: 100%;
+}
+
+.tituloCliente{
+    display: flex;
+    align-items: center;
+    width: 79%;
+    height: 40%;
+}
+
+.tituloCliente a{
+    color: #ff6d00;
+    font-size: 3.3vw;
+    font-weight: bold;
+}
+
+.textoCliente{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 79%;
+    height: 40%;
+}
+
+.textoCliente a{
+    font-size: 1.2vw;
+}
+
+.baixoClientes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    gap: 2vw;
+}
+
+.cliente{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 25%;
+    flex-direction: column;
+}
+
+.fotoCliente{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    border: solid 2px black;
+}
+
+.fotoCliente img{
+    height: 100%;
+    width: 100%;
+}
+
+.nomeCliente{
+    display: flex;
+    
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    background-color: #ff6d00;
+}
+
+.nomeCliente a{
+    font-size: 1.2vw;
+    font-weight: bold;
+    margin-left: 2vw;
+}
+
+.espacoDesenvolvimento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 50vw;
+    background-image: url(../PICS/imgsSobreNos/Img_3pessoas.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.cimaDev{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 45%;
+}
+
+.tituloDev{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 80%;
+}
+
+.tituloDev a{
+    font-size: 3.3vw;
+    color: white;
+    margin-left: 6vw;
+}
+
+.laranja{
+    color: #ff6d00 !important;
+}
+
+.baixoDev{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 45%;
+}
+
+.textoDev{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+    margin-right: 4vw;
+}
+
+.textoDev a{
+    font-size: 1.7vw;
+    color: white;
+}
+
+.espacoFrase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vw;
+    background-color: #10002b;
+}
+
+.meioFrase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 50%;
+}
+
+.propriaFrase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+    width: 80%;
+}
+
+.propriaFrase a{
+    color: #ff6d00;
+    font-size: 2.7vw;
+    font-weight: bold;
+}
+
+.autorFrase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 80%;
+}
+
+.autorFrase a{
+    color: #adb5bd;
+    font-size: 2.5vw;
+    margin-bottom: 6vw;
+}
+
+.espacoTrabalhar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vw;
+}
+
+.esquerdaTrabalho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+    height: 80%;
+}
+
+.tituloTrabalho{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+}
+
+.tituloTrabalho a{
+    color: #ff6d00;
+    font-size: 3vw;
+    font-weight: bold;
+    margin-left: 2.2vw;
+}
+
+.fotoTrabalho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+
+.fotoTrabalho img{
+    height: 100%;
+    width: 90%;
+    border: solid 4px #ff6d00;
+}
+
+.direitaTrabalho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 35%;
+    height: 55%;
+    margin-top: 12vw;
+    gap: 2vw;
+}
+
+.divTrabalho{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    height: 25%;
+}
+
+.divTrabalho a{
+    font-size: 1vw;
+}
+
+.laranjaTrabalho{
+    color: #ff6d00;
+    font-weight: bold;
+    font-size: 1.5vw !important;
+}

@@ -214,6 +214,87 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="espacoClientes">
+        <div class="cimaClientes">
+            <div class="tituloCliente">
+                <a>Nossos Clientes</a>
+            </div>
+            <div class="textoCliente">
+                <a>Desde o começo, prestamos serviços de confiança a nossos clientes. Tivemos a honra de</a>
+                <a>sermos a primeira empresa na escolha das seguintes corporações:</a>
+            </div>
+        </div>
+        <div class="baixoClientes">
+            <div class="cliente">
+                <div class="fotoCliente"></div>
+                <div class="nomeCliente">
+                    <a>TCC do Kauan</a>
+                </div>
+            </div>
+            <div class="cliente">
+                <div class="fotoCliente"></div>
+                <div class="nomeCliente">
+                    <a>TCC da Laís</a>
+                </div>
+            </div>
+            <div class="cliente">
+                <div class="fotoCliente"></div>
+                <div class="nomeCliente">
+                    <a>TCC do Alex</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="espacoDesenvolvimento">
+        <div class="cimaDev">
+            <div class="tituloDev">
+                <a>Desenvolvimento</a>
+                <a class="laranja">Financeiro</a>
+            </div>
+        </div>
+        <div class="baixoDev">
+            <div class="textoDev">
+                <a>Em nossa equipe temos os melhores profissionais do mercado, Desenvolvedores, Economistas e colaboradores compõe nosso time, 
+                    estamos ligados a vários projetos direcionados a desenvolver a educação financeira no Brasil. Na Save pensamos em você e no país.</a>
+            </div>
+        </div>
+    </div>
+    <div class="espacoFrase">
+        <div class="meioFrase">
+            <div class="propriaFrase">
+                <a>"Muitos sabem ganhar dinheiro, mas poucos</a>
+                <a>sabem gastá-lo."</a>
+            </div>
+            <div class="autorFrase">
+                <a>— Henry David Thoreau</a>
+            </div>
+        </div>
+    </div>
+    <div class="espacoTrabalhar">
+        <div class="esquerdaTrabalho">
+            <div class="tituloTrabalho">
+                <a>Vamos trabalhar juntos.</a>
+            </div>
+            <div class="fotoTrabalho">
+                <img src="../PICS/imgsSobreNos/img_MaoEstendi" alt="">
+            </div>
+        </div>
+        <div class="direitaTrabalho">
+            <div class="divTrabalho">
+                <a class="laranjaTrabalho">Endereço</a>
+                <a>R. Virgínia Ferni, 400 - Itaquera, São Paulo - SP</a>
+            </div>
+            <div class="divTrabalho">
+                <a class="laranjaTrabalho">Telefone</a>
+                <a>(11) 3456-7890</a>
+            </div>
+            <div class="divTrabalho">
+                <a class="laranjaTrabalho">E-mail</a>
+                <a>saveyourmoney@gmail.com.br</a>
+            </div>
+        </div>
     </div>
 </body>
 <script>
