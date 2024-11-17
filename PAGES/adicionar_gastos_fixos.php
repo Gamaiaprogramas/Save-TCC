@@ -1,7 +1,6 @@
 <?php
 session_start();
-include("../partials/header.php");
-require('../ACTS/connect.php');
+
 
 
 // Mensagem
@@ -15,7 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         echo "<p class='alerta red'>Por favor, preencha todos os campos.</p>";
     }
-}
+}include("../partials/header.php");
+require('../ACTS/connect.php');
 ?>
 
 <!DOCTYPE html>
