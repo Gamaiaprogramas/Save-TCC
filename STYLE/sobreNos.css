@@ -67,7 +67,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 23vw;
+    height: 20vw;
     font-size: 3vw;
 }
 
@@ -104,7 +104,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 33vw;
+    height: 30vw;
     width: 100%;
 }
 
@@ -392,3 +392,226 @@ body{
     margin-left: 3%;
 }
 
+.espacoPerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vw;
+    width: 100%;
+    background-color: #120130;
+    flex-direction: column;
+}
+
+.conteudoPerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 80%;
+    gap: 4vw;
+}
+
+.fotoPerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 40%;
+    background-color: #adb5bd;
+}
+
+.fotoPerfil img{
+    height: 100%;
+    width: 100%;
+    border: solid .2vw #ff6d00;
+}
+
+.espacoTextoPerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 40%;
+    margin-top: 4%;
+    flex-direction: column;
+}
+
+.tituloPerfil{
+    display: flex;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.tituloPerfil a{
+    height: 40%;
+    color: white;
+    font-size: 2.8vw;
+    font-weight: bold;
+}
+
+.sepPerfil{
+    margin-bottom: 7%;
+}
+
+.textoPerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+}
+
+.textoPerfil a{
+    color: white;
+    font-size: 1.3vw;
+}
+
+.espacoBtnPerfil{
+    display: flex;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    margin-top: 2%;
+}
+
+.btnPerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    background-color: #ff6d00;
+    cursor: pointer;
+}
+
+.btnPerfil:hover{
+    background-color: #10002b;
+    border: solid .2vw #ff6d00;
+    color: #ff6d00;
+}
+
+.btnPerfil:hover a{
+    color: #ff6d00;
+}
+
+.btnPerfil a{
+    color: white;
+    font-size: 1.2vw;
+}
+
+.espacoServicos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vw;
+    width: 100%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+}
+
+.esquerdaServicos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 40%;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.tituloServicos{
+    display: flex;
+    justify-content: center;
+    height: 20%;
+    width: 80%;
+    flex-direction: column;
+}
+
+.tituloServicos a{
+    color: #ff6d00;
+    font-size: 3.3vw;
+    font-weight: bold;
+}
+
+.fotoServicos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45%;
+    width: 80%;
+    background-color: #adb5bd;
+}
+
+.fotoServicos img{
+    height: 100%;
+    width: 100%;
+    border: solid .3vw #ff6d00;
+}
+
+.direitaServicos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 40%;
+    flex-direction: column;
+    margin-top: 2vw;
+    gap: 2vw;
+}
+
+.daleServicos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+}
+
+.esquerdaDale{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 25%; 
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.txt3{
+    margin-top: 6%;
+}
+
+.direitaDale{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 75%;
+}
+
+.cimaDale{
+    display: flex;
+    align-items: center;
+    height: 35%;
+    width: 100%;
+}
+
+.cimaDale a{
+    margin-top: 1%;
+    color: #ff6d00;
+    font-size: 1.8vw;
+    font-weight: bold;
+}
+
+.baixoDale{
+    display: flex;
+    justify-content: center;
+    height: 65%;
+    width: 100%;
+}
+
+.baixoDale a{
+    margin-top: 5%;
+    font-size: 1vw;
+}
