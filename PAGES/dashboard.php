@@ -33,10 +33,18 @@ if ($result_dividas) {
     $valores_dividas = explode(",", $dividas['Valores_Dividas']);
     $juros_dividas = explode(",", $dividas['Juros_Dividas']);
     $tempo_dividas = explode(",", $dividas['Tempo_Dividas']);
-    $total_dividas = array_sum(array_map('floatval', $valores_dividas));
+
+    // Somar apenas as dívidas ativas
+    $total_dividas = 0;
+    for ($i = 0; $i < count($nomes_dividas); $i++) {
+        if (intval($tempo_dividas[$i]) > 0 || intval($tempo_dividas[$i]) == 9999) {
+            $total_dividas += floatval($valores_dividas[$i]);
+        }
+    }
 } else {
     $total_dividas = 0;
 }
+
 
 if ($result_gastos) {
     $gastos = mysqli_fetch_assoc($result_gastos);
@@ -287,6 +295,10 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                 cursor: not-allowed;
             }
         </style>
+
+
+
     </div>
+    
 </body>
 </html>
