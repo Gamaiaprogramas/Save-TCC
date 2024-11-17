@@ -129,6 +129,35 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
         <div class="tituloDividas">
             <h1>Dividas <a>!</a></h1>
         </div>
+        <div class="espacoBtnDividas">
+            <div class="btnDividas">
+                <a>Exibir Dividas<a class="laranja">Pagas</a><i class="fa-solid fa-chevron-down"></i></a>
+                <div class="subDividas">
+                    <div class="espacoCimaDividas">
+                        <a>Nome</a>
+                        <a>Valor</a>
+                        <a>Status</a>
+                    </div>
+                    <div class="espacoBaixoDividas">
+                        <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
+                            <?php if (intval($tempo_dividas[$i]) == 0): ?>
+                                <div class="linhaDivida">
+                                    <div class="divnomeDivida">
+                                    <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
+                                    </div>
+                                    <div class="divValorDivida">
+                                        <p><?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
+                                    </div>
+                                    <div class="divStatusDivida">
+                                        <p>Paga</p>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                        <?php endfor; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="espacoDividas">
             <div class="espacoBtnEsquerda">
                 <button class="btnEsquerda" onclick="direcao(1)"><i class="fa-solid fa-arrow-left fa-2xl"></i></button>
@@ -239,31 +268,6 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
         </div>
         <div class="espacoBtnFixo">
             <a href="../PAGES/adicionar_gastos_fixos.php" class="btnAdicionarFixo">Adicionar Gasto <i class="fa-solid fa-circle-plus"></i></a>
-        </div>
-
-        <div class="tituloDividasPagas">
-            <h1>Dívidas <a>Pagas</a>!</h1>
-        </div>
-        <div class="containerDividasPagas">
-            <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
-                <?php if (intval($tempo_dividas[$i]) == 0): ?>
-                    <div class="cardDividaPaga">
-                        <div class="nomeDivida">
-                            <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
-                        </div>
-                        <div class="valorDivida">
-                            <p>Valor: R$ <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
-                        </div>
-                        <div class="jurosDivida">
-                            <p>Juros: <?php echo htmlspecialchars($juros_dividas[$i]); ?>%</p>
-                        </div>
-                        <div class="tempoDivida">
-                            <p>Dívida Paga</p>
-                        </div>
-                        <button class="btnDividaPaga">Quitado</button>
-                    </div>
-                <?php endif; ?>
-            <?php endfor; ?>
         </div>
 
         <!-- Estilização da nova seção de dívidas pagas -->
