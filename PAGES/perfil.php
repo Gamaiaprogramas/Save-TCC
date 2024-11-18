@@ -25,7 +25,7 @@
 $nivelBusca = mysqli_query($conn, "SELECT nivel FROM `informacao` WHERE `Id_user` = '$codigo'");
 $buscaResult = mysqli_fetch_assoc($nivelBusca);
 
-$nivel2 = $buscaResult['nivel']; // Corrigir para acessar o valor da chave 'nivel'
+@$nivel2 = $buscaResult['nivel']; // Corrigir para acessar o valor da chave 'nivel'
 
 switch ($nivel2) {
     case 1:
