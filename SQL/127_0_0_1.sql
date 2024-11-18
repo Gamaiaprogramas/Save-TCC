@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 15/11/2024 às 19:12
--- Versão do servidor: 8.3.0
--- Versão do PHP: 8.2.18
+-- Tempo de geração: 18-Nov-2024 às 20:57
+-- Versão do servidor: 8.0.27
+-- versão do PHP: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -26,7 +26,7 @@ USE `save`;
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `gastosfix`
+-- Estrutura da tabela `gastosfix`
 --
 
 DROP TABLE IF EXISTS `gastosfix`;
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `gastosfix` (
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Despejando dados para a tabela `gastosfix`
+-- Extraindo dados da tabela `gastosfix`
 --
 
 INSERT INTO `gastosfix` (`Id_gastoFix`, `Nomes_gastos`, `Valores_gastos`, `Id_User`) VALUES
@@ -51,7 +51,7 @@ INSERT INTO `gastosfix` (`Id_gastoFix`, `Nomes_gastos`, `Valores_gastos`, `Id_Us
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `informacao`
+-- Estrutura da tabela `informacao`
 --
 
 DROP TABLE IF EXISTS `informacao`;
@@ -65,23 +65,24 @@ CREATE TABLE IF NOT EXISTS `informacao` (
   `Id_User` int DEFAULT NULL,
   `nivel` int DEFAULT NULL,
   `status_divida` varchar(10) DEFAULT 'ativo',
+  `valor_reserva` int DEFAULT '0',
   PRIMARY KEY (`Id_Informacao`),
   UNIQUE KEY `Id_User` (`Id_User`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Despejando dados para a tabela `informacao`
+-- Extraindo dados da tabela `informacao`
 --
 
-INSERT INTO `informacao` (`Id_Informacao`, `saldo`, `Nomes_Dividas`, `Valores_Dividas`, `Tempo_Dividas`, `Juros_Dividas`, `Id_User`, `nivel`, `status_divida`) VALUES
-(1, 1000.00, '123,gamaia,gamaia2,oi123,Gamaia', '1231,123,1232,1231,123', '3123128,321,3212,312,0', '312,1231,12312,31231,1', 1, 1, 'ativo'),
-(2, 1000.00, 'Seila,adasdad,1,2,3,adassdada,Alisson', '123,1231,1,2,3,123,112222', '0,229,0,0,0,0,0', '23,12321,1,1,3,213,2', 2, 1, 'ativo'),
-(3, 1000.00, 'fafajfaj1,eqeqwewq', '1231,12', '312,0', '13231,3', 3, 2, 'ativo');
+INSERT INTO `informacao` (`Id_Informacao`, `saldo`, `Nomes_Dividas`, `Valores_Dividas`, `Tempo_Dividas`, `Juros_Dividas`, `Id_User`, `nivel`, `status_divida`, `valor_reserva`) VALUES
+(1, '1000.00', '123,gamaia,gamaia2,oi123,Gamaia', '1231,123,1232,1231,123', '3123128,321,3212,312,0', '312,1231,12312,31231,1', 1, 1, 'ativo', 0),
+(2, '12323.00', 'Seila,adasdad,1,2,3,adassdada,Alisson', '123,1231,1,2,3,123,112222', '0,229,0,0,0,0,0', '23,12321,1,1,3,213,2', 2, 1, 'ativo', 0),
+(3, '1000.00', 'fafajfaj1,eqeqwewq', '1231,12', '312,0', '13231,3', 3, 2, 'ativo', 0);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `missoes`
+-- Estrutura da tabela `missoes`
 --
 
 DROP TABLE IF EXISTS `missoes`;
@@ -94,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `missoes` (
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Despejando dados para a tabela `missoes`
+-- Extraindo dados da tabela `missoes`
 --
 
 INSERT INTO `missoes` (`id_missao`, `nivel`, `descricao`, `recompensa`) VALUES
@@ -111,7 +112,7 @@ INSERT INTO `missoes` (`id_missao`, `nivel`, `descricao`, `recompensa`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `missoes_usuarios`
+-- Estrutura da tabela `missoes_usuarios`
 --
 
 DROP TABLE IF EXISTS `missoes_usuarios`;
@@ -126,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `missoes_usuarios` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `recompensas`
+-- Estrutura da tabela `recompensas`
 --
 
 DROP TABLE IF EXISTS `recompensas`;
@@ -138,7 +139,7 @@ CREATE TABLE IF NOT EXISTS `recompensas` (
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Despejando dados para a tabela `recompensas`
+-- Extraindo dados da tabela `recompensas`
 --
 
 INSERT INTO `recompensas` (`id_recompensa`, `descricao`, `criterio`) VALUES
@@ -152,7 +153,7 @@ INSERT INTO `recompensas` (`id_recompensa`, `descricao`, `criterio`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `recompensas_usuarios`
+-- Estrutura da tabela `recompensas_usuarios`
 --
 
 DROP TABLE IF EXISTS `recompensas_usuarios`;
@@ -167,7 +168,7 @@ CREATE TABLE IF NOT EXISTS `recompensas_usuarios` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `registro`
+-- Estrutura da tabela `registro`
 --
 
 DROP TABLE IF EXISTS `registro`;
@@ -186,7 +187,7 @@ CREATE TABLE IF NOT EXISTS `registro` (
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Despejando dados para a tabela `registro`
+-- Extraindo dados da tabela `registro`
 --
 
 INSERT INTO `registro` (`Id_user`, `nome`, `email`, `cpf`, `genero`, `telefone`, `nascto`, `senha`, `foto`, `nivel`) VALUES
@@ -197,7 +198,7 @@ INSERT INTO `registro` (`Id_user`, `nome`, `email`, `cpf`, `genero`, `telefone`,
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `videos`
+-- Estrutura da tabela `videos`
 --
 
 DROP TABLE IF EXISTS `videos`;
@@ -211,7 +212,7 @@ CREATE TABLE IF NOT EXISTS `videos` (
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Despejando dados para a tabela `videos`
+-- Extraindo dados da tabela `videos`
 --
 
 INSERT INTO `videos` (`id_video`, `nivel`, `titulo`, `url`, `perguntas`) VALUES
@@ -225,7 +226,7 @@ INSERT INTO `videos` (`id_video`, `nivel`, `titulo`, `url`, `perguntas`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `videos_usuarios`
+-- Estrutura da tabela `videos_usuarios`
 --
 
 DROP TABLE IF EXISTS `videos_usuarios`;
