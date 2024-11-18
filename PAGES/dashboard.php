@@ -20,15 +20,15 @@ $query_gastos = "SELECT Nomes_gastos, Valores_gastos FROM gastosfix WHERE Id_Use
 $result_saldo = mysqli_query($con, $query_saldo);
 $result_dividas = mysqli_query($con, $query_dividas);
 $result_gastos = mysqli_query($con, $query_gastos);
-$result_reserva = mysqli_query($con, $query_reserva);
+
 $query_reserva = "SELECT valor_reserva FROM informacao WHERE Id_User = '$id_user'";
+
+
+$result_reserva = mysqli_query($con, $query_reserva);
 $ValorResultado = mysqli_fetch_assoc($result_reserva);
-$ValorRultadoReal = $ValorResultado['valor_reserva'];
-
-
 $nivelBusca = mysqli_query($con, "SELECT nivel FROM `informacao` WHERE `Id_user` = '$id_user'");
 $buscaResult = mysqli_fetch_assoc($nivelBusca);
-
+$ValorRultadoReal = $ValorResultado['valor_reserva'];
 
 $nivel2 = $buscaResult['nivel']; // Corrigir para acessar o valor da chave 'nivel'
 
@@ -307,6 +307,81 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                 </form>
                 
         </div>
+
+        <div class="caixinhaSonhos">
+    <h2>Caixinha de Sonhos</h2>
+    <!-- Formulário para criar novas metas -->
+    <form action="../ACTS/caixinha_de_sonhos.act.php" method="post">
+        <label for="nome_meta">Nome da Meta:</label>
+        <input type="text" name="nome_meta" required>
+        
+        <label for="valor_meta">Valor da Meta:</label>
+        <input type="number" name="valor_meta" step="0.01" required>
+        
+        <input type="submit" value="Criar Meta">
+    </form>
+
+    <!-- Lista de metas existentes -->
+    <div class="metasExistentes">
+        <h3>Suas Metas</h3>
+        <?php
+        // Consulta as metas do usuário
+        $userId = $_SESSION['Id_user'];
+        $query = "SELECT * FROM caixinha_sonhos WHERE user_id = $userId";
+        $result = mysqli_query($con, $query);
+
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $percentual = ($row['valor_atual'] / $row['valor_meta']) * 100;
+                $metaId = $row['id'];
+                ?>
+                <div class='meta'>
+                    <p><strong><?php echo $row['nome_meta']; ?></strong></p>
+                    <p>Progresso: <?php echo "{$row['valor_atual']} / {$row['valor_meta']}"; ?></p>
+                    
+                    <!-- Barra de progresso -->
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar-<?php echo $metaId; ?>" style="width: <?php echo $percentual; ?>%;"></div>
+                    </div>
+
+                    <!-- Formulário para depósito -->
+                    <?php if ($row['valor_atual'] < $row['valor_meta']) { ?>
+                        <form action="../ACTS/caixinha_deposito.php" method="post">
+                            <input type="hidden" name="meta_id" value="<?php echo $metaId; ?>">
+                            <input type="number" name="valor_deposito" step="0.01" required>
+                            <input type="submit" value="Depositar">
+                        </form>
+                    <?php } else { ?>
+                        <p class="meta-concluida">Meta concluída! 🎉</p>
+                    <?php } ?>
+                </div>
+                <?php
+            }
+        } else {
+            echo "<p>Você ainda não criou metas.</p>";
+        }
+        ?>
+    </div>
+</div>
+
+<!-- Popup -->
+<div id="popup" style="display: none;">
+    <div class="popup-content">
+        <p>Parabéns! Você atingiu sua meta!</p>
+        <button onclick="closePopup()">Fechar</button>
+    </div>
+</div>
+
+<script>
+    function showPopup() {
+    document.getElementById('popup').style.display = 'flex';
+}
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+
+</script>
 
 <div class="alterarDados">
     <!-- Alterar Dívida -->
