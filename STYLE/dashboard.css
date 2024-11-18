@@ -22,6 +22,34 @@ body {
     align-items: center;
 }
 
+.tituloDividasPagas {
+    margin-top: 20px;
+}
+.containerDividasPagas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+.cardDividaPaga {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    color: #333;
+}
+.btnDividaPaga {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+
+
 .tituloDash{
     display: flex;
     justify-content: center;

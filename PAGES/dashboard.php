@@ -20,6 +20,14 @@ $result_saldo = mysqli_query($con, $query_saldo);
 $result_dividas = mysqli_query($con, $query_dividas);
 $result_gastos = mysqli_query($con, $query_gastos);
 
+
+$nivelBusca = mysqli_query($con, "SELECT nivel FROM `informacao` WHERE `Id_user` = '$id_user'");
+$buscaResult = mysqli_fetch_assoc($nivelBusca);
+
+$nivel2 = $buscaResult['nivel']; // Corrigir para acessar o valor da chave 'nivel'
+
+
+
 // Verificar se as consultas retornaram resultados
 if ($result_saldo) {
     $saldo = mysqli_fetch_assoc($result_saldo)['saldo'];
@@ -95,7 +103,7 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                         <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
                     </div>
                     <div class="nomeGasto">
-                        <h1>Saldo</h1>
+                        <h1>Ganho mensal</h1>
                     </div>
                     <div class="propGasto">
                         <h1>R$<?php echo number_format($saldo, 2, ',', '.'); ?></h1>
@@ -271,34 +279,7 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
         </div>
 
         <!-- Estilização da nova seção de dívidas pagas -->
-        <style>
-            .tituloDividasPagas {
-                margin-top: 20px;
-            }
-            .containerDividasPagas {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 15px;
-                justify-content: center;
-                padding: 20px;
-            }
-            .cardDividaPaga {
-                background-color: #e0e0e0;
-                padding: 15px;
-                border-radius: 8px;
-                width: 250px;
-                text-align: center;
-                color: #333;
-            }
-            .btnDividaPaga {
-                background-color: #28a745;
-                color: white;
-                border: none;
-                padding: 8px 16px;
-                border-radius: 5px;
-                cursor: not-allowed;
-            }
-        </style>
+
 
 
 <div class="alterarDados">
@@ -389,7 +370,7 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
 
 <!-- Formulário para atualizar saldo -->
 <div class="formAtualizarSaldo">
-    <form method="post" action="../ACTS/atualizar_saldo.php">
+    <form method="post" action="../ACTS/update_saldo.php">
         <label for="novo_saldo">Novo Saldo:</label>
         <input type="number" name="novo_saldo" id="novo_saldo" step="0.01" required>
 
