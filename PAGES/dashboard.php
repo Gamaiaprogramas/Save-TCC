@@ -15,14 +15,20 @@ $query_saldo = "SELECT saldo FROM informacao WHERE Id_User = '$id_user'";
 $query_dividas = "SELECT Nomes_Dividas, Valores_Dividas, Juros_Dividas, Tempo_Dividas FROM informacao WHERE Id_User = '$id_user'";
 $query_gastos = "SELECT Nomes_gastos, Valores_gastos FROM gastosfix WHERE Id_User = '$id_user'";
 
+
 // Executar consultas
 $result_saldo = mysqli_query($con, $query_saldo);
 $result_dividas = mysqli_query($con, $query_dividas);
 $result_gastos = mysqli_query($con, $query_gastos);
+$result_reserva = mysqli_query($con, $query_reserva);
+$query_reserva = "SELECT valor_reserva FROM informacao WHERE Id_User = '$id_user'";
+$ValorResultado = mysqli_fetch_assoc($result_reserva);
+$ValorRultadoReal = $ValorResultado['valor_reserva'];
 
 
 $nivelBusca = mysqli_query($con, "SELECT nivel FROM `informacao` WHERE `Id_user` = '$id_user'");
 $buscaResult = mysqli_fetch_assoc($nivelBusca);
+
 
 $nivel2 = $buscaResult['nivel']; // Corrigir para acessar o valor da chave 'nivel'
 
@@ -280,7 +286,36 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
 
         <!-- Estilização da nova seção de dívidas pagas -->
 
+                <?php 
+                if($nivel2 == 2 || $nivel2 == 3){
+                    echo "
+                    <style>
+                    
+                    .planFinanceiro{
+                    display : flex;
+                    }
 
+                    </style>";
+                }else{
+                    echo "
+                    <style>
+                    
+                    .planFinanceiro{
+                    display : none;
+                    }
+
+                    </style>";
+                }
+                ?>
+        <div class="planFinanceiro">
+
+                <form action="../ACTS/reserva_emergencia.act.php" method="post">
+                    <label for="reserva_input">Reserva Atual: <?php  echo $ValorRultadoReal ?></label>
+                    <input type="number" name="reserva_input">
+                    <input type="submit" value="Adicionar">
+                </form>
+                
+        </div>
 
 <div class="alterarDados">
     <!-- Alterar Dívida -->
@@ -378,8 +413,7 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
     </form>
 </div>
 
-
-
+  
 
     </div>
     
