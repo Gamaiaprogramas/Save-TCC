@@ -1,6 +1,6 @@
 <?php 
     @session_start();
-    include("../partials/header.php");
+    include("../partials/headeralternative.php");
     
     
     // Conectar ao banco de dados
@@ -49,13 +49,36 @@ switch ($nivel2) {
 <link rel="stylesheet" href="../STYLE/landing.css">
 
 <style>
-  header {
-    position: relative !important;
-    background-color: #10002b !important;
-    height: 7vw !important;
-    margin: 0 !important;
-    z-index: 1;
-  }
+
+    header{
+        background-color: #f8f9fa !important;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+            .green{
+            background-color: green;
+            width: 100%;
+            height: 2vw;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            align-items: center;
+            margin-top: -.2vw !important;
+        }
+
+        .red{
+            background-color: #c50000;
+            width: 100%;
+            height: 2vw;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            align-items: center;
+            margin-top: -.2vw !important;
+        }
   .btnEdit {
     margin-top: 10px;
   }

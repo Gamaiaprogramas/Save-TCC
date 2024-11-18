@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #fff !important;
+    
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -12,6 +12,7 @@ body{
 }
 
 .main-Perfil{
+    background-color: #f8f9fa !important;
     margin-top: 1.5vw;
     display: flex;
     height: 80vh;

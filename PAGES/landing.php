@@ -112,7 +112,7 @@
                 <a href="../PAGES/selecao.php">
                     <button><i class="bi bi-cash-coin"></i> <p>Planejamento Financeiro</p> </button>
                 </a>
-                <a href="#">
+                <a href="../PAGES/educacao.php">
                     <button><i class="bi bi-book-half"></i> <p>Educação Financeira</p> </button>
                 </a>
             </article>

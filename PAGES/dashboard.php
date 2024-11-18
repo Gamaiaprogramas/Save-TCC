@@ -1,7 +1,7 @@
 <?php
 // Inicia a sessão
 session_start();
-include("../partials/header.php");
+require("../partials/headeralternative.php"); 
 require("../ACTS/sec_dashboard.php");
 
 // Conexão com o banco de dados
@@ -70,15 +70,6 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script src="../JS/jquery-3.7.1.min.js"></script>
-    <style>
-        header {
-            position: relative !important;
-            background-color: #10002b !important;
-            height: 7vw !important;
-            margin: 0 !important;
-            z-index: 1;
-        }
-    </style>
 </head>
 <body>
     <div class="dashboard-container">
