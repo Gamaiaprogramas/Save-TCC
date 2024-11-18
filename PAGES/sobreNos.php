@@ -159,7 +159,7 @@
                 </div>
                 <div class="espacoBtnPerfil">
                     <div class="btnPerfil">
-                        <a href="#">Faça Parte <i class="fa-solid fa-chevron-right"></i></a>
+                        <a href="../PAGES/perfil.php">Faça Parte <i class="fa-solid fa-chevron-right"></i></a>
                     </div>
                 </div>
             </div>
