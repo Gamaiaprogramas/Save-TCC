@@ -51,10 +51,10 @@
       </div>
       <div class="txt-itens">
         <h3><span>O que é</span> Câmbio de<br>moedas</h3>
-        <p>Save Your Money é uma empresa especializada em gestão financeira, dedicada a ajudar seus clientes a otimizar e proteger
-        suas finanças pessoais e empresariais. Nosso objetivo é proporcionar uma abordagem estratégica e personalizada para o gerenciamento de dinheiro, 
-        oferecendo orientação sobre orçamento, investimentos, e planejamento financeiro. Com uma equipe de especialistas comprometidos em transformar desafios 
-        financeiros em oportunidades, a Save Your Money é a parceira ideal para aqueles que buscam um futuro financeiro mais seguro e eficiente.</p>
+        <p>Na Save Your Money, oferecemos suporte especializado para a gestão de finanças pessoais e empresariais, com foco no câmbio de moedas. Com soluções 
+          personalizadas, ajudamos nossos clientes a entender e otimizar operações de câmbio, oferecendo estratégias claras, seguras e eficazes para conversão 
+          de moedas e proteção de valores. Somos uma escolha confiável para alcançar segurança e eficiência em transações internacionais.
+        </p>
       </div>
       
     </div>

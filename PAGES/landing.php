@@ -65,10 +65,10 @@
                 
                 <div class="txt-itens item-2">
                     <h3><span>Como lidamos</span> com<br>seu dinheiro</h3>
-                    <p>Save Your Money é uma empresa especializada em gestão financeira, dedicada a ajudar seus clientes a otimizar e proteger
-                    suas finanças pessoais e empresariais. Nosso objetivo é proporcionar uma abordagem estratégica e personalizada para o gerenciamento de dinheiro, 
-                    oferecendo orientação sobre orçamento, investimentos, e planejamento financeiro. Com uma equipe de especialistas comprometidos em transformar desafios 
-                    financeiros em oportunidades, a Save Your Money é a parceira ideal para aqueles que buscam um futuro financeiro mais seguro e eficiente.</p>
+                    <p>Na Save Your Money, levamos a sério o compromisso com sua saúde financeira. Nossa missão é capacitar clientes a gerirem melhor suas finanças, 
+                        oferecendo orientações práticas e personalizadas sobre orçamento, investimentos e planejamento financeiro. Trabalhamos para transformar desafios 
+                        financeiros em oportunidades, com estratégias eficazes e uma equipe de especialistas dedicados. Conte conosco para construir um futuro financeiro
+                         mais sólido, seguro e eficiente.</p>
                 </div>
                 
                 
@@ -79,10 +79,10 @@
 
                 <div class="txt-itens">
                     <h3><span>Sobre</span> educação<br>financeira</h3>
-                    <p>Save Your Money é uma empresa especializada em gestão financeira, dedicada a ajudar seus clientes a otimizar e proteger
-                    suas finanças pessoais e empresariais. Nosso objetivo é proporcionar uma abordagem estratégica e personalizada para o gerenciamento de dinheiro, 
-                    oferecendo orientação sobre orçamento, investimentos, e planejamento financeiro. Com uma equipe de especialistas comprometidos em transformar desafios 
-                    financeiros em oportunidades, a Save Your Money é a parceira ideal para aqueles que buscam um futuro financeiro mais seguro e eficiente.</p>
+                    <p>A Save Your Money acredita que a educação financeira é a chave para o sucesso pessoal e empresarial. Nosso objetivo é capacitar você a 
+                        compreender, controlar e otimizar suas finanças de maneira eficaz. Por meio de orientação estratégica e ferramentas práticas, ajudamos 
+                        nossos clientes a tomar decisões financeiras informadas, planejar o futuro e construir uma base sólida para o crescimento financeiro. 
+                        Com apoio de especialistas dedicados, transformamos a complexidade das finanças em oportunidades para todos..</p>
                 </div>
                 
                 <div class="img-itens">
@@ -109,7 +109,7 @@
                 <a href="../PAGES/action.php">
                     <button><i class="bi bi-headset"></i> <p>Ações e Rentabilidade</p> </button>
                 </a>
-                <a href="../PAGES/login.php">
+                <a href="../PAGES/selecao.php">
                     <button><i class="bi bi-cash-coin"></i> <p>Planejamento Financeiro</p> </button>
                 </a>
                 <a href="#">
@@ -126,7 +126,7 @@
 
             <h3>No vermelho? <span>Deixa com a gente</span> </h3>
             <p>Os melhores planejamentos para sair desta situção.</p>
-            <a href="#">
+            <a href="selecao.php">
                 <button>Conheça o plano</button>
             </a>
 
@@ -163,7 +163,8 @@
 
                     <div class="txt-instru-box">
                         <h4>Filipe <span>Takara</span></h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam maxime nulla dolorum eius necessitatibus quas accusamus ab aliquid iusto illum dolores porro ipsum suscipit atque unde saepe possimus, culpa facilis.</p>
+                        <p>Nascido em 27 de julho de 2006, é um dos desenvolvedores da Save Your Money, responsável pela documentação do projeto. Seu trabalho focou 
+                            em garantir materiais claros, colaborando com a equipe para alinhar o sistema às necessidades dos usuários.</p>
                     </div>
                 
                 </article>
@@ -224,10 +225,10 @@
 
                 <div class="txt-itens item-2">
                     <h3><span>Considereções</span><br>Finais</h3>
-                    <p>Save Your Money é uma empresa especializada em gestão financeira, dedicada a ajudar seus clientes a otimizar e proteger
-                    suas finanças pessoais e empresariais. Nosso objetivo é proporcionar uma abordagem estratégica e personalizada para o gerenciamento de dinheiro, 
-                    oferecendo orientação sobre orçamento, investimentos, e planejamento financeiro. Com uma equipe de especialistas comprometidos em transformar desafios 
-                    financeiros em oportunidades, a Save Your Money é a parceira ideal para aqueles que buscam um futuro financeiro mais seguro e eficiente.</p>
+                    <p>A Save Your Money encerra este compromisso reafirmando sua dedicação em transformar vidas por meio da gestão financeira estratégica. Nosso 
+                        trabalho não termina com a orientação inicial, mas continua com suporte contínuo, adaptação às necessidades dos clientes e inovação constante 
+                        em soluções de economia, planejamento e investimentos. Acreditamos que, com as ferramentas certas, qualquer pessoa pode alcançar estabilidade 
+                        e prosperidade financeira de maneira segura.</p>
                 </div>
                 
                 
