@@ -122,7 +122,7 @@ body{
     height: 10%;
 }
 
-.editar:hover a{
+.editar a:hover{
     color: #ff6d00;
 }
 
@@ -152,6 +152,7 @@ body{
     margin-bottom: 1.5vw;
     text-decoration: none;
     border-radius: 2vw;
+    cursor: pointer;
 }
 .btnAnalise a {
     color: #10002b;

@@ -30,6 +30,7 @@ switch ($nivel) {
 
 <link rel="stylesheet" href="../STYLE/landing.css">
 <link rel="stylesheet" href="../STYLE/edit.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <style>
             .green{
@@ -114,9 +115,9 @@ switch ($nivel) {
             <div class="foto">
                 <img id="previewImg" src="<?php echo $_SESSION['foto']; ?>" class="miniaturaPerf">
                 <label for="fileFoto" class="file-label">Escolher Foto</label>
-                <input type="file" class="file-input" name="newFoto" id="fileFoto" id="inputGroupFile01" onchange="previewFile(this);">
-
+                <input type="file" class="file-input" name="newFoto" id="fileFoto" onchange="previewFile();">
             </div>
+
                 <div class="plano">
                     <label>Plano <?php echo $nivel?></label>
                     <label class="textoPlano"><?php echo $textoPlano; ?></label>
@@ -222,43 +223,33 @@ switch ($nivel) {
     </div>
 </form>
     <script>
-            function previewFile(inputId, imgId) {
-                const input = document.getElementById(inputId);
-                const preview = document.getElementById(imgId);
+            function previewFile() {
+    const input = document.getElementById('fileFoto');  // Pega o input pelo ID
+    const preview = document.getElementById('previewImg');  // Pega a imagem de pré-visualização
 
-                const file = input.files[0];
-                const reader = new FileReader();
+    const file = input.files[0];  // Pega o primeiro arquivo selecionado
 
-                reader.onloadend = function() {
-                    preview.src = reader.result;
-                }
+    // Exibe o efeito de fade e desfoque
+    $("#previewImg").fadeOut(100);
+    $("#imagemAtual").css("filter", "blur(5px)");
+    $("#previewImg").css("filter", "blur(0px)");
 
-                if (file) {
-                    reader.readAsDataURL(file);
-                } else {
-                    preview.src = "<?php echo $_SESSION['Foto']; ?>";
-                }
-            }
-            function previewFile(input) {
-                $("#previewImg").fadeOut(100);
-                $("#imagemAtual").css("filter", "blur(5px)");
-                $("#previewImg").css("filter", "blur(0px)");
-                var file = $("input[type=file]").get(0).files[0];
+    if (file) {
+        const reader = new FileReader();
 
-                if (file) {
-                    var reader = new FileReader();
+        reader.onload = function () {
+            preview.src = reader.result;  // Atualiza o 'src' da imagem com o resultado da leitura do arquivo
+        };
 
-                    reader.onload = function () {
-                        $("#previewImg").attr("src", reader.result);
-                    };
+        reader.readAsDataURL(file);  // Lê o arquivo como URL de dados
+    } else {
+        preview.src = "<?php echo $_SESSION['foto']; ?>";  // Retorna a foto original caso não haja arquivo
+    }
 
-                    reader.readAsDataURL(file);
-                }
-                $("#previewImg").fadeIn(800);
-            }
+    // Faz a imagem de pré-visualização aparecer suavemente
+    $("#previewImg").fadeIn(800);
+}
 
-
-        
     </script>
     <script src="../JS/geral.js"></script>
 </body>
