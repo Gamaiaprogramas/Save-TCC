@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 18-Nov-2024 às 20:57
--- Versão do servidor: 8.0.27
--- versão do PHP: 7.4.26
+-- Tempo de geração: 19/11/2024 às 00:35
+-- Versão do servidor: 8.3.0
+-- Versão do PHP: 8.2.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -26,7 +26,35 @@ USE `save`;
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `gastosfix`
+-- Estrutura para tabela `caixinha_sonhos`
+--
+
+DROP TABLE IF EXISTS `caixinha_sonhos`;
+CREATE TABLE IF NOT EXISTS `caixinha_sonhos` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `user_id` int NOT NULL,
+  `nome_meta` varchar(255) NOT NULL,
+  `valor_meta` decimal(10,2) NOT NULL,
+  `valor_atual` decimal(10,2) DEFAULT '0.00',
+  `data_criacao` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Despejando dados para a tabela `caixinha_sonhos`
+--
+
+INSERT INTO `caixinha_sonhos` (`id`, `user_id`, `nome_meta`, `valor_meta`, `valor_atual`, `data_criacao`) VALUES
+(1, 3, 'Viagem', 1000.00, 3000.00, '2024-11-18 23:05:59'),
+(2, 3, 'GATO', 123333.00, 99999999.99, '2024-11-18 23:07:31'),
+(3, 3, '1000', 200.00, 2000.00, '2024-11-18 23:16:10'),
+(4, 3, 'Guilherme', 12332.00, 101000.00, '2024-11-19 00:12:14');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `gastosfix`
 --
 
 DROP TABLE IF EXISTS `gastosfix`;
@@ -40,18 +68,18 @@ CREATE TABLE IF NOT EXISTS `gastosfix` (
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Extraindo dados da tabela `gastosfix`
+-- Despejando dados para a tabela `gastosfix`
 --
 
 INSERT INTO `gastosfix` (`Id_gastoFix`, `Nomes_gastos`, `Valores_gastos`, `Id_User`) VALUES
 (1, '1231,1231,1231232,qweqweqweqe1,qweqeqweq', '31231,1,13123213,23131,3213131', 1),
 (2, 'Gamaia,Analize', '123,231', 2),
-(3, '123123,321131321', '12312313,32131131', 3);
+(3, '123123,321131321', '12,32', 3);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `informacao`
+-- Estrutura para tabela `informacao`
 --
 
 DROP TABLE IF EXISTS `informacao`;
@@ -65,24 +93,24 @@ CREATE TABLE IF NOT EXISTS `informacao` (
   `Id_User` int DEFAULT NULL,
   `nivel` int DEFAULT NULL,
   `status_divida` varchar(10) DEFAULT 'ativo',
-  `valor_reserva` int DEFAULT '0',
+  `valor_reserva` decimal(10,2) DEFAULT '0.00',
   PRIMARY KEY (`Id_Informacao`),
   UNIQUE KEY `Id_User` (`Id_User`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Extraindo dados da tabela `informacao`
+-- Despejando dados para a tabela `informacao`
 --
 
 INSERT INTO `informacao` (`Id_Informacao`, `saldo`, `Nomes_Dividas`, `Valores_Dividas`, `Tempo_Dividas`, `Juros_Dividas`, `Id_User`, `nivel`, `status_divida`, `valor_reserva`) VALUES
-(1, '1000.00', '123,gamaia,gamaia2,oi123,Gamaia', '1231,123,1232,1231,123', '3123128,321,3212,312,0', '312,1231,12312,31231,1', 1, 1, 'ativo', 0),
-(2, '12323.00', 'Seila,adasdad,1,2,3,adassdada,Alisson', '123,1231,1,2,3,123,112222', '0,229,0,0,0,0,0', '23,12321,1,1,3,213,2', 2, 1, 'ativo', 0),
-(3, '1000.00', 'fafajfaj1,eqeqwewq', '1231,12', '312,0', '13231,3', 3, 2, 'ativo', 0);
+(1, 1000.00, '123,gamaia,gamaia2,oi123,Gamaia', '1231,123,1232,1231,123', '3123128,321,3212,312,0', '312,1231,12312,31231,1', 1, 1, 'ativo', 0.00),
+(2, 12323.00, 'Seila,adasdad,1,2,3,adassdada,Alisson', '123,1231,1,2,3,123,112222', '0,229,0,0,0,0,0', '23,12321,1,1,3,213,2', 2, 1, 'ativo', 0.00),
+(3, 1000.00, 'fafajfaj1,eqeqwewq', '1231,12', '312,0', '13231,3', 3, 2, 'ativo', 4457.00);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `missoes`
+-- Estrutura para tabela `missoes`
 --
 
 DROP TABLE IF EXISTS `missoes`;
@@ -95,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `missoes` (
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Extraindo dados da tabela `missoes`
+-- Despejando dados para a tabela `missoes`
 --
 
 INSERT INTO `missoes` (`id_missao`, `nivel`, `descricao`, `recompensa`) VALUES
@@ -112,7 +140,7 @@ INSERT INTO `missoes` (`id_missao`, `nivel`, `descricao`, `recompensa`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `missoes_usuarios`
+-- Estrutura para tabela `missoes_usuarios`
 --
 
 DROP TABLE IF EXISTS `missoes_usuarios`;
@@ -127,7 +155,7 @@ CREATE TABLE IF NOT EXISTS `missoes_usuarios` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `recompensas`
+-- Estrutura para tabela `recompensas`
 --
 
 DROP TABLE IF EXISTS `recompensas`;
@@ -139,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `recompensas` (
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Extraindo dados da tabela `recompensas`
+-- Despejando dados para a tabela `recompensas`
 --
 
 INSERT INTO `recompensas` (`id_recompensa`, `descricao`, `criterio`) VALUES
@@ -153,7 +181,7 @@ INSERT INTO `recompensas` (`id_recompensa`, `descricao`, `criterio`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `recompensas_usuarios`
+-- Estrutura para tabela `recompensas_usuarios`
 --
 
 DROP TABLE IF EXISTS `recompensas_usuarios`;
@@ -168,7 +196,7 @@ CREATE TABLE IF NOT EXISTS `recompensas_usuarios` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `registro`
+-- Estrutura para tabela `registro`
 --
 
 DROP TABLE IF EXISTS `registro`;
@@ -187,18 +215,18 @@ CREATE TABLE IF NOT EXISTS `registro` (
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Extraindo dados da tabela `registro`
+-- Despejando dados para a tabela `registro`
 --
 
 INSERT INTO `registro` (`Id_user`, `nome`, `email`, `cpf`, `genero`, `telefone`, `nascto`, `senha`, `foto`, `nivel`) VALUES
 (1, 'Teste', 'teste@teste.com', '111.111.111-11', 'Masculino', '(00) 00000-0000', '2024-10-28', '123', '../clientes/fotosClientes/Teste.jpg', 2),
 (2, 'Guilherme Teste Marques', 'teste1@gamail.com', '123.131.313-23', 'Masculino', '(12) 31323-3123', '2024-11-01', '202cb962ac59075b964b07152d234b70', 'https://api.dicebear.com/8.x/initials/svg?seed=Guilherme Teste Marques&backgroundColor=ff6d00\r\n            ', 2),
-(3, 'Guilherme Marques Cardoso Dos Santos', 'teste123@gmail.com', '131.231.321-32', 'Masculino', '(11) 95812-4482', '2024-11-08', '202cb962ac59075b964b07152d234b70', 'https://api.dicebear.com/8.x/initials/svg?seed=Guilherme Marques Cardoso Dos Santos&backgroundColor=ff6d00\r\n            ', 2);
+(3, 'Guilherme Marques Cardoso Dos Santos', 'teste123@gmail.com', '131.231.321-32', 'Masculino', '(11) 95812-4482', '0000-00-00', '123', 'https://api.dicebear.com/8.x/initials/svg?seed=Guilherme Marques Cardoso Dos Santos&backgroundColor=ff6d00\r\n            ', 2);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `videos`
+-- Estrutura para tabela `videos`
 --
 
 DROP TABLE IF EXISTS `videos`;
@@ -212,7 +240,7 @@ CREATE TABLE IF NOT EXISTS `videos` (
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Extraindo dados da tabela `videos`
+-- Despejando dados para a tabela `videos`
 --
 
 INSERT INTO `videos` (`id_video`, `nivel`, `titulo`, `url`, `perguntas`) VALUES
@@ -226,7 +254,7 @@ INSERT INTO `videos` (`id_video`, `nivel`, `titulo`, `url`, `perguntas`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `videos_usuarios`
+-- Estrutura para tabela `videos_usuarios`
 --
 
 DROP TABLE IF EXISTS `videos_usuarios`;
