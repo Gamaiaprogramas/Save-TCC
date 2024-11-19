@@ -4,3 +4,131 @@
     padding: 0;
     user-select: none;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+    background-color: #e9ecef;
+    color: #10002b;
+}
+
+.tituloConteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 13vw;
+    gap: .8vw;
+}
+
+.tituloConteudo a{
+    font-size: 2vw;
+}
+
+.laranja{
+    color: #ff6d00;
+}
+
+.introducao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 6vw;
+}
+
+.tituloIntroducao{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 30%;
+    font-size: 1.6vw;
+}
+
+.textoIntroducao{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 70%;
+    font-size: 1vw;
+}
+
+.fase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    flex-direction: column;
+    margin-top: 4vw;
+}
+
+.faseG{
+    font-size: 1.7vw;
+    font-weight: bold;
+    color: #ff6d00;
+}
+
+.nomeFase{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    gap: 1vw;
+    margin-right: 2vw;
+    color: #ff6d00;
+    font-size: 1.7vw;
+    background-color: #e9ecef;
+}
+
+.textoFase{
+    display: flex;
+    width: 100%;
+    height: auto;
+    font-size: 1vw;
+    flex-direction: column;
+    gap: .4vw;
+}
+
+.espacoVideo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25vw;
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38.5%;
+    height: 80%;
+    background-color: #ff6d00;
+}
+
+.espacoBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5vw;
+}
+
+.btnFase1 button, .btnFase2 button, .btnFase3 button, .btnFase4 button, .btnFase5 button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5vw;
+    width: 12vw;
+    font-size: 1.3vw;
+    border-radius: 1vw;
+    border: solid #ff6d00;
+    color: #ff6d00;
+    font-weight: bold;
+}
