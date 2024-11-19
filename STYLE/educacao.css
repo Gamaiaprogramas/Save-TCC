@@ -58,7 +58,7 @@ body {
     font-size: 1vw;
 }
 
-.fase{
+.fase1, .fase2, .fase3, .fase4, .fase5{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,6 +67,18 @@ body {
     flex-direction: column;
     margin-top: 4vw;
 }
+
+.fase2, .espacoVideo2, .espacoBtn2, .fase3, .espacoVideo3, .espacoBtn3, .fase4, .espacoVideo4, .espacoBtn4, .fase5, .espacoVideo5, .espacoBtn5 {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .desbloqueada {
+    filter: none;
+    pointer-events: auto;
+  }
+  
 
 .faseG{
     font-size: 1.7vw;
@@ -95,7 +107,7 @@ body {
     gap: .4vw;
 }
 
-.espacoVideo{
+.espacoVideo1, .espacoVideo2, .espacoVideo3, .espacoVideo4, .espacoVideo5{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,7 +124,7 @@ body {
     background-color: #ff6d00;
 }
 
-.espacoBtn{
+.espacoBtn1, .espacoBtn2, .espacoBtn3, .espacoBtn4, .espacoBtn5{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,4 +143,5 @@ body {
     border: solid #ff6d00;
     color: #ff6d00;
     font-weight: bold;
+    cursor: pointer;
 }

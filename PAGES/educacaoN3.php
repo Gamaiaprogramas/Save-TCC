@@ -35,7 +35,7 @@
     </div>
       
   </div>
-  <div class="fase">
+  <div class="fase1">
     <div class="nomeFase">
       <a><a class="faseG">Fase 1: </a>Aprender sobre finanças</a>
     </div>
@@ -51,7 +51,7 @@
         <a>4) Busque ajuda profissional: Planejadores financeiros podem oferecer orientação personalizada.</a>
     </div>
   </div>
-  <div class="espacoVideo">
+  <div class="espacoVideo1">
       <div class="video">
       <iframe 
           width="700" 
@@ -65,14 +65,14 @@
       </iframe>
       </div>
   </div>
-  <div class="espacoBtn">
+  <div class="espacoBtn1">
       <div class="btnFase1">
         <button>Concluir Fase 1</button>
       </div>
   </div>
 
 
-  <div class="fase">
+  <div class="fase2">
     <div class="nomeFase">
       <a><a class="faseG">Fase 2: </a>Investir meu dinheiro</a>
     </div>
@@ -98,7 +98,7 @@
       <a>7 Aprimore seus conhecimentos: Leia, assista a vídeos e consulte um planejador financeiro para orientação personalizada.</a>
     </div>
   </div>
-  <div class="espacoVideo">
+  <div class="espacoVideo2">
       <div class="video">
       <iframe 
           width="700" 
@@ -112,14 +112,14 @@
       </iframe>
       </div>
   </div>
-  <div class="espacoBtn">
+  <div class="espacoBtn2">
       <div class="btnFase2">
         <button>Concluir Fase 2</button>
       </div>
   </div>
 
 
-  <div class="fase">
+  <div class="fase3">
     <div class="nomeFase">
       <a><a class="faseG">Fase 3: </a>Ter uma reserva de emergência</a>
     </div>
@@ -144,12 +144,12 @@
       <a>3 Contribua regularmente: Separe uma parte da sua renda mensalmente até alcançar o valor desejado.</a>
     </div>
   </div>
-  <div class="espacoVideo">
+  <div class="espacoVideo3">
       <div class="video">
       <iframe 
           width="700" 
           height="350" 
-          src="https://www.youtube.com/embed/RZA7DoykWR8" 
+          src="https://www.youtube.com/embed/e8W1S5r5v6M" 
           title="YouTube video player" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -158,14 +158,14 @@
       </iframe>
       </div>
   </div>
-  <div class="espacoBtn">
+  <div class="espacoBtn3">
       <div class="btnFase3">
         <button>Concluir Fase 3</button>
       </div>
   </div>
 
 
-  <div class="fase">
+  <div class="fase4">
     <div class="nomeFase">
       <a><a class="faseG">Fase 4: </a>Corrigir meus gastos</a>
     </div>
@@ -196,12 +196,12 @@
       <a>Renegocie condições: Converse com credores para buscar melhores prazos ou taxas menores.</a>
     </div>
   </div>
-  <div class="espacoVideo">
+  <div class="espacoVideo4">
       <div class="video">
       <iframe 
           width="700" 
           height="350" 
-          src="https://www.youtube.com/embed/RZA7DoykWR8" 
+          src="https://www.youtube.com/embed/Pr2lUEgqd3M"
           title="YouTube video player" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -210,14 +210,14 @@
       </iframe>
       </div>
   </div>
-  <div class="espacoBtn">
+  <div class="espacoBtn4">
       <div class="btnFase4">
         <button>Concluir Fase 4</button>
       </div>
   </div>
 
 
-  <div class="fase">
+  <div class="fase5">
     <div class="nomeFase">
       <a><a class="faseG">Fase 5: </a>Melhorar minha vida financeira</a>
     </div>
@@ -248,12 +248,12 @@
       <a>Invista em sua carreira: Faça cursos de qualificação, aprenda novas habilidades ou procure promoções no trabalho.</a>
     </div>
   </div>
-  <div class="espacoVideo">
+  <div class="espacoVideo5">
       <div class="video">
       <iframe 
         width="700" 
         height="350" 
-        src="https://www.youtube.com/embed/5Eyf7tc_OK4w8z_8" 
+        src="https://www.youtube.com/embed/0q-MAxta-d0"
         title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -262,12 +262,49 @@
       </iframe>
       </div>
   </div>
-  <div class="espacoBtn">
+  <div class="espacoBtn5">
       <div class="btnFase5">
         <button>Concluir Fase 5</button>
       </div>
   </div>
-
+<script>
+  document.querySelector('.btnFase1 button').addEventListener('click', function() {
+  // Seleciona todas as divs que devem perder o blur
+  const divsParaDesbloquear = document.querySelectorAll('.fase2, .espacoVideo2, .espacoBtn2');
+  
+  // Adiciona a classe 'desbloqueada' para cada uma
+  divsParaDesbloquear.forEach(div => {
+    div.classList.add('desbloqueada');
+  });
+});
+document.querySelector('.btnFase2 button').addEventListener('click', function() {
+  // Seleciona todas as divs que devem perder o blur
+  const divsParaDesbloquear = document.querySelectorAll('.fase3, .espacoVideo3, .espacoBtn3');
+  
+  // Adiciona a classe 'desbloqueada' para cada uma
+  divsParaDesbloquear.forEach(div => {
+    div.classList.add('desbloqueada');
+  });
+});
+document.querySelector('.btnFase3 button').addEventListener('click', function() {
+  // Seleciona todas as divs que devem perder o blur
+  const divsParaDesbloquear = document.querySelectorAll('.fase4, .espacoVideo4, .espacoBtn4');
+  
+  // Adiciona a classe 'desbloqueada' para cada uma
+  divsParaDesbloquear.forEach(div => {
+    div.classList.add('desbloqueada');
+  });
+});
+document.querySelector('.btnFase4 button').addEventListener('click', function() {
+  // Seleciona todas as divs que devem perder o blur
+  const divsParaDesbloquear = document.querySelectorAll('.fase5, .espacoVideo5, .espacoBtn5');
+  
+  // Adiciona a classe 'desbloqueada' para cada uma
+  divsParaDesbloquear.forEach(div => {
+    div.classList.add('desbloqueada');
+  });
+});
+</script>
 
 
 
