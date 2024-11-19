@@ -79,7 +79,7 @@
                 
                 echo "
                     <a href='../PAGES/perfil.php'>
-                    <img src='".$_SESSION['foto']."' class='user-photo'>
+                    <img src='".$_SESSION['foto']."' class='user-photo'>    
                     </a>
                     <div class='nome'><p>Olá, $nome_usuario!</p></div>
                 ";  
