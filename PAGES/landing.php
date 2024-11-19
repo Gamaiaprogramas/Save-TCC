@@ -145,12 +145,14 @@
                 <article class="instru-box">
 
                     <div class="img-instru-box">
-                        <img src="../PICS/imgs/user.png" alt="">
+                        <img src="../PICS/imgs/alisonArruda.png" alt="">
                     </div> 
 
                     <div class="txt-instru-box">
                         <h4>Alison <span>Arruda</span></h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam maxime nulla dolorum eius necessitatibus quas accusamus ab aliquid iusto illum dolores porro ipsum suscipit atque unde saepe possimus, culpa facilis.</p>
+                        <p>Nascido em 16 de janeiro de 2003, é um dos desenvolvedores da Save Your Money, responsável pela parte gráfica e desenvolvimento do projeto.
+                            Seu trabalho focou em dar vida ao design desenvolvido em conjunto, utilizando todo seu conhecimento adquirido durante o curso.
+                        </p>
                     </div>
                 
                 </article>

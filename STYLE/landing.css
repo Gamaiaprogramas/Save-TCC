@@ -284,3 +284,7 @@ section.como-funciona{
 .instrucoes .instru-box p{
     line-height: 20px;
 }
+
+.img-instru-box img{
+    border-radius: 50%;
+}
