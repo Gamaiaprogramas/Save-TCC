@@ -181,7 +181,7 @@ switch ($nivel2) {
                     </div>
                 <?php else: ?>
                     <div class="btnAnalise">
-                        <a href="../PAGES/dashboard.php">Ir para dashboard</a>
+                        <a href="../PAGES/dashboard.php" >Ir para dashboard</a>
                     </div>
                 <?php endif; ?>
 

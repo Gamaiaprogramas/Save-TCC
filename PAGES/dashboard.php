@@ -215,39 +215,45 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
             }
         </script>
          <script>
-        am5.ready(function() {
-            // Create root element
-            var root = am5.Root.new("chartdiv");
+am5.ready(function() {
+    // Create root element
+    var root = am5.Root.new("chartdiv");
 
-            // Set themes
-            root.setThemes([
-                am5themes_Animated.new(root)
-            ]);
+    // Set themes
+    root.setThemes([am5themes_Animated.new(root)]);
 
-            // Create chart
-            var chart = root.container.children.push(am5percent.PieChart.new(root, {
-                layout: root.verticalLayout
-            }));
+    // Create chart
+    var chart = root.container.children.push(am5percent.PieChart.new(root, {
+        layout: root.verticalLayout
+    }));
 
-            // Create series
-            var series = chart.series.push(am5percent.PieSeries.new(root, {
-                valueField: "value",
-                categoryField: "category"
-            }));
+    // Create series
+    var series = chart.series.push(am5percent.PieSeries.new(root, {
+        valueField: "value",
+        categoryField: "category"
+    }));
 
-            // Set data
-            series.data.setAll([
-                { value: <?php echo $total_dividas; ?>, category: "Dívidas" },
-                { value: <?php echo $total_gastos; ?>, category: "Gastos Fixos" },
-                { value: <?php echo $saldo; ?>, category: "Saldo" }
-            ]);
+    // Set data dynamically from PHP
+    series.data.setAll([
+        { value: <?php echo $total_dividas; ?>, category: "Dívidas" },
+        { value: <?php echo $total_gastos; ?>, category: "Gastos Fixos" },
+        { value: <?php echo $saldo; ?>, category: "Saldo" }
+    ]);
 
-            // Add tooltip
-            series.slices.template.set("tooltipText", "{category}: [bold]{value}[/]");
+    // Create color set with custom colors
+    var colorSet = am5.ColorSet.new(root, {
+        colors: [am5.color("#ff6d00"), am5.color("#10002b"), am5.color("#ffc107")]
+    });
+    series.set("colors", colorSet);
 
-            // Play initial series animation
-            series.appear(1000, 100);
-        }); // end am5.ready()
+    // Add tooltip
+    series.slices.template.set("tooltipText", "{category}: [bold]{value}[/]");
+
+    // Play initial series animation
+    series.appear(1000, 100);
+});
+
+
         </script>
 
         <div class="espacoBtnDivida">
@@ -381,15 +387,20 @@ function closePopup() {
     document.getElementById('popup').style.display = 'none';
 }
 
+
 </script>
 
-<div class="alterarDados">
+
+
+
+<script src="../JS/alterarDadosJs.js"></script>
+<div class="alterarDados" id="idDivMae">
     <!-- Alterar Dívida -->
     <!-- Formulário para atualizar dívida -->
-    <div class="tituloAtualizarDivida">
+    <div class="tituloAtualizarDivida" id= "idDivida1">
     <h2>Atualizar <a>Dívida</a></h2>
 </div>
-<div class="formAtualizarDivida">
+<div class="formAtualizarDivida" id= "idDivida2">
     <form method="post" action="../ACTS/update_divida.php">
         <label for="index_divida">Escolha a dívida:</label>
         <select name="index_divida" id="index_divida" onchange="preencherCamposDivida()">
@@ -433,10 +444,10 @@ function closePopup() {
 
 
 <!-- Formulário para atualizar gasto fixo -->
-<div class="tituloAtualizarGasto">
+<div class="tituloAtualizarGasto"  id= "idGasto1" >
     <h2>Atualizar <a>Gasto Fixo</a></h2>
 </div>
-<div class="formAtualizarGasto">
+<div class="formAtualizarGasto" id= "idGasto2">
     <form method="post" action="../ACTS/update_gasto.php">
         <label for="index_gasto">Escolha o gasto fixo:</label>
         <select name="index_gasto" id="index_gasto" onchange="preencherCamposGasto()">
@@ -470,7 +481,7 @@ function closePopup() {
 
 
 <!-- Formulário para atualizar saldo -->
-<div class="formAtualizarSaldo">
+<div class="formAtualizarSaldo" id= "idSaldo">
     <form method="post" action="../ACTS/update_saldo.php">
         <label for="novo_saldo">Novo Saldo:</label>
         <input type="number" name="novo_saldo" id="novo_saldo" step="0.01" required>

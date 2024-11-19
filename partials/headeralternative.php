@@ -72,16 +72,18 @@
 
 <header>
     <div class="user">
-        <?php
+    <?php
             if(isset($_SESSION['logado']) && $_SESSION['logado'] == true){
+                // Dividir o nome completo do usuário e pegar apenas o primeiro nome
+                $nome_usuario = explode(' ', $_SESSION['nome'])[0];
+                
                 echo "
                     <a href='../PAGES/perfil.php'>
                     <img src='".$_SESSION['foto']."' class='user-photo'>
                     </a>
-                    <div class='nome'><p>Olá, $_SESSION[nome]!</p></div>
+                    <div class='nome'><p>Olá, $nome_usuario!</p></div>
                 ";  
             }
-
         ?>
 
         

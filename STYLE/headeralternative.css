@@ -32,7 +32,9 @@ header img{
     gap: 1vw;
     font-size: 1.3vw;
 }
-
+.user div p{
+    color: #10002b;
+}
 .menu{
     display: flex;
     justify-content: end;
@@ -40,6 +42,13 @@ header img{
 
     width: 80%;
     height: 100%;
+}
+
+.menu a {
+    color: #10002b;
+}
+.menu a li{
+    color: #10002b;
 }
 
 .menu ul{
