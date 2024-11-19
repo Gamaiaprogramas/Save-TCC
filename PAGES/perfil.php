@@ -29,13 +29,13 @@ $buscaResult = mysqli_fetch_assoc($nivelBusca);
 
 switch ($nivel2) {
     case 1:
-        $textoPlano = "Plano 1: Aprender a lidar com dinheiro, pagar dívidas e sair do vermelho.";
+        $textoPlano = "Aprender a lidar com dinheiro, pagar dívidas e sair do vermelho.";
         break;
     case 2:
-        $textoPlano = "Plano 2: Começar pequenos investimentos, guardar dinheiro, aprender mais sobre finanças.";
+        $textoPlano = "Começar pequenos investimentos, guardar dinheiro, aprender mais sobre finanças.";
         break;
     case 3:
-        $textoPlano = "Plano 3: Investir meu dinheiro, ter uma reserva de emergência, corrigir meus gastos.";
+        $textoPlano = "Investir meu dinheiro, ter uma reserva de emergência, corrigir meus gastos.";
         break;
     default:
         $textoPlano = "Plano não definido, faça a sua análise para obter um.";
