@@ -179,33 +179,14 @@
 
   <div class="fase5">
     <div class="nomeFase">
-      <a><a class="faseG">Fase 5: </a>Melhorar minha vida financeira</a>
+      <a><a class="faseG">Fase 5: </a>Como vou guardar dinheiro?</a>
     </div>
     <div class="textoFase">
-      <a>1. Avalie sua Situação Atual</a>
-      <a> Registre sua renda e despesas: Anote tudo, desde a sua renda fixa até os menores gastos diários, para entender onde seu dinheiro está indo.</a>
-      <a>Identifique problemas: Verifique se você está gastando mais do que ganha, acumulando dívidas ou tendo dificuldades para poupar.</a>
-      <a>2. Estabeleça Metas Financeiras</a>
-      <a>Curto prazo: Quitação de dívidas, criação de uma reserva de emergência.</a>
-      <a>Médio prazo: Compra de bens, como um carro ou curso de especialização.</a>
-      <a>Longo prazo: Aposentadoria confortável, compra de imóveis ou independência financeira.</a>
-      <a>Defina objetivos específicos, mensuráveis e com prazos.</a>
-      <a>3. Crie um Orçamento</a>
-      <a>Adote uma regra simples, como 50-30-20:</a>
-      <a>50% para necessidades (moradia, alimentação, transporte).</a>
-      <a>30% para desejos (lazer, viagens).</a>
-      <a> 20% para poupança e investimentos.</a>
-      <a>Reveja mensalmente: Ajuste conforme necessário para manter o controle.</a>
-      <a>4. Reduza e Controle os Gastos</a>
-      <a>Elimine despesas supérfluas: Avalie assinaturas e serviços pouco usados.</a>
-      <a> Evite o consumismo: Planeje compras e priorize itens essenciais.</a>
-      <a>Renegocie dívidas: Busque condições melhores com credores para reduzir juros e prazos.</a>
-      <a>5. Construa uma Reserva de Emergência</a>
-      <a>Acumule o equivalente a 3 a 6 meses de despesas essenciais.</a>
-      <a>Invista essa reserva em opções de baixo risco e alta liquidez, como CDBs ou Tesouro Selic.</a>
-      <a>6. Aumente sua Renda</a>
-      <a>Busque renda extra: Considere trabalhos freelancers, vendas online ou aluguel de bens.</a>
-      <a>Invista em sua carreira: Faça cursos de qualificação, aprenda novas habilidades ou procure promoções no trabalho.</a>
+    <a>A Importância de Guardar Dinheiro:</a>
+  <a>Guardar o seu dinheiro é fundamental para garantir segurança financeira e alcançar os seus objetivos a longo prazo. Além de ser uma proteção em situações imprevistas, a prática de poupar permite investir em sonhos e conquistar metas que antes pareciam distantes.</a>
+  <a>Organização e Disciplina:</a>
+  <a>Para que essa tarefa se torne mais eficaz, você precisará de disciplina e equilíbrio entre os seus gastos e desejos. Uma boa estratégia é usar ferramentas como a "Caixinha dos Sonhos" no app Save Your Money, que ajudará a organizar o processo de poupança e manter o foco nas suas metas.</a>
+  <a>Com um bom planejamento, essa missão pode ser difícil, mas com certeza não é impossível. Abaixo, você encontra um vídeo que exemplifica e dá dicas práticas para te ajudar a alcançar esse objetivo e começar a poupar para o futuro.</a>
     </div>
   </div>
   <div class="espacoVideo5">
@@ -213,7 +194,7 @@
       <iframe 
         width="700" 
         height="350" 
-        src="https://www.youtube.com/embed/0q-MAxta-d0"
+        src="https://www.youtube.com/embed/m_-hO9vzB3I?si=NP9uu85NFY6QdEEu" 
         title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

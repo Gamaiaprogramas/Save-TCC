@@ -174,12 +174,12 @@
                 <article class="instru-box">
 
                     <div class="img-instru-box">
-                        <img src="../PICS/imgs/user.png" alt="">
+                        <img src="../PICS/imgs/luis.jpeg" alt="">
                     </div> 
 
                     <div class="txt-instru-box">
                         <h4>Luis <span>Henrique</span></h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam maxime nulla dolorum eius necessitatibus quas accusamus ab aliquid iusto illum dolores porro ipsum suscipit atque unde saepe possimus, culpa facilis.</p>
+                        <p>Nascido em São Paulo em 22 de abril de 2006, é um dos criadores da empresa Save Your Money, especializada em soluções financeiras digitais. Estudante da ETEC, João adquiriu conhecimentos técnicos e administrativos que aplicou diretamente no desenvolvimento do site da empresa, transformando ideias em uma plataforma prática e eficiente para gestão financeira. Com dedicação e visão inovadora, busca expandir seu impacto no mercado.</p>
                     </div>
                 
                 </article>
@@ -187,12 +187,13 @@
                 <article class="instru-box">
 
                     <div class="img-instru-box">
-                        <img src="../PICS/imgs/user.png" alt="">
+                        <img src="../PICS/imgs/alisson.jpeg" alt="">
                     </div> 
 
                     <div class="txt-instru-box">
                         <h4>Alisson <span>Silva</span></h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam maxime nulla dolorum eius necessitatibus quas accusamus ab aliquid iusto illum dolores porro ipsum suscipit atque unde saepe possimus, culpa facilis.</p>
+                        <p>Alisson Silva faz parte da equipe de desenvolvedores da Save,atualmente tem 18 anos,nascido em 20/06/2006 sua trajetoria no começo do projeto foi incerta,sendo o ultimo membro a chegar na equipe,porêm ,logo assumiu o cargo de deseign Visual da aplicação,
+                        ajudando nas contruções das paginas, e fornecendo materias para os programadores front-end,"Trabalhar na Save Your Money me ajudou a descobrir minha vocação,e tive o prazer de ver os talentos dos meus colegas de perto",falas do colaborador.</p>
                     </div>
                 
                 </article>

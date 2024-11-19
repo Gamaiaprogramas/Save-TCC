@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../STYLE/cadastro.css">
         <title>Cadastro</title>
+        <link rel="shortcut icon" href="../PICS/imgs/save_logo_site.png" type="image/x-icon">
     </head>
     <link rel="stylesheet" href="../STYLE/cadastro.css">
     <title>Cadastro</title>

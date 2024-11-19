@@ -287,4 +287,6 @@ section.como-funciona{
 
 .img-instru-box img{
     border-radius: 50%;
+    height: 10vh;
+    width: 10vh;
 }
