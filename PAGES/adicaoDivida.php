@@ -116,7 +116,7 @@ require("../ACTS/sec.php");
                         <label><span>Tempo </span>da Dívida (meses):</label>
                     </div>
                     <div>
-                        <label><span>Dívida </span>Parcelável?</label>
+                        <label><span>Dívida </span>não Parcelável?</label>
                     </div>
                 </div>
                 <div class="direita">
