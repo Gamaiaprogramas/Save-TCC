@@ -192,8 +192,8 @@
 
                     <div class="txt-instru-box">
                         <h4>Alisson <span>Silva</span></h4>
-                        <p>Alisson Silva faz parte da equipe de desenvolvedores da Save,atualmente tem 18 anos,nascido em 20/06/2006 sua trajetoria no começo do projeto foi incerta,sendo o ultimo membro a chegar na equipe,porêm ,logo assumiu o cargo de deseign Visual da aplicação,
-                        ajudando nas contruções das paginas, e fornecendo materias para os programadores front-end,"Trabalhar na Save Your Money me ajudou a descobrir minha vocação,e tive o prazer de ver os talentos dos meus colegas de perto",falas do colaborador.</p>
+                        <p>Alisson Silva faz parte da equipe de desenvolvedores,nascido em 20/06/2006 ,sua função principal foi ajudar no design visual,
+                        fornecendo materias para os programadores front-end."Trabalhar na Save Your Money me ajudou a descobrir minha vocação,tive o prazer de colaborar com os talentos dos meus colegas.",fala do membro.</p>
                     </div>
                 
                 </article>
