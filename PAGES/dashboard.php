@@ -105,7 +105,7 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                     <div class="propGasto">
                         <h1>R$<?php echo number_format($saldo, 2, ',', '.'); ?></h1>
                     </div>
-                    <button id ="buton">Alterar Saldo</button>
+                    <button id ="buton">Alterar Saldo <i class="fa-solid fa-pen"></i></button>
                 </div>
                 <div class="divGastos">
                     <div class="iconeGastos">
@@ -258,9 +258,8 @@ am5.ready(function() {
         </script>
 
         <div class="espacoBtnDivida">
-            <div>
-            <a href="../PAGES/adicionar_novo.php" class="btnAdicionarDivida">Adicionar Dívida <i class="fa-solid fa-circle-plus"></i></a></div>
-            <button id="butonDivida">Alterar Divida</button>
+            <div><a href="../PAGES/adicionar_novo.php" class="btnAdicionarDivida">Adicionar Dívida <i class="fa-solid fa-circle-plus"></i></a></div>
+            <button id="butonDivida">Alterar Divida <i class="fa-solid fa-pen"></i></button>
         </div>
 
         <div class="tituloFixo">
@@ -282,7 +281,7 @@ am5.ready(function() {
         </div>
         <div class="espacoBtnFixo">
             <a href="../PAGES/adicionar_gastos_fixos.php" class="btnAdicionarFixo">Adicionar Gasto <i class="fa-solid fa-circle-plus"></i></a>
-            <button id= "butonGasto">Alterar Gasto</button>
+            <button id= "butonGasto">Alterar Gasto <i class="fa-solid fa-pen"></i></button>
         </div>
 
         <!-- Estilização da nova seção de dívidas pagas -->
@@ -320,13 +319,20 @@ am5.ready(function() {
             </style>
 
         <div class="planFinanceiro">
-
-                <form action="../ACTS/reserva_emergencia.act.php" method="post">
-                    <label for="reserva_input">Reserva Atual: <?php  echo $ValorRultadoReal ?></label>
-                    <input type="number" name="reserva_input">
-                    <input type="submit" value="Adicionar">
-                </form>
-                
+            <div class="tituloFinanceiro">
+                <a>Reserva para o Futuro!</a>
+            </div>
+            <div class="textoFinanceiro">
+                <a>Uma Reserva para o Futuro é um fundo financeiro criado para garantir segurança em longo prazo.</a>
+                <a>Ela é formada por economias ou investimentos, visando cobrir necessidades futuras como</a>
+                <a>aposentadoria, educação ou emergências. O objetivo é ter recursos disponíveis em momentos de</a>
+                <a>imprevistos, proporcionando estabilidade e tranquilidade financeira.</a>            
+            </div>
+            <form action="../ACTS/reserva_emergencia.act.php" method="post">
+                <label class="nomeReserva" for="reserva_input">Reserva Atual: <?php  echo $ValorRultadoReal ?></label>
+                <input type="number" name="reserva_input">
+                <input type="submit" value="Adicionar">
+            </form>
         </div>
 
         <div class="caixinhaSonhos">
