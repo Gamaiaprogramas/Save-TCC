@@ -15,15 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Save - Sobre nós</title>
 </head>
-    <style>
-        header {
-            position: relative !important;
-            background-color: #10002b !important;
-            height: 7vw !important;
-            margin: 0 !important;
-            z-index: 1;
-        }
-    </style>
 <body>
     <div class="topoSave">
         <div class="topoEsquerda">
@@ -421,4 +412,5 @@
 
     }); // end am5.ready()
 </script>
+<script src="../JS/js/menu.js"></script>
 </html>

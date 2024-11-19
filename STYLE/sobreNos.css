@@ -13,6 +13,31 @@ body{
     flex-direction: column;
 }
 
+header{
+    width: 100%;
+    padding: 40px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    margin-bottom: 2vw;
+    background-color: none;
+}
+
+header .interface{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Menu Dinamico*/
+header.rolar{
+    background-color: #10002b;
+    padding: 20px 0;
+    box-shadow: 0 0 8px #00000061;
+    z-index: 999999999999999999999999 ;
+}
+
 .topoSave{
     display: flex;
     align-items: center;
