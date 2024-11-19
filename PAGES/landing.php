@@ -200,12 +200,12 @@
                 <article class="instru-box">
 
                     <div class="img-instru-box">
-                        <img src="../PICS/imgs/user.png" alt="">
+                        <img src="../PICS/imgs/GuilhermeMarques.jpeg" alt="">
                     </div> 
 
                     <div class="txt-instru-box">
                         <h4>Guilherme <span>Marques</span></h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam maxime nulla dolorum eius necessitatibus quas accusamus ab aliquid iusto illum dolores porro ipsum suscipit atque unde saepe possimus, culpa facilis.</p>
+                        <p>Nascido em 09 de outubro de 2006, Guilherme Marques é um dos desenvolvedores da Save Your Money, sendo responsável pela parte funcional do projeto. Seu trabalho foi focado em implementar as funcionalidades essenciais do sistema, utilizando seu conhecimento técnico adquirido ao longo de sua jornada no desenvolvimento de software.</p>
                     </div>
                 
                 </article>
