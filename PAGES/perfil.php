@@ -38,7 +38,7 @@ switch ($nivel2) {
         $textoPlano = "Plano 3: Investir meu dinheiro, ter uma reserva de emergência, corrigir meus gastos.";
         break;
     default:
-        $textoPlano = "Plano não definido.";
+        $textoPlano = "Plano não definido, faça a sua análise para obter um.";
         break;
 }
 ?>

@@ -220,13 +220,17 @@
         </div>
         <div class="baixoClientes">
             <div class="cliente">
-                <div class="fotoCliente"></div>
+                <div class="fotoCliente">
+                    <img src="../PICS/imgsSobreNos/tccKauan" alt="">
+                </div>
                 <div class="nomeCliente">
                     <a>TCC do Kauan</a>
                 </div>
             </div>
             <div class="cliente">
-                <div class="fotoCliente"></div>
+                <div class="fotoCliente">
+                <img src="../PICS/imgsSobreNos/tccLais" alt="">
+                </div>
                 <div class="nomeCliente">
                     <a>TCC da Laís</a>
                 </div>
@@ -234,7 +238,7 @@
             <div class="cliente">
                 <div class="fotoCliente"></div>
                 <div class="nomeCliente">
-                    <a>TCC do Alex</a>
+                    <a>TCC do Guilherme</a>
                 </div>
             </div>
         </div>
