@@ -103,7 +103,7 @@
       <iframe 
           width="700" 
           height="350" 
-          src="https://www.youtube.com/embed/RZA7DoykWR8" 
+          src="https://www.youtube.com/embed/1I04mhydo4s?si=_3pX09DTOaAY_cij" 
           title="YouTube video player" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -149,7 +149,7 @@
       <iframe 
           width="700" 
           height="350" 
-          src="https://www.youtube.com/embed/e8W1S5r5v6M" 
+          src="https://www.youtube.com/embed/bFLp81P4C-U?si=7M2ADU7ZHMn1SzGw" 
           title="YouTube video player" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -264,7 +264,7 @@
   </div>
   <div class="espacoBtn5">
       <div class="btnFase5">
-        <button>Concluir Fase 5</button>
+      <a href="../PAGES/dashboard.php"><button>Concluir Fase 5</button></a>
       </div>
   </div>
 <script>
