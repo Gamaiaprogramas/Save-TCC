@@ -105,6 +105,7 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                     <div class="propGasto">
                         <h1>R$<?php echo number_format($saldo, 2, ',', '.'); ?></h1>
                     </div>
+                    <button id ="buton">Alterar Saldo</button>
                 </div>
                 <div class="divGastos">
                     <div class="iconeGastos">
@@ -257,7 +258,9 @@ am5.ready(function() {
         </script>
 
         <div class="espacoBtnDivida">
-            <a href="../PAGES/adicionar_novo.php" class="btnAdicionarDivida">Adicionar Dívida <i class="fa-solid fa-circle-plus"></i></a>
+            <div>
+            <a href="../PAGES/adicionar_novo.php" class="btnAdicionarDivida">Adicionar Dívida <i class="fa-solid fa-circle-plus"></i></a></div>
+            <button id="butonDivida">Alterar Divida</button>
         </div>
 
         <div class="tituloFixo">
@@ -279,6 +282,7 @@ am5.ready(function() {
         </div>
         <div class="espacoBtnFixo">
             <a href="../PAGES/adicionar_gastos_fixos.php" class="btnAdicionarFixo">Adicionar Gasto <i class="fa-solid fa-circle-plus"></i></a>
+            <button id= "butonGasto">Alterar Gasto</button>
         </div>
 
         <!-- Estilização da nova seção de dívidas pagas -->
@@ -289,9 +293,12 @@ am5.ready(function() {
                     <style>
                     
                     .planFinanceiro{
-                    display : flex;
+                    display : block;
                     }
-
+                    .caixinhaSonhos{
+                    display : block;
+;
+                }
                     </style>";
                 }else{
                     echo "
@@ -300,10 +307,18 @@ am5.ready(function() {
                     .planFinanceiro{
                     display : none;
                     }
-
+                    .caixinhaSonhos{
+                    display : none;
+                }
                     </style>";
                 }
                 ?>
+            <style>
+                .alterarDados{
+                    display : none;
+                }
+            </style>
+
         <div class="planFinanceiro">
 
                 <form action="../ACTS/reserva_emergencia.act.php" method="post">
@@ -482,6 +497,7 @@ function closePopup() {
 
 <!-- Formulário para atualizar saldo -->
 <div class="formAtualizarSaldo" id= "idSaldo">
+
     <form method="post" action="../ACTS/update_saldo.php">
         <label for="novo_saldo">Novo Saldo:</label>
         <input type="number" name="novo_saldo" id="novo_saldo" step="0.01" required>
@@ -491,8 +507,8 @@ function closePopup() {
 </div>
 
   
-
     </div>
-    
+    <button id="voltar" class="voltar">Voltar</button>
+
 </body>
 </html>
