@@ -88,7 +88,7 @@
                             <a href="">Serviços</a>
                             <div class="submenu">
                                 <a href="../PAGES/cambio.php">Cambio</a>
-                                <a href="#">Educação Financeira</a>
+                                <a href="../ACTS/verifica_educacao.php">Educação Financeira</a>
                                 <a href="../PAGES/action.php">Açoes</a>
                                 <?php if(isset($_SESSION['logado']) && $_SESSION['logado'] == true): ?>
                                     <a class="aDash" href="../PAGES/dashboard.php">Sua Dashboard</a>
