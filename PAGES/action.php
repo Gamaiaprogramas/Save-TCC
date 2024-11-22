@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../STYLE/action.css">
 <style>
   header{
-    height: 7vw !important;
+    height: 140px !important;
     background-color: #10002b !important;
     position: relative !important;
   }
@@ -157,12 +157,6 @@
           </p>
         </div>
     </div>
-
-<?php 
-
-  include("../partials/footer.php");
-
-?>
 <script>
       const apiKey = 'cr33hs1r01qkkc024o00cr33hs1r01qkkc024o0g'; // Substitua com sua chave de API
       
