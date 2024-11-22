@@ -530,4 +530,44 @@ span{
 .circle {
     stroke: white; /* Cor da borda do círculo */
 }
-   
+  
+@media screen and (max-width: 600px) {
+
+
+}
+
+@media screen and (max-width: 768px) {
+  
+
+}
+
+@media screen and (max-width: 900px){
+  .divida-item{
+    width: 55%;
+    height: 25vw;
+  }
+
+  .esquerda{
+    margin-top: 4vw;
+    gap: 2.5vw;
+    height: 100%;
+    width: 50%;
+  }
+
+  .direita{
+    margin-top: 4vw;
+    gap: .8vw;
+    height: 100%;
+    width: 50%;
+  }
+
+  .esquerda div{
+    font-size: 1.5vw;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+
+}
