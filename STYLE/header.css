@@ -292,3 +292,15 @@ body.no-overflow{
     visibility: visible;
 }
 
+@media screen and (max-width: 900px) {
+    header{
+      height: 100px !important;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    header{
+      height: 100px !important;
+    }
+  }
+
