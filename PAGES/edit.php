@@ -10,7 +10,7 @@ $usuario = mysqli_fetch_assoc($usuarios);
 $nivelBusca = mysqli_query($con, "SELECT nivel FROM `informacao` WHERE `Id_user` = '$codigo'");
 $buscaResult = mysqli_fetch_assoc($nivelBusca);
 
-$nivel = $buscaResult['nivel']; // Corrigir para acessar o valor da chave 'nivel'
+@$nivel = $buscaResult['nivel']; // Corrigir para acessar o valor da chave 'nivel'
 
 switch ($nivel) {
     case 1:
@@ -176,7 +176,7 @@ switch ($nivel) {
                         </div>
                         <div class="conteudoInfoBtn">
                             <button type="button" class="btn" id="deleteButton" onclick="confirmDelete()">Deletar Perfil</button>
-                            <button type="submit" class="btn">Salvar</button>
+                            <button type="submit" class="btn" id="salvarButton">Salvar</button>
                         </div>
                         <script>
     // Máscara para CPF

@@ -32,15 +32,6 @@ $ValorRultadoReal = $ValorResultado['valor_reserva'];
 
 $nivel2 = $buscaResult['nivel']; // Corrigir para acessar o valor da chave 'nivel'
 
-
-
-// Verificar se as consultas retornaram resultados
-if ($result_saldo) {
-    $saldo = mysqli_fetch_assoc($result_saldo)['saldo'];
-} else {
-    $saldo = 0;
-}
-
 if ($result_dividas) {
     $dividas = mysqli_fetch_assoc($result_dividas);
     $nomes_dividas = explode(",", $dividas['Nomes_Dividas']);
@@ -59,7 +50,6 @@ if ($result_dividas) {
     $total_dividas = 0;
 }
 
-
 if ($result_gastos) {
     $gastos = mysqli_fetch_assoc($result_gastos);
     $nomes_gastos = explode(",", $gastos['Nomes_gastos']);
@@ -69,8 +59,21 @@ if ($result_gastos) {
     $total_gastos = 0;
 }
 
+// Verificar se as consultas retornaram resultados
+if ($result_saldo) {
+    $salario = mysqli_fetch_assoc($result_saldo)['saldo'];
+    $saldo = $salario - $total_dividas - $total_gastos;
+} else {
+    $salario = 0;
+}
+
+
+
+
+
+
 // Calcular o total em relação ao salário
-$total = floatval($saldo) + $total_dividas + $total_gastos;
+$total = floatval($salario) + $total_dividas + $total_gastos;
 ?>
 
 <!DOCTYPE html>
@@ -103,7 +106,7 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                         <h1>Ganho mensal</h1>
                     </div>
                     <div class="propGasto">
-                        <h1>R$<?php echo number_format($saldo, 2, ',', '.'); ?></h1>
+                        <h1>R$<?php echo number_format($salario, 2, ',', '.'); ?></h1>
                     </div>
                     <button id ="buton">Alterar Saldo <i class="fa-solid fa-pen"></i></button>
                 </div>
