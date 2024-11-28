@@ -160,7 +160,7 @@
                 <article class="instru-box">
 
                     <div class="img-instru-box">
-                        <img src="../PICS/imgs/user.png" alt="">
+                        <img src="../PICS/imgs/felipe.png" alt="">
                     </div> 
 
                     <div class="txt-instru-box">

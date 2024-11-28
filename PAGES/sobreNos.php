@@ -220,11 +220,11 @@
         </div>
         <div class="baixoClientes">
             <div class="cliente">
-                <div class="fotoCliente">
-                    
+                <div class="fotoCliente1">
+                    <img src="../PICS/imgsSobreNos/tccArena.png" alt="">
                 </div>
                 <div class="nomeCliente">
-                    <a>TCC do Kauan</a>
+                    <a>Arena Sport</a>
                 </div>
             </div>
             <div class="cliente">
