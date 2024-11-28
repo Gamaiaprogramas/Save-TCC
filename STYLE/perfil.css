@@ -92,7 +92,8 @@ body{
     align-items: center;
     height: 90%;
     width: 60%;
-    gap: 1vw;
+    margin-top: 2vw;
+    gap: .5vw;
 }
 
 .nomes{

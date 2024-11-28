@@ -20,7 +20,7 @@
             </section>
 
             <section class="bottom-footer">
-                <p>TravelsGo 2024 &copy; Todos os direitos reservados</p>
+                <p>Save Your Money 2024 &copy; Todos os direitos reservados</p>
             </section>
         </div>
     </footer>

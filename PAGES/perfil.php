@@ -2,6 +2,10 @@
     @session_start();
     include("../partials/headeralternative.php");
     
+    if (!isset($_SESSION['Id_user'])) {
+        header('Location: login.php');
+        exit();
+    }
     
     // Conectar ao banco de dados
     $conn = new mysqli('localhost', 'root', '', 'save'); // Ajuste conforme suas credenciais
