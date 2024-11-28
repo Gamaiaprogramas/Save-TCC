@@ -137,7 +137,7 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
         </div>
         <div class="espacoBtnDividas">
             <div class="btnDividas">
-                <a>Exibir Dividas<a class="laranja">Pagas</a><i class="fa-solid fa-chevron-down"></i></a>
+                <a>Exibir Dívidas<a class="laranja">Pagas</a><i class="fa-solid fa-chevron-down"></i></a>
                 <div class="subDividas">
                     <div class="espacoCimaDividas">
                         <a>Nome</a>

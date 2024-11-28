@@ -36,17 +36,18 @@ if ($busca->num_rows == 0) {
             exit();
         }
 
+   
         // Convertendo arrays para strings separadas por vírgulas
         $dividasStr = implode(',', $dividas);
         $valoresStr = implode(',', $valores);
         $jurosStr = implode(',', $juros);
         $temposStr = implode(',', $tempos);
-
-        $query = "INSERT INTO `informacao` (`saldo`, `Nomes_Dividas`, `Valores_Dividas`, `Tempo_Dividas`, `Juros_Dividas`, `Id_User`, `nivel`) 
-                  VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $tempoStrFix = implode(',' , $tempos);
+         $query = "INSERT INTO `informacao` (`saldo`, `Nomes_Dividas`, `Valores_Dividas`, `Tempo_Dividas`, `Tempo_Divida_Fixo` , `Juros_Dividas`, `Id_User`, `nivel`) 
+                  VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         
         if ($stmt = mysqli_prepare($con, $query)) {
-            mysqli_stmt_bind_param($stmt, "sssssis", $saldo, $dividasStr, $valoresStr, $temposStr, $jurosStr, $user_id, $nivelDivida);
+            mysqli_stmt_bind_param($stmt, "ssssssis", $saldo, $dividasStr, $valoresStr, $temposStr, $tempoStrFix,  $jurosStr, $user_id, $nivelDivida);
 
             if (mysqli_stmt_execute($stmt)) {
                 $msg = "<p class=\"alerta green\">Informações salvas com sucesso</p>";
