@@ -190,7 +190,6 @@ switch ($nivel2) {
                         <a href="../PAGES/dashboard.php" >Ir para dashboard</a>
                     </div>
                 <?php endif; ?>
-
             </div>
         </div>
     </div>

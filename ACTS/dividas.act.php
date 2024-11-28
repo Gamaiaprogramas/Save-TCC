@@ -43,6 +43,8 @@ if ($busca->num_rows == 0) {
         $jurosStr = implode(',', $juros);
         $temposStr = implode(',', $tempos);
         $tempoStrFix = implode(',' , $tempos);
+
+        
          $query = "INSERT INTO `informacao` (`saldo`, `Nomes_Dividas`, `Valores_Dividas`, `Tempo_Dividas`, `Tempo_Divida_Fixo` , `Juros_Dividas`, `Id_User`, `nivel`) 
                   VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         
