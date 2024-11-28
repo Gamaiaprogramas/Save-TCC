@@ -32,15 +32,6 @@ $ValorRultadoReal = $ValorResultado['valor_reserva'];
 
 $nivel2 = $buscaResult['nivel']; // Corrigir para acessar o valor da chave 'nivel'
 
-
-
-// Verificar se as consultas retornaram resultados
-if ($result_saldo) {
-    $saldo = mysqli_fetch_assoc($result_saldo)['saldo'];
-} else {
-    $saldo = 0;
-}
-
 if ($result_dividas) {
     $dividas = mysqli_fetch_assoc($result_dividas);
     $nomes_dividas = explode(",", $dividas['Nomes_Dividas']);
@@ -59,7 +50,6 @@ if ($result_dividas) {
     $total_dividas = 0;
 }
 
-
 if ($result_gastos) {
     $gastos = mysqli_fetch_assoc($result_gastos);
     $nomes_gastos = explode(",", $gastos['Nomes_gastos']);
@@ -69,8 +59,21 @@ if ($result_gastos) {
     $total_gastos = 0;
 }
 
+// Verificar se as consultas retornaram resultados
+if ($result_saldo) {
+    $salario = mysqli_fetch_assoc($result_saldo)['saldo'];
+    $saldo = $salario - $total_dividas - $total_gastos;
+} else {
+    $salario = 0;
+}
+
+
+
+
+
+
 // Calcular o total em relação ao salário
-$total = floatval($saldo) + $total_dividas + $total_gastos;
+$total = floatval($salario) + $total_dividas + $total_gastos;
 ?>
 
 <!DOCTYPE html>
@@ -100,10 +103,10 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                         <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
                     </div>
                     <div class="nomeGasto">
-                        <h1>Ganho mensal</h1>
+                        <h1>Salário</h1>
                     </div>
                     <div class="propGasto">
-                        <h1>R$<?php echo number_format($saldo, 2, ',', '.'); ?></h1>
+                        <h1>R$<?php echo number_format($salario, 2, ',', '.'); ?></h1>
                     </div>
                     <button id ="buton">Alterar Salário <i class="fa-solid fa-pen"></i></button>
                 </div>
@@ -112,10 +115,10 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                         <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
                     </div>
                     <div class="nomeGasto">
-                        <h1>Despesas</h1>
+                        <h1>Saldo</h1>
                     </div>
                     <div class="propGasto">
-                        <h1>R$<?php echo number_format($total_dividas, 2, ',', '.'); ?></h1>
+                        <h1>R$<?php echo number_format($saldo, 2, ',', '.'); ?></h1>
                     </div>
                 </div>
                 <div class="divGastos">
@@ -127,6 +130,17 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                     </div>
                     <div class="propGasto">
                         <h1>R$<?php echo number_format($total_gastos, 2, ',', '.'); ?></h1>
+                    </div>
+                </div>
+                <div class="divGastos">
+                    <div class="iconeGastos">
+                        <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
+                    </div>
+                    <div class="nomeGasto">
+                        <h1>Despesas</h1>
+                    </div>
+                    <div class="propGasto">
+                        <h1>R$<?php echo number_format($total_dividas, 2, ',', '.'); ?></h1>
                     </div>
                 </div>
             </div>
@@ -238,7 +252,7 @@ am5.ready(function() {
     series.data.setAll([
         { value: <?php echo $total_dividas; ?>, category: "Dívidas" },
         { value: <?php echo $total_gastos; ?>, category: "Gastos Fixos" },
-        { value: <?php echo $saldo; ?>, category: "Saldo" }
+        { value: <?php echo $saldo; ?>, category: "Saldo" },
     ]);
 
     // Create color set with custom colors

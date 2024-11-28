@@ -282,3 +282,7 @@ body{
 #ultInfo{
     margin-bottom: 4vw;
 }
+
+#salvarButton:hover{
+    color: #ff6d00;
+}
