@@ -702,7 +702,7 @@ header.rolar{
     flex-direction: column;
 }
 
-.fotoCliente{
+.fotoCliente, .fotoCliente1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -714,6 +714,11 @@ header.rolar{
 .fotoCliente img{
     height: 100%;
     width: 100%;
+}
+
+.fotoCliente1 img{
+    height: 80%;
+    width: 80%;
 }
 
 .nomeCliente{
