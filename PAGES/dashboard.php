@@ -103,7 +103,7 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                         <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
                     </div>
                     <div class="nomeGasto">
-                        <h1>Ganho mensal</h1>
+                        <h1>Salário</h1>
                     </div>
                     <div class="propGasto">
                         <h1>R$<?php echo number_format($salario, 2, ',', '.'); ?></h1>
@@ -115,10 +115,10 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                         <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
                     </div>
                     <div class="nomeGasto">
-                        <h1>Despesas</h1>
+                        <h1>Saldo</h1>
                     </div>
                     <div class="propGasto">
-                        <h1>R$<?php echo number_format($total_dividas, 2, ',', '.'); ?></h1>
+                        <h1>R$<?php echo number_format($saldo, 2, ',', '.'); ?></h1>
                     </div>
                 </div>
                 <div class="divGastos">
@@ -130,6 +130,17 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                     </div>
                     <div class="propGasto">
                         <h1>R$<?php echo number_format($total_gastos, 2, ',', '.'); ?></h1>
+                    </div>
+                </div>
+                <div class="divGastos">
+                    <div class="iconeGastos">
+                        <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
+                    </div>
+                    <div class="nomeGasto">
+                        <h1>Despesas</h1>
+                    </div>
+                    <div class="propGasto">
+                        <h1>R$<?php echo number_format($total_dividas, 2, ',', '.'); ?></h1>
                     </div>
                 </div>
             </div>
@@ -241,7 +252,7 @@ am5.ready(function() {
     series.data.setAll([
         { value: <?php echo $total_dividas; ?>, category: "Dívidas" },
         { value: <?php echo $total_gastos; ?>, category: "Gastos Fixos" },
-        { value: <?php echo $saldo; ?>, category: "Saldo" }
+        { value: <?php echo $saldo; ?>, category: "Saldo" },
     ]);
 
     // Create color set with custom colors
