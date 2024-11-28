@@ -85,17 +85,14 @@
                 ";  
             }
         ?>
-
-        
     </div>
-    
     <div class="menu">
         <ul>
             <a href="../PAGES/landing.php">
                 <li class="mn1">Início</li>
             </a>
             <a href="../PAGES/perfil.php">
-                <li class="mn2">Perfil</li>
+                <li class="mn2">Educação <span>Financeira</span></li>
 
             </a>
             <a href="../PAGES/cambio.php">
