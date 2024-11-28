@@ -179,7 +179,9 @@
 
                     <div class="txt-instru-box">
                         <h4>Luis <span>Henrique</span></h4>
-                        <p>Nascido em São Paulo em 22 de abril de 2006, é um dos criadores da empresa Save Your Money, especializada em soluções financeiras digitais. Estudante da ETEC, João adquiriu conhecimentos técnicos e administrativos que aplicou diretamente no desenvolvimento do site da empresa, transformando ideias em uma plataforma prática e eficiente para gestão financeira. Com dedicação e visão inovadora, busca expandir seu impacto no mercado.</p>
+                        <p>
+                            Luis, nascido em São Paulo em 22 de abril de 2006, é cofundador da Save Your Money, uma empresa de soluções financeiras digitais. Estudante da ETEC, ele aplicou seus conhecimentos técnicos e administrativos no desenvolvimento do site da empresa, criando uma plataforma prática e eficiente para gestão financeira. Com dedicação e visão inovadora, busca expandir seu impacto no mercado.
+                        </p>
                     </div>
                 
                 </article>
