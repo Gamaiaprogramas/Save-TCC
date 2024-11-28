@@ -1,15 +1,54 @@
-*{
+* {
     padding: 0;
     box-sizing: border-box;
     margin: 0;
     text-decoration: none;
     list-style: none;
     font-family: "Poppins", sans-serif;
-
 }
 
+body::-webkit-scrollbar {
+    width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 80px;
+    background: #ff6d00;
+}
+body::-webkit-scrollbar-track {
+    background: #10002b;
+}
 
-header{
+.green {
+    background-color: green;
+    width: 100%;
+    height: 2vw;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    margin-top: -.2vw !important;
+}
+
+.red {
+    background-color: #c50000;
+    width: 100%;
+    height: 2vw;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    margin-top: -.2vw !important;
+}
+
+.hidden {
+    display: none;
+}
+
+header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,13 +56,13 @@ header{
     height: 6vw;
 }
 
-header img{
+header img {
     margin-left: 2vw;
     height: 2.5vw;
     border-radius: 50%;
 }
 
-.user{
+.user {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,39 +72,55 @@ header img{
     font-size: 1.3vw;
 }
 
-.user-photo{
+.user-photo {
     margin-top: .5vw;
 }
-.user div p{
+
+.user div p {
     color: #10002b;
 }
-.menu{
+
+.menu {
     display: flex;
     justify-content: end;
     align-items: center;
-
     width: 80%;
     height: 100%;
 }
 
-.menu a {
-    color: #10002b;
-}
-.menu a li{
-    color: #10002b;
-}
-
-.menu ul{
+.menu ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ff6d00!important;
     gap: 2vw;
     font-size: 1.1vw;
     margin-right: 2vw;
 }
 
-.menu span{
-    color: #ff6d00;
+.menu a {
+    color: #10002b;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
+.menu a::after {
+    content: "";
+    background-color: #ff6d00;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+span{
+    color: #ff6d00;
+}
