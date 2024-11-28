@@ -108,7 +108,7 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                     <div class="propGasto">
                         <h1>R$<?php echo number_format($salario, 2, ',', '.'); ?></h1>
                     </div>
-                    <button id ="buton">Alterar Saldo <i class="fa-solid fa-pen"></i></button>
+                    <button id ="buton">Alterar Salário <i class="fa-solid fa-pen"></i></button>
                 </div>
                 <div class="divGastos">
                     <div class="iconeGastos">
@@ -136,7 +136,7 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
         </div>
         
         <div class="tituloDividas">
-            <h1>Dividas <a>!</a></h1>
+            <h1>Dívidas <a>!</a></h1>
         </div>
         <div class="espacoBtnDividas">
             <div class="btnDividas">
@@ -262,7 +262,7 @@ am5.ready(function() {
 
         <div class="espacoBtnDivida">
             <div><a href="../PAGES/adicionar_novo.php" class="btnAdicionarDivida">Adicionar Dívida <i class="fa-solid fa-circle-plus"></i></a></div>
-            <button id="butonDivida">Alterar Divida <i class="fa-solid fa-pen"></i></button>
+            <button id="butonDivida">Alterar Dívida <i class="fa-solid fa-pen"></i></button>
         </div>
 
         <div class="tituloFixo">
