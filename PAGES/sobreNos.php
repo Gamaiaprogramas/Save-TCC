@@ -290,7 +290,7 @@
             </div>
             <div class="divTrabalho">
                 <a class="laranjaTrabalho">E-mail</a>
-                <a>saveyourmoney@gmail.com.br</a>
+                <a>saveyourmoney@gmail.com</a>
             </div>
         </div>
     </div>
@@ -419,4 +419,7 @@
     }); // end am5.ready()
 </script>
 <script src="../JS/js/menu.js"></script>
+<?php
+    include("../partials/footer.php");
+?>
 </html>
