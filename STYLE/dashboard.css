@@ -263,7 +263,7 @@ body {
 
 
 .alterarDados {
-    height: 25vw;
+    height: 25vw !important;
     width: 20vw;
     margin: 20px;
     padding: 20px;
@@ -289,7 +289,7 @@ body {
     font-weight: bold;
 }
 
-.alterarDados input, .alterarDados select, .alterarDados button,.alterarDados2 input, .alterarDados2 select, .alterarDados2 button {
+.alterarDados input, .alterarDados select, .alterarDados button, .alterarDados2 input, .alterarDados2 select, .alterarDados2 button {
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -307,7 +307,7 @@ body {
     background-color: #e65a00;
 }
 .alterarDados2 {
-    height: 32vw;
+    height: auto;
     width: 20vw;
     margin: 20px;
     padding: 20px;

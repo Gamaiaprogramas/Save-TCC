@@ -326,12 +326,6 @@ am5.ready(function() {
                     </style>";
                 }
                 ?>
-            <style>
-                .alterarDados{
-                    display : none;
-                }
-            </style>
-
         <div class="planFinanceiro">
             <div class="tituloFinanceiro">
                 <a>Reserva para o Futuro!</a>
@@ -482,7 +476,7 @@ function closePopup() {
 
 
 <!-- Formulário para atualizar gasto fixo -->
-<div class="tituloAtualizarGasto"  id= "idGasto1" >
+    <div class="tituloAtualizarGasto"  id= "idGasto1" >
         <h2>Atualizar <a>Gasto Fixo</a></h2>
     </div>
     <div class="formAtualizarGasto" id= "idGasto2">
@@ -502,8 +496,7 @@ function closePopup() {
 
             <button type="submit" class="btnAtualizar">Atualizar Gasto</button>
         </form>
-</div>
-
+    </div>
 <script>
     const nomesGastos = <?php echo json_encode($nomes_gastos); ?>;
     const valoresGastos = <?php echo json_encode($valores_gastos); ?>;
