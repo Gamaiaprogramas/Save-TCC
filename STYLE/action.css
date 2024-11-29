@@ -49,7 +49,7 @@ body::-webkit-scrollbar-track {
     flex-direction: column;
     gap: 1vw;
     background-color: #FFF;
-    border-radius: 1.5vw;
+    border-radius: 1vw;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     height: 100%;
     width: 25%;
@@ -74,6 +74,7 @@ select {
     background-color: #10002b;
     background-image: none;
     cursor: pointer;
+    border-radius: 1vw !important;
   }
   /* Remove IE arrow */
   select::-ms-expand {
@@ -87,7 +88,7 @@ select {
     display: flex;
     width: 20em;
     height: 3em;
-    border-radius: .25em;
+    border-radius: .5vw .5vw .2vw .2vw;
     overflow: hidden;
   }
   /* Arrow */
@@ -108,7 +109,7 @@ select {
   
 
 .center{
-    border-radius: 1.5vw;
+    border-radius: 1vw;
     background-color: #FFF;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     height: 100%;
@@ -125,12 +126,14 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .bloco{
     width: 80%;
     height: 80%;
-    border-radius: 2vw;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 1vw;
+    background-color: #f8f9fa !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,9 +159,10 @@ select {
     align-items: center;
     gap: 2vw;
     height: 80%;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: #f8f9fa !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     width: 40%;
-    border-radius: 2vw;
+    border-radius: 1vw;
 }
 
 #mxdia{
@@ -184,17 +188,21 @@ select {
     align-items: center;
     gap: 2vw;
     height: 80%;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: #f8f9fa !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     width: 40%;
-    border-radius: 2vw;
+    border-radius: 1vw;
 }
+
 
 .menor h2{
     font-size: 1.5vw;
+    text-align: center;
 }
 
 .maior h2{
     font-size: 1.5vw;
+    text-align: center;
 }
 
 .right{
@@ -202,7 +210,7 @@ select {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 1.5vw;
+    border-radius: 1vw;
     background-color: #FFF;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     height: 100%;
