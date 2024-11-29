@@ -74,35 +74,32 @@ switch ($nivel) {
     <title>Editar Perfil</title>
 </head>
 <body>
-    <div class="confirmar hidden" id="confirm">
-        <div class="cima">
-            <div class="textoCima">
-                <p>Tem certeza que deseja deletar o seu <a>perfil</a>?</p>
-                <p>Esta ação não poderá ser <b>revertida</b>!</p>
-            </div>
-        </div>
-        <div class="baixo">
-            <div class="botoesBaixo">
-                <a href="../ACTS/deletar.php"><button class="btnSimBaixo" type="button">Sim</button></a>
-                <button class="btnNaoBaixo" type="button" onclick="cancel()">Não</button> 
-            </div>
-        </div>
-    </div>
+    
     <script>
         function confirmDelete() {
-        console.log("oia");
         container = document.querySelector('#confirm');
         container.classList.add('show');
         container.classList.remove('hidden');
-        document.body.classList.add('blurred'); // Adiciona o blur no body
+        
+        const dashboardContainer = document.querySelector('.conteudo');
+        const header = document.querySelector('header');
+        if (dashboardContainer) {
+            header.style.filter = 'blur(5px)';
+            dashboardContainer.style.filter = 'blur(5px)';
+        }
         }
 
         function cancel() {
-            console.log("oia");
             container = document.querySelector('#confirm');
             container.classList.add('hidden');
             container.classList.remove('show');
-            document.body.classList.remove('blurred'); // Remove o blur do body
+
+            const dashboardContainer = document.querySelector('.conteudo');
+            const header = document.querySelector('header');
+            if (dashboardContainer) {
+            header.style.filter = 'blur(0px)';
+            dashboardContainer.style.filter = 'blur(0px)';
+        }
         }
     </script>
 <form action="../ACTS/edit.act.php" enctype="multipart/form-data" method="post">
@@ -253,4 +250,18 @@ switch ($nivel) {
     </script>
     <script src="../JS/geral.js"></script>
 </body>
+<div  class="confirmar hidden" id="confirm">
+        <div class="cima">
+            <div class="textoCima">
+                <p>Tem certeza que deseja deletar o seu <a>perfil</a>?</p>
+                <p>Esta ação não poderá ser <b>revertida</b>!</p>
+            </div>
+        </div>
+        <div class="baixo">
+            <div class="botoesBaixo">
+                <a href="../ACTS/deletar.php"><button class="btnSimBaixo" type="button">Sim</button></a>
+                <button class="btnNaoBaixo" type="button" onclick="cancel()">Não</button> 
+            </div>
+        </div>
+    </div>
 </html>
