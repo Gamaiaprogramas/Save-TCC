@@ -40,19 +40,43 @@
             behavior: 'smooth' // Para um efeito suave
         });
         document.body.style.overflow = 'hidden';
-        if (voltar) voltar.style.display ='block';
-     })
-     botaoGasto.addEventListener('click' , function(){
-        if(divMae) divMae.style.display = 'block';
+        
+        const dashboardContainer = document.querySelector('.dashboard-container');
+        const header = document.querySelector('header');
+        if (dashboardContainer) {
+            header.style.filter = 'blur(5px)';
+            dashboardContainer.style.filter = 'blur(5px)';
+        }
+    
+        // Exibe o botão de voltar
+        if (voltar) voltar.style.display = 'block';
+    });
+
+     botaoGasto.addEventListener('click' , function() {
+        if (divMae) divMae.style.display = 'block';
         if (gasto2) gasto2.style.display = 'block';
         if (gasto1) gasto1.style.display = 'block';
+    
         window.scrollTo({
             top: 0,
             behavior: 'smooth' // Para um efeito suave
         });
-         document.body.style.overflow = 'hidden';
-         if (voltar) voltar.style.display ='block';
-     })
+    
+        // Desativa o overflow do body para evitar rolagem
+        document.body.style.overflow = 'hidden';
+    
+        // Aplica o blur na div 'tituloDash'
+        const dashboardContainer = document.querySelector('.dashboard-container');
+        const header = document.querySelector('header');
+        if (dashboardContainer) {
+            header.style.filter = 'blur(5px)';
+            dashboardContainer.style.filter = 'blur(5px)';
+        }
+    
+        // Exibe o botão de voltar
+        if (voltar) voltar.style.display = 'block';
+    });
+    
      voltar.addEventListener('click' , function(){
         if (divida1) divida1.style.display = 'none';
         if (gasto1) gasto1.style.display = 'none';
@@ -63,5 +87,12 @@
         if(divMae) divMae.style.display = 'none';
         document.body.style.overflow = 'auto';
         if(voltar) voltar.style.display = 'none';
+
+        const dashboardContainer = document.querySelector('.dashboard-container');
+        const header = document.querySelector('header');
+        if(dashboardContainer){
+            header.style.filter = 'blur(0px)';
+            dashboardContainer.style.filter = 'blur(0px)';
+        }
      });
     });

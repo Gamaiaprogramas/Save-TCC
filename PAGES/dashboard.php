@@ -428,13 +428,16 @@ function closePopup() {
 
 
 
+
+    </div>
+</body>
 <script src="../JS/alterarDadosJs.js"></script>
-<div class="alterarDados" id="idDivMae">
+<div class="alterarDados2" id="idDivMae">
     <!-- Alterar Dívida -->
     <!-- Formulário para atualizar dívida -->
     <div class="tituloAtualizarDivida" id= "idDivida1">
-    <h2>Atualizar <a>Dívida</a></h2>
-</div>
+        <h2>Atualizar <a>Dívida</a></h2>
+    </div>
 <div class="formAtualizarDivida" id= "idDivida2">
     <form method="post" action="../ACTS/update_divida.php">
         <label for="index_divida">Escolha a dívida:</label>
@@ -480,25 +483,25 @@ function closePopup() {
 
 <!-- Formulário para atualizar gasto fixo -->
 <div class="tituloAtualizarGasto"  id= "idGasto1" >
-    <h2>Atualizar <a>Gasto Fixo</a></h2>
-</div>
-<div class="formAtualizarGasto" id= "idGasto2">
-    <form method="post" action="../ACTS/update_gasto.php">
-        <label for="index_gasto">Escolha o gasto fixo:</label>
-        <select name="index_gasto" id="index_gasto" onchange="preencherCamposGasto()">
-            <?php for ($i = 0; $i < count($nomes_gastos); $i++): ?>
-                <option value="<?php echo $i; ?>"><?php echo htmlspecialchars($nomes_gastos[$i]); ?></option>
-            <?php endfor; ?>
-        </select>
+        <h2>Atualizar <a>Gasto Fixo</a></h2>
+    </div>
+    <div class="formAtualizarGasto" id= "idGasto2">
+        <form method="post" action="../ACTS/update_gasto.php">
+            <label for="index_gasto">Escolha o gasto fixo:</label>
+            <select name="index_gasto" id="index_gasto" onchange="preencherCamposGasto()">
+                <?php for ($i = 0; $i < count($nomes_gastos); $i++): ?>
+                    <option value="<?php echo $i; ?>"><?php echo htmlspecialchars($nomes_gastos[$i]); ?></option>
+                <?php endfor; ?>
+            </select>
 
-        <label for="novo_nome_gasto">Nome Atual:</label>
-        <input type="text" name="novo_nome_gasto" id="novo_nome_gasto" required>
+            <label for="novo_nome_gasto">Nome Atual:</label>
+            <input type="text" name="novo_nome_gasto" id="novo_nome_gasto" required>
 
-        <label for="novo_valor_gasto">Valor Atual:</label>
-        <input type="number" name="novo_valor_gasto" id="novo_valor_gasto" required>
+            <label for="novo_valor_gasto">Valor Atual:</label>
+            <input type="number" name="novo_valor_gasto" id="novo_valor_gasto" required>
 
-        <button type="submit" class="btnAtualizar">Atualizar Gasto</button>
-    </form>
+            <button type="submit" class="btnAtualizar">Atualizar Gasto</button>
+        </form>
 </div>
 
 <script>
@@ -528,7 +531,5 @@ function closePopup() {
 
   
     </div>
-    <button id="voltar" class="voltar">Voltar</button>
-
-</body>
+    <button id="voltar" class="voltar"><i class="fa-solid fa-x"></i></button>
 </html>
