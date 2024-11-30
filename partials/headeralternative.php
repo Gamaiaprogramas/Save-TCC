@@ -96,7 +96,7 @@
 
             </a>
             <a href="../PAGES/cambio.php">
-                <li class="mn4">Cotação <span>Dolar</span></li>
+                <li class="mn4">Câmbio de <span>Moedas</span></li>
             </a>
             <a href="../PAGES/action.php">
                 <li class="mn5"><span>Bolsa de valores</span></li>
