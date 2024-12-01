@@ -28,6 +28,14 @@
         behavior: 'smooth' // Para um efeito suave
     });
     document.body.style.overflow = 'hidden';
+    const dashboardContainer = document.querySelector('.dashboard-container');
+    const header = document.querySelector('header');
+
+    if (dashboardContainer) {
+        header.style.filter = 'blur(5px)';
+        dashboardContainer.style.filter = 'blur(5px)';
+    }
+
     if (voltar) voltar.style.display ='block';
     })
 
@@ -77,7 +85,7 @@
         if (voltar) voltar.style.display = 'block';
     });
     
-     voltar.addEventListener('click' , function(){
+    voltar.addEventListener('click' , function(){
         if (divida1) divida1.style.display = 'none';
         if (gasto1) gasto1.style.display = 'none';
         if (divida2) divida2.style.display = 'none';
@@ -94,5 +102,6 @@
             header.style.filter = 'blur(0px)';
             dashboardContainer.style.filter = 'blur(0px)';
         }
+        location.reload();
      });
     });
