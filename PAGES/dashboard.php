@@ -258,7 +258,7 @@ am5.ready(function() {
     series.data.setAll([
         { value: <?php echo $total_dividas; ?>, category: "Dívidas" },
         { value: <?php echo $total_gastos; ?>, category: "Gastos Fixos" },
-        { value: <?php echo $saldo; ?>, category: "Saldo" },
+        { value: <?php echo $salario; ?>, category: "Ganho mensal" },
     ]);
 
     // Create color set with custom colors
