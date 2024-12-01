@@ -4,7 +4,6 @@
   echo $_SESSION['msg'];
   unset($_SESSION['msg']);
 }
-require("../ACTS/verifica_educacao.php");
 
 ?>
 <link rel="stylesheet" href="../STYLE/educacao.css">
