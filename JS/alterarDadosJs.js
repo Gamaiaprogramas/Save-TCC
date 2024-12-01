@@ -34,6 +34,9 @@
     if (dashboardContainer) {
         header.style.filter = 'blur(5px)';
         dashboardContainer.style.filter = 'blur(5px)';
+
+        header.style.pointerEvents = 'none';
+        dashboardContainer.style.pointerEvents = 'none';
     }
 
     if (voltar) voltar.style.display ='block';
@@ -54,13 +57,16 @@
         if (dashboardContainer) {
             header.style.filter = 'blur(5px)';
             dashboardContainer.style.filter = 'blur(5px)';
+
+            header.style.pointerEvents = 'none';
+            dashboardContainer.style.pointerEvents = 'none';
         }
     
         // Exibe o botão de voltar
         if (voltar) voltar.style.display = 'block';
     });
 
-     botaoGasto.addEventListener('click' , function() {
+    botaoGasto.addEventListener('click' , function() {
         if (divMae) divMae.style.display = 'block';
         if (gasto2) gasto2.style.display = 'block';
         if (gasto1) gasto1.style.display = 'block';
@@ -79,6 +85,9 @@
         if (dashboardContainer) {
             header.style.filter = 'blur(5px)';
             dashboardContainer.style.filter = 'blur(5px)';
+
+            header.style.pointerEvents = 'none';
+            dashboardContainer.style.pointerEvents = 'none';
         }
     
         // Exibe o botão de voltar
@@ -101,6 +110,9 @@
         if(dashboardContainer){
             header.style.filter = 'blur(0px)';
             dashboardContainer.style.filter = 'blur(0px)';
+
+            header.style.pointerEvents = 'auto';
+            dashboardContainer.style.pointerEvents = 'auto';
         }
         location.reload();
      });
