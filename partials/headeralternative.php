@@ -79,7 +79,7 @@
                 
                 echo "
                     <a href='../PAGES/perfil.php'>
-                    <img src='".$_SESSION['foto']."' class='user-photo'>    
+                    <img src='".$_SESSION['foto']."' class='user-photo'>
                     </a>
                     <div class='nome'><p>Olá, $nome_usuario!</p></div>
                 ";  
@@ -91,7 +91,7 @@
             <a href="../PAGES/landing.php">
                 <li class="mn1">Início</li>
             </a>
-            <a href="../PAGES/perfil.php">
+            <a href="../ACTS/verifica_educacao.php">
                 <li class="mn2">Educação <span>Financeira</span></li>
 
             </a>

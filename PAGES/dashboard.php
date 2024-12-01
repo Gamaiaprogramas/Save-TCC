@@ -89,6 +89,12 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
     <script src="../JS/jquery-3.7.1.min.js"></script>
 </head>
 <body>
+    <style>
+        header{
+            background-color: #f8f9fa !important;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        }
+    </style>
     <div class="dashboard-container">
         <div class="tituloDash">
             <h1>Bem vindo(a) a sua <a>Dashboard</a>!</h1>

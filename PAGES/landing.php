@@ -101,7 +101,6 @@
                 <h3>Alguns dos <span>nossos serviços</span></h3>
                 <p>solicte sua consultoria agora mesmo.</p>
             </article>
-
             <article class="icons-contato">
                 <a href="../PAGES/cambio.php">
                     <button><i class="bi bi-currency-exchange"></i> <p>Câmbio de Moedas</p> </button>
@@ -112,7 +111,7 @@
                 <a href="../PAGES/selecao.php">
                     <button><i class="bi bi-cash-coin"></i> <p>Planejamento Financeiro</p> </button>
                 </a>
-                <a href="../PAGES/educacaoN1.php">
+                <a href="../ACTS/verifica_educacao.php">
                     <button><i class="bi bi-book-half"></i> <p>Educação Financeira</p> </button>
                 </a>
             </article>
@@ -160,7 +159,7 @@
                 <article class="instru-box">
 
                     <div class="img-instru-box">
-                        <img src="../PICS/imgs/felipe.png" alt="">
+                        <img src="../PICS/imgs/filipe2.png" alt="">
                     </div> 
 
                     <div class="txt-instru-box">

@@ -33,37 +33,41 @@ switch ($nivel) {
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <style>
-            .green{
-            background-color: green;
-            width: 100%;
-            height: 2vw;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            position: absolute;
-            top: 0;
-            align-items: center;
-            margin-top: -.2vw !important;
-        }
+    header{
+        background-color: #f8f9fa !important;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+    .green{
+        background-color: green;
+        width: 100%;
+        height: 2vw;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        align-items: center;
+        margin-top: -.2vw !important;
+    }
 
-        .red{
-            background-color: #c50000;
-            width: 100%;
-            height: 2vw;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            position: absolute;
-            top: 0;
-            align-items: center;
-            margin-top: -.2vw !important;
-        }
-  .show{
-    display: block;
-  }
-  .hidden{
-    display: none;
-  }
+    .red{
+        background-color: #c50000;
+        width: 100%;
+        height: 2vw;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        align-items: center;
+        margin-top: -.2vw !important;
+    }
+    .show{
+        display: block;
+    }
+    .hidden{
+        display: none;
+    }
 </style>
 
 <!DOCTYPE html>
@@ -109,11 +113,11 @@ switch ($nivel) {
         </div>
         <div class="baixoConteudo">
             <div class="esquerda">
-            <div class="foto">
-                <img id="previewImg" src="<?php echo $_SESSION['foto']; ?>" class="miniaturaPerf">
-                <label for="fileFoto" class="file-label">Escolher Foto</label>
-                <input type="file" class="file-input" name="newFoto" id="fileFoto" onchange="previewFile();">
-            </div>
+                <div class="foto">
+                    <img id="previewImg" src="<?php echo $_SESSION['foto']; ?>" class="miniaturaPerf">
+                    <label for="fileFoto" class="file-label">Escolher Foto</label>
+                    <input type="file" class="file-input" name="newFoto" id="fileFoto" onchange="previewFile();">
+                </div>
 
                 <div class="plano">
                     <label>Plano <?php echo $nivel?></label>
