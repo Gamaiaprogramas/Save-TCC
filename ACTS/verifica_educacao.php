@@ -10,7 +10,7 @@ $buscaResult = mysqli_fetch_assoc($nivelBusca);
 $nivel2 = $buscaResult['nivel']; // Corrigir para acessar o valor da chave 'nivel'
 
 if($nivel2 != null){
-    header("Location: ../PAGES/educacaoN$nivel2");
+    header("Location: ../PAGES/educacaoN$nivel2.php");
     exit();
 }else{
     header("Location: ../PAGES/perfil.php");
