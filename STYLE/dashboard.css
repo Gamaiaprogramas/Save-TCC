@@ -145,8 +145,8 @@ body {
     align-items: center;
     background-color: #f9f9f9;
     border-radius: 1vh;
-    width: 40%;
-    height: 15vw;
+    width: 55%;
+    height: 20vw;
     margin-top: 4vw;
     box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.1);
 }
@@ -159,7 +159,7 @@ body {
     height: 15%;
     color: #ff6d00;
     font-weight: bold;
-    font-size: 1vw;
+    font-size: 1.7vw;
 }
 
 .textoFinanceiro{
@@ -169,7 +169,7 @@ body {
     width: 100%;
     height: 40%;
     flex-direction: column;
-    font-size: .7vw;
+    font-size: 1vw;
 }
 
 .fechar {
@@ -186,11 +186,21 @@ body {
     color: #10002b;
 }
 
+.nomeReserva{
+    color: black !important;
+    font-size: 1.5vw !important;
+}
+
+.nomeReserva a{
+    color: #ff6d00;
+}
+
 .planFinanceiro form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: .5vw;
 }
 
 .planFinanceiro label {
@@ -211,23 +221,29 @@ body {
     color: #333;
 }
 
-.planFinanceiro input[type="submit"] {
+.planFinanceiro button[type="submit"] {
     background-color: #ff6d00;
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
     border: none;
-    padding: 1vh 2vw;
-    border-radius: 0.5vh;
+    width: 9vw;
+    height: 2.2vw;
+    gap: 1vw;
+    border-radius: 2vw;
     cursor: pointer;
-    font-size: 1.4vh;
+    font-size: 1vw;
     transition: background-color 0.3s ease;
 }
 
-.planFinanceiro input[type="submit"]:hover {
+.planFinanceiro button[type="submit"]:hover {
     background-color: #e65c00;
 }
 
 .planFinanceiro label, 
-.planFinanceiro input {
+.planFinanceiro input,
+.planFinanceiro button {
     font-family: 'Arial', sans-serif;
 }
 
@@ -859,10 +875,10 @@ body {
     justify-content: center;
     align-items: center;
     width: 80%;
-    height: 23vw;
+    height: auto;
     gap: 2vw;
     flex-wrap: wrap ;
-    
+    padding: 2vw;
 }
 
 .cardFixo{

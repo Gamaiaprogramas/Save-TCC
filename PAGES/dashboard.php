@@ -343,9 +343,9 @@ am5.ready(function() {
                 <a>imprevistos, proporcionando estabilidade e tranquilidade financeira.</a>            
             </div>
             <form action="../ACTS/reserva_emergencia.act.php" method="post">
-                <label class="nomeReserva" for="reserva_input">Reserva Atual: <?php  echo $ValorRultadoReal ?></label>
+                <label class="nomeReserva" for="reserva_input">Reserva Atual: <a> <?php  echo $ValorRultadoReal ?> </a></label>
                 <input type="number" name="reserva_input">
-                <input type="submit" value="Adicionar">
+                <button type="submit">Adicionar<i class="fa-solid fa-circle-plus"></i></button>
             </form>
         </div>
 
