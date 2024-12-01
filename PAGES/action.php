@@ -157,49 +157,55 @@
           </p>
         </div>
     </div>
-<script>
-      const apiKey = 'cr33hs1r01qkkc024o00cr33hs1r01qkkc024o0g'; // Substitua com sua chave de API
+    <script>
+    const apiKey = 'cr33hs1r01qkkc024o00cr33hs1r01qkkc024o0g'; // Substitua com sua chave de API
       
-function change(){
-    console.log("mudou");
-    const select = document.getElementById('stockSelect');
-    const symbol = select.value; // Ticker da ação
-     console.log(symbol)
-    const url = `https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${apiKey}`;
-fetch(url)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
+    function change() {
+        console.log("mudou");
+        const select = document.getElementById('stockSelect');
+        const symbol = select.value; // Ticker da ação
+        console.log(symbol);
+        const url = `https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${apiKey}`;
+        
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Dados da ação:', data);
+
+                const { c: currentPrice, h: highPrice, l: lowPrice, o: openPrice, pc: previousClose } = data;
+
+                console.log(`Preço Atual: $${currentPrice}`);
+                console.log(`Preço Máximo do Dia: $${highPrice}`);
+                console.log(`Preço Mínimo do Dia: $${lowPrice}`);
+                console.log(`Preço de Abertura: $${openPrice}`);
+                console.log(`Preço de Fechamento Anterior: $${previousClose}`);
+
+                var nome = document.querySelector('#nm');
+                var mxdia = document.querySelector('#mxdia');
+                var mndia = document.querySelector('#mndia');
+                var current = document.querySelector('#preco');
+
+                nome.innerText = symbol;
+                mxdia.innerText = "R$" + highPrice.toFixed(2);
+                mndia.innerText = "R$" + lowPrice.toFixed(2);
+                current.innerText = "R$" + currentPrice.toFixed(2);
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+            });
     }
-    return response.json();
-  })
-  .then(data => {
-    // Manipular os dados recebidos
-    console.log('Dados da ação:', data);
 
-    const { c: currentPrice, h: highPrice, l: lowPrice, o: openPrice, pc: previousClose } = data;
+    // Função para abrir o select automaticamente
+    window.onload = function () {
+        const select = document.getElementById('stockSelect');
+        select.focus();
+        select.click(); // Simula a abertura do menu
+    };
+</script>
 
-    console.log(`Preço Atual: $${currentPrice}`);
-    console.log(`Preço Máximo do Dia: $${highPrice}`);
-    console.log(`Preço Mínimo do Dia: $${lowPrice}`);
-    console.log(`Preço de Abertura: $${openPrice}`);
-    console.log(`Preço de Fechamento Anterior: $${previousClose}`);
-
-    var nome = document.querySelector('#nm');
-    var mxdia = document.querySelector('#mxdia');
-    var mndia = document.querySelector('#mndia');
-    var current = document.querySelector('#preco');
-
-    nome.innerText = symbol;
-    mxdia.innerText = "R$" + highPrice.toFixed(2);
-    mndia.innerText = "R$" + lowPrice.toFixed(2);
-    current.innerText = "R$" + currentPrice.toFixed(2);
-
-
-  })
-  .catch(error => {
-    console.error('Erro:', error);
-  });
-}
-    </script>
 <script>window.onload = fetchExchangeRates;</script>
