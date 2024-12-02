@@ -179,7 +179,8 @@
                     <div class="txt-instru-box">
                         <h4>Luis <span>Henrique</span></h4>
                         <p>
-                        Nascido em 22 de abril de 2006, é um dos desenvolvedores da Save Your Money, responsável pela estilização e pela lógica do back-end. Sua contribuição foi essencial para criar uma interface atraente e garantir o funcionamento eficiente do sistema.
+                        Nascido em 22 de abril de 2006, é um dos desenvolvedores da Save Your Money, responsável pela estilização e pela lógica do back-end. 
+                        Sua contribuição foi essencial para criar uma interface atraente e garantir o funcionamento eficiente do sistema.
 
                     </div>
                 
@@ -193,7 +194,8 @@
 
                     <div class="txt-instru-box">
                         <h4>Alisson <span>Silva</span></h4>
-                        <p>Nascido em 20 de junho de 2006, é um dos desenvolvedores da Save Your Money, responsável pelo design das páginas. Com estudo em finanças, criou um layout funcional e alinhado ao tema do projeto.</p>
+                        <p>Nascido em 20 de junho de 2006, é um dos desenvolvedores da Save Your Money, responsável pelo design das páginas. Com estudo em finanças, 
+                            criou um layout funcional e alinhado ao tema do projeto.</p>
                     </div>
                 
                 </article>
@@ -206,7 +208,8 @@
 
                     <div class="txt-instru-box">
                         <h4>Guilherme <span>Marques</span></h4>
-                        <p>Nascido em 9 de outubro de 2006, é um dos desenvolvedores da Save Your Money, responsável pela arquitetura lógica do programa. Aprendeu sobre finanças para criar páginas funcionais e alinhadas às necessidades dos usuários.
+                        <p>Nascido em 9 de outubro de 2006, é um dos desenvolvedores da Save Your Money, responsável pela arquitetura lógica do programa. 
+                            Aprendeu sobre finanças para criar páginas funcionais e alinhadas às necessidades dos usuários.
                         </p>
                     </div>
                 
