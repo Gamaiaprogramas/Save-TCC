@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
-<nav><a href="../PAGES/landing.php"><img src="../PICS/imgs/logo.png" alt="Logo"></a></nav>
+<nav><a href="../PAGES/landing.php"><img src="../PICS/imgs/logo_alternativa.svg" alt="Logo"></a></nav>
 <div class="container">
     <form action="" method="POST" class="card">
         <input type="hidden" name="nivels" value="1">
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             - Pagar dívidas <br><br>
             - Sair do vermelho
         </h2>
-        <button type="submit">Perfil 1</button>
+        <button class="txtPerfil" type="submit">Perfil 1</button>
     </form>
 
     <form action="" method="POST" class="card">
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             - Guardar dinheiro <br>
             - Aprender mais sobre finanças 
         </h2>
-        <button type="submit">Perfil 2</button>
+        <button class="txtPerfil" type="submit">Perfil 2</button>
     </form>
 
     <form action="" method="POST" class="card">
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             - Corrigir meus gastos <br>
             - Melhorar minha vida financeira
         </h2>
-        <button type="submit">Perfil 3</button>
+        <button class="txtPerfil" type="submit">Perfil 3</button>
     </form>
 </div>
 
