@@ -106,7 +106,7 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
             <div class="direitaInfo">
                 <div class="divGastos">
                     <div class="iconeGastos">
-                        <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
+                        <img src="../PICS/imgsSelecao/iconeSalario" alt="Imagem Notas" class="produto">
                     </div>
                     <div class="nomeGasto">
                         <h1>Ganho Mensal</h1>
@@ -129,7 +129,7 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                 </div>
                 <div class="divGastos">
                     <div class="iconeGastos">
-                        <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
+                        <img src="../PICS/imgsSelecao/iconeGastofixo.svg" alt="Imagem Notas" class="produto">
                     </div>
                     <div class="nomeGasto2">
                         <h1>Gastos Fixos</h1>
@@ -140,7 +140,7 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                 </div>
                 <div class="divGastos">
                     <div class="iconeGastos">
-                        <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
+                        <img src="../PICS/imgsSelecao/iconeDespesa.svg" alt="Imagem Notas" class="produto">
                     </div>
                     <div class="nomeGasto2">
                         <h1>Despesas</h1>
