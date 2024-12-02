@@ -43,7 +43,7 @@ $mensagem = isset($_GET['mensagem']) ? $_GET['mensagem'] : null;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Game Educativo</title>
+    <title>Save - Mini Game Educativo</title>
     <link rel="stylesheet" href="style.css"> <!-- Seu arquivo de CSS -->
 </head>
 <body>

@@ -53,7 +53,7 @@ switch ($nivel2) {
 
 
 <link rel="stylesheet" href="../STYLE/landing.css">
-
+<title>Save - Perfil do usuário</title>
 <style>
 
     header{

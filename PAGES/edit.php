@@ -31,7 +31,7 @@ switch ($nivel) {
 <link rel="stylesheet" href="../STYLE/landing.css">
 <link rel="stylesheet" href="../STYLE/edit.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+<title>Save - Editar Perfil</title>
 <style>
     header{
         background-color: #f8f9fa !important;

@@ -22,7 +22,7 @@ require("../ACTS/sec.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preencha as Dívidas</title>
+    <title>Save - Adicionar Dívida</title>
     <script>
     // Função para adicionar mais campos de dívidas
     function adicionarDivida() {

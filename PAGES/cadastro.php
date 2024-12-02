@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="../PICS/imgs/save_logo_site.png" type="image/x-icon">
     </head>
     <link rel="stylesheet" href="../STYLE/cadastro.css">
-    <title>Cadastro</title>
+    <title>Save - Cadastro</title>
 
     <?php
             @session_start();

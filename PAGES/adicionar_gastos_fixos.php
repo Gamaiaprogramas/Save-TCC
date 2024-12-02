@@ -23,7 +23,7 @@ require('../ACTS/connect.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Gastos Fixos</title>
+    <title>Save - Adicionar Gastos</title>
     <script>
         function adicionarGasto() {
             const container = document.getElementById('dividas-container');

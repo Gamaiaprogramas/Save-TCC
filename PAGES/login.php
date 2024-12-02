@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="../STYLE/cadastro.css">
     <link rel="shortcut icon" href="../PICS/imgs/save_logo_site.png" type="image/x-icon">
-    <title>Cadastro</title>
+    <title>Save - Login</title>
 </head>
 <?php
     require('../ACTS/sec_login.php');
