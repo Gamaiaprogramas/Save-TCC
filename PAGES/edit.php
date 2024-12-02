@@ -90,6 +90,9 @@ switch ($nivel) {
         if (dashboardContainer) {
             header.style.filter = 'blur(5px)';
             dashboardContainer.style.filter = 'blur(5px)';
+
+            header.style.pointerEvents = 'none';
+            dashboardContainer.style.pointerEvents = 'none';
         }
         }
 
@@ -103,6 +106,9 @@ switch ($nivel) {
             if (dashboardContainer) {
             header.style.filter = 'blur(0px)';
             dashboardContainer.style.filter = 'blur(0px)';
+
+            header.style.pointerEvents = 'auto';
+            dashboardContainer.style.pointerEvents = 'auto';
         }
         }
     </script>
