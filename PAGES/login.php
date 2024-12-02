@@ -9,6 +9,7 @@
     <title>Cadastro</title>
 </head>
 <?php
+    require('../ACTS/sec_login.php');
     // Criando um intervalo de 1 a 10
     $intervalo = range(1, 5);
 

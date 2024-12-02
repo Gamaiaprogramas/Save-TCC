@@ -47,14 +47,14 @@ require("../ACTS/sec.php");
     include("../partials/header.php");
 ?>
 
-<h1>Informe seu saldo</h1>
+<h1 class="ganho">Informe seu ganho mensal!</h1>
 
 <form method="POST">
     <div id="dividas-container">
         <div class="divida-item-2">
-            <label for="saldo" id="lasaldo">Salário</label>
+            <label for="saldo" id="lasaldo">Ganho Mensal</label>
             <!-- Altere o tipo de 'number' para 'text' para aceitar formatação personalizada -->
-            <input type="text" name="saldo" placeholder="R$999,99" id="saldo" require>
+            <input type="text" name="saldo" placeholder="R$999,99" id="saldo" required>
             <button class="btnProx" type="submit" >
                 <span>Próximo</span>
                 <svg

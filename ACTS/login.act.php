@@ -27,7 +27,7 @@
                 $_SESSION['genero'] = $clientes['genero'];
                 $_SESSION['senha'] = $senha1;
                 $msg = "<div class=\"alerta green\"><p >Login efetuado com sucesso</p></div>";            
-                $destino = "location:../PAGES/landing.php";
+                $destino = "location:../PAGES/perfil.php";
                 
             }else{
                 $msg = "<div class=\"alerta red\"><p >Usuário ou senha incorreto</p></div>";            

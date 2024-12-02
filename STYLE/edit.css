@@ -163,6 +163,7 @@ body{
     flex-direction: column;
     height: 100%;
     width: 32%;
+    margin-left: 1.5vw;
 }
 
 .foto{
@@ -193,7 +194,7 @@ body{
 }
 
 .textoPlano{
-    font-size: .8vw;
+    font-size: 1vw;
 }
 
 .direita{
@@ -281,4 +282,8 @@ body{
 
 #ultInfo{
     margin-bottom: 4vw;
+}
+
+#salvarButton:hover{
+    color: #ff6d00;
 }

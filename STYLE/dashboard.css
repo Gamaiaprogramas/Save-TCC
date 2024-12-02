@@ -60,22 +60,64 @@ body {
     font-size: 1.2vw;
     margin-top: 2vw;
 }
+
 .caixinhaSonhos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
     background-color: #f9f9f9;
-    border-radius: 1vh; /* Proporcional ao tamanho da tela */
-    padding: 2vh;
-    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.1);
-    margin: 2vh auto;
-    max-width: 60vw; /* Ajustado para largura relativa */
-    font-family: 'Arial', sans-serif;
+    border-radius: .8vw;
+    margin-top: 3vw;
 }
 
-.caixinhaSonhos h2, .caixinhaSonhos h3 {
-    color: #10002b;
+.tituloCaixinha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff6d00;
+    font-size: 2vw;
+    width: 100%;
+    height: 10%;
+    font-weight: bold;
+}
+
+.criarMeta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 25%;
+    width: 50%;
+    height: 50%;
+    margin-top: 2vw;
+    border-bottom: solid .2vw rgba(0, 0, 0, 0.199);
+}
+
+.criarMeta a{
+    font-size: 1.5vw;
+    color: black;
+    font-weight: bold;
 }
 
 .caixinhaSonhos form {
-    margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1vw;
+    height: auto;
+    font-size: 1vw;
+}
+
+.caixinhaSonhos form label{
+    text-align: start;
+    width: 100%;
+    font-weight: bold;
 }
 
 .caixinhaSonhos input[type="text"], 
@@ -87,19 +129,77 @@ body {
     border-radius: 0.5vh;
 }
 
-.caixinhaSonhos input[type="submit"] {
+.caixinhaSonhos button[type="submit"] {
     background-color: #ff6d00;
     color: #fff;
+    width: 10vw;
+    height: 2vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
-    padding: 1vh 2vw;
-    border-radius: 0.5vh;
+    font-size: 1vw;
+    border-radius: 2vw;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    gap: 1vw;
 }
 
-.caixinhaSonhos input[type="submit"]:hover {
+.caixinhaSonhos button[type="submit"]:hover {
     background-color: #e65c00;
 }
+
+.baixoCaixa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.tituloMeta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    margin-top: 3vw;
+    font-size: 1.5vw;
+    gap: .5vw;
+    font-weight: bold;
+}
+
+.espacoMetas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+    width: 80%;
+    gap: 3vw;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+}
+
+.meta{
+    height: 13vw;
+    width: 40%;
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .progress-container {
     background-color: #e0e0e0;
@@ -116,10 +216,6 @@ body {
     height: 100%;
     transition: width 0.5s ease;
     border-radius: 2vh;
-}
-
-.meta {
-    margin-bottom: 2vh;
 }
 
 .meta-concluida {
@@ -145,8 +241,8 @@ body {
     align-items: center;
     background-color: #f9f9f9;
     border-radius: 1vh;
-    width: 40%;
-    height: 15vw;
+    width: 55%;
+    height: 20vw;
     margin-top: 4vw;
     box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.1);
 }
@@ -159,7 +255,7 @@ body {
     height: 15%;
     color: #ff6d00;
     font-weight: bold;
-    font-size: 1vw;
+    font-size: 1.7vw;
 }
 
 .textoFinanceiro{
@@ -169,7 +265,7 @@ body {
     width: 100%;
     height: 40%;
     flex-direction: column;
-    font-size: .7vw;
+    font-size: 1vw;
 }
 
 .fechar {
@@ -186,11 +282,21 @@ body {
     color: #10002b;
 }
 
+.nomeReserva{
+    color: black !important;
+    font-size: 1.5vw !important;
+}
+
+.nomeReserva a{
+    color: #ff6d00;
+}
+
 .planFinanceiro form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: .5vw;
 }
 
 .planFinanceiro label {
@@ -211,23 +317,29 @@ body {
     color: #333;
 }
 
-.planFinanceiro input[type="submit"] {
+.planFinanceiro button[type="submit"] {
     background-color: #ff6d00;
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
     border: none;
-    padding: 1vh 2vw;
-    border-radius: 0.5vh;
+    width: 9vw;
+    height: 2.2vw;
+    gap: 1vw;
+    border-radius: 2vw;
     cursor: pointer;
-    font-size: 1.4vh;
+    font-size: 1vw;
     transition: background-color 0.3s ease;
 }
 
-.planFinanceiro input[type="submit"]:hover {
+.planFinanceiro button[type="submit"]:hover {
     background-color: #e65c00;
 }
 
 .planFinanceiro label, 
-.planFinanceiro input {
+.planFinanceiro input,
+.planFinanceiro button {
     font-family: 'Arial', sans-serif;
 }
 
@@ -263,47 +375,66 @@ body {
 
 
 .alterarDados {
+    height: 25vw !important;
+    width: 20vw;
     margin: 20px;
     padding: 20px;
     position: absolute;
+    top: 10vw;
     background-color: #f9f9f9;
     border-radius: 8px;
 }
 
-.alterarDados h2 {
+.alterarDados h2, .alterarDados2 h2 {
     margin-bottom: 10px;
     color: #10002b;
 }
 
-.alterarDados form {
+.alterarDados form{
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    gap: .7vw;
 }
 
-.alterarDados label {
+.alterarDados label, .alterarDados2 label {
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-.alterarDados input, .alterarDados select, .alterarDados button {
+.alterarDados input, .alterarDados select, .alterarDados button, .alterarDados2 input, .alterarDados2 select, .alterarDados2 button {
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
 }
 
-.alterarDados button {
+.alterarDados button, .alterarDados2 button {
     background-color: #ff6d00;
     color: white;
     font-weight: bold;
     cursor: pointer;
 }
 
-.alterarDados button:hover {
+.alterarDados button:hover, .alterarDados2 button:hover {
     background-color: #e65a00;
 }
+.alterarDados2 {
+    height: auto;
+    width: 20vw;
+    margin: 20px;
+    padding: 20px;
+    position: absolute;
+    top: 10vw;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: solid 2px #10002b;
+}
 
+.alterarDados2 form {
+    display: flex;
+    flex-direction: column;
+    gap: .2vw;
+}
 
 .tituloDash a{
     color: #ff6d00;
@@ -336,7 +467,8 @@ body {
     align-items: center;
     width: 65%;
     height: 100%;
-    gap: 2vw;
+    gap: .8vw;
+    padding: .8vw;
 }
 
 .divGastos{
@@ -374,6 +506,14 @@ body {
     width: 100%;
 }
 
+.nomeGasto2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 100%;
+}
+
 .propGasto{
     display: flex;
     justify-content: center;
@@ -381,20 +521,31 @@ body {
     height: 40%;
     width: 100%;
 }
+
+.propGasto2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 100%;
+    margin-bottom: 2.3vw;
+}
+
 #buton{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 55%;
+    width: 90%;
     height: 2vw;
     margin-bottom: .5vw;
-    font-size: 1vw;
+    font-size: .9vw;
     border: none;
     color: #ff6d00;
     font-weight: bold;
     cursor: pointer;
     background-color: #fff;
     gap: .5vw;
+    
 }
 
 #buton:hover{
@@ -434,6 +585,7 @@ body {
     border-radius: 2vw;
     cursor: pointer;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: #fff;
 }
 
 .btnDividas:hover{
@@ -631,25 +783,21 @@ body {
 
 .voltar{
     position: absolute;
-    height: 10vh;
-    font-size: 2vh;
-    filter: none;
-    width: 20vh;
+    height: auto;
+    font-size: 1.5vw;
+    width: 3vw;
     display: none;
     cursor: pointer;
-    margin-left: 160vh;
-    margin-top: -3vh;
-    background-color: #10002b;
-    border-radius: 2vh;
-    border: solid 1vh white;
-    color: white;
-    transition: 0.5s;
+    margin-right: -16.5vw;
+    top: 11.2vw;
+    border-radius: 2vw;
+    color: black;
+    border: none !important;
+    background-color: #f9f9f9;
 }
+
 .voltar:hover{
-    background-color: #e65a00;
-    border: solid #10002b;
-    color: #10002b;
-    box-shadow: 0.1vh 0.1vh 1vh black;
+    color: red;
 }
 
 .botaoDivida{
@@ -662,13 +810,13 @@ body {
     border-radius: 2vw;
     cursor: pointer;
 }
-.borrado {
-   
-        filter: blur(5px); /* Aplica o desfoque */
-        pointer-events: none; /* Desabilita interações com o fundo */
-        user-select: none; /* Evita seleção de texto no fundo */
 
+.borrado {
+    filter: blur(5px); /* Aplica o desfoque */
+    pointer-events: none; /* Desabilita interações com o fundo */
+    user-select: none; /* Evita seleção de texto no fundo */
 }
+
 .btnDividaPaga{
     width: 10vw;
     height: 1.8vw;
@@ -676,7 +824,6 @@ body {
     font-size: 1vw;
     color: #ff6d00;
     border: none;
-    
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
     border-radius: 2vw;
 }
@@ -705,7 +852,7 @@ body {
     text-align: center;
     color: #10002b;
     border-radius: 2vw;
-    background-color: #e9ecef;
+    background-color: #fff;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
     gap: 1vw;
 }
@@ -721,11 +868,12 @@ body {
     text-align: center;
     color: #10002b;
     border-radius: 2vw;
-    background-color: #e9ecef;
+    background-color: #fff;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
     gap: 1vw;
     cursor: pointer;
     border: none;
+
 }
 
 #butonDivida:hover{
@@ -765,7 +913,7 @@ body {
     text-align: center;
     color: #10002b;
     border-radius: 2vw;
-    background-color: #e9ecef;
+    background-color: #fff;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
     gap: 1vw;
 }
@@ -781,7 +929,7 @@ body {
     text-align: center;
     color: #10002b;
     border-radius: 2vw;
-    background-color: #e9ecef;
+    background-color: #fff;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
     gap: 1vw;
     cursor: pointer;
@@ -825,10 +973,10 @@ body {
     justify-content: center;
     align-items: center;
     width: 80%;
-    height: 23vw;
+    height: auto;
     gap: 2vw;
     flex-wrap: wrap ;
-    
+    padding: 2vw;
 }
 
 .cardFixo{
@@ -841,6 +989,7 @@ body {
     border-radius: 1vw;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
     font-size: 1.7vw;
+    background-color: #fff;
 }
 
 .nomeFixo{

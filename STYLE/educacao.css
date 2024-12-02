@@ -16,6 +16,10 @@ body {
     color: #10002b;
 }
 
+.user-photo{
+    margin-bottom: .5vw;
+}
+
 .tituloConteudo{
     display: flex;
     justify-content: center;

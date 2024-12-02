@@ -79,27 +79,24 @@
                 
                 echo "
                     <a href='../PAGES/perfil.php'>
-                    <img src='".$_SESSION['foto']."' class='user-photo'>    
+                    <img src='".$_SESSION['foto']."' class='user-photo'>
                     </a>
                     <div class='nome'><p>Olá, $nome_usuario!</p></div>
                 ";  
             }
         ?>
-
-        
     </div>
-    
     <div class="menu">
         <ul>
             <a href="../PAGES/landing.php">
                 <li class="mn1">Início</li>
             </a>
-            <a href="../PAGES/perfil.php">
-                <li class="mn2">Perfil</li>
+            <a href="../ACTS/verifica_educacao.php">
+                <li class="mn2">Educação <span>Financeira</span></li>
 
             </a>
             <a href="../PAGES/cambio.php">
-                <li class="mn4">Cotação <span>Dolar</span></li>
+                <li class="mn4">Câmbio de <span>Moedas</span></li>
             </a>
             <a href="../PAGES/action.php">
                 <li class="mn5"><span>Bolsa de valores</span></li>

@@ -1,7 +1,11 @@
-<?php 
+<?php
     @session_start();
     include("../partials/headeralternative.php");
     
+    if (!isset($_SESSION['Id_user'])) {
+        header('Location: login.php');
+        exit();
+    }
     
     // Conectar ao banco de dados
     $conn = new mysqli('localhost', 'root', '', 'save'); // Ajuste conforme suas credenciais
@@ -24,6 +28,8 @@
     $codigo = $_SESSION['Id_user'];
 $nivelBusca = mysqli_query($conn, "SELECT nivel FROM `informacao` WHERE `Id_user` = '$codigo'");
 $buscaResult = mysqli_fetch_assoc($nivelBusca);
+
+$_SESSION['busca'] = $buscaResult;
 
 @$nivel2 = $buscaResult['nivel']; // Corrigir para acessar o valor da chave 'nivel'
 
@@ -184,7 +190,6 @@ switch ($nivel2) {
                         <a href="../PAGES/dashboard.php" >Ir para dashboard</a>
                     </div>
                 <?php endif; ?>
-
             </div>
         </div>
     </div>

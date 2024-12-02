@@ -37,9 +37,7 @@ if (isset($_SESSION['msg'])) {
                     <div>
                         <label><span>Tempo</span> da Dívida (meses):</label>
                     </div>
-                    <div>
-                        <label><span>Dívida</span> Parcelável?</label>
-                    </div>
+                    
                 </div>
                 <div class="direita">
                     <div>
@@ -54,10 +52,7 @@ if (isset($_SESSION['msg'])) {
                     <div>
                         <input type="number" name="tempo[]" required class="tempo-input"><br>
                     </div>
-                    <div class="check">
-                        <input type="checkbox" onchange="toggleTempo(this)"><br><br>
-                        <input type="hidden" name="tempo_ilimitada[]" value="">
-                    </div>
+                    
                 </div>
             </div>
             <button class="Btn" onclick="removerDivida(this)">
@@ -147,9 +142,6 @@ if (isset($_SESSION['msg'])) {
                     <div>
                         <label><span>Tempo</span> da Dívida (meses):</label>
                     </div>
-                    <div>
-                        <label><span>Dívida</span> não Parcelável?</label>
-                    </div>
                 </div>
                 <div class="direita">
                     <div>
@@ -163,10 +155,6 @@ if (isset($_SESSION['msg'])) {
                     </div>
                     <div>
                         <input type="number" name="tempo[]" required class="tempo-input"><br>
-                    </div>
-                    <div class="check">
-                        <input type="checkbox" onchange="toggleTempo(this)"><br><br>
-                        <input type="hidden" name="tempo_ilimitada[]" value="">
                     </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@ $usuario = mysqli_fetch_assoc($usuarios);
 $nivelBusca = mysqli_query($con, "SELECT nivel FROM `informacao` WHERE `Id_user` = '$codigo'");
 $buscaResult = mysqli_fetch_assoc($nivelBusca);
 
-$nivel = $buscaResult['nivel']; // Corrigir para acessar o valor da chave 'nivel'
+@$nivel = $buscaResult['nivel']; // Corrigir para acessar o valor da chave 'nivel'
 
 switch ($nivel) {
     case 1:
@@ -33,37 +33,41 @@ switch ($nivel) {
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <style>
-            .green{
-            background-color: green;
-            width: 100%;
-            height: 2vw;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            position: absolute;
-            top: 0;
-            align-items: center;
-            margin-top: -.2vw !important;
-        }
+    header{
+        background-color: #f8f9fa !important;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+    .green{
+        background-color: green;
+        width: 100%;
+        height: 2vw;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        align-items: center;
+        margin-top: -.2vw !important;
+    }
 
-        .red{
-            background-color: #c50000;
-            width: 100%;
-            height: 2vw;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            position: absolute;
-            top: 0;
-            align-items: center;
-            margin-top: -.2vw !important;
-        }
-  .show{
-    display: block;
-  }
-  .hidden{
-    display: none;
-  }
+    .red{
+        background-color: #c50000;
+        width: 100%;
+        height: 2vw;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        align-items: center;
+        margin-top: -.2vw !important;
+    }
+    .show{
+        display: block;
+    }
+    .hidden{
+        display: none;
+    }
 </style>
 
 <!DOCTYPE html>
@@ -74,35 +78,38 @@ switch ($nivel) {
     <title>Editar Perfil</title>
 </head>
 <body>
-    <div class="confirmar hidden" id="confirm">
-        <div class="cima">
-            <div class="textoCima">
-                <p>Tem certeza que deseja deletar o seu <a>perfil</a>?</p>
-                <p>Esta ação não poderá ser <b>revertida</b>!</p>
-            </div>
-        </div>
-        <div class="baixo">
-            <div class="botoesBaixo">
-                <a href="../ACTS/deletar.php"><button class="btnSimBaixo" type="button">Sim</button></a>
-                <button class="btnNaoBaixo" type="button" onclick="cancel()">Não</button> 
-            </div>
-        </div>
-    </div>
+    
     <script>
         function confirmDelete() {
-        console.log("oia");
         container = document.querySelector('#confirm');
         container.classList.add('show');
         container.classList.remove('hidden');
-        document.body.classList.add('blurred'); // Adiciona o blur no body
+        
+        const dashboardContainer = document.querySelector('.conteudo');
+        const header = document.querySelector('header');
+        if (dashboardContainer) {
+            header.style.filter = 'blur(5px)';
+            dashboardContainer.style.filter = 'blur(5px)';
+
+            header.style.pointerEvents = 'none';
+            dashboardContainer.style.pointerEvents = 'none';
+        }
         }
 
         function cancel() {
-            console.log("oia");
             container = document.querySelector('#confirm');
             container.classList.add('hidden');
             container.classList.remove('show');
-            document.body.classList.remove('blurred'); // Remove o blur do body
+
+            const dashboardContainer = document.querySelector('.conteudo');
+            const header = document.querySelector('header');
+            if (dashboardContainer) {
+            header.style.filter = 'blur(0px)';
+            dashboardContainer.style.filter = 'blur(0px)';
+
+            header.style.pointerEvents = 'auto';
+            dashboardContainer.style.pointerEvents = 'auto';
+        }
         }
     </script>
 <form action="../ACTS/edit.act.php" enctype="multipart/form-data" method="post">
@@ -112,11 +119,11 @@ switch ($nivel) {
         </div>
         <div class="baixoConteudo">
             <div class="esquerda">
-            <div class="foto">
-                <img id="previewImg" src="<?php echo $_SESSION['foto']; ?>" class="miniaturaPerf">
-                <label for="fileFoto" class="file-label">Escolher Foto</label>
-                <input type="file" class="file-input" name="newFoto" id="fileFoto" onchange="previewFile();">
-            </div>
+                <div class="foto">
+                    <img id="previewImg" src="<?php echo $_SESSION['foto']; ?>" class="miniaturaPerf">
+                    <label for="fileFoto" class="file-label">Escolher Foto</label>
+                    <input type="file" class="file-input" name="newFoto" id="fileFoto" onchange="previewFile();">
+                </div>
 
                 <div class="plano">
                     <label>Plano <?php echo $nivel?></label>
@@ -176,7 +183,7 @@ switch ($nivel) {
                         </div>
                         <div class="conteudoInfoBtn">
                             <button type="button" class="btn" id="deleteButton" onclick="confirmDelete()">Deletar Perfil</button>
-                            <button type="submit" class="btn">Salvar</button>
+                            <button type="submit" class="btn" id="salvarButton">Salvar</button>
                         </div>
                         <script>
     // Máscara para CPF
@@ -253,4 +260,18 @@ switch ($nivel) {
     </script>
     <script src="../JS/geral.js"></script>
 </body>
+<div  class="confirmar hidden" id="confirm">
+        <div class="cima">
+            <div class="textoCima">
+                <p>Tem certeza que deseja deletar o seu <a>perfil</a>?</p>
+                <p>Esta ação não poderá ser <b>revertida</b>!</p>
+            </div>
+        </div>
+        <div class="baixo">
+            <div class="botoesBaixo">
+                <a href="../ACTS/deletar.php"><button class="btnSimBaixo" type="button">Sim</button></a>
+                <button class="btnNaoBaixo" type="button" onclick="cancel()">Não</button> 
+            </div>
+        </div>
+    </div>
 </html>

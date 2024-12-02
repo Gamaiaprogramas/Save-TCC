@@ -49,11 +49,16 @@ body::-webkit-scrollbar-track {
     flex-direction: column;
     gap: 1vw;
     background-color: #FFF;
-    border-radius: 1.5vw;
+    border-radius: 1vw;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     height: 100%;
     width: 25%;
     padding: 1vw;
+
+}
+
+.left h1{
+    font-size: 1.5vw;
 }
 
 select {
@@ -69,6 +74,7 @@ select {
     background-color: #10002b;
     background-image: none;
     cursor: pointer;
+    border-radius: 1vw !important;
   }
   /* Remove IE arrow */
   select::-ms-expand {
@@ -82,7 +88,7 @@ select {
     display: flex;
     width: 20em;
     height: 3em;
-    border-radius: .25em;
+    border-radius: .5vw .5vw .2vw .2vw;
     overflow: hidden;
   }
   /* Arrow */
@@ -103,11 +109,15 @@ select {
   
 
 .center{
-    border-radius: 1.5vw;
+    border-radius: 1vw;
     background-color: #FFF;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     height: 100%;
     width: 35%;
+}
+
+.center h1{
+    font-size: 1.5vw;
 }
 
 .nome{
@@ -116,12 +126,14 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .bloco{
     width: 80%;
     height: 80%;
-    border-radius: 2vw;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 1vw;
+    background-color: #f8f9fa !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,15 +152,17 @@ select {
 }
 
 .maior{
+    padding: 1vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2vw;
     height: 80%;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: #f8f9fa !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     width: 40%;
-    border-radius: 2vw;
+    border-radius: 1vw;
 }
 
 #mxdia{
@@ -167,15 +181,28 @@ select {
 }
 
 .menor{
+    padding: 1vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2vw;
     height: 80%;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: #f8f9fa !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     width: 40%;
-    border-radius: 2vw;
+    border-radius: 1vw;
+}
+
+
+.menor h2{
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.maior h2{
+    font-size: 1.5vw;
+    text-align: center;
 }
 
 .right{
@@ -183,7 +210,7 @@ select {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 1.5vw;
+    border-radius: 1vw;
     background-color: #FFF;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     height: 100%;
@@ -191,10 +218,105 @@ select {
     gap: 2vw;
 }
 
+.right h1{
+    font-size: 1.5vw;
+}
+
 .right iframe{
     width: 90%;
+    height: 17vw;
 }
 
 .right p{
+    font-size: .9vw;
     text-align: center;
+}
+
+@media screen and (max-width: 907px) {
+
+    .container{
+        gap: 5vw;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .left{
+        height: 300px !important;
+        width: 90%;
+    }
+    
+    .left h1{
+        font-size: 3vw;
+    }
+
+    .left .select{
+        width: 90%;
+
+    }
+
+    .center{
+        height: 1000000px !important;
+        width: 90%;
+    }
+
+    .center h1{
+        font-size: 3vw;
+    }
+
+    .right{
+        width: 90%;
+        height: 600vw !important;
+    }
+
+    header{
+        height: 100px;
+    }
+
+    .right iframe{
+        height: 38vw;
+    }
+
+    .right h1{
+        font-size: 3vw;
+    }
+
+    .right p {
+        font-size: 12px;
+    }
+
+    #mxdia{
+        font-size: 4vw;
+    }
+    
+    #mndia{
+        font-size: 4vw;
+    }
+    
+    #preco{
+        font-size: 4vw;
+    }
+
+    .maior h2{
+        font-size: 3vw;
+    }
+
+    .menor h2{
+        font-size: 3vw;
+    }
+
+    .bloco h2{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .container{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+
 }

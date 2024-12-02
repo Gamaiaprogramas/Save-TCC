@@ -32,15 +32,6 @@ $ValorRultadoReal = $ValorResultado['valor_reserva'];
 
 $nivel2 = $buscaResult['nivel']; // Corrigir para acessar o valor da chave 'nivel'
 
-
-
-// Verificar se as consultas retornaram resultados
-if ($result_saldo) {
-    $saldo = mysqli_fetch_assoc($result_saldo)['saldo'];
-} else {
-    $saldo = 0;
-}
-
 if ($result_dividas) {
     $dividas = mysqli_fetch_assoc($result_dividas);
     $nomes_dividas = explode(",", $dividas['Nomes_Dividas']);
@@ -59,7 +50,6 @@ if ($result_dividas) {
     $total_dividas = 0;
 }
 
-
 if ($result_gastos) {
     $gastos = mysqli_fetch_assoc($result_gastos);
     $nomes_gastos = explode(",", $gastos['Nomes_gastos']);
@@ -69,8 +59,21 @@ if ($result_gastos) {
     $total_gastos = 0;
 }
 
+// Verificar se as consultas retornaram resultados
+if ($result_saldo) {
+    $salario = mysqli_fetch_assoc($result_saldo)['saldo'];
+    $saldo = $salario - $total_dividas - $total_gastos;
+} else {
+    $salario = 0;
+}
+
+
+
+
+
+
 // Calcular o total em relação ao salário
-$total = floatval($saldo) + $total_dividas + $total_gastos;
+$total = floatval($salario) + $total_dividas + $total_gastos;
 ?>
 
 <!DOCTYPE html>
@@ -86,6 +89,12 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
     <script src="../JS/jquery-3.7.1.min.js"></script>
 </head>
 <body>
+    <style>
+        header{
+            background-color: #f8f9fa !important;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        }
+    </style>
     <div class="dashboard-container">
         <div class="tituloDash">
             <h1>Bem vindo(a) a sua <a>Dashboard</a>!</h1>
@@ -100,44 +109,55 @@ $total = floatval($saldo) + $total_dividas + $total_gastos;
                         <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
                     </div>
                     <div class="nomeGasto">
-                        <h1>Ganho mensal</h1>
+                        <h1>Ganho Mensal</h1>
                     </div>
                     <div class="propGasto">
+                        <h1>R$<?php echo number_format($salario, 2, ',', '.'); ?></h1>
+                    </div>
+                    <button id ="buton">Alterar ganho mensal <i class="fa-solid fa-pen"></i></button>
+                </div>
+                <div class="divGastos">
+                    <div class="iconeGastos">
+                        <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
+                    </div>
+                    <div class="nomeGasto2">
+                        <h1>Saldo</h1>
+                    </div>
+                    <div class="propGasto2">
                         <h1>R$<?php echo number_format($saldo, 2, ',', '.'); ?></h1>
                     </div>
-                    <button id ="buton">Alterar Saldo <i class="fa-solid fa-pen"></i></button>
                 </div>
                 <div class="divGastos">
                     <div class="iconeGastos">
                         <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
                     </div>
-                    <div class="nomeGasto">
-                        <h1>Despesas</h1>
-                    </div>
-                    <div class="propGasto">
-                        <h1>R$<?php echo number_format($total_dividas, 2, ',', '.'); ?></h1>
-                    </div>
-                </div>
-                <div class="divGastos">
-                    <div class="iconeGastos">
-                        <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
-                    </div>
-                    <div class="nomeGasto">
+                    <div class="nomeGasto2">
                         <h1>Gastos Fixos</h1>
                     </div>
-                    <div class="propGasto">
+                    <div class="propGasto2">
                         <h1>R$<?php echo number_format($total_gastos, 2, ',', '.'); ?></h1>
+                    </div>
+                </div>
+                <div class="divGastos">
+                    <div class="iconeGastos">
+                        <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
+                    </div>
+                    <div class="nomeGasto2">
+                        <h1>Despesas</h1>
+                    </div>
+                    <div class="propGasto2">
+                        <h1>R$<?php echo number_format($total_dividas, 2, ',', '.'); ?></h1>
                     </div>
                 </div>
             </div>
         </div>
         
         <div class="tituloDividas">
-            <h1>Dividas <a>!</a></h1>
+            <h1>Dívidas <a>!</a></h1>
         </div>
         <div class="espacoBtnDividas">
             <div class="btnDividas">
-                <a>Exibir Dividas<a class="laranja">Pagas</a><i class="fa-solid fa-chevron-down"></i></a>
+                <a>Exibir Dívidas<a class="laranja">Pagas</a><i class="fa-solid fa-chevron-down"></i></a>
                 <div class="subDividas">
                     <div class="espacoCimaDividas">
                         <a>Nome</a>
@@ -238,7 +258,7 @@ am5.ready(function() {
     series.data.setAll([
         { value: <?php echo $total_dividas; ?>, category: "Dívidas" },
         { value: <?php echo $total_gastos; ?>, category: "Gastos Fixos" },
-        { value: <?php echo $saldo; ?>, category: "Saldo" }
+        { value: <?php echo $salario; ?>, category: "Ganho mensal" },
     ]);
 
     // Create color set with custom colors
@@ -259,7 +279,7 @@ am5.ready(function() {
 
         <div class="espacoBtnDivida">
             <div><a href="../PAGES/adicionar_novo.php" class="btnAdicionarDivida">Adicionar Dívida <i class="fa-solid fa-circle-plus"></i></a></div>
-            <button id="butonDivida">Alterar Divida <i class="fa-solid fa-pen"></i></button>
+            <button id="butonDivida">Alterar Dívida <i class="fa-solid fa-pen"></i></button>
         </div>
 
         <div class="tituloFixo">
@@ -312,12 +332,6 @@ am5.ready(function() {
                     </style>";
                 }
                 ?>
-            <style>
-                .alterarDados{
-                    display : none;
-                }
-            </style>
-
         <div class="planFinanceiro">
             <div class="tituloFinanceiro">
                 <a>Reserva para o Futuro!</a>
@@ -329,67 +343,69 @@ am5.ready(function() {
                 <a>imprevistos, proporcionando estabilidade e tranquilidade financeira.</a>            
             </div>
             <form action="../ACTS/reserva_emergencia.act.php" method="post">
-                <label class="nomeReserva" for="reserva_input">Reserva Atual: <?php  echo $ValorRultadoReal ?></label>
+                <label class="nomeReserva" for="reserva_input">Reserva Atual: <a> <?php  echo $ValorRultadoReal ?> </a></label>
                 <input type="number" name="reserva_input">
-                <input type="submit" value="Adicionar">
+                <button type="submit">Adicionar<i class="fa-solid fa-circle-plus"></i></button>
             </form>
         </div>
 
         <div class="caixinhaSonhos">
-    <h2>Caixinha de Sonhos</h2>
-    <!-- Formulário para criar novas metas -->
-    <form action="../ACTS/caixinha_de_sonhos.act.php" method="post">
-        <label for="nome_meta">Nome da Meta:</label>
-        <input type="text" name="nome_meta" required>
-        
-        <label for="valor_meta">Valor da Meta:</label>
-        <input type="number" name="valor_meta" step="0.01" required>
-        
-        <input type="submit" value="Criar Meta">
-    </form>
-
-    <!-- Lista de metas existentes -->
-    <div class="metasExistentes">
-        <h3>Suas Metas</h3>
-        <?php
-        // Consulta as metas do usuário
-        $userId = $_SESSION['Id_user'];
-        $query = "SELECT * FROM caixinha_sonhos WHERE user_id = $userId";
-        $result = mysqli_query($con, $query);
-
-        if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                $percentual = ($row['valor_atual'] / $row['valor_meta']) * 100;
-                $metaId = $row['id'];
-                ?>
-                <div class='meta'>
-                    <p><strong><?php echo $row['nome_meta']; ?></strong></p>
-                    <p>Progresso: <?php echo "{$row['valor_atual']} / {$row['valor_meta']}"; ?></p>
+            <div class="tituloCaixinha">Caixinha Dos Sonhos!</div>
+            <div class="criarMeta">
+                <a>Criar Nova <span>Meta</span></a>
+                <form action="../ACTS/caixinha_de_sonhos.act.php" method="post">
+                    <label for="nome_meta">Nome da Meta:</label>
+                    <input type="text" name="nome_meta" required>
                     
-                    <!-- Barra de progresso -->
-                    <div class="progress-container">
-                        <div class="progress-bar" id="progressBar-<?php echo $metaId; ?>" style="width: <?php echo $percentual; ?>%;"></div>
-                    </div>
+                    <label for="valor_meta">Valor da Meta:</label>
+                    <input type="number" name="valor_meta" step="0.01" required>
+                    
+                    <button type="submit">Criar Meta <i class="fa-solid fa-circle-plus"></i></button>
+                </form>
+            </div>
+            <div class="baixoCaixa">
+                <div class="tituloMeta">Suas <span>Metas!</span></div>
+                <div class="espacoMetas">
+                    <?php
+                        // Consulta as metas do usuário
+                        $userId = $_SESSION['Id_user'];
+                        $query = "SELECT * FROM caixinha_sonhos WHERE user_id = $userId";
+                        $result = mysqli_query($con, $query);
 
-                    <!-- Formulário para depósito -->
-                    <?php if ($row['valor_atual'] < $row['valor_meta']) { ?>
-                        <form action="../ACTS/caixinha_deposito.php" method="post">
-                            <input type="hidden" name="meta_id" value="<?php echo $metaId; ?>">
-                            <input type="number" name="valor_deposito" step="0.01" required>
-                            <input type="submit" value="Depositar">
-                        </form>
-                    <?php } else { ?>
-                        <p class="meta-concluida">Meta concluída! 🎉</p>
-                    <?php } ?>
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $percentual = ($row['valor_atual'] / $row['valor_meta']) * 100;
+                                $metaId = $row['id'];
+                                ?>
+                                <div class='meta'>
+                                    <p><strong><?php echo $row['nome_meta']; ?></strong></p>
+                                    <p>Progresso: <?php echo "{$row['valor_atual']} / {$row['valor_meta']}"; ?></p>
+                                    
+                                    <!-- Barra de progresso -->
+                                    <div class="progress-container">
+                                        <div class="progress-bar" id="progressBar-<?php echo $metaId; ?>" style="width: <?php echo $percentual; ?>%;"></div>
+                                    </div>
+
+                                    <!-- Formulário para depósito -->
+                                    <?php if ($row['valor_atual'] < $row['valor_meta']) { ?>
+                                        <form action="../ACTS/caixinha_deposito.php" method="post">
+                                            <input type="hidden" name="meta_id" value="<?php echo $metaId; ?>">
+                                            <input type="number" name="valor_deposito" step="0.01" required>
+                                            <input type="submit" value="Depositar">
+                                        </form>
+                                    <?php } else { ?>
+                                        <p class="meta-concluida">Meta concluída! 🎉</p>
+                                    <?php } ?>
+                                </div>
+                                <?php
+                            }
+                        } else {
+                            echo "<p>Você ainda não criou metas.</p>";
+                        }
+                    ?>
                 </div>
-                <?php
-            }
-        } else {
-            echo "<p>Você ainda não criou metas.</p>";
-        }
-        ?>
-    </div>
-</div>
+            </div>
+        </div>
 
 <!-- Popup -->
 <div id="popup" style="display: none;">
@@ -414,13 +430,19 @@ function closePopup() {
 
 
 
+
+    </div>
+    <?php
+    include("../partials/footer.php");
+    ?>
+</body>
 <script src="../JS/alterarDadosJs.js"></script>
-<div class="alterarDados" id="idDivMae">
+<div class="alterarDados2" id="idDivMae">
     <!-- Alterar Dívida -->
     <!-- Formulário para atualizar dívida -->
     <div class="tituloAtualizarDivida" id= "idDivida1">
-    <h2>Atualizar <a>Dívida</a></h2>
-</div>
+        <h2>Atualizar <a>Dívida</a></h2>
+    </div>
 <div class="formAtualizarDivida" id= "idDivida2">
     <form method="post" action="../ACTS/update_divida.php">
         <label for="index_divida">Escolha a dívida:</label>
@@ -465,28 +487,27 @@ function closePopup() {
 
 
 <!-- Formulário para atualizar gasto fixo -->
-<div class="tituloAtualizarGasto"  id= "idGasto1" >
-    <h2>Atualizar <a>Gasto Fixo</a></h2>
-</div>
-<div class="formAtualizarGasto" id= "idGasto2">
-    <form method="post" action="../ACTS/update_gasto.php">
-        <label for="index_gasto">Escolha o gasto fixo:</label>
-        <select name="index_gasto" id="index_gasto" onchange="preencherCamposGasto()">
-            <?php for ($i = 0; $i < count($nomes_gastos); $i++): ?>
-                <option value="<?php echo $i; ?>"><?php echo htmlspecialchars($nomes_gastos[$i]); ?></option>
-            <?php endfor; ?>
-        </select>
+    <div class="tituloAtualizarGasto"  id= "idGasto1" >
+        <h2>Atualizar <a>Gasto Fixo</a></h2>
+    </div>
+    <div class="formAtualizarGasto" id= "idGasto2">
+        <form method="post" action="../ACTS/update_gasto.php">
+            <label for="index_gasto">Escolha o gasto fixo:</label>
+            <select name="index_gasto" id="index_gasto" onchange="preencherCamposGasto()">
+                <?php for ($i = 0; $i < count($nomes_gastos); $i++): ?>
+                    <option value="<?php echo $i; ?>"><?php echo htmlspecialchars($nomes_gastos[$i]); ?></option>
+                <?php endfor; ?>
+            </select>
 
-        <label for="novo_nome_gasto">Nome Atual:</label>
-        <input type="text" name="novo_nome_gasto" id="novo_nome_gasto" required>
+            <label for="novo_nome_gasto">Nome Atual:</label>
+            <input type="text" name="novo_nome_gasto" id="novo_nome_gasto" required>
 
-        <label for="novo_valor_gasto">Valor Atual:</label>
-        <input type="number" name="novo_valor_gasto" id="novo_valor_gasto" required>
+            <label for="novo_valor_gasto">Valor Atual:</label>
+            <input type="number" name="novo_valor_gasto" id="novo_valor_gasto" required>
 
-        <button type="submit" class="btnAtualizar">Atualizar Gasto</button>
-    </form>
-</div>
-
+            <button type="submit" class="btnAtualizar">Atualizar Gasto</button>
+        </form>
+    </div>
 <script>
     const nomesGastos = <?php echo json_encode($nomes_gastos); ?>;
     const valoresGastos = <?php echo json_encode($valores_gastos); ?>;
@@ -514,7 +535,5 @@ function closePopup() {
 
   
     </div>
-    <button id="voltar" class="voltar">Voltar</button>
-
-</body>
+    <button id="voltar" class="voltar"><i class="fa-solid fa-x"></i></button>
 </html>

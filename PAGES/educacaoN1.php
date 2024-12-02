@@ -4,6 +4,7 @@
   echo $_SESSION['msg'];
   unset($_SESSION['msg']);
 }
+
 ?>
 <link rel="stylesheet" href="../STYLE/educacao.css">
 <?php
@@ -31,7 +32,7 @@
       <a class="laranja">Introdução!</a>
     </div>
     <div class="textoIntroducao">
-      <a>É bom te ver aqui <?php echo "$_SESSION[nome]"; ?>, você escolheu o Plano 3, por isso segue aqui as fases para alcançarmos os objetivos propostos em nosso cronograma de acordo com sua situação.</a>
+      <a>É bom te ver aqui <?php echo "$_SESSION[nome]"; ?>, você escolheu o Plano 1, por isso segue aqui as fases para alcançarmos os objetivos propostos em nosso cronograma de acordo com sua situação.</a>
     </div>
       
   </div>

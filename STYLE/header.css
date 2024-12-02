@@ -63,8 +63,8 @@ header .btn-contato button:hover, .hero-site button:hover, .hoteis button:hover{
     opacity: 0;
     transition: opacity 0.4s ease, visibility 0.4s ease;
     visibility: hidden;
-    height: 10vw;
-    width: 10vw;
+    height: 7vw;
+    width: 7vw;
 }
 
 .dropdown-content a {
@@ -291,4 +291,16 @@ body.no-overflow{
     opacity: 1;
     visibility: visible;
 }
+
+@media screen and (max-width: 900px) {
+    header{
+      height: 100px !important;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    header{
+      height: 100px !important;
+    }
+  }
 

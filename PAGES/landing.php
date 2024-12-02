@@ -25,7 +25,7 @@
 
                 <h1>Descubra uma <span>nova forma</span></h1>
                 <p>Encontre a melhor maneira de cuidar do seu dinheiro <span>estamos aqui para ajudar</span> </p>
-                <a href="#">
+                <a href="../PAGES/login.php">
                     <button>Quero conhecer</button>
                 </a>
 
@@ -101,7 +101,6 @@
                 <h3>Alguns dos <span>nossos serviços</span></h3>
                 <p>solicte sua consultoria agora mesmo.</p>
             </article>
-
             <article class="icons-contato">
                 <a href="../PAGES/cambio.php">
                     <button><i class="bi bi-currency-exchange"></i> <p>Câmbio de Moedas</p> </button>
@@ -112,7 +111,7 @@
                 <a href="../PAGES/selecao.php">
                     <button><i class="bi bi-cash-coin"></i> <p>Planejamento Financeiro</p> </button>
                 </a>
-                <a href="../PAGES/educacao.php">
+                <a href="../ACTS/verifica_educacao.php">
                     <button><i class="bi bi-book-half"></i> <p>Educação Financeira</p> </button>
                 </a>
             </article>
@@ -160,7 +159,7 @@
                 <article class="instru-box">
 
                     <div class="img-instru-box">
-                        <img src="../PICS/imgs/user.png" alt="">
+                        <img src="../PICS/imgs/filipe2.png" alt="">
                     </div> 
 
                     <div class="txt-instru-box">
@@ -179,7 +178,9 @@
 
                     <div class="txt-instru-box">
                         <h4>Luis <span>Henrique</span></h4>
-                        <p>Nascido em São Paulo em 22 de abril de 2006, é um dos criadores da empresa Save Your Money, especializada em soluções financeiras digitais. Estudante da ETEC, João adquiriu conhecimentos técnicos e administrativos que aplicou diretamente no desenvolvimento do site da empresa, transformando ideias em uma plataforma prática e eficiente para gestão financeira. Com dedicação e visão inovadora, busca expandir seu impacto no mercado.</p>
+                        <p>
+                            Luis, nascido em São Paulo em 22 de abril de 2006, é cofundador da Save Your Money, uma empresa de soluções financeiras digitais. Estudante da ETEC, ele aplicou seus conhecimentos técnicos e administrativos no desenvolvimento do site da empresa, criando uma plataforma prática e eficiente para gestão financeira. Com dedicação e visão inovadora, busca expandir seu impacto no mercado.
+                        </p>
                     </div>
                 
                 </article>

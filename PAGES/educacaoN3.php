@@ -4,6 +4,7 @@
   echo $_SESSION['msg'];
   unset($_SESSION['msg']);
 }
+
 ?>
 <link rel="stylesheet" href="../STYLE/educacao.css">
 <?php
@@ -17,8 +18,8 @@
   <title>Document</title>
   <style>
       header{
-          background-color: #f8f9fa !important;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        background-color: #f8f9fa !important;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
       }
   </style>
 </head>

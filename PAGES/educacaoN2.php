@@ -4,6 +4,7 @@
   echo $_SESSION['msg'];
   unset($_SESSION['msg']);
 }
+
 ?>
 <link rel="stylesheet" href="../STYLE/educacao.css">
 <?php

@@ -220,11 +220,11 @@
         </div>
         <div class="baixoClientes">
             <div class="cliente">
-                <div class="fotoCliente">
-                    
+                <div class="fotoCliente1">
+                    <img src="../PICS/imgsSobreNos/tccArena.png" alt="">
                 </div>
                 <div class="nomeCliente">
-                    <a>TCC do Kauan</a>
+                    <a>Arena Sport</a>
                 </div>
             </div>
             <div class="cliente">
@@ -290,7 +290,7 @@
             </div>
             <div class="divTrabalho">
                 <a class="laranjaTrabalho">E-mail</a>
-                <a>saveyourmoney@gmail.com.br</a>
+                <a>saveyourmoney@gmail.com</a>
             </div>
         </div>
     </div>
@@ -419,4 +419,7 @@
     }); // end am5.ready()
 </script>
 <script src="../JS/js/menu.js"></script>
+<?php
+    include("../partials/footer.php");
+?>
 </html>
