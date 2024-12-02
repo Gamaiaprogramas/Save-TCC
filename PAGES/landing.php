@@ -179,8 +179,8 @@
                     <div class="txt-instru-box">
                         <h4>Luis <span>Henrique</span></h4>
                         <p>
-                            Luis, nascido em São Paulo em 22 de abril de 2006, é cofundador da Save Your Money, uma empresa de soluções financeiras digitais. Estudante da ETEC, ele aplicou seus conhecimentos técnicos e administrativos no desenvolvimento do site da empresa, criando uma plataforma prática e eficiente para gestão financeira. Com dedicação e visão inovadora, busca expandir seu impacto no mercado.
-                        </p>
+                        Nascido em 22 de abril de 2006, é um dos desenvolvedores da Save Your Money, responsável pela estilização e pela lógica do back-end. Sua contribuição foi essencial para criar uma interface atraente e garantir o funcionamento eficiente do sistema.
+
                     </div>
                 
                 </article>
@@ -193,8 +193,7 @@
 
                     <div class="txt-instru-box">
                         <h4>Alisson <span>Silva</span></h4>
-                        <p>Alisson Silva faz parte da equipe de desenvolvedores,nascido em 20/06/2006 ,sua função principal foi ajudar no design visual,
-                        fornecendo materias para os programadores front-end."Trabalhar na Save Your Money me ajudou a descobrir minha vocação,tive o prazer de colaborar com os talentos dos meus colegas.",fala do membro.</p>
+                        <p>Nascido em 20 de junho de 2006, é um dos desenvolvedores da Save Your Money, responsável pelo design das páginas. Com estudo em finanças, criou um layout funcional e alinhado ao tema do projeto.</p>
                     </div>
                 
                 </article>
@@ -207,7 +206,8 @@
 
                     <div class="txt-instru-box">
                         <h4>Guilherme <span>Marques</span></h4>
-                        <p>Nascido em 09 de outubro de 2006, Guilherme Marques é um dos desenvolvedores da Save Your Money, sendo responsável pela parte funcional do projeto. Seu trabalho foi focado em implementar as funcionalidades essenciais do sistema, utilizando seu conhecimento técnico adquirido ao longo de sua jornada no desenvolvimento de software.</p>
+                        <p>Nascido em 9 de outubro de 2006, é um dos desenvolvedores da Save Your Money, responsável pela arquitetura lógica do programa. Aprendeu sobre finanças para criar páginas funcionais e alinhadas às necessidades dos usuários.
+                        </p>
                     </div>
                 
                 </article>
