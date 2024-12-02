@@ -1,7 +1,7 @@
 <?php
 session_start();
 require('../ACTS/connect.php');
-
+$id_usuario = $_SESSION['Id_user'];
 // Captura os dados do formulário
 $nome = $_POST['nome'] ?? '';
 $email = $_POST['email'] ?? '';
@@ -10,6 +10,7 @@ $genero = $_POST['sexo'] ?? '';
 $telefone = $_POST['telefone'] ?? '';
 $data = $_POST['data'] ?? '';
 $senha = $_POST['senha'] ?? '';
+$nivel = $_POST['nivel']??'';
 
 if ($senha != $_SESSION['senha']) {
     $senha = md5($senha);
@@ -44,6 +45,11 @@ $update_query = "UPDATE `registro` SET
     `foto` = '$foto'
     WHERE `Id_user` = '{$_SESSION['Id_user']}';";
 
+$update_nivel ="UPDATE `informacao` SET `nivel` = $nivel WHERE `Id_user` = '$id_usuario'";
+if (mysqli_query($con, $update_nivel)){
+    $_SESSION['nivel'] = $nivel;
+}
+
 if (mysqli_query($con, $update_query)) {
     // Atualiza a sessão com os novos valores
     $_SESSION['nome'] = $nome;
@@ -53,12 +59,13 @@ if (mysqli_query($con, $update_query)) {
     $_SESSION['genero'] = $genero;
     $_SESSION['telefone'] = $telefone;
     $_SESSION['data'] = $data;
-
+    $_SESSION['nivel'] = $nivel;
     // Redireciona para a página de perfil
     header("Location: ../PAGES/perfil.php");
     exit;
 } else {
     echo "Erro ao atualizar os dados: " . mysqli_error($con);
 }
+
 ?>
     

@@ -3,36 +3,58 @@ session_start();
 require("../ACTS/connect.php");
 
 $id_user = $_SESSION['Id_user'];
-$gasto_index = intval($_POST['index_gasto']);
-$new_value = floatval($_POST['novo_valor_gasto']);
-$new_name = $_POST['novo_nome_gasto']; // Agora tratando como string
+$debtIndex = intval($_POST['debt_index']); // Índice da dívida a ser excluída
 
-// Obter os gastos atuais
-$query = "SELECT Nomes_gastos, Valores_gastos FROM gastosfix WHERE Id_User = '$id_user'";
+// Obter as informações atuais das dívidas
+$query = "SELECT Nomes_dividas, Valores_dividas, Juros_dividas, Tempo_Dividas FROM informacao WHERE Id_User = '$id_user'";
 $result = mysqli_query($con, $query);
 
 if ($result) {
     $row = mysqli_fetch_assoc($result);
-    $valores_gastos = explode(",", $row['Valores_gastos']);
-    $Nomes_gastos = explode(",", $row['Nomes_gastos']);
-    
-    // Atualiza o valor e nome do gasto no índice correto
-    $valores_gastos[$gasto_index] = $new_value;
-    $Nomes_gastos[$gasto_index] = $new_name;
+    $nomes_dividas = explode(",", $row['Nomes_dividas']);
+    $valores_dividas = explode(",", $row['Valores_dividas']);
+    $juros_dividas = explode(",", $row['Juros_dividas']);
+    $tempo_dividas = explode(",", $row['Tempo_Dividas']);
 
-    // Atualizar no banco de dados
-    $valores_gastos = implode(",", $valores_gastos);
-    $Nomes_gastos = implode(",", $Nomes_gastos);
-    $update_query = "UPDATE gastosfix SET Nomes_Gastos = '$Nomes_gastos', Valores_gastos = '$valores_gastos' WHERE Id_User = '$id_user'";
-    
-    if (mysqli_query($con, $update_query)) {
-        // Sucesso ao atualizar
-    } else {
-        // Erro ao atualizar
-        echo "Erro: " . mysqli_error($con);
+    // Verificar se o índice é válido
+    if ($debtIndex >= 0 && $debtIndex < count($nomes_dividas)) {
+        // Remover a dívida correspondente ao índice
+        unset($nomes_dividas[$debtIndex]);
+        unset($valores_dividas[$debtIndex]);
+        unset($juros_dividas[$debtIndex]);
+        unset($tempo_dividas[$debtIndex]);
+
+        // Reindexar os arrays após a remoção
+        $nomes_dividas = array_values($nomes_dividas);
+        $valores_dividas = array_values($valores_dividas);
+        $juros_dividas = array_values($juros_dividas);
+        $tempo_dividas = array_values($tempo_dividas);
+
+        // Atualizar os campos no banco de dados
+        $nomes_dividas_str = implode(",", $nomes_dividas);
+        $valores_dividas_str = implode(",", $valores_dividas);
+        $juros_dividas_str = implode(",", $juros_dividas);
+        $tempo_dividas_str = implode(",", $tempo_dividas);
+
+        $update_query = "UPDATE informacao 
+                         SET Nomes_dividas = '$nomes_dividas_str', 
+                             Valores_dividas = '$valores_dividas_str', 
+                             Juros_dividas = '$juros_dividas_str', 
+                             Tempo_Dividas = '$tempo_dividas_str' 
+                         WHERE Id_User = '$id_user'";
+
+        if (mysqli_query($con, $update_query)) {
+            // Dívida excluída com sucesso
+        } else {
+            // Exibir mensagem de erro caso a atualização falhe
+            echo "Erro ao excluir a dívida: " . mysqli_error($con);
+        }
     }
+} else {
+    echo "Erro ao buscar dívidas: " . mysqli_error($con);
 }
 
-header("Location: ../PAGES/dashboard.php");
+// Redirecionar de volta para a página das dívidas
+header('Location: ../PAGES/dashboard.php');
 exit();
 ?>

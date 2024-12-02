@@ -188,38 +188,43 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                 <button class="btnEsquerda" onclick="direcao(1)"><i class="fa-solid fa-arrow-left fa-2xl"></i></button>
             </div>
             <div class="containerDividas">
-                <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
-                    <?php if (intval($tempo_dividas[$i]) > 0 || intval($tempo_dividas[$i]) == 9999): ?>
-                        <div class="cardDivida">
-                            <div class="nomeDivida">
-                                <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
-                            </div>
-                            <div class="valorDivida">
-                                <p>Valor: R$ <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
-                            </div>
-                            <div class="jurosDivida">
-                                <p>Juros: <?php echo htmlspecialchars($juros_dividas[$i]); ?>%</p>
-                            </div>
-                            <div class="tempoDivida">
-                                <p>Tempo: <?php 
-                                    if (intval($tempo_dividas[$i]) == 9999) {
-                                        echo "Pagamento Único";
-                                    } else {
-                                        echo htmlspecialchars($tempo_dividas[$i]) . " meses";
-                                    }
-                                ?></p>
-                            </div>
-                            <form method="post" action="../ACTS/pagar_divida.php">
-                                <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
-                                <input type="hidden" name="tempo_dividas" value="<?php echo intval($tempo_dividas[$i]); ?>">
-                                <div class="btnDivida">
-                                    <button class="botaoDivida" type="submit">Pagar Parcela</button>
-                                </div>
-                            </form>
-                        </div>
-                    <?php endif; ?>
-                <?php endfor; ?>
+    <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
+        <?php if (intval($tempo_dividas[$i]) > 0 || intval($tempo_dividas[$i]) == 9999): ?>
+            <div class="cardDivida">
+                <div class="nomeDivida">
+                    <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
+                </div>
+                <div class="valorDivida">
+                    <p>Valor: R$ <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
+                </div>
+                <div class="jurosDivida">
+                    <p>Juros: <?php echo htmlspecialchars($juros_dividas[$i]); ?>%</p>
+                </div>
+                <div class="tempoDivida">
+                    <p>Tempo: 
+                        <?php 
+                        if (intval($tempo_dividas[$i]) == 9999) {
+                            echo "Pagamento Único";
+                        } else {
+                            echo htmlspecialchars($tempo_dividas[$i]) . " meses";
+                        }
+                        ?>
+                    </p>
+                </div>
+
+                <!-- Botão para excluir a dívida -->
+                <form method="post" action="../ACTS/excluir_divida.php" style="display: inline;">
+                    <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
+                    <div class="btnExcluir">
+                        <button class="botaoExcluir" type="submit" onclick="return confirm('Tem certeza que deseja excluir esta dívida?');">
+                            Excluir Dívida
+                        </button>
+                    </div>
+                </form>
             </div>
+        <?php endif; ?>
+    <?php endfor; ?>
+</div>
             <div class="espacoBtnDireita">
                 <button class="btnDireita" onclick="direcao(2)"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
             </div>
@@ -285,19 +290,27 @@ am5.ready(function() {
             <h1>Gastos <a>Fixos</a>!</h1>
         </div>
         <div class="containerFixo">
-            <?php for ($i = 0; $i < count($nomes_gastos); $i++): ?>
-                <div class="cardFixo">
-                    <div class="nomeFixo">
-                        <p><strong><?php echo htmlspecialchars($nomes_gastos[$i]); ?></strong></p>
-                    </div>
-                    <div class="valorFixo">
-                        <p>Valor: R$ <?php echo number_format(floatval($valores_gastos[$i]), 2, ',', '.'); ?></p>
-                    </div>
+    <?php for ($i = 0; $i < count($nomes_gastos); $i++): ?>
+        <div class="cardFixo">
+            <div class="nomeFixo">
+                <p><strong><?php echo htmlspecialchars($nomes_gastos[$i]); ?></strong></p>
+            </div>
+            <div class="valorFixo">
+                <p>Valor: R$ <?php echo number_format(floatval($valores_gastos[$i]), 2, ',', '.'); ?></p>
+            </div>
+            
+            <!-- Formulário para excluir gasto fixo -->
+            <form method="post" action="../ACTS/excluir_gasto.php" style="display: inline;">
+                <input type="hidden" name="gasto_index" value="<?php echo $i; ?>">
+                <div class="btnExcluir">
+                    <button class="botaoExcluir" type="submit" onclick="return confirm('Tem certeza que deseja excluir este gasto?');">
+                        Excluir Gasto
+                    </button>
                 </div>
-            <?php endfor; ?>
-            <!-- Card de Adicionar Gasto -->
-                       <!-- Card de Adicionar Gasto -->
+            </form>
         </div>
+    <?php endfor; ?>
+</div>
         <div class="espacoBtnFixo">
             <a href="../PAGES/adicionar_gastos_fixos.php" class="btnAdicionarFixo">Adicionar Gasto <i class="fa-solid fa-circle-plus"></i></a>
             <button id= "butonGasto">Alterar Gasto <i class="fa-solid fa-pen"></i></button>
@@ -431,9 +444,7 @@ function closePopup() {
 
 
     </div>
-    <?php
-    include("../partials/footer.php");
-    ?>
+   
 </body>
 <script src="../JS/alterarDadosJs.js"></script>
 <div class="alterarDados2" id="idDivMae">

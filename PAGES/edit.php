@@ -126,9 +126,40 @@ switch ($nivel) {
                 </div>
 
                 <div class="plano">
-                    <label>Plano <?php echo $nivel?></label>
-                    <label class="textoPlano"><?php echo $textoPlano; ?></label>
+                    <label>
+                      
+                        <select id="nivel" name="nivel" onchange="trocarPalavra()">
+                        <option value="1" <?php echo ($nivel == 1) ? 'selected' : ''; ?>>Plano 1</option>
+                        <option value="2" <?php echo ($nivel == 2) ? 'selected' : ''; ?>>Plano 2</option>
+                        <option value="3" <?php echo ($nivel == 3) ? 'selected' : ''; ?>>Plano 3</option>
+           
+                        </select>
+                    </label>
+                    <label class="textoPlano" id="top"></label>
                 </div>
+                <script>
+                                function trocarPalavra() {
+                    // Obtém o select e o valor selecionado
+                    const select = document.querySelector('#nivel');
+                    const selectedValue = select.value;
+
+                    // Obtém o elemento de exibição
+                    const topLabel = document.querySelector('#top');
+
+                    // Define os textos para cada plano
+                    const planos = {
+                        1: "Aprender a lidar com dinheiro, pagar dívidas e sair do vermelho.",
+                        2: " Começar pequenos investimentos, guardar dinheiro, aprender mais sobre finanças.",
+                        3: " Plano não definido, faça a sua análise para obter um."
+                    };
+
+                    // Atualiza o texto com base no valor selecionado
+                    topLabel.textContent = planos[selectedValue];
+                }
+
+                // Executa a função ao carregar para exibir o valor inicial
+                trocarPalavra();
+                </script>
             </div>
             <div class="direita">
                 <div class="infos">
