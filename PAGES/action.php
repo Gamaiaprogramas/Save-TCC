@@ -5,6 +5,7 @@
   unset($_SESSION['msg']);
 }
 ?>
+<title>Save - Ações</title>
 <link rel="stylesheet" href="../STYLE/action.css">
 <style>
   header{
@@ -14,7 +15,6 @@
   }
 </style>
 <?php
-
     include("../partials/header.php");
   ?>
     <div class="container">

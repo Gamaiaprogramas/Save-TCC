@@ -81,7 +81,7 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Financeira</title>
+    <title>Save - Dashboard Financeira</title>
     <link rel="stylesheet" href="../STYLE/dashboard.css">
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
