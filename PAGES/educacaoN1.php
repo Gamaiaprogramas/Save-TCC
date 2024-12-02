@@ -8,7 +8,9 @@
 ?>
 <link rel="stylesheet" href="../STYLE/educacao.css">
 <?php
-    include("../partials/headeralternative.php");
+
+    require("../ACTS/sec_educacao.php");
+      include("../partials/headeralternative.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
