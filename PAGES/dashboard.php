@@ -91,8 +91,7 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
 <body>
     <style>
         header{
-            background-color: #f8f9fa !important;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            background-color: #e9ecef;
         }
     </style>
     <div class="dashboard-container">
@@ -153,7 +152,7 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
         </div>
         
         <div class="tituloDividas">
-            <h1>Dívidas<a>!</a></h1>
+            <h1>Dívidas <a>!</a></h1>
         </div>
         <div class="espacoBtnDividas">
             <div class="btnDividas">
