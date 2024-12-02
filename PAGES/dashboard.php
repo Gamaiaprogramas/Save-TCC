@@ -153,7 +153,7 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
         </div>
         
         <div class="tituloDividas">
-            <h1>Dívidas <a>!</a></h1>
+            <h1>Dívidas<a>!</a></h1>
         </div>
         <div class="espacoBtnDividas">
             <div class="btnDividas">

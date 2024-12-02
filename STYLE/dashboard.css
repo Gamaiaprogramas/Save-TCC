@@ -61,6 +61,10 @@ body {
     margin-top: 2vw;
 }
 
+.tituloDash h1{
+    font-weight: 400;
+}
+
 .caixinhaSonhos {
     display: flex;
     justify-content: center;
@@ -562,6 +566,10 @@ body {
     font-size: 1.5vw;
 }
 
+.tituloDividas h1{
+    font-weight: 400;
+}
+
 .tituloDividas a{
     color: #10002b;
 }
@@ -962,6 +970,11 @@ body {
     height: 2vw;
     margin-top: 6vw;
     font-size: 1.3vw;
+}
+
+.tituloFixo h1{
+    font-weight: 400;
+
 }
 
 .tituloFixo a{
