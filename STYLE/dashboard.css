@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: "Poppins", sans-serif;
-    background-color: #fff;
+    
     background-color: #e9ecef;
     color: #10002b;
 }
@@ -20,6 +20,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin-top: 2vw;
 }
 
 .tituloDividasPagas {
@@ -145,7 +147,7 @@ body {
     align-items: center;
     border: none;
     font-size: 1vw;
-    border-radius: 2vw;
+    border-radius: .3vw;
     cursor: pointer;
     transition: background-color 0.3s ease;
     gap: 1vw;
@@ -331,7 +333,7 @@ body {
     width: 9vw;
     height: 2.2vw;
     gap: 1vw;
-    border-radius: 2vw;
+    border-radius: .3vw;
     cursor: pointer;
     font-size: 1vw;
     transition: background-color 0.3s ease;
