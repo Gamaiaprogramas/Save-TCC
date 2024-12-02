@@ -17,6 +17,7 @@
 
     include("../partials/header.php");
   ?>
+  <title>Save - Câmbio de moedas</title>
 <link rel="stylesheet" href="../STYLE/cambio.css">
 
 <h1>Taxas de Câmbio em Relação ao Real (BRL)</h1>

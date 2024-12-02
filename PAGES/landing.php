@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="../STYLE/landing.css">
 <section class="hero-site">
-        
+<title>Save - Landing Page</title>
         <div class="interface">
             
             <div class="txt-hero">
