@@ -88,8 +88,8 @@ switch ($nivel) {
         const dashboardContainer = document.querySelector('.conteudo');
         const header = document.querySelector('header');
         if (dashboardContainer) {
-            header.style.filter = 'blur(5px)';
-            dashboardContainer.style.filter = 'blur(5px)';
+            header.style.filter = 'blur(8px)';
+            dashboardContainer.style.filter = 'blur(8px)';
 
             header.style.pointerEvents = 'none';
             dashboardContainer.style.pointerEvents = 'none';
