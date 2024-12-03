@@ -35,22 +35,18 @@ require("../ACTS/sec.php");
                     <div><label><span>Valor </span>da Dívida:</label></div>
                     <div><label><span>Juros </span>da Dívida (%):</label></div>
                     <div><label><span>Tempo </span>da Dívida (meses):</label></div>
-                    <div><label><span>Dívida </span>Parcelável?</label></div>
                 </div>
                 <div class="direita">
                     <div><input type="text" name="dividas[]" required><br></div>
                     <div><input type="number" name="valores[]" step="0.01" required><br></div>
                     <div><input type="number" name="juros[]" step="0.01" required><br></div>
                     <div><input type="number" name="tempo[]" class="tempo-input" required><br></div>
-                    <div class="check">
-                        <input type="checkbox" onchange="toggleTempo(this)"><br><br>
-                        <input type="hidden" name="tempo_ilimitada[]" value="">
-                    </div>
+                    
                 </div>
             </div>  
-            <button class="Btn" onclick="removerDivida(this)">
-                <div class="sign"><i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i></div>
-                <div class="text">Apagar dívida</div>
+             <button class="Btn" onclick="removerDivida(this)">
+                <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
+
             </button>
         </div>`;
         dividasContainer.insertAdjacentHTML('beforeend', novaDivida);
@@ -115,36 +111,28 @@ require("../ACTS/sec.php");
                     <div>
                         <label><span>Tempo </span>da Dívida (meses):</label>
                     </div>
-                    <div>
-                        <label><span>Dívida </span>não Parcelável?</label>
-                    </div>
                 </div>
                 <div class="direita">
                     <div>
-                        <input type="text" name="dividas[]" required><br>
+                        <input type="text" name="dividas[]" placeholder="Tênis" required><br>
                     </div>
                     <div>
-                        <input type="number" name="valores[]" step="0.01" required><br>
+                        <input type="number" name="valores[]" step="0.01" placeholder="R$499,99" required><br>
                     </div>
                     <div>
-                        <input type="number" name="juros[]" step="0.01" required><br>
+                        <input type="number" name="juros[]" step="0.01" placeholder="5" required><br>
                     </div>
                     <div>
-                        <input type="number" name="tempo[]" required id="tempo-input"><br>
+                        <input type="number" name="tempo[]" placeholder="12" required id="tempo-input"><br>
                     </div>
-                    <div class="check">
-                        <input type="checkbox" onchange="toggleTempo(this)"><br><br>
-                        <input type="hidden" name="tempo_ilimitada[]" value="">
-                    </div>
+
+
+                    
                 </div>
             </div>
             <button class="Btn" onclick="removerDivida(this)">
-  
-                <div class="sign">
                 <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
-                </div>
-  
-                <div class="text">Apagar dívida</div>
+
             </button>
 
 

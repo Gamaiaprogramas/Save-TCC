@@ -125,18 +125,37 @@ switch ($nivel) {
                     <input type="file" class="file-input" name="newFoto" id="fileFoto" onchange="previewFile();">
                 </div>
 
-                <div class="plano">
+                
+
+
+                <?php 
+                if (isset($_SESSION['nivel2']) && $_SESSION['nivel2'] != '') {
+                    echo "
+                    <div class='plano'>
                     <label>
                       
-                        <select id="nivel" name="nivel" onchange="trocarPalavra()">
-                        <option value="1" <?php echo ($nivel == 1) ? 'selected' : ''; ?>>Plano 1</option>
-                        <option value="2" <?php echo ($nivel == 2) ? 'selected' : ''; ?>>Plano 2</option>
-                        <option value="3" <?php echo ($nivel == 3) ? 'selected' : ''; ?>>Plano 3</option>
+                        <select id='nivel' name='nivel' onchange='trocarPalavra()'>
+                        <option value='1' <?php echo ($nivel == 1) ? 'selected' : ''; ?>Plano 1</option>
+                        <option value='2' <?php echo ($nivel == 2) ? 'selected' : ''; ?>Plano 2</option>
+                        <option value='3' <?php echo ($nivel == 3) ? 'selected' : ''; ?>Plano 3</option>
            
                         </select>
                     </label>
-                    <label class="textoPlano" id="top"></label>
+                    <label class='textoPlano' id='top'></label>
                 </div>
+                    
+                    ";
+                }else{
+                    echo"
+                    <div class='plano'>
+                    <label class='nenhum'>Nenhum plano cadastrado, faça uma análise!</label>
+                    </div>
+                    
+                    
+                    ";
+                }
+                
+                ?>
                 <script>
                                 function trocarPalavra() {
                     // Obtém o select e o valor selecionado
