@@ -21,22 +21,27 @@ form{
 }
 
 .Btn {
-    position: fixed;
-    right: -41vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    right: -40vw;
     top: -21.5vw;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 45px;
-    height: 45px;
-    border: none;
+    width: 2.5vw;
+    height: 2.6vw;
+    font-size: 0.7vw;
     border-radius: 50%;
     cursor: pointer;
     position: relative;
-    overflow: hidden;
-    transition-duration: .3s;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
-    background-color: rgb(255, 65, 65);
+    background-color: #ff6d00;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;    
+    transition: all ease .5s;
+  }
+
+  .Btn:hover{
+    background-color: rgb(230, 0, 0);
+    transform: scale(1.05) rotateX(180deg);
+
   }
   
   .green{
@@ -66,56 +71,6 @@ form{
 }
 
 
-  /* plus sign */
-  .sign {
-    width: 100%;
-    transition-duration: .3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .sign svg {
-    width: 17px;
-  }
-  
-  .sign svg path {
-    fill: white;
-  }
-  /* text */
-  .text {
-    position: absolute;
-    right: 0%;
-    width: 0%;
-    opacity: 0;
-    color: white;
-    font-size: 1.2em;
-    font-weight: 600;
-    transition-duration: .3s;
-  }
-  /* hover effect on button width */
-  .Btn:hover {
-    width: 125px;
-    border-radius: 40px;
-    transition-duration: .3s;
-  }
-  
-  .Btn:hover .sign {
-    width: 30%;
-    transition-duration: .3s;
-    padding-left: 20px;
-  }
-  /* hover effect button's text */
-  .Btn:hover .text {
-    opacity: 1;
-    width: 70%;
-    transition-duration: .3s;
-    padding-right: 10px;
-  }
-  /* button click effect*/
-  .Btn:active {
-    transform: translate(2px ,2px);
-  }
 
 .green{
     background-color: green;
@@ -227,19 +182,22 @@ span{
     color: #ff6d00;
 }
 
+
 .divida-item input{
-    width: 70%;
-    padding: .5vw;
-    font-size: 1rem;
-    border: 1.5px solid #000;
-    border-radius: 0.5rem;
-    box-shadow: 2.5px 3px 0 #000;
-    outline: none;
-    transition: ease 0.25s;
+  border: none;
+    width: 100%;
+    padding: .5vw .5vw .5vw 1vw;
+
+    display: flex;
+    color: black;
+    font-size: 1vw;
+    border-radius: 0.5vw;
+    background-color: #e9ecef;
 }
 
 .divida-item input:focus{
-    box-shadow: 5.5px 7px 0 black;
+    box-shadow: 5.5px 7px 0 #d4d4d4;
+    border: none;
 }
 
 .divida-item-2 input{

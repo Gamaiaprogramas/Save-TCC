@@ -23,6 +23,10 @@ body{
     font-size: 1vw;
 }
 
+.nenhum{
+    font-size: 1vw;
+}
+
 #nivel{
     display: flex;
     justify-content: center;

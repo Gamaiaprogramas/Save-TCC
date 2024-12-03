@@ -47,7 +47,7 @@ $update_query = "UPDATE `registro` SET
 
 $update_nivel ="UPDATE `informacao` SET `nivel` = $nivel WHERE `Id_user` = '$id_usuario'";
 if (mysqli_query($con, $update_nivel)){
-    $_SESSION['nivel'] = $nivel;
+    $_SESSION['nivel2'] = $nivel;
 }
 
 if (mysqli_query($con, $update_query)) {
@@ -59,7 +59,7 @@ if (mysqli_query($con, $update_query)) {
     $_SESSION['genero'] = $genero;
     $_SESSION['telefone'] = $telefone;
     $_SESSION['data'] = $data;
-    $_SESSION['nivel'] = $nivel;
+    $_SESSION['nivel2'] = $nivel;
     // Redireciona para a página de perfil
     header("Location: ../PAGES/perfil.php");
     exit;

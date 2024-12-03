@@ -24,17 +24,24 @@ form{
   display: flex;
   justify-content: center;
   align-items: center;
-    position: fixed;
-    right: -41vw;
-    top: -12.5vw;
-    width: 45px;
-    height: 100px;
+    right: -33vw;
+    top: -13.5vw;
+    width: 2.5vw;
+    height: 5vw;
+    font-size: 0.7vw;
     border-radius: 50%;
     cursor: pointer;
     position: relative;
-    background-color: rgb(230, 0, 0);
+    background-color: #ff6d00;
     border: none;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;  
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;    
+    transition: all ease .5s;
+  }
+
+  .Btn:hover{
+    background-color: rgb(230, 0, 0);
+    transform: scale(1.05) rotateX(180deg);
+
   }
   
   .green{
@@ -108,13 +115,13 @@ padding: .5vw .5vw .5vw 1vw;
 }
 
 .divida-item{
-    width: 55%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
     padding: 2vw;
-    height: 14vw;
+    height: 15vw;
     gap: 1vw;
     background-color: #FFF;
     border-radius: 1.5vw;
@@ -140,8 +147,17 @@ padding: .5vw .5vw .5vw 1vw;
     align-items: center;
     flex-direction: column;
     height: 100%;
-    width: 50%;
+
     gap: 2vw;
+
+}
+
+.esquerda{
+  width: 40%;
+}
+
+.direita{
+  width: 60%;
 }
 
 .esquerda div{
@@ -176,7 +192,7 @@ span{
 
 .divida-item input{
   border: none;
-    width: 70%;
+    width: 100%;
     padding: .5vw;
     display: flex;
     color: black;
