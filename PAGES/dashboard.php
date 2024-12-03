@@ -84,8 +84,8 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
     <title>Save - Dashboard Financeira</title>
     <link rel="stylesheet" href="../STYLE/dashboard.css">
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script src="../JS/jquery-3.7.1.min.js"></script>
 </head>
 <body>
@@ -246,47 +246,104 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                 }
             }
         </script>
-         <script>
+<script>
 am5.ready(function() {
-    // Create root element
-    var root = am5.Root.new("chartdiv");
 
-    // Set themes
-    root.setThemes([am5themes_Animated.new(root)]);
+  // Criar o elemento root
+  var root = am5.Root.new("chartdiv");
 
-    // Create chart
-    var chart = root.container.children.push(am5percent.PieChart.new(root, {
-        layout: root.verticalLayout
-    }));
+  // Definir temas
+  root.setThemes([am5themes_Animated.new(root)]);
 
-    // Create series
-    var series = chart.series.push(am5percent.PieSeries.new(root, {
-        valueField: "value",
-        categoryField: "category"
-    }));
+  // Criar gráfico de pizza
+  var chart = root.container.children.push(
+    am5percent.PieChart.new(root, {
+      startAngle: 160, 
+      endAngle: 380
+    })
+  );
 
-    // Set data dynamically from PHP
-    series.data.setAll([
-        { value: <?php echo $total_dividas; ?>, category: "Dívidas" },
-        { value: <?php echo $total_gastos; ?>, category: "Gastos Fixos" },
-        { value: <?php echo $salario; ?>, category: "Ganho mensal" },
-    ]);
+  // Criar primeira série
+  var series0 = chart.series.push(
+    am5percent.PieSeries.new(root, {
+      valueField: "value",        // Campo de valor
+      categoryField: "category",  // Campo de categoria
+      startAngle: 160,
+      endAngle: 380,
+      radius: am5.percent(70),   // Valor em percentual
+      innerRadius: am5.percent(65)
+    })
+  );
 
-    // Create color set with custom colors
-    var colorSet = am5.ColorSet.new(root, {
-        colors: [am5.color("#ff6d00"), am5.color("#10002b"), am5.color("#ffc107")]
-    });
-    series.set("colors", colorSet);
+  // Definir cor personalizada para cada segmento
+  var colorSet = am5.ColorSet.new(root, {
+    colors: [
+      am5.color(0x10002b), // Cor para "Ganho Mensal" (vermelho)
+      am5.color(0xFF6D00), // Cor para "Gastos Fixos" (verde)
+      am5.color(0xadb5bd)  // Cor para "Dívidas" (azul)
+    ]
+  });
 
-    // Add tooltip
-    series.slices.template.set("tooltipText", "{category}: [bold]{value}[/]");
+  // Aplica o color set à série 0
+  series0.set("colors", colorSet);
+  series0.ticks.template.set("forceHidden", true);
+  series0.labels.template.set("forceHidden", true);
 
-    // Play initial series animation
-    series.appear(1000, 100);
-});
+  // Criar segunda série (mesma configuração de cor)
+  var series1 = chart.series.push(
+    am5percent.PieSeries.new(root, {
+      startAngle: 160,
+      endAngle: 380,
+      valueField: "value",
+      innerRadius: am5.percent(80),
+      categoryField: "category"
+    })
+  );
+
+  // Aplica o color set à série 1 também
+  series1.set("colors", colorSet);
+  series1.ticks.template.set("forceHidden", true);
+  series1.labels.template.set("forceHidden", true);
+
+  // Adicionar label central (total)
+  var label = chart.seriesContainer.children.push(
+    am5.Label.new(root, {
+      textAlign: "center",
+      centerY: am5.p100,
+      centerX: am5.p50,
+      // Usar o valor do ganho mensal vindo do PHP
+      text: "[fontSize:18px]Ganho mensal[/]:\n[bold fontSize:30px]" + "<?php echo number_format($salario, 2, ',', '.'); ?>" + "[/]"
+    })
+  );
+
+  // Dados para o gráfico
+  var data = [
+    {
+      category: "Ganho Mensal", // Categoria para o ganho mensal
+      value: <?php echo $salario; ?>  // Valor do ganho mensal vindo do PHP
+    },
+    {
+      category: "Gastos Fixos", // Categoria para os gastos fixos
+      value: <?php echo $total_gastos; ?>  // Valor dos gastos fixos vindo do PHP
+    },
+    {
+      category: "Dívidas", // Categoria para as dívidas
+      value: <?php echo $total_dividas; ?>  // Valor das dívidas vindo do PHP
+    }
+  ];
+
+  // Definir os dados no gráfico
+  series0.data.setAll(data);
+  series1.data.setAll(data);
+
+}); // end am5.ready()
+</script>
+    
 
 
-        </script>
+
+
+
 
         <div class="espacoBtnDivida">
             <div><a href="../PAGES/adicionar_novo.php" class="btnAdicionarDivida">Adicionar Dívida <i class="fa-solid fa-circle-plus"></i></a></div>

@@ -129,7 +129,7 @@ switch ($nivel) {
 
 
                 <?php 
-                if (isset($_SESSION['nivel2']) && $_SESSION['nivel2'] != '') {
+                if (isset($nivel) && $nivel != '') {
                     echo "
                     <div class='plano'>
                     <label>
