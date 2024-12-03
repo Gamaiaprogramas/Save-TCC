@@ -511,6 +511,25 @@ body {
     margin-left: 1vw;
 }
 
+.botaoExcluirGasto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vw;
+    height: 2vw;
+    width: 7vw;
+    font-size: .8vw;
+    border-radius: .3vw;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    gap: .5vw;
+}
+
+.botaoExcluirGasto:hover, .botaoExcluirGasto:hover span{
+    color: red;
+}
+
 .nomeGasto{
     display: flex;
     justify-content: center;

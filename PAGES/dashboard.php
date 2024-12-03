@@ -310,8 +310,8 @@ am5.ready(function() {
             <form method="post" action="../ACTS/excluir_gasto.php" style="display: inline;">
                 <input type="hidden" name="gasto_index" value="<?php echo $i; ?>">
                 <div class="btnExcluir">
-                    <button class="botaoExcluir" type="submit" onclick="return confirm('Tem certeza que deseja excluir este gasto?');">
-                        Excluir Gasto
+                    <button class="botaoExcluirGasto" type="submit" onclick="return confirm('Tem certeza que deseja excluir este gasto?');">
+                        Excluir Gasto <span><i class="fa-solid fa-trash"></i></span>
                     </button>
                 </div>
             </form>
