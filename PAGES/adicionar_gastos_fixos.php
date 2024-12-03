@@ -47,11 +47,9 @@ require('../ACTS/connect.php');
                     </div>
                 </div>
             </div>
-            <button class="Btn" onclick="removerGasto(this)">
-                <div class="sign">
-                    <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
-                </div>
-                <div class="text">Apagar dívida</div>
+             <button class="Btn" onclick="removerDivida(this)">
+                <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
+
             </button>
         </div>
             `;
@@ -60,6 +58,10 @@ require('../ACTS/connect.php');
 
         function removerGasto(button) {
             button.parentElement.remove();
+        }
+        function removerDivida(button) {
+            const dividaItem = button.parentElement; // Seleciona o container da dívida
+            dividaItem.remove(); // Remove o container da dívida
         }
     </script>
     <link rel="stylesheet" href="../STYLE/adicaoGastos.css">
@@ -89,18 +91,16 @@ require('../ACTS/connect.php');
                 </div>
                 <div class="direita">
                     <div>
-                        <input type="text" name="Gastos[]" required><br>
+                        <input type="text" name="Gastos[]" placeholder="internete" required><br>
                     </div>
                     <div>
-                        <input type="number" name="valoresGasto[]" step="0.01" required><br>
+                        <input type="number" name="valoresGasto[]" step="0.01" placeholder="R$199,99" required><br>
                     </div>
                 </div>
             </div>
-            <button class="Btn" onclick="removerGasto(this)">
-                <div class="sign">
-                    <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
-                </div>
-                <div class="text">Apagar dívida</div>
+            <button class="Btn" onclick="removerDivida(this)">
+                <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
+
             </button>
         </div>
     </div>

@@ -55,11 +55,9 @@ if (isset($_SESSION['msg'])) {
                     
                 </div>
             </div>
-            <button class="Btn" onclick="removerDivida(this)">
-                <div class="sign">
-                    <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
-                </div>
-                <div class="text">Apagar dívida</div>
+             <button class="Btn" onclick="removerDivida(this)">
+                <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
+
             </button>
         </div>`
         ;
@@ -159,10 +157,8 @@ if (isset($_SESSION['msg'])) {
                 </div>
             </div>
             <button class="Btn" onclick="removerDivida(this)">
-                <div class="sign">
-                    <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
-                </div>
-                <div class="text">Apagar dívida</div>
+                <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
+
             </button>
         </div>
     </div>
