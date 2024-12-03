@@ -23,6 +23,19 @@ body{
     font-size: 1vw;
 }
 
+#nivel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2vw;
+    width: 5vw;
+    border: none;
+    border-bottom: solid 2px black;
+    font-size: 1vw;
+    font-weight: bold;
+    margin-bottom: 1vw;
+}
+
 .confirmar{
     display: flex;
     position: absolute;
