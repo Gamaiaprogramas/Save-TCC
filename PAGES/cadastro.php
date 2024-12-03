@@ -26,7 +26,7 @@
 <div class="interface">
     <a href="../PAGES/landing.php">
         <section class="logo">
-            <img src="../PICS/imgs/logo.svg" alt="logo tipo do site">
+            <img src="../PICS/imgs/logo_alternativa.svg" alt="logo tipo do site">
     </section>
     </a>
     

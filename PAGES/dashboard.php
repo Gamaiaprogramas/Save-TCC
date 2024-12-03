@@ -211,6 +211,13 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                         ?>
                     </p>
                 </div>
+                <form method="post" action="../ACTS/pagar_divida.php">
+                                <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
+                                <input type="hidden" name="tempo_dividas" value="<?php echo intval($tempo_dividas[$i]); ?>">
+                                <div class="btnDivida">
+                                    <button class="botaoDivida" type="submit">Pagar Parcela</button>
+                                </div>
+                            </form>
 
                 <!-- Botão para excluir a dívida -->
                 <form method="post" action="../ACTS/excluir_divida.php" style="display: inline;">
