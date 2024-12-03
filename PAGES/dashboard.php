@@ -397,24 +397,25 @@ am5.ready(function() {
                                 $metaId = $row['id'];
                                 ?>
                                 <div class='meta'>
-                                    <p><strong><?php echo $row['nome_meta']; ?></strong></p>
-                                    <p>Progresso: <?php echo "{$row['valor_atual']} / {$row['valor_meta']}"; ?></p>
+                                    <p class="nomeMeta"><strong><?php echo $row['nome_meta']; ?></strong></p>
+                                    
+                                    <!-- Formulário para depósito -->
+                                    <?php if ($row['valor_atual'] < $row['valor_meta']) { ?>
+                                        <form class="formDepositar" action="../ACTS/caixinha_deposito.php" method="post">
+                                            <input type="hidden" name="meta_id"  value="<?php echo $metaId; ?>">
+                                            <input type="text" id="valor_deposito" name="valor_deposito" placeholder="R$999,99" step="0.01" required>
+                                            <input type="submit" value="Guardar">
+                                        </form>
+                                    <?php } else { ?>
+                                        <p class="meta-concluida">Meta concluída! 🎉</p>
+                                    <?php } ?>
+
+                                    <p class="nomeProgresso">Progresso: <?php echo "{$row['valor_atual']} / {$row['valor_meta']}"; ?></p>
                                     
                                     <!-- Barra de progresso -->
                                     <div class="progress-container">
                                         <div class="progress-bar" id="progressBar-<?php echo $metaId; ?>" style="width: <?php echo $percentual; ?>%;"></div>
                                     </div>
-
-                                    <!-- Formulário para depósito -->
-                                    <?php if ($row['valor_atual'] < $row['valor_meta']) { ?>
-                                        <form action="../ACTS/caixinha_deposito.php" method="post">
-                                            <input type="hidden" name="meta_id" value="<?php echo $metaId; ?>">
-                                            <input type="number" name="valor_deposito" step="0.01" required>
-                                            <input type="submit" value="Depositar">
-                                        </form>
-                                    <?php } else { ?>
-                                        <p class="meta-concluida">Meta concluída! 🎉</p>
-                                    <?php } ?>
                                 </div>
                                 <?php
                             }
@@ -425,7 +426,20 @@ am5.ready(function() {
                 </div>
             </div>
         </div>
+        <script>
+            document.getElementById('valor_deposito').addEventListener('input', function (e) {
+                let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não é dígito
 
+                // Limita a um máximo de 15 dígitos (sem contar vírgulas e pontos)
+                if (value.length > 15) value = value.slice(0, 15);
+
+                // Formata o número com R$: insere a vírgula e depois os pontos para separar os milhares
+                e.target.value = 'R$ ' + new Intl.NumberFormat('pt-BR', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                }).format(value / 100);
+            });
+        </script>
 <!-- Popup -->
 <div id="popup" style="display: none;">
     <div class="popup-content">

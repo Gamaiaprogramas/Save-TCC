@@ -3,7 +3,8 @@ session_start();
 include("../ACTS/connect.php");
 
 $metaId = $_POST['meta_id'];
-$valorDeposito = $_POST['valor_deposito'];
+$valorDeposito =  str_replace(['R$', '.', ','], ['', '', '.'], $_POST['valor_deposito']);
+
 
 $query = "UPDATE caixinha_sonhos 
           SET valor_atual = valor_atual + $valorDeposito 
