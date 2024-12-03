@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 <div class="direita">
                     <div>
-                        <input type="text" name="Gastos[]"required><br>
+                        <input type="text" name="Gastos[]" required><br>
                     </div>
                     <div>
                         <input type="number" name="valoresGasto[]" step="0.01" required><br>
@@ -58,12 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
             </div>
             <button class="Btn" onclick="removerDivida(this)">
-  
-                <div class="sign">
                 <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
-                </div>
-  
-                <div class="text">Apagar dívida</div>
+
             </button>
 
 
@@ -116,20 +112,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 <div class="direita">
                     <div>
-                        <input type="text" name="Gastos[]"required><br>
+                        <input type="text" name="Gastos[]" placeholder="Aluguel..." required><br>
                     </div>
                     <div>
-                        <input type="number" name="valoresGasto[]" step="0.01" required><br>
+                        <input type="number" name="valoresGasto[]" step="0.01"  placeholder="R$999,99" required><br>
                 </div>
                 </div>
             </div>
             <button class="Btn" onclick="removerDivida(this)">
-  
-                <div class="sign">
                 <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
-                </div>
-  
-                <div class="text">Apagar dívida</div>
+
             </button>
 
 
