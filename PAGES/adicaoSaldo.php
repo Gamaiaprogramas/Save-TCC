@@ -31,7 +31,7 @@ require("../ACTS/sec.php");
   header {
     position: relative !important;
     background-color: #10002b !important;
-    height: 7vw !important;
+    height: 140px !important;
     margin: 0 !important;
     z-index: 1;
   }
