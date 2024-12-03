@@ -197,22 +197,30 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                                 <div class="espacoDividasInfo">
                                     <div class="esquerdaDividasInfo">
                                         <div class="valorDivida">
-                                            <p>Valor: R$ </p>
+                                            <p>Valor:</p>
                                         </div>
                                         <div class="valorParcela">
-                                            <p>Valor Parcela: R$ </p>
+                                            <p>Valor Parcela:</p>
                                         </div>
                                         <div class="jurosDivida">
-                                            <p>Juros: %</p>
+                                            <p>Juros:</p>
                                         </div>
                                         <div class="tempoDivida">
                                             <p>Tempo: </p>
                                         </div>
                                     </div>
                                     <div class="direitaDividasInfo">
-                                        <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?>
-                                        <p>500</p>
+
+                                    <div class="valorDivida2">
+                                    <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?>
+                                        </div>
+                                        <div class="valorParcela2">
+                                            <p>500</p>
+                                        </div>
+                                        <div class="jurosDivida2">
                                         <?php echo htmlspecialchars($juros_dividas[$i]); ?>
+                                        </div>
+                                        <div class="tempoDivida2">
                                         <?php 
                                             if (intval($tempo_dividas[$i]) == 9999) {
                                                 echo "Pagamento Único";
@@ -220,6 +228,11 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                                                 echo htmlspecialchars($tempo_dividas[$i]) . " meses";
                                             }
                                             ?>
+                                        </div>
+                                        
+                                        
+                                        
+                                        
                                     </div>
                                     
                                 
