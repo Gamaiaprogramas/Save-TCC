@@ -188,50 +188,80 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                 <button class="btnEsquerda" onclick="direcao(1)"><i class="fa-solid fa-arrow-left fa-2xl"></i></button>
             </div>
             <div class="containerDividas">
-    <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
-        <?php if (intval($tempo_dividas[$i]) > 0 || intval($tempo_dividas[$i]) == 9999): ?>
-            <div class="cardDivida">
-                <div class="nomeDivida">
-                    <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
-                </div>
-                <div class="valorDivida">
-                    <p>Valor: R$ <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
-                </div>
-                <div class="jurosDivida">
-                    <p>Juros: <?php echo htmlspecialchars($juros_dividas[$i]); ?>%</p>
-                </div>
-                <div class="tempoDivida">
-                    <p>Tempo: 
-                        <?php 
-                        if (intval($tempo_dividas[$i]) == 9999) {
-                            echo "Pagamento Único";
-                        } else {
-                            echo htmlspecialchars($tempo_dividas[$i]) . " meses";
-                        }
-                        ?>
-                    </p>
-                </div>
-                <form method="post" action="../ACTS/pagar_divida.php">
-                                <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
-                                <input type="hidden" name="tempo_dividas" value="<?php echo intval($tempo_dividas[$i]); ?>">
-                                <div class="btnDivida">
-                                    <button class="botaoDivida" type="submit">Pagar Parcela</button>
-                                </div>
-                            </form>
+                <?php for ($i = 0; $i < count($nomes_dividas); $i++): ?>
+                    <?php if (intval($tempo_dividas[$i]) > 0 || intval($tempo_dividas[$i]) == 9999): ?>
+                        <div class="cardDivida">
+                            <div class="nomeDivida">
+                                <p><strong><?php echo htmlspecialchars($nomes_dividas[$i]); ?></strong></p>
+                            </div>
+                                <div class="espacoDividasInfo">
+                                    <div class="esquerdaDividasInfo">
+                                        <div class="valorDivida">
+                                            <p>Valor:</p>
+                                        </div>
+                                        <div class="valorParcela">
+                                            <p>Valor Parcela:</p>
+                                        </div>
+                                        <div class="jurosDivida">
+                                            <p>Juros:</p>
+                                        </div>
+                                        <div class="tempoDivida">
+                                            <p>Tempo: </p>
+                                        </div>
+                                    </div>
+                                    <div class="direitaDividasInfo">
 
-                <!-- Botão para excluir a dívida -->
-                <form method="post" action="../ACTS/excluir_divida.php" style="display: inline;">
-                    <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
-                    <div class="btnExcluir">
-                        <button class="botaoExcluir" type="submit" onclick="return confirm('Tem certeza que deseja excluir esta dívida?');">
-                            Excluir Dívida
-                        </button>
-                    </div>
-                </form>
+                                    <div class="valorDivida2">
+                                    <?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?>
+                                        </div>
+                                        <div class="valorParcela2">
+                                            <p>500</p>
+                                        </div>
+                                        <div class="jurosDivida2">
+                                        <?php echo htmlspecialchars($juros_dividas[$i]); ?>
+                                        </div>
+                                        <div class="tempoDivida2">
+                                        <?php 
+                                            if (intval($tempo_dividas[$i]) == 9999) {
+                                                echo "Pagamento Único";
+                                            } else {
+                                                echo htmlspecialchars($tempo_dividas[$i]) . " meses";
+                                            }
+                                            ?>
+                                        </div>
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                
+                                
+                            </div>
+                            <div class="espacoFormsDivida">
+                                <form method="post" action="../ACTS/pagar_divida.php">
+                                                <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
+                                                <input type="hidden" name="tempo_dividas" value="<?php echo intval($tempo_dividas[$i]); ?>">
+                                                <div class="btnDivida">
+                                                    <button class="botaoDivida" type="submit">Pagar Parcela</button>
+                                                </div>
+                                            </form>
+
+                                <!-- Botão para excluir a dívida -->
+                                <form method="post" action="../ACTS/excluir_divida.php" style="display: inline;">
+                                    <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
+                                    <div class="btnExcluir">
+                                        <button class="botaoExcluir" type="submit" onclick="return confirm('Tem certeza que deseja excluir esta dívida?');">
+                                            Excluir Dívida <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                        </div>
+                    <?php endif; ?>
+                <?php endfor; ?>
             </div>
-        <?php endif; ?>
-    <?php endfor; ?>
-</div>
             <div class="espacoBtnDireita">
                 <button class="btnDireita" onclick="direcao(2)"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
             </div>
