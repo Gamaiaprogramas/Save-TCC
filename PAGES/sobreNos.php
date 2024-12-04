@@ -52,7 +52,7 @@
                     <img src="../PICS/imgsSobreNos/card1.png" alt="">
                 </div>
                 <div class="textoCardOQ">
-                    <a>O alto endividamento gera um ciclo vicioso, onde as famílias se endividam cada vez mais para cobrir dívidas anteriores, o que dificulta a recuperação financeira.</a>
+                    <a>O alto endividamento gera um ciclo vicioso, no qual as famílias se endividam cada vez mais para cobrir dívidas anteriores, o que dificulta a recuperação financeira.</a>
                 </div>
             </div>
             <div class="cardOQ">
@@ -68,7 +68,7 @@
                     <img src="../PICS/imgsSobreNos/card3.png" alt="">
                 </div>
                 <div class="textoCardOQ">
-                    <a>Famílias endividadas enfrentam dificuldades para obter novos créditos, prejudicando a compra de bens essenciais e limitando o crescimento econômico pessoal.</a>
+                    <a>Famílias endividadas enfrentam dificuldades para obter novos créditos, o que prejudica a compra de bens essenciais e limita o crescimento econômico pessoal.</a>
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
             <a>Estamos aqui...</a>
         </div>
         <div class="infosEstamos">
-            <a class="t">Com base nessa triste realidade vivida por milhões de Brasileiros,nós surgimos, a “Save Your Money”,venho com a proposta de melhorar a vida
+            <a class="t">Com base nessa triste realidade vivida por milhões de brasileiros, nós surgimos, a “Save Your Money”, com a proposta de melhorar a vida
                 financeira de milhares de pessoas,com profissionais e tecnologia de ponta,para ajudar você e seu dinheiro.</a>
             <div class="btnEstamos">
                 <a href="../PAGES/selecao.php">Preciso de ajuda <i class="fa-solid fa-arrow-right"></i></a>
@@ -99,7 +99,7 @@
                 </div>
                 <div class="divCimaCrono">
                     <a>-Realizar as ações propostas</a>
-                    <a>pela nossa equipe, com base em suas informações, para melhorar sua vida financeira</a>
+                    <a>pela nossa equipe, com base em suas informações, para melhorar sua vida financeira!</a>
                     <a class="laranja2">Fase 4</a>
                 </div>
             </div>
@@ -144,9 +144,9 @@
                     <a class="sepPerfil">Empresa</a>
                 </div>
                 <div class="textoPerfil">
-                    <a>Nós da Save ,acima de tudo queremos ajudar nossos clientes, lidar com dinheiro não é tarefa fácil, focamos em experiência, valorizar o trabalho, 
+                    <a>Nós da Save, acima de tudo, queremos ajudar nossos clientes, lidar com dinheiro não é tarefa fácil, focamos em experiência, valorizar o trabalho, 
                         e temos um compromisso com quem procura nossos serviços, 
-                        nosso  meta é ser uma das maiores consultora financeira do pais, sendo ligada principalmente com o público de baixa renda.</a>
+                        nosso meta é ser uma das maiores consultorias financeiras do país, especialmente voltada para o público de baixa renda.</a>
                 </div>
                 <div class="espacoBtnPerfil">
                     <div class="btnPerfil">
@@ -173,10 +173,10 @@
                 </div>
                 <div class="direitaDale">
                     <div class="cimaDale">
-                        <a>Cambio Atual</a>
+                        <a>Câmbio Atual</a>
                     </div>
                     <div class="baixoDale">
-                        <a>Temos aplicação mostrando o cambio de moedas do mundo inteiro.</a>
+                        <a>Temos aplicação mostrando o câmbio de moedas do mundo inteiro.</a>
                     </div>
                 </div>
             </div>
@@ -202,7 +202,7 @@
                         <a>DashBoard</a>
                     </div>
                     <div class="baixoDale">
-                        <a>Após coletar todas as informações financeira do usuario criamos uma DashBoard pessoa,mostrandos todos estes dados.</a>
+                        <a>Após coletar todas as informações financeiras do usuário criamos uma DashBoard pessoal, mostrandos todos estes dados.</a>
                     </div>
                 </div>
             </div>
@@ -214,8 +214,8 @@
                 <a>Nossos Clientes</a>
             </div>
             <div class="textoCliente">
-                <a>Desde o começo, prestamos serviços de confiança a nossos clientes. Tivemos a honra de</a>
-                <a>sermos a primeira empresa na escolha das seguintes corporações:</a>
+                <a>Desde o começo, prestamos serviços de confiança aos nossos clientes. Tivemos a honra de</a>
+                <a>ser a primeira empresa a escolher as seguintes corporações:</a>
             </div>
         </div>
         <div class="baixoClientes">
@@ -254,8 +254,8 @@
         </div>
         <div class="baixoDev">
             <div class="textoDev">
-                <a>Em nossa equipe temos os melhores profissionais do mercado, Desenvolvedores, Economistas e colaboradores compõe nosso time, 
-                    estamos ligados a vários projetos direcionados a desenvolver a educação financeira no Brasil. Na Save pensamos em você e no país.</a>
+                <a>Em nossa equipe, temos os melhores profissionais do mercado, Desenvolvedores, Economistas e colaboradores que compõe nosso time, 
+                    estamos ligados a vários projetos direcionados ao desenvolvimento da educação financeira no Brasi. Na Save, pensamos em você e no país.</a>
             </div>
         </div>
     </div>

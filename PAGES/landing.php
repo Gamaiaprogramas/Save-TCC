@@ -65,7 +65,7 @@
                 
                 <div class="txt-itens item-2">
                     <h3><span>Como lidamos</span> com<br>seu dinheiro</h3>
-                    <p>Na Save Your Money, levamos a sério o compromisso com sua saúde financeira. Nossa missão é capacitar clientes a gerirem melhor suas finanças, 
+                    <p>Na Save Your Money, levamos a sério o compromisso com sua saúde financeira. Nossa missão é capacitar nossos clientes a gerirem melhor suas finanças, 
                         oferecendo orientações práticas e personalizadas sobre orçamento, investimentos e planejamento financeiro. Trabalhamos para transformar desafios 
                         financeiros em oportunidades, com estratégias eficazes e uma equipe de especialistas dedicados. Conte conosco para construir um futuro financeiro
                          mais sólido, seguro e eficiente.</p>
@@ -82,7 +82,7 @@
                     <p>A Save Your Money acredita que a educação financeira é a chave para o sucesso pessoal e empresarial. Nosso objetivo é capacitar você a 
                         compreender, controlar e otimizar suas finanças de maneira eficaz. Por meio de orientação estratégica e ferramentas práticas, ajudamos 
                         nossos clientes a tomar decisões financeiras informadas, planejar o futuro e construir uma base sólida para o crescimento financeiro. 
-                        Com apoio de especialistas dedicados, transformamos a complexidade das finanças em oportunidades para todos..</p>
+                        Com apoio de especialistas dedicados, transformamos a complexidade das finanças em oportunidades para todos.</p>
                 </div>
                 
                 <div class="img-itens">
@@ -231,8 +231,8 @@
                 </div>
 
                 <div class="txt-itens item-2">
-                    <h3><span>Considereções</span><br>Finais</h3>
-                    <p>A Save Your Money encerra este compromisso reafirmando sua dedicação em transformar vidas por meio da gestão financeira estratégica. Nosso 
+                    <h3><span>Considerações</span><br>Finais</h3>
+                    <p>A Save Your Money encerra este compromisso reafirmando sua dedicação a transformar vidas por meio da gestão financeira estratégica. Nosso 
                         trabalho não termina com a orientação inicial, mas continua com suporte contínuo, adaptação às necessidades dos clientes e inovação constante 
                         em soluções de economia, planejamento e investimentos. Acreditamos que, com as ferramentas certas, qualquer pessoa pode alcançar estabilidade 
                         e prosperidade financeira de maneira segura.</p>
