@@ -152,9 +152,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div id="overlay">
     <div id="confirmacao">
-        <p>Você está certa com as informações fornecidas?</p>
-        <button class="button" id="simBtn">Sim</button>
-        <button class="button cancel" id="naoBtn">Não</button>
+        <div class="nomeConfirmacao">
+            <p>Revisadas todas as informações, deseja enviá-las?</p>
+        </div>
+        <div class="espacoConfirmacao">
+            <button class="button" id="simBtn"><span>SIM</span></button>
+            <button class="button cancel" id="naoBtn">NÃO</button>
+        </div>
     </div>
 </div>
 <script src="../JS/geral.js"></script>

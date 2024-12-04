@@ -494,6 +494,10 @@ am5.ready(function() {
                                     <div class="progress-container">
                                         <div class="progress-bar" id="progressBar-<?php echo $metaId; ?>" style="width: <?php echo $percentual; ?>%;"></div>
                                     </div>
+                                    <div class="espacoBtnMeta">
+                                        <button><span>Alterar Meta</span></button>
+                                        <button>Excluir Meta</button>
+                                    </div>
                                 </div>
                                 <?php
                             }

@@ -212,7 +212,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 13vw;
+    height: 17vw;
     width: 40%;
     box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.1);
     border-radius: .5vw;
@@ -227,6 +227,27 @@ body {
     width: 100%;
     margin-top: .5vw;
     height: 10%;
+}
+
+.espacoBtnMeta{
+    display: flex;
+    width: 100%;
+    height: 18%;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+.espacoBtnMeta button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 40%;
+    font-size: 1vw;
+    border-radius: .3vw;
+    cursor: pointer;
+    background-color: #fff;
 }
 
 .formDepositar{
@@ -557,13 +578,14 @@ body {
     margin-right: 13vw;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 60%;
     height: 20%;
 }
 
 .iconeGastos img{
     width: 100%;
     height: 70%;
+    margin-right: 1.5vw;
 }
 
 .botaoExcluirGasto{
