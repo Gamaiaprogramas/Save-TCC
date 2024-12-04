@@ -1,9 +1,9 @@
 <?php
+session_start();
 include("../partials/header.php");
 require("../ACTS/sec.php");
 
 // Mensagem de sessão
-@session_start();
 if (isset($_SESSION['msg'])) {
     echo $_SESSION['msg'];
     unset($_SESSION['msg']);
@@ -21,45 +21,43 @@ if (isset($_SESSION['msg'])) {
         function adicionarDivida() {
             const dividasContainer = document.getElementById('dividas-container');
             const novaDivida = `
-                <div id="dividas-container">
-        <div class="divida-item">
-            <div class="centro">
-                <div class="esquerda">
-                    <div>
-                        <label><span>Nome</span> da Dívida:</label>
+            
+                <div class="divida-item">
+                    <div class="centro">
+                        <div class="esquerda">
+                            <div>
+                                <label><span>Nome</span> da Dívida:</label>
+                            </div>
+                            <div>
+                                <label><span>Valor</span> da Dívida:</label>
+                            </div>
+                            <div>
+                                <label><span>Juros</span> da Dívida (%):</label>
+                            </div>
+                            <div>
+                                <label><span>Tempo</span> da Dívida (meses):</label>
+                            </div>
+                        </div>
+                        <div class="direita">
+                            <div>
+                                <input type="text" name="dividas[]" required><br>
+                            </div>
+                            <div>
+                                <input type="number" name="valores[]" step="0.01" required><br>
+                            </div>
+                            <div>
+                                <input type="number" name="juros[]" step="0.01" required><br>
+                            </div>
+                            <div>
+                                <input type="number" name="tempo[]" required class="tempo-input"><br>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <label><span>Valor</span> da Dívida:</label>
-                    </div>
-                    <div>
-                        <label><span>Juros</span> da Dívida (%):</label>
-                    </div>
-                    <div>
-                        <label><span>Tempo</span> da Dívida (meses):</label>
-                    </div>
-                    
-                </div>
-                <div class="direita">
-                    <div>
-                        <input type="text" name="dividas[]" required><br>
-                    </div>
-                    <div>
-                        <input type="number" name="valores[]" step="0.01" required><br>
-                    </div>
-                    <div>
-                        <input type="number" name="juros[]" step="0.01" required><br>
-                    </div>
-                    <div>
-                        <input type="number" name="tempo[]" required class="tempo-input"><br>
-                    </div>
-                    
-                </div>
-            </div>
-             <button class="Btn" onclick="removerDivida(this)">
-                <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
+                    <button class="Btn" onclick="removerDivida(this)">
+                        <i class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
 
-            </button>
-        </div>`
+                    </button>
+                </div>`
         ;
             dividasContainer.insertAdjacentHTML('beforeend', novaDivida);
         }

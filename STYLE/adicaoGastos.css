@@ -180,8 +180,10 @@ padding: .5vw .5vw .5vw 1vw;
 }
 
 .centro{
-    height: 17vw;
+    height: 100%;
+    margin-top: 1vw;
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
 }
@@ -226,7 +228,6 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-
     height: 100%;
     width: 100%;
 }
@@ -253,7 +254,6 @@ span{
     overflow: visible;
     padding: 2px 24px;
     position: relative;
-    text-align: center;
     text-transform: none;
     transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
     user-select: none;
@@ -262,7 +262,8 @@ span{
     width: auto;
     will-change: transform,opacity;
     z-index: 0;
-    margin-right: 35vw;
+    margin-right: 27vw;
+    margin-bottom: 2vw;
   }
   
   .btnAdicionar .fa-solid {

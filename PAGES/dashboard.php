@@ -102,19 +102,10 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
             <div class="esquerdaInfo">
                 <div id="chartdiv"></div>
             </div>
+            <div class="alterarGasto">
+                <button id ="buton">Alterar ganho mensal <i class="fa-solid fa-pen"></i></button>
+            </div>
             <div class="direitaInfo">
-                <div class="divGastos">
-                    <div class="iconeGastos">
-                        <img src="../PICS/imgsSelecao/iconeSalario" alt="Imagem Notas" class="produto">
-                    </div>
-                    <div class="nomeGasto">
-                        <h1>Ganho Mensal</h1>
-                    </div>
-                    <div class="propGasto">
-                        <h1>R$<?php echo number_format($salario, 2, ',', '.'); ?></h1>
-                    </div>
-                    <button id ="buton">Alterar ganho mensal <i class="fa-solid fa-pen"></i></button>
-                </div>
                 <div class="divGastos">
                     <div class="iconeGastos">
                         <img src="../PICS/imgsSelecao/imgNotas.svg" alt="Imagem Notas" class="produto">
@@ -142,7 +133,7 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                         <img src="../PICS/imgsSelecao/iconeDespesa.svg" alt="Imagem Notas" class="produto">
                     </div>
                     <div class="nomeGasto2">
-                        <h1>Despesas</h1>
+                        <h1>Dívidas</h1>
                     </div>
                     <div class="propGasto2">
                         <h1>R$<?php echo number_format($total_dividas, 2, ',', '.'); ?></h1>

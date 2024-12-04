@@ -255,6 +255,7 @@ span{
   will-change: transform,opacity;
   z-index: 0;
   margin-right: 35vw;
+  margin-bottom: 2vw;
 }
 
 .btnAdicionar .fa-solid {

@@ -91,7 +91,7 @@ require('../ACTS/connect.php');
                 </div>
                 <div class="direita">
                     <div>
-                        <input type="text" name="Gastos[]" placeholder="internete" required><br>
+                        <input type="text" name="Gastos[]" placeholder="Internet" required><br>
                     </div>
                     <div>
                         <input type="number" name="valoresGasto[]" step="0.01" placeholder="R$199,99" required><br>
