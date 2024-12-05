@@ -12,10 +12,13 @@ $data = $_POST['data'] ?? '';
 $senha = md5($_POST['senha']) ?? '';
 $nivel = $_POST['nivel']??'';
 
+
 if ($senha != $_SESSION['senha']) {
-    $senha = md5($senha);
+    $senha =  $senha;
 }
 
+$_SESSION['senha'] = $_POST['senha'];
+$_SESSION['data'] = $_POST['data'];
 // Inicializa a variável $foto
 $foto = $_SESSION['foto']; // Mantém a foto existente por padrão
 

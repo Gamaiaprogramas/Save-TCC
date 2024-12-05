@@ -150,7 +150,7 @@ switch ($nivel2) {
                     <div class="phps">
                         <?php
                         // $_SESSION['nascto'] contém a data no formato "YYYY-MM-DD"
-                        $dataOriginal = $_SESSION['nascto'];
+                        $dataOriginal = $_SESSION['data'];
                         
                         // Dividir a data em partes
                         $partes = explode('-', $dataOriginal);
