@@ -512,8 +512,7 @@ am5.ready(function() {
                                     </div>
                                     <div class="espacoBtnMeta">
                                         <button><span>Alterar Meta</span></button>
-                                         <button><a href="../ACTS/excluirMeta.php">Excluir Meta</a></button>
-                               
+                                         <button type="button" onclick="confirmarEnvio()">Excluir Meta</button>
                                     </div>
                                 </div>
                                 <?php
@@ -524,8 +523,29 @@ am5.ready(function() {
                     ?>
                 </div>
             </div>
+            <div id="overlay">
+                <div id="confirmacao">
+                    <div class="nomeConfirmacao">
+                        <p>Revisadas todas as informações, deseja enviá-las?</p>
+                    </div>
+                    <div class="espacoConfirmacao">
+                        <button class="button" id="simBtn"><span><a href="../ACTS/excluirMeta.php">SIM</a></span></button>
+                        <button class="button cancel" id="naoBtn">NÃO</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <script>
+            function confirmarEnvio() {
+                document.getElementById('overlay').style.display = 'block';
+            }
+            document.getElementById('naoBtn').onclick = function() {
+                document.getElementById('overlay').style.display = 'none'; // Fecha o overlay
+            }
+
+            
+
+
             document.getElementById('valor_deposito').addEventListener('input', function (e) {
                 let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não é dígito
 
@@ -538,6 +558,8 @@ am5.ready(function() {
                     maximumFractionDigits: 2
                 }).format(value / 100);
             });
+
+            
         </script>
 <!-- Popup -->
 <div id="popup" style="display: none;">
