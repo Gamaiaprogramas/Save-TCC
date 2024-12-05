@@ -250,46 +250,14 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                                             </form>
 
                                 <!-- Botão para excluir a dívida -->
-                                <form method="post" action="../ACTS/excluir_divida.php" style="display: inline;" id="formExcluirSafadeza">
+                                <form method="post" action="../ACTS/excluir_divida.php" style="display: inline;">
                                     <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
                                     <div class="btnExcluir">
-                                        <button class="botaoExcluir" type="button" onclick="safadeza();">
+                                        <button class="botaoExcluir" type="submit" onclick="return confirm('Tem certeza que deseja excluir esta dívida?');">
                                             Excluir Dívida <i class="fa-solid fa-trash"></i>
                                         </button>
                                     </div>
                                 </form>
-                                <div id="overlay3">
-                                    <div id="confirmacao3">
-                                        <div class="nomeConfirmacao3">
-                                            <p>Tem certeza que deseja excluir o gasto?</p>
-                                        </div>
-                                        <div class="espacoConfirmacao3">
-                                            <button class="button3" id="simBtn3" type="button"><span>SIM</span></button> <!-- Garantir que o tipo seja "button" -->
-                                            <button class="button3 cancel" id="naoBtn3" type="button">NÃO</button> <!-- Garantir que o tipo seja "button" -->
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <script>
-                                    function safadeza() {
-                                    // Exibe o overlay
-                                        document.getElementById('overlay3').style.display = 'block';
-                                    }
-
-                                    // Evento para o botão "NÃO" fechar o overlay sem enviar o formulário
-                                    document.getElementById('naoBtn3').onclick = function() {
-                                        document.getElementById('overlay3').style.display = 'none'; // Fecha o overlay
-                                    }
-
-                                    // Evento para o botão "SIM" enviar o formulário
-                                    document.getElementById('simBtn3').onclick = function() {
-                                        // Envia o formulário específico
-                                        document.getElementById('formExcluirSafadeza').submit();
-                                    }
-
-
-                                </script>
                             </div>
                             
                         </div>
@@ -428,47 +396,16 @@ am5.ready(function() {
             </div>
             
             <!-- Formulário para excluir gasto fixo -->
-            <form id="formExcluirGasto"  method="post" action="../ACTS/excluir_gasto.php" style="display: inline;">
+            <form method="post" action="../ACTS/excluir_gasto.php" style="display: inline;">
                 <input type="hidden" name="gasto_index" value="<?php echo $i; ?>">
                 <div class="btnExcluir">
-                    <button class="botaoExcluirGasto" type="button" onclick="ConfirmarExcluirGasto()">
+                    <button class="botaoExcluirGasto" type="submit" onclick="return confirm('Tem certeza que deseja excluir este gasto?');">
                         Excluir Gasto <span><i class="fa-solid fa-trash"></i></span>
                     </button>
-                    <div id="overlay2">
-                        <div id="confirmacao2">
-                            <div class="nomeConfirmacao2">
-                                <p>Tem certeza que deseja excluir o gasto?</p>
-                            </div>
-                            <div class="espacoConfirmacao2">
-                                <button class="button2" id="simBtn2" type="button"><span>SIM</span></button> <!-- Garantir que o tipo seja "button" -->
-                                <button class="button2 cancel" id="naoBtn2" type="button">NÃO</button> <!-- Garantir que o tipo seja "button" -->
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </form>
-
         </div>
     <?php endfor; ?>
-    <script>
-        function ConfirmarExcluirGasto() {
-        // Exibe o overlay
-            document.getElementById('overlay2').style.display = 'block';
-        }
-
-        // Evento para o botão "NÃO" fechar o overlay sem enviar o formulário
-        document.getElementById('naoBtn2').onclick = function() {
-            document.getElementById('overlay2').style.display = 'none'; // Fecha o overlay
-        }
-
-        // Evento para o botão "SIM" enviar o formulário
-        document.getElementById('simBtn2').onclick = function() {
-            // Envia o formulário específico
-            document.getElementById('formExcluirGasto').submit();
-        }
-
-
-    </script>
 </div>
         <div class="espacoBtnFixo">
             <a href="../PAGES/adicionar_gastos_fixos.php" class="btnAdicionarFixo">Adicionar Gasto <i class="fa-solid fa-circle-plus"></i></a>
@@ -552,12 +489,6 @@ am5.ready(function() {
                                 $percentual = ($row['valor_atual'] / $row['valor_meta']) * 100;
                                 $metaId = $row['id'];
                                 $_SESSION['id_da_meta'] = $metaId;
-                                $query_meta_nome = "SELECT nome_meta FROM caixinha_sonhos WHERE id = '$metaId'";
-
-                                $cu = mysqli_fetch_assoc( mysqli_query($con, $query_meta_nome));
-                                
-                                var_dump($cu);
-// Executar consultas
 
                                 ?>
                                 <div class='meta'>
@@ -591,20 +522,16 @@ am5.ready(function() {
                             echo "<p>Você ainda não criou metas.</p>";
                         }
                     ?>
-                    <?php 
-                    echo  $_SESSION['result_novo'];
-                    ?>
                 </div>
             </div>
-            
             <div id="overlay">
                 <div id="confirmacao">
                     <div class="nomeConfirmacao">
-                        <p>Tem certeza que deseja excluir a divida </strong></p>
+                        <p>Revisadas todas as informações, deseja enviá-las?  </p>
                     </div>
                     <div class="espacoConfirmacao">
-                        <button type="button" class="button" id="simBtn"><span><a href="../ACTS/excluirMeta.php">SIM</a></span></button>
-                        <button type="button" class="button cancel" id="naoBtn">NÃO</button>
+                        <button class="button" id="simBtn" ><span><a href="../ACTS/excluirMeta.php">SIM</a></span></button>
+                        <button class="button cancel" id="naoBtn">NÃO</button>
                     </div>
                 </div>
             </div>
