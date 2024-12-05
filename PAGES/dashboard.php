@@ -250,14 +250,46 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                                             </form>
 
                                 <!-- Botão para excluir a dívida -->
-                                <form method="post" action="../ACTS/excluir_divida.php" style="display: inline;">
+                                <form method="post" action="../ACTS/excluir_divida.php" style="display: inline;" id="formExcluirSafadeza">
                                     <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
                                     <div class="btnExcluir">
-                                        <button class="botaoExcluir" type="submit" onclick="return confirm('Tem certeza que deseja excluir esta dívida?');">
+                                        <button class="botaoExcluir" type="button" onclick="safadeza();">
                                             Excluir Dívida <i class="fa-solid fa-trash"></i>
                                         </button>
                                     </div>
                                 </form>
+                                <div id="overlay3">
+                                    <div id="confirmacao3">
+                                        <div class="nomeConfirmacao3">
+                                            <p>Tem certeza que deseja excluir o gasto?</p>
+                                        </div>
+                                        <div class="espacoConfirmacao3">
+                                            <button class="button3" id="simBtn3" type="button"><span>SIM</span></button> <!-- Garantir que o tipo seja "button" -->
+                                            <button class="button3 cancel" id="naoBtn3" type="button">NÃO</button> <!-- Garantir que o tipo seja "button" -->
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <script>
+                                    function safadeza() {
+                                    // Exibe o overlay
+                                        document.getElementById('overlay3').style.display = 'block';
+                                    }
+
+                                    // Evento para o botão "NÃO" fechar o overlay sem enviar o formulário
+                                    document.getElementById('naoBtn3').onclick = function() {
+                                        document.getElementById('overlay3').style.display = 'none'; // Fecha o overlay
+                                    }
+
+                                    // Evento para o botão "SIM" enviar o formulário
+                                    document.getElementById('simBtn3').onclick = function() {
+                                        // Envia o formulário específico
+                                        document.getElementById('formExcluirSafadeza').submit();
+                                    }
+
+
+                                </script>
                             </div>
                             
                         </div>

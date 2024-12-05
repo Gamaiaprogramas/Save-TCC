@@ -190,7 +190,7 @@ if (isset($_SESSION['msg'])) {
                 <p>Revisadas todas as informações, deseja enviá-las?</p>
             </div>
             <div class="espacoConfirmacao">
-                <button class="button" onclick="submeterForm()">Sim</button>
+                <button class="button2" onclick="submeterForm()">Sim</button>
                 <button class="button cancel" onclick="fecharOverlay()">Não</button>
             </div>
         </div>
