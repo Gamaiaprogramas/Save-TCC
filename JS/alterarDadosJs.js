@@ -3,6 +3,7 @@
         let gasto1 = document.getElementById('idGasto1');
         let divida2 = document.getElementById('idDivida2');
         let gasto2 = document.getElementById('idGasto2');
+        document.getElementById('');
         let saldo = document.getElementById('idSaldo');
         let botao = document.getElementById('buton');       
         let botaoDivida = document.getElementById('butonDivida');  
@@ -18,7 +19,7 @@
         if (saldo) saldo.style.display = 'none';
         if(divMae) divMae.style.display = 'none';
         // Quando o botão for clicado, mostrar as divs
-        
+        let alterarMetaBtn = document.querySelector('.espacoBtnMeta button:first-child'); // Primeiro botão "Alterar Meta"
 
     botao.addEventListener('click' , function (){
        if(divMae) divMae.style.display = 'block';
@@ -117,3 +118,7 @@
         location.reload();
      });
     });
+
+
+
+    

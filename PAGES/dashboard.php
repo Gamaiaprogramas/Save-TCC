@@ -68,7 +68,18 @@ if ($result_saldo) {
 }
 
 
+$query_metas = "SELECT id, nome_meta, valor_meta FROM caixinha_sonhos WHERE user_id = '$id_user'";
+$result_metas = mysqli_query($con, $query_metas);
 
+$nomeMeta = [];
+$valorMeta = [];
+$idMeta = [];
+
+while ($meta = mysqli_fetch_assoc($result_metas)) {
+    $idMeta[] = $meta['id'];
+    $nomeMeta[] = $meta['nome_meta'];
+    $valorMeta[] = $meta['valor_meta'];
+}
 
 
 
@@ -468,11 +479,16 @@ am5.ready(function() {
                         $userId = $_SESSION['Id_user'];
                         $query = "SELECT * FROM caixinha_sonhos WHERE user_id = $userId";
                         $result = mysqli_query($con, $query);
+                        $valorMeta = 'valor_meta';
+                        $valorAtual = 'valor_atual';
+                        $nomeMeta = 'nome_meta';
+                        $_SESSION['id_da_meta'] = 0;
 
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
                                 $percentual = ($row['valor_atual'] / $row['valor_meta']) * 100;
                                 $metaId = $row['id'];
+                                $_SESSION['id_da_meta'] = $metaId;
                                 ?>
                                 <div class='meta'>
                                     <p class="nomeMeta"><strong><?php echo $row['nome_meta']; ?></strong></p>
@@ -496,7 +512,8 @@ am5.ready(function() {
                                     </div>
                                     <div class="espacoBtnMeta">
                                         <button><span>Alterar Meta</span></button>
-                                        <button>Excluir Meta</button>
+                                         <button><a href="../ACTS/excluirMeta.php">Excluir Meta</a></button>
+                               
                                     </div>
                                 </div>
                                 <?php
@@ -650,3 +667,41 @@ function closePopup() {
     </div>
     <button id="voltar" class="voltar"><i class="fa-solid fa-x"></i></button>
 </html>
+
+
+
+
+
+<div class="formAtualizarMeta" id= "idMeta">
+<form method="post" action="../ACTS/update_meta.php">
+    <label for="index_meta">Escolha a meta:</label>
+    <select name="index_meta" id="index_meta" onchange="preencherCamposMeta()">
+        <?php for ($i = 0; $i < count($nomeMeta); $i++): ?>
+            <option value="<?php echo $idMeta[$i]; ?>">
+                <?php echo htmlspecialchars($nomeMeta[$i]); ?>
+            </option>
+        <?php endfor; ?>
+    </select>
+
+    <label for="novo_nome_meta">Nome Atual:</label>
+    <input type="text" name="novo_nome_meta" id="novo_nome_meta" required>
+
+    <label for="novo_valor_meta">Valor Atual:</label>
+    <input type="number" name="novo_valor_meta" id="novo_valor_meta" required>
+
+    <button type="submit" class="btnAtualizar">Atualizar Meta!</button>
+</form>
+
+</div>
+<script>
+  const nomesMeta = <?php echo json_encode($nomeMeta); ?>;
+const valorMeta = <?php echo json_encode($valorMeta); ?>;
+
+function preencherCamposMeta() {
+    const index = document.getElementById("index_meta").selectedIndex;
+    document.getElementById("novo_nome_meta").value = nomesMeta[index];
+    document.getElementById("novo_valor_meta").value = valorMeta[index];
+}
+
+
+</script>

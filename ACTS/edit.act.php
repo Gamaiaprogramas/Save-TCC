@@ -9,7 +9,7 @@ $cpf = $_POST['cpf'] ?? '';
 $genero = $_POST['sexo'] ?? '';
 $telefone = $_POST['telefone'] ?? '';
 $data = $_POST['data'] ?? '';
-$senha = $_POST['senha'] ?? '';
+$senha = md5($_POST['senha']) ?? '';
 $nivel = $_POST['nivel']??'';
 
 if ($senha != $_SESSION['senha']) {
@@ -45,7 +45,7 @@ $update_query = "UPDATE `registro` SET
     `foto` = '$foto'
     WHERE `Id_user` = '{$_SESSION['Id_user']}';";
 
-$update_nivel ="UPDATE `informacao` SET `nivel` = $nivel WHERE `Id_user` = '$id_usuario'";
+$update_nivel ="UPDATE `informacao` SET `nivel` = '$nivel' WHERE `Id_user` = '$id_usuario'";
 if (mysqli_query($con, $update_nivel)){
     $_SESSION['nivel2'] = $nivel;
 }
