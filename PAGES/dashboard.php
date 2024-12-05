@@ -396,47 +396,16 @@ am5.ready(function() {
             </div>
             
             <!-- Formulário para excluir gasto fixo -->
-            <form id="formExcluirGasto"  method="post" action="../ACTS/excluir_gasto.php" style="display: inline;">
+            <form method="post" action="../ACTS/excluir_gasto.php" style="display: inline;">
                 <input type="hidden" name="gasto_index" value="<?php echo $i; ?>">
                 <div class="btnExcluir">
-                    <button class="botaoExcluirGasto" type="button" onclick="ConfirmarExcluirGasto()">
+                    <button class="botaoExcluirGasto" type="submit" onclick="return confirm('Tem certeza que deseja excluir este gasto?');">
                         Excluir Gasto <span><i class="fa-solid fa-trash"></i></span>
                     </button>
-                    <div id="overlay2">
-                        <div id="confirmacao2">
-                            <div class="nomeConfirmacao2">
-                                <p>Tem certeza que deseja excluir o gasto?</p>
-                            </div>
-                            <div class="espacoConfirmacao2">
-                                <button class="button2" id="simBtn2" type="button"><span>SIM</span></button> <!-- Garantir que o tipo seja "button" -->
-                                <button class="button2 cancel" id="naoBtn2" type="button">NÃO</button> <!-- Garantir que o tipo seja "button" -->
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </form>
-
         </div>
     <?php endfor; ?>
-    <script>
-        function ConfirmarExcluirGasto() {
-        // Exibe o overlay
-            document.getElementById('overlay2').style.display = 'block';
-        }
-
-        // Evento para o botão "NÃO" fechar o overlay sem enviar o formulário
-        document.getElementById('naoBtn2').onclick = function() {
-            document.getElementById('overlay2').style.display = 'none'; // Fecha o overlay
-        }
-
-        // Evento para o botão "SIM" enviar o formulário
-        document.getElementById('simBtn2').onclick = function() {
-            // Envia o formulário específico
-            document.getElementById('formExcluirGasto').submit();
-        }
-
-
-    </script>
 </div>
         <div class="espacoBtnFixo">
             <a href="../PAGES/adicionar_gastos_fixos.php" class="btnAdicionarFixo">Adicionar Gasto <i class="fa-solid fa-circle-plus"></i></a>
@@ -564,15 +533,14 @@ am5.ready(function() {
                     ?>
                 </div>
             </div>
-            
             <div id="overlay">
                 <div id="confirmacao">
                     <div class="nomeConfirmacao">
-                        <p>Tem certeza que deseja excluir a divida </strong></p>
+                        <p>Revisadas todas as informações, deseja enviá-las? <?php  echo $row['nome_meta'];?> </p>
                     </div>
                     <div class="espacoConfirmacao">
-                        <button type="button" class="button" id="simBtn"><span><a href="../ACTS/excluirMeta.php">SIM</a></span></button>
-                        <button type="button" class="button cancel" id="naoBtn">NÃO</button>
+                        <button class="button" id="simBtn"><span><a href="../ACTS/excluirMeta.php">SIM</a></span></button>
+                        <button class="button cancel" id="naoBtn">NÃO</button>
                     </div>
                 </div>
             </div>
@@ -740,7 +708,7 @@ function closePopup() {
 <form method="post" action="../ACTS/update_meta.php">
     <label for="index_meta">Escolha a meta:</label>
     <select name="index_meta" id="index_meta" onchange="preencherCamposMeta()">
-        <?php for ($i = 0; $i < count($nomeMeta); $i++): ?>
+        <?php for ($i = 0; $i < count($idMeta); $i++): ?>
             <option value="<?php echo $idMeta[$i]; ?>">
                 <?php echo htmlspecialchars($nomeMeta[$i]); ?>
             </option>
