@@ -199,7 +199,7 @@ switch ($nivel) {
                         </div>
                         <div class="conteudoInfo">
                             <label>Nascimento:</label>
-                            <input type="date" id="nasc" name="nascto"  value="<?php echo $_SESSION['nascto']; ?>">
+                            <input type="date" id="nasc" name="data"  value="<?php echo $_SESSION['data']; ?>">
                         </div>
                     </div>
                     <div class="info">

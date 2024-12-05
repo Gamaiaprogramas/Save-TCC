@@ -552,6 +552,13 @@ am5.ready(function() {
                                 $percentual = ($row['valor_atual'] / $row['valor_meta']) * 100;
                                 $metaId = $row['id'];
                                 $_SESSION['id_da_meta'] = $metaId;
+                                $query_meta_nome = "SELECT nome_meta FROM caixinha_sonhos WHERE id = '$metaId'";
+
+                                $cu = mysqli_fetch_assoc( mysqli_query($con, $query_meta_nome));
+                                
+                                var_dump($cu);
+// Executar consultas
+
                                 ?>
                                 <div class='meta'>
                                     <p class="nomeMeta"><strong><?php echo $row['nome_meta']; ?></strong></p>
@@ -584,13 +591,16 @@ am5.ready(function() {
                             echo "<p>Você ainda não criou metas.</p>";
                         }
                     ?>
+                    <?php 
+                    echo  $_SESSION['result_novo'];
+                    ?>
                 </div>
             </div>
             
             <div id="overlay">
                 <div id="confirmacao">
                     <div class="nomeConfirmacao">
-                        <p>Tem certeza que deseja excluir a meta? </strong></p>
+                        <p>Tem certeza que deseja excluir a divida </strong></p>
                     </div>
                     <div class="espacoConfirmacao">
                         <button type="button" class="button" id="simBtn"><span><a href="../ACTS/excluirMeta.php">SIM</a></span></button>
