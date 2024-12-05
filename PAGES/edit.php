@@ -313,14 +313,14 @@ switch ($nivel) {
     <div  class="confirmar hidden" id="confirm">
         <div class="cima">
             <div class="textoCima">
-                <p>Tem certeza que deseja deletar o seu <a>perfil</a>?</p>
-                <p>Esta ação não poderá ser <b>revertida</b>!</p>
+                <p>Tem certeza que deseja <a>deletar</a> o seu perfil <a>SAVE</a>?</p>
+                <b><p>Esta ação não poderá ser revertida!</p></b>
             </div>
         </div>
         <div class="baixo">
             <div class="botoesBaixo">
-                <a href="../ACTS/deletar.php"><button class="btnSimBaixo" type="button">Sim</button></a>
-                <button class="btnNaoBaixo" type="button" onclick="cancel()">Não</button> 
+                <a href="../ACTS/deletar.php"><button class="btnSimBaixo" type="button"><span>SIM</span></button></a>
+                <button class="btnNaoBaixo" type="button" onclick="cancel()">NÃO</button> 
             </div>
         </div>
     </div>
