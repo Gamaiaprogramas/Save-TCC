@@ -28,7 +28,7 @@ body {
     margin-top: 2vw;
 }
 
-#overlay {
+#overlay, #overlay2 {
     display: none;
     position: fixed;
     top: 0;
@@ -39,7 +39,7 @@ body {
     z-index: 999;
 }
 
-#confirmacao {
+#confirmacao, #confirmacao2 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,7 +52,7 @@ body {
     border-radius: .5vw;
 }
 
-.nomeConfirmacao{
+.nomeConfirmacao, .nomeConfirmacao2{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,7 +63,7 @@ body {
   color: #10002b;
 }
 
-.espacoConfirmacao{
+.espacoConfirmacao, .espacoConfirmacao2{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,7 +73,7 @@ body {
   font-size: 1.2vw;
 }
 
-.button{
+.button, .button2{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,7 +86,7 @@ body {
   cursor: pointer;
 }
 
-.button:hover{
+.button:hover, .button2:hover{
   border: solid 2px #ff6d00;
 }
 
@@ -1034,6 +1034,10 @@ body {
     cursor: pointer;
 }
 
+.botaoDivida:hover{
+    color: #ff6d00;
+}
+
 .botaoExcluir{
     display: flex;
     justify-content: center;
@@ -1047,6 +1051,10 @@ body {
     cursor: pointer;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
     gap: .5vw;
+}
+
+.botaoExcluir:hover{
+    color: #10002b;
 }
 
 .borrado {

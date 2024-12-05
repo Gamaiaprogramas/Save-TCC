@@ -396,16 +396,47 @@ am5.ready(function() {
             </div>
             
             <!-- Formulário para excluir gasto fixo -->
-            <form method="post" action="../ACTS/excluir_gasto.php" style="display: inline;">
+            <form id="formExcluirGasto"  method="post" action="../ACTS/excluir_gasto.php" style="display: inline;">
                 <input type="hidden" name="gasto_index" value="<?php echo $i; ?>">
                 <div class="btnExcluir">
-                    <button class="botaoExcluirGasto" type="submit" onclick="return confirm('Tem certeza que deseja excluir este gasto?');">
+                    <button class="botaoExcluirGasto" type="button" onclick="ConfirmarExcluirGasto()">
                         Excluir Gasto <span><i class="fa-solid fa-trash"></i></span>
                     </button>
+                    <div id="overlay2">
+                        <div id="confirmacao2">
+                            <div class="nomeConfirmacao2">
+                                <p>Tem certeza que deseja excluir o gasto?</p>
+                            </div>
+                            <div class="espacoConfirmacao2">
+                                <button class="button2" id="simBtn2" type="button"><span>SIM</span></button> <!-- Garantir que o tipo seja "button" -->
+                                <button class="button2 cancel" id="naoBtn2" type="button"><span>NÃO</span></button> <!-- Garantir que o tipo seja "button" -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </form>
+
         </div>
     <?php endfor; ?>
+    <script>
+        function ConfirmarExcluirGasto() {
+        // Exibe o overlay
+            document.getElementById('overlay2').style.display = 'block';
+        }
+
+        // Evento para o botão "NÃO" fechar o overlay sem enviar o formulário
+        document.getElementById('naoBtn2').onclick = function() {
+            document.getElementById('overlay2').style.display = 'none'; // Fecha o overlay
+        }
+
+        // Evento para o botão "SIM" enviar o formulário
+        document.getElementById('simBtn2').onclick = function() {
+            // Envia o formulário específico
+            document.getElementById('formExcluirGasto').submit();
+        }
+
+
+    </script>
 </div>
         <div class="espacoBtnFixo">
             <a href="../PAGES/adicionar_gastos_fixos.php" class="btnAdicionarFixo">Adicionar Gasto <i class="fa-solid fa-circle-plus"></i></a>
@@ -533,10 +564,11 @@ am5.ready(function() {
                     ?>
                 </div>
             </div>
+            
             <div id="overlay">
                 <div id="confirmacao">
                     <div class="nomeConfirmacao">
-                        <p>Revisadas todas as informações, deseja enviá-las? <?php ?> </p>
+                        <p>Revisadas todas as informações, deseja enviá-las?</p>
                     </div>
                     <div class="espacoConfirmacao">
                         <button class="button" id="simBtn"><span><a href="../ACTS/excluirMeta.php">SIM</a></span></button>
