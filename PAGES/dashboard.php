@@ -174,7 +174,7 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                                     </div>
                                     <div class="divValorDivida">
                                         <p><?php echo number_format(floatval($valores_dividas[$i]), 2, ',', '.'); ?></p>
-                                    </div>
+                                    </div>  
                                     <div class="divStatusDivida">
                                         <p>Paga</p>
                                     </div>
@@ -378,7 +378,7 @@ am5.ready(function() {
 
 
         <div class="espacoBtnDivida">
-            <div><a href="../PAGES/adicionar_novo.php" class="btnAdicionarDivida">Adicionar Dívida <i class="fa-solid fa-circle-plus"></i></a></div>
+            <div><a href="../PAGES/adicionar_novo.php" class="btnAdicionarDivida">Adicionar Dívida<i class="fa-solid fa-circle-plus"></i></a></div>
             <button id="butonDivida">Alterar Dívida <i class="fa-solid fa-pen"></i></button>
         </div>
 
@@ -530,7 +530,7 @@ am5.ready(function() {
                         <p>Revisadas todas as informações, deseja enviá-las?  </p>
                     </div>
                     <div class="espacoConfirmacao">
-                        <button class="button" id="simBtn" ><span><a href="../ACTS/excluirMeta.php">SIM</a></span></button>
+                    <a href="../ACTS/excluirMeta.php"><button class="button" id="simBtn" ><span>SIM</span></button></a>
                         <button class="button cancel" id="naoBtn">NÃO</button>
                     </div>
                 </div>
@@ -695,7 +695,7 @@ function closePopup() {
 
 
 
-<div class="formAtualizarMeta" id= "idMeta">
+<!-- <div class="formAtualizarMeta" id= "idMeta">
 <form method="post" action="../ACTS/update_meta.php">
     <label for="index_meta">Escolha a meta:</label>
     <select name="index_meta" id="index_meta" onchange="preencherCamposMeta()">
@@ -727,4 +727,4 @@ function preencherCamposMeta() {
 }
 
 
-</script>
+</script> -->

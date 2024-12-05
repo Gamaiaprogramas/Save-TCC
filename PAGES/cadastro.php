@@ -168,12 +168,17 @@
             }
             });
 
+ 
+
             document.getElementById('nome').addEventListener('input', function() {
             let value = this.value.toLowerCase();
             this.value = value.split(' ')
                 .map(word => word.charAt(0).toUpperCase() + word.slice(1))
                 .join(' ');
             });
+
+            
+
 
             window.onload = CadastroAct;
 
