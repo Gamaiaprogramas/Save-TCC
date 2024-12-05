@@ -28,7 +28,7 @@ body {
     margin-top: 2vw;
 }
 
-#overlay, #overlay2 {
+#overlay, #overlay2, #overlay3{
     display: none;
     position: fixed;
     top: 0;
@@ -39,7 +39,7 @@ body {
     z-index: 999;
 }
 
-#confirmacao, #confirmacao2 {
+#confirmacao, #confirmacao2, #confirmacao3{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,7 +52,7 @@ body {
     border-radius: .5vw;
 }
 
-.nomeConfirmacao, .nomeConfirmacao2{
+.nomeConfirmacao, .nomeConfirmacao2, .nomeConfirmacao3{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,7 +63,7 @@ body {
   color: #10002b;
 }
 
-.espacoConfirmacao, .espacoConfirmacao2{
+.espacoConfirmacao, .espacoConfirmacao2, .espacoConfirmacao3{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,7 +73,7 @@ body {
   font-size: 1.2vw;
 }
 
-.button, .button2{
+.button, .button2, .button3{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,15 +87,15 @@ body {
   cursor: pointer;
 }
 
-#simBtn a, #simBtn2 a{
+#simBtn a, #simBtn2 a, #simBtn3 a{
     color: #ff6d00 !important;
 }
 
-#naoBtn2 a, #naoBtn2 a{
+#naoBtn2 a, #naoBtn2 a, #naoBtn3 a{
     color: black !important;
 }
 
-.button:hover, .button2:hover{
+.button:hover, .button2:hover, .button3:hover{
   border: solid 2px #ff6d00;
 }
 

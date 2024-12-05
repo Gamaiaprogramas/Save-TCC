@@ -91,7 +91,21 @@ form{
   cursor: pointer;
 }
 
-.button:hover{
+.button2{
+  color: #ff6d00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3vw;
+  width: 13vw;
+  border-radius: .5vw;
+  margin-bottom: 1vw;
+  font-size: 1.5vw;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover, .button2:hover{
   border: solid 2px #ff6d00;
 }
   
