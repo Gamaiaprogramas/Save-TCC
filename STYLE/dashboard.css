@@ -83,7 +83,16 @@ body {
   margin-bottom: 1vw;
   font-size: 1.5vw;
   font-weight: bold;
+  border: solid 2px black;
   cursor: pointer;
+}
+
+#simBtn a, #simBtn2 a{
+    color: #ff6d00 !important;
+}
+
+#naoBtn2 a, #naoBtn2 a{
+    color: black !important;
 }
 
 .button:hover, .button2:hover{

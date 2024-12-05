@@ -409,7 +409,7 @@ am5.ready(function() {
                             </div>
                             <div class="espacoConfirmacao2">
                                 <button class="button2" id="simBtn2" type="button"><span>SIM</span></button> <!-- Garantir que o tipo seja "button" -->
-                                <button class="button2 cancel" id="naoBtn2" type="button"><span>NÃO</span></button> <!-- Garantir que o tipo seja "button" -->
+                                <button class="button2 cancel" id="naoBtn2" type="button">NÃO</button> <!-- Garantir que o tipo seja "button" -->
                             </div>
                         </div>
                     </div>
@@ -558,11 +558,11 @@ am5.ready(function() {
             <div id="overlay">
                 <div id="confirmacao">
                     <div class="nomeConfirmacao">
-                        <p>Tem certeza que deseja excluir a divida </strong></p>
+                        <p>Tem certeza que deseja excluir a meta? </strong></p>
                     </div>
                     <div class="espacoConfirmacao">
-                        <button class="button" id="simBtn"><span><a href="../ACTS/excluirMeta.php">SIM</a></span></button>
-                        <button class="button cancel" id="naoBtn">NÃO</button>
+                        <button type="button" class="button" id="simBtn"><span><a href="../ACTS/excluirMeta.php">SIM</a></span></button>
+                        <button type="button" class="button cancel" id="naoBtn">NÃO</button>
                     </div>
                 </div>
             </div>
