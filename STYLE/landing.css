@@ -95,6 +95,40 @@ section.vantagens{
 
 }
 
+.profCarla{
+    display: flex;
+    top: 4vw;
+    left: 4vw;
+    width: 7vw;
+    font-size: 1.5vw;
+    position: relative;
+    height: 2vw;
+    background-color: #e3e3e3;
+    color: #e3e3e3;
+    cursor: pointer;
+}
+
+.profCarla:hover{
+    color: red;
+}
+
+.profJoao{
+    display: flex;
+    top: 2vw;
+    left: 87vw;
+    width: 10vw;
+    font-size: 1.5vw;
+    position: relative;
+    height: 2vw;
+    background-color: #e3e3e3;
+    color: #e3e3e3;
+    cursor: pointer;
+}
+
+.profJoao:hover{
+    color: rgb(0, 0, 0);
+}
+
 .vantagens .itens-container .img-itens img{
     max-width: 480px;
 }
