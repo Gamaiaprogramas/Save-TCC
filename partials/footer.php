@@ -5,9 +5,9 @@
 
             <section class="top-footer">
 
-                <a href="#"><button><i class="bi bi-instagram"></i></button></a>
+                <a href="https://www.instagram.com/saveyourmoney_br/"><button><i class="bi bi-instagram"></i></button></a>
                 <a href="#"><button><i class="bi bi-facebook"></i></button></a>
-                <a href="#"><button><i class="bi bi-twitter-x"></i></button></i></a>
+                <a href="https://x.com/SaveurMoney_Co"><button><i class="bi bi-twitter-x"></i></button></i></a>
                 <a href="#"><button><i class="bi bi-github"></i></button></a>
 
 
