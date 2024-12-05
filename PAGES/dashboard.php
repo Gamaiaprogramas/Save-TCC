@@ -405,7 +405,7 @@ am5.ready(function() {
                     <div id="overlay2">
                         <div id="confirmacao2">
                             <div class="nomeConfirmacao2">
-                                <p>Tem certeza que deseja excluir a dívida?</p>
+                                <p>Tem certeza que deseja excluir o gasto?</p>
                             </div>
                             <div class="espacoConfirmacao2">
                                 <button class="button2" id="simBtn2" type="button"><span>SIM</span></button> <!-- Garantir que o tipo seja "button" -->
