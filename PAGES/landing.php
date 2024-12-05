@@ -93,7 +93,12 @@
 
         </div>
     </section>
-
+    <div class="profCarla">
+        <a>Carla <i class="fa-solid fa-heart"></i></a>
+    </div>
+    <div class="profJoao">
+        <a>João Viado</a>
+    </div>
     <section class="contato">
         <div class="interface">
 
