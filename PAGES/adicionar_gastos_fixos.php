@@ -155,6 +155,7 @@ require('../ACTS/connect.php');
         }
     }
 
+    document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('naoBtn').onclick = function() {
         document.getElementById('overlay').style.display = 'none'; // Fecha o overlay
     }
@@ -162,6 +163,7 @@ require('../ACTS/connect.php');
     document.getElementById('simBtn').onclick = function() {
         document.getElementById('GastosForm').submit(); // Envia o formulário
     }
+    });
     </script>
 </body>
 </html>
