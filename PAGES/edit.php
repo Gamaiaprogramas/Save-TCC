@@ -310,7 +310,7 @@ switch ($nivel) {
     </script>
     <script src="../JS/geral.js"></script>
 </body>
-<div  class="confirmar hidden" id="confirm">
+    <div  class="confirmar hidden" id="confirm">
         <div class="cima">
             <div class="textoCima">
                 <p>Tem certeza que deseja deletar o seu <a>perfil</a>?</p>

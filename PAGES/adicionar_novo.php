@@ -184,14 +184,17 @@ if (isset($_SESSION['msg'])) {
 </form>
 
 <!-- Overlay de confirmação -->
-<div id="overlay" style="display: none;">
-    <div id="confirmacao">
-        <p>Você está certo(a) com as informações fornecidas?</p>
-        <button class="button" onclick="submeterForm()">Sim</button>
-        <button class="button cancel" onclick="fecharOverlay()">Não</button>
+<div id="overlay">
+        <div id="confirmacao">
+            <div class="nomeConfirmacao">
+                <p>Revisadas todas as informações, deseja enviá-las?</p>
+            </div>
+            <div class="espacoConfirmacao">
+                <button class="button" onclick="submeterForm()">Sim</button>
+                <button class="button cancel" onclick="fecharOverlay()">Não</button>
+            </div>
+        </div>
     </div>
-</div>
-
 <script src="../JS/geral.js"></script>
 </body>
 </html>
