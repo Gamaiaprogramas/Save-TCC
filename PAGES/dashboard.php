@@ -250,46 +250,14 @@ $total = floatval($salario) + $total_dividas + $total_gastos;
                                             </form>
 
                                 <!-- Botão para excluir a dívida -->
-                                <form method="post" action="../ACTS/excluir_divida.php" style="display: inline;" id="formExcluirSafadeza">
+                                <form method="post" action="../ACTS/excluir_divida.php" style="display: inline;">
                                     <input type="hidden" name="debt_index" value="<?php echo $i; ?>">
                                     <div class="btnExcluir">
-                                        <button class="botaoExcluir" type="button" onclick="safadeza();">
+                                        <button class="botaoExcluir" type="submit" onclick="return confirm('Tem certeza que deseja excluir esta dívida?');">
                                             Excluir Dívida <i class="fa-solid fa-trash"></i>
                                         </button>
                                     </div>
                                 </form>
-                                <div id="overlay3">
-                                    <div id="confirmacao3">
-                                        <div class="nomeConfirmacao3">
-                                            <p>Tem certeza que deseja excluir o gasto?</p>
-                                        </div>
-                                        <div class="espacoConfirmacao3">
-                                            <button class="button3" id="simBtn3" type="button"><span>SIM</span></button> <!-- Garantir que o tipo seja "button" -->
-                                            <button class="button3 cancel" id="naoBtn3" type="button">NÃO</button> <!-- Garantir que o tipo seja "button" -->
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <script>
-                                    function safadeza() {
-                                    // Exibe o overlay
-                                        document.getElementById('overlay3').style.display = 'block';
-                                    }
-
-                                    // Evento para o botão "NÃO" fechar o overlay sem enviar o formulário
-                                    document.getElementById('naoBtn3').onclick = function() {
-                                        document.getElementById('overlay3').style.display = 'none'; // Fecha o overlay
-                                    }
-
-                                    // Evento para o botão "SIM" enviar o formulário
-                                    document.getElementById('simBtn3').onclick = function() {
-                                        // Envia o formulário específico
-                                        document.getElementById('formExcluirSafadeza').submit();
-                                    }
-
-
-                                </script>
                             </div>
                             
                         </div>
@@ -521,12 +489,6 @@ am5.ready(function() {
                                 $percentual = ($row['valor_atual'] / $row['valor_meta']) * 100;
                                 $metaId = $row['id'];
                                 $_SESSION['id_da_meta'] = $metaId;
-                                $query_meta_nome = "SELECT nome_meta FROM caixinha_sonhos WHERE id = '$metaId'";
-
-                                $cu = mysqli_fetch_assoc( mysqli_query($con, $query_meta_nome));
-                                
-                                var_dump($cu);
-// Executar consultas
 
                                 ?>
                                 <div class='meta'>
@@ -560,18 +522,15 @@ am5.ready(function() {
                             echo "<p>Você ainda não criou metas.</p>";
                         }
                     ?>
-                    <?php 
-                    echo  $_SESSION['result_novo'];
-                    ?>
                 </div>
             </div>
             <div id="overlay">
                 <div id="confirmacao">
                     <div class="nomeConfirmacao">
-                        <p>Revisadas todas as informações, deseja enviá-las? <?php  echo $row['nome_meta'];?> </p>
+                        <p>Revisadas todas as informações, deseja enviá-las?  </p>
                     </div>
                     <div class="espacoConfirmacao">
-                        <button class="button" id="simBtn"><span><a href="../ACTS/excluirMeta.php">SIM</a></span></button>
+                        <button class="button" id="simBtn" ><span><a href="../ACTS/excluirMeta.php">SIM</a></span></button>
                         <button class="button cancel" id="naoBtn">NÃO</button>
                     </div>
                 </div>
@@ -740,7 +699,7 @@ function closePopup() {
 <form method="post" action="../ACTS/update_meta.php">
     <label for="index_meta">Escolha a meta:</label>
     <select name="index_meta" id="index_meta" onchange="preencherCamposMeta()">
-        <?php for ($i = 0; $i < count($idMeta); $i++): ?>
+        <?php for ($i = 0; $i < count($nomeMeta); $i++): ?>
             <option value="<?php echo $idMeta[$i]; ?>">
                 <?php echo htmlspecialchars($nomeMeta[$i]); ?>
             </option>
